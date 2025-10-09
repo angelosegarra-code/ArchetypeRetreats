@@ -1,1 +1,96 @@
-body{font-family:Georgia,serif;padding:20px} .btn{background:#5a7ca3;color:#fff;padding:8px 12px;border-radius:4px;text-decoration:none}
+/* --- Archetype Retreats – global design --- */
+:root {
+  --bg:#0b0c0e;
+  --card:#16181c;
+  --edge:#2a2d32;
+  --text:#f3f3f3;
+  --muted:#a7a7a7;
+  --accent:#c6b26b;
+  --accent-fade:#c6b26b22;
+  --radius:10px;
+  --shadow:0 0 14px #0008;
+}
+
+html,body{
+  margin:0;
+  padding:0;
+  font-family:'Inter',sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+  min-height:100%;
+}
+
+.container{max-width:960px;margin:auto;padding:0 1.2rem;}
+
+h1,h2,h3,h4{font-family:'EB Garamond',serif;margin-top:0;color:var(--text);}
+h1{font-size:2.2rem;}
+h2{font-size:1.6rem;}
+h3{font-size:1.3rem;color:var(--accent);}
+p{margin:0 0 1rem;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+.site-header{
+  border-bottom:1px solid var(--edge);
+  background:#111;
+  box-shadow:var(--shadow);
+  position:sticky;top:0;z-index:10;
+}
+.header-inner{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;}
+.brand{font-family:'EB Garamond',serif;font-weight:600;font-size:1.2rem;color:var(--accent);}
+.nav a{margin-left:1.2rem;font-size:.95rem;color:var(--muted);}
+.nav a:hover{color:var(--accent);}
+
+.hero{
+  background:linear-gradient(135deg,var(--card),#111);
+  border-bottom:1px solid var(--edge);
+  padding:4rem 0 3rem;
+  text-align:center;
+}
+.hero h1{margin-bottom:.5rem;}
+.hero .tagline{color:var(--muted);font-size:1.1rem;}
+
+.content{padding:2rem 0;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.4rem;}
+.card{
+  background:var(--card);
+  border:1px solid var(--edge);
+  border-radius:var(--radius);
+  padding:1.2rem 1.4rem;
+  box-shadow:var(--shadow);
+}
+.box{display:flex;flex-direction:column;gap:.6rem;}
+input,textarea,select{
+  border:1px solid var(--edge);
+  border-radius:var(--radius);
+  background:#0e0f11;
+  color:var(--text);
+  padding:.6rem .8rem;
+  font-family:'Inter',sans-serif;
+}
+button,.btn{
+  background:var(--accent);
+  color:#000;
+  border:none;
+  padding:.7rem 1.1rem;
+  border-radius:var(--radius);
+  cursor:pointer;
+  font-weight:600;
+}
+button:hover,.btn:hover{background:var(--text);color:#000;}
+
+.site-footer{
+  border-top:1px solid var(--edge);
+  text-align:center;
+  padding:1.5rem 0;
+  color:var(--muted);
+  font-size:.9rem;
+  background:#111;
+}
+.footer-inner{display:flex;justify-content:center;align-items:center;gap:.5rem;flex-wrap:wrap;}
+.sep{opacity:.3;}
+
+.muted{color:var(--muted);}
+.link{color:var(--accent);font-weight:600;}
+.btn-primary{background:var(--accent);color:#000;border:none;border-radius:var(--radius);padding:.6rem 1rem;}
