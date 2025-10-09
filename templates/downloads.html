@@ -1,0 +1,1 @@
+<!DOCTYPE html><html><head>{% include '_head.html' %}</head><body><h2>Downloads for {{ email }}</h2>{% if downloads %}<ul>{% for d in downloads %}<li><a href='/{{ d.path }}' target='_blank'>{{ d.label }}</a></li>{% endfor %}</ul>{% else %}<p>No files yet.</p>{% endif %}</body></html>
