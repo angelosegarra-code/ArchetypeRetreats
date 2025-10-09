@@ -88,4 +88,7 @@ def export_csv():
 def logout(): session.clear(); return redirect('/')
 @app.route('/robots.txt')
 def robots_txt(): return app.send_static_file('robots.txt')
+@app.route('/retreats')
+def retreats():
+    return render_template('retreats.html')    
 if __name__=='__main__': app.run(host='0.0.0.0', port=8080)
