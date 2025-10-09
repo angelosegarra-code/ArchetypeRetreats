@@ -1,138 +1,122 @@
-/* ====== Base ====== */
-:root{
-  --bg: #0f1320;           /* deep slate */
-  --panel: #151a2b;        /* panel background */
-  --ink: #e6ecff;          /* main text */
-  --muted: #a8b1c7;
-  --accent: #8ad0ff;       /* sky */
-  --accent-2: #ffb86b;     /* soft ember */
-  --line: #26304a;
-
-  --radius: 14px;
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
-}
-
-* { box-sizing: border-box; }
-html, body { height: 100%; }
-body{
+/* ===== Archetype Retreats Final Style ===== */
+body {
+  font-family: "EB Garamond", serif;
+  background-color: #faf9f7;
+  color: #2c2c2c;
   margin: 0;
-  background: radial-gradient(1200px 700px at 20% -10%, #1b2240 0%, var(--bg) 60%), var(--bg);
-  color: var(--ink);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  line-height: 1.7;
 }
 
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-.container{
-  width: min(1100px, 92vw);
-  margin-inline: auto;
-  padding: 28px 0;
+/* Header */
+header {
+  background: #f4efe6;
+  text-align: center;
+  padding: 40px 10px 25px;
+  border-bottom: 1px solid #ddd;
 }
 
-/* ====== Header ====== */
-.site-header{
-  display: flex; align-items: center; justify-content: space-between;
-  width: min(1100px, 92vw); margin: 22px auto 12px;
-}
-.brand{
-  font-family: "Playfair Display", serif;
-  font-weight: 700; letter-spacing:.4px; color: var(--ink);
-  font-size: clamp(20px, 3vw, 28px);
-}
-.site-nav a{
-  margin-left: 18px; padding: 8px 12px; border-radius: 10px;
-  color: var(--ink); border: 1px solid transparent;
-}
-.site-nav a:hover{ background: #12182b; border-color: #222b46; }
-
-/* ====== Hero (home only) ====== */
-.hero{
-  position: relative;
-  padding: 56px 0 32px;
-  background:
-    radial-gradient(1000px 600px at 80% -20%, rgba(138,208,255,.18), transparent 70%),
-    linear-gradient(180deg, #0f1320 0%, #0f1320 60%, rgba(15,19,32,0) 100%);
-  border-bottom: 1px solid var(--line);
-}
-.hero-inner{ width: min(1100px, 92vw); margin: 0 auto; }
-.hero h1{
-  font-family: "Playfair Display", serif;
-  font-weight: 700; line-height:1.15;
-  font-size: clamp(34px, 5.2vw, 56px);
-  margin: 0 0 10px;
-}
-.hero-sub{
-  color: var(--muted);
-  font-size: clamp(16px, 2.1vw, 18px);
-  max-width: 720px; margin: 0 0 22px;
-}
-.hero-ctas{ display: flex; gap: 12px; flex-wrap: wrap; }
-.br-md{ display: none; }
-@media (min-width: 720px){ .br-md{ display:inline; } }
-
-/* Decorative wave */
-.hero-wave{
-  height: 28px; margin-top: 26px;
-  background:
-    linear-gradient(90deg, rgba(138,208,255,.35), rgba(255,184,107,.35)),
-    repeating-linear-gradient(90deg, transparent 0 18px, rgba(255,255,255,.06) 18px 19px);
-  mask: radial-gradient(20px 20px at 20px 14px, #000 98%, transparent 100%) left / 40px 28px repeat-x;
-  opacity:.7;
+header h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #222;
 }
 
-/* ====== Buttons ====== */
-.btn{
-  display:inline-block; padding:12px 16px; border-radius: 12px;
-  background: #12182b; color: var(--ink); border:1px solid #222b46;
-  transition: transform .06s ease, background .2s ease, border-color .2s ease;
+nav {
+  margin-top: 10px;
 }
-.btn:hover{ transform: translateY(-1px); background:#121a34; }
-.btn.primary{ background: linear-gradient(180deg, #1b77b2, #125a85); border-color:#166398; }
-.btn.primary:hover{ background: linear-gradient(180deg, #1e82c0, #156997); }
-.btn.subtle{ background: transparent; border-color:#2a3553; }
 
-/* ====== Cards/sections ====== */
-.card{
-  background: var(--panel); border:1px solid var(--line);
-  border-radius: var(--radius); box-shadow: var(--shadow);
-  padding: 22px; margin: 16px 0;
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  margin: 0 12px;
+  transition: color 0.3s;
 }
-h2, h3{ font-family: "Playfair Display", serif; margin: 8px 0 10px; }
 
-/* ====== Forms (Test page) ====== */
-.form{
-  display:grid; gap:16px; max-width: 560px;
+nav a:hover {
+  color: #b37c49;
 }
-.input, input[type="text"], input[type="email"], select, textarea{
-  width:100%; padding:12px 14px; font-size:16px;
-  color: var(--ink); background:#0f1427; border:1px solid #283250; border-radius:10px;
-}
-label{ font-weight:600; color:#d6ddf4; }
-.help{ color:var(--muted); font-size:14px; margin-top:6px; }
 
-/* ====== Tables (admin/dashboard) ====== */
-.table{ width:100%; border-collapse: collapse; }
-.table th, .table td{ padding:10px 12px; border-bottom:1px solid #233055; }
-.table th{ text-align:left; color:#cfd7f3; font-weight:600; }
-
-/* ====== Footer ====== */
-.site-footer{
-  border-top: 1px solid var(--line);
-  margin-top: 50px; padding: 26px 0 40px; color: var(--muted);
+/* Buttons */
+.btn, button, input[type="submit"] {
+  background: #b37c49;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: all 0.3s;
 }
-.footer-grid{
-  display:grid; gap:20px; grid-template-columns: 1.2fr .8fr;
-}
-.brand-small{ font-family:"Playfair Display", serif; font-weight:700; color:var(--ink); }
-.footer-links a{ display:inline-block; margin:6px 14px 6px 0; color:#cfd7f3; }
-.tiny{ font-size:13px; margin-top:8px; }
-.muted{ color:var(--muted); }
 
-/* Small screens */
-@media (max-width: 720px){
-  .footer-grid{ grid-template-columns: 1fr; }
+.btn:hover, button:hover, input[type="submit"]:hover {
+  background: #a16f42;
+}
+
+/* Main content */
+main.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Headings */
+h2, h3 {
+  color: #222;
+  font-weight: 600;
+  margin-top: 1.5em;
+}
+
+/* Footer */
+footer {
+  background: #f4efe6;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+footer a:hover {
+  color: #b37c49;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+input, textarea {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 120px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 { font-size: 2rem; }
+  main.container { margin: 30px auto; }
+  nav a { margin: 0 6px; }
 }
