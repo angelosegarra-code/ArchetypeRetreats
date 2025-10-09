@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Archetype Retreats{% endblock %}</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="{{ url_for('home') }}">Archetype Retreats</a>
+      <nav class="nav">
+        <a href="{{ url_for('test_form') }}">InnerCube Test</a>
+        <a href="{{ url_for('retreats') }}">Retreats</a>
+        <a href="{{ url_for('purchase') }}">Shop</a>
+      </nav>
+    </div>
+  </header>
+
+  {% block hero %}{% endblock %}
+
+  <main class="container content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2025 Archetype Retreats</span>
+      <span class="sep">•</span>
+      <a href="mailto:angelo@angelosegarra.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
