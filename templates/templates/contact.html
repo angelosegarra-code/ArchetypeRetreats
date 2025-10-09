@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-section">
+  <h2>Contact & Inquiries</h2>
+  <p>
+    Thank you for visiting Archetype Retreats.  
+    If you’d like to learn more about the <strong>InnerCube Test</strong>, retreats, or creative collaborations,
+    please reach out using the form below or connect with us on social media.
+  </p>
+
+  <form action="mailto:angelo@painting2poetry.com" method="post" enctype="text/plain" class="contact-form">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Tell us how you'd like to collaborate or join a retreat..." required></textarea>
+
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+
+  <p class="muted" style="margin-top: 20px;">
+    or reach us directly:<br>
+    ✉️ <strong>angelo@painting2poetry.com</strong><br>
+    💬 WeChat: <strong>Intinno</strong><br>
+    🌐 Instagram: <a href="https://instagram.com/segarra.angelo" target="_blank">@segarra.angelo</a>
+  </p>
+</section>
+{% endblock %}
