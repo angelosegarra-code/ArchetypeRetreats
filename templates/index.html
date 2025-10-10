@@ -1,38 +1,39 @@
 {% extends "base.html" %}
-{% block title %}Archetype Retreats — InnerCube, Retreats & Books{% endblock %}
-
-{% block hero %}
-<section class="hero">
-  <div class="container hero-inner">
-    <h1>Find your story. Shape your life.</h1>
-    <p class="tagline">
-      The InnerCube Test reveals your creative archetype. Our retreats and guides help you weave it into the everyday.
-    </p>
-    <div class="cta-group">
-      <a class="btn btn-primary" href="{{ url_for('test_form') }}">Take the InnerCube Test</a>
-      <a class="btn btn-ghost" href="{{ url_for('retreats') }}">Explore Retreats</a>
-      <a class="btn btn-ghost" href="{{ url_for('purchase') }}">Shop</a>
-    </div>
-  </div>
-</section>
-{% endblock %}
-
 {% block content %}
-<section class="grid">
-  <div class="card">
-    <h3>InnerCube</h3>
-    <p>Five symbols. One inner landscape. Discover the patterns behind how you create, love, and decide.</p>
-    <a class="link" href="{{ url_for('test_form') }}">Start the test →</a>
-  </div>
-  <div class="card">
-    <h3>Retreats</h3>
-    <p>Quiet, art-filled days to reset your story. Small groups. Gentle structure. Real transformation.</p>
-    <a class="link" href="{{ url_for('retreats') }}">Upcoming dates →</a>
-  </div>
-  <div class="card">
-    <h3>Books & Guides</h3>
-    <p><em>Your Story Is You</em> and <em>Painting to Poetry</em> — companions for a truer creative life.</p>
-    <a class="link" href="{{ url_for('purchase') }}">Browse →</a>
+
+<section class="section center">
+  <h1>Find your story. Shape your life.</h1>
+  <p class="muted">The InnerCube Test reveals your creative archetype. Our retreats and guides help you weave it into the everyday.</p>
+
+  <div class="mt-2">
+    <a href="{{ url_for('test_form') }}" class="btn">Take the InnerCube Test</a>
+    <a href="{{ url_for('retreats') }}" class="btn secondary">Explore Retreats</a>
+    <a href="{{ url_for('purchase') }}" class="btn ghost">Shop</a>
   </div>
 </section>
+
+<section class="section">
+  <div class="card">
+    <h2>InnerCube</h2>
+    <p>Five symbols. One inner landscape. Discover the patterns behind how you create, love, and decide.</p>
+    <a href="{{ url_for('test_form') }}" class="btn mt-1">Start the Test →</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>Retreats</h2>
+    <p>Quiet, art-filled days to reset your story. Small groups. Gentle structure. Real transformation.</p>
+    <a href="{{ url_for('retreats') }}" class="btn mt-1">Upcoming Dates →</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>Books & Guides</h2>
+    <p><em>Your Story Is You</em> and <em>Painting to Poetry</em> — companions for a truer creative life.</p>
+    <a href="{{ url_for('purchase') }}" class="btn mt-1">Browse →</a>
+  </div>
+</section>
+
 {% endblock %}
