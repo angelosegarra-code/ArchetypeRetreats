@@ -70,6 +70,16 @@ a:hover {
 
 /* ====== HERO SECTION ====== */
 
+/* Fix header overlap with hero */
+.site-header {
+  position: relative;
+  z-index: 10;
+}
+
+.hero {
+  position: relative;
+  margin-top: 0; /* ensures hero starts right after header */
+}
 .hero {
   background-image: url('../static/hero-bali-golden.jpg'); /* update path if needed */
   background-size: cover;
