@@ -1,5 +1,43 @@
 /* ====== GLOBAL STYLES ====== */
+/* ====== HEADER OVER HERO ====== */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem 0;
+}
 
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.site-header .logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.site-header nav a {
+  color: #fff;
+  margin-left: 1.2rem;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.site-header nav a:hover {
+  opacity: 0.8;
+}
 body {
   margin: 0;
   font-family: "EB Garamond", Georgia, serif;
