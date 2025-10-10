@@ -6,7 +6,21 @@ from pdf_generator import create_pdf
 from gumroad_webhook import gumroad_bp
 from scheduler import start_scheduler
 load_dotenv()
-app=Flask(__name__); app.register_blueprint(gumroad_bp)
+app = Flask(
+    __name__,
+    static_folder="static",
+    static_url_path="/static",
+    template_folder="templates"
+)
+
+# Optional: prevent CSS caching during testing
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
+# Explicit static route (helps on Render)
+@app.route('/static/<path:filename>')
+def static_files(filename):
+    from flask import send_from_directory
+    return send_from_directory('static', filename)
 app.secret_key=os.environ.get('SECRET_KEY','please_change_me')
 ADMIN_USER='angelo'; ADMIN_PASS=os.environ.get('ADMIN_PASS','retreat2025')
 DB_PATH=os.path.join('database','users.db')
