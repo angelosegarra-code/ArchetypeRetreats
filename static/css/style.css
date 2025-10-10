@@ -7,27 +7,34 @@
 
 html, body {
   font-family: "EB Garamond", "Georgia", serif;
-  background: linear-gradient(to bottom right, #f7f9fb, #dde1e7);
+  background: linear-gradient(to bottom right, #f7f1fb, #dde1e7);
   color: #222;
   line-height: 1.6;
   min-height: 100vh;
+}
+
+/* === Smooth Transition Effects === */
+a, button {
+  transition: all 0.3s ease;
 }
 
 /* === Header === */
 .site-header {
   background: linear-gradient(to right, #2d3e50, #536976);
   color: #fff;
-  padding: 1rem 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .site-header .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
 }
 
 .site-header h1 a {
@@ -38,123 +45,85 @@ html, body {
 }
 
 nav a {
-  color: #fff;
+  color: #e6e6e6;
   text-decoration: none;
-  margin-left: 1.2rem;
+  margin: 0 1rem;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #ffd580;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255,255,255,0.6);
 }
 
-/* === Main Content === */
+/* === Main Container === */
 .container {
-  width: 90%;
   max-width: 900px;
   margin: 2.5rem auto;
-  padding: 1rem;
-  background: #ffffffd9;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3 {
+  color: #2d3e50;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: #333;
 }
 
 /* === Buttons === */
-a.btn, button {
+.btn, button, input[type=submit] {
   display: inline-block;
-  background: linear-gradient(135deg, #5c7cfa, #74c0fc);
-  color: white;
+  background: linear-gradient(to right, #536976, #a3b8cc);
+  color: #fff;
   border: none;
-  border-radius: 6px;
   padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
   text-decoration: none;
-  font-weight: 600;
-  margin: 0.5rem 0;
-  transition: transform 0.2s ease, background 0.3s ease;
 }
 
-a.btn:hover, button:hover {
-  transform: scale(1.03);
-  background: linear-gradient(135deg, #748ffc, #4dabf7);
+.btn:hover, button:hover, input[type=submit]:hover {
+  background: linear-gradient(to right, #607a92, #c0d2e2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* === Footer === */
 .site-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #2d3e50;
-  color: #ccc;
-  font-size: 0.9rem;
-  margin-top: 3rem;
+  background: linear-gradient(to right, #536976, #2d3e50);
+  color: #ddd;
+  padding: 2rem 0;
+  margin-top: 4rem;
 }
 
-.site-footer a {
-  color: #ffd580;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-}
-
-/* === Forms === */
-form {
+.footer-grid {
+  max-width: 900px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 1.5rem;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0.6rem;
-  font-size: 1rem;
-  width: 100%;
+.footer-links a {
+  color: #ccc;
+  margin: 0 0.5rem;
+  text-decoration: none;
 }
 
-button[type="submit"] {
-  align-self: start;
+.footer-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
 
-/* === Hero Section (Home Page) === */
-.hero {
+.tiny {
   text-align: center;
-  padding: 4rem 1rem;
-  background: linear-gradient(145deg, #c2e9fb, #a1c4fd);
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  color: #1c1c1c;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-/* === Responsive Design === */
-@media (max-width: 768px) {
-  .site-header .container {
-    flex-direction: column;
-  }
-
-  nav {
-    margin-top: 0.8rem;
-  }
-
-  nav a {
-    margin: 0 0.8rem;
-  }
-
-  .container {
-    width: 95%;
-  }
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 1.5rem;
 }
