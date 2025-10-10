@@ -1,72 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="hero hero-retreats" style="background-image: url('{{ url_for('static', filename='images/hero-bali-villa.jpg') }}');">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
+<section class="hero" style="background-image: url('{{ url_for('static', filename='images/hero-retreats-rice.jpg') }}');">
+  <div class="hero-overlay">
     <h1>Retreat into the Creative Heart of Bali</h1>
-    <p>
-      Small, art-filled groups in tranquil rice fields.  
-      Real transformation begins in stillness — rediscover your story here.
-    </p>
-    <a href="{{ url_for('contact') }}" class="btn">Join a Retreat</a>
+    <p>Small, art-filled groups in tranquil rice fields. Real transformation begins in stillness — rediscover your story here.</p>
   </div>
-  
 </section>
-<section class="cards">
-  <div class="card">
-    <h3>Quiet Reset (3 days)</h3>
-    <p>Slow mornings, silent walks, gentle prompts. A soft reset for your creative compass.</p>
-    <ul class="bullets">
+
+<section class="retreat-details">
+  <div class="container centered">
+    <h2>Quiet Reset (3 Days)</h2>
+    <p>Slow mornings, silent walks, and gentle prompts. A soft reset for your creative compass.</p>
+
+    <ul>
       <li>Small group (6–8)</li>
       <li>Guided journaling & sketching</li>
       <li>Evening story circles</li>
     </ul>
-    <a class="btn" href="#dates">Upcoming dates →</a>
-  </div>
 
-  <div class="card">
-    <h3>Archetype Immersion (5 days)</h3>
-    <p>Decode your InnerCube symbols and build a life story that fits. Hands-on, art-driven.</p>
-    <ul class="bullets">
-      <li>Daily studio blocks</li>
-      <li>1:1 archetype session</li>
-      <li>Personal mini-guide</li>
-    </ul>
-    <a class="btn" href="#dates">Upcoming dates →</a>
-  </div>
-
-  <div class="card">
-    <h3>Story Lab (Weekend)</h3>
-    <p>Short, focused workshop to test ideas and leave with a simple creative plan.</p>
-    <ul class="bullets">
-      <li>Micro-projects</li>
-      <li>Peer feedback</li>
-      <li>Take-home prompts</li>
-    </ul>
-    <a class="btn" href="#dates">Upcoming dates →</a>
-  </div>
-</section>
-
-<section id="dates" class="section">
-  <h2>Upcoming dates</h2>
-  <div class="cards">
-    <div class="card skinny">
-      <h4>Quiet Reset</h4>
-      <p class="muted">Bali · Nov 22–24</p>
-      <a class="btn" href="#" aria-disabled="true">Waitlist</a>
-    </div>
-    <div class="card skinny">
-      <h4>Archetype Immersion</h4>
-      <p class="muted">Kyoto · Jan 12–16</p>
-      <a class="btn" href="#" aria-disabled="true">Waitlist</a>
-    </div>
-    <div class="card skinny">
-      <h4>Story Lab</h4>
-      <p class="muted">Online · Feb 8–9</p>
-      <a class="btn" href="#" aria-disabled="true">Waitlist</a>
+    <div class="buttons-center">
+      <a href="#" class="btn primary">Upcoming Dates</a>
+      <a href="#" class="btn secondary">Join a Retreat</a>
     </div>
   </div>
-  <p class="tiny muted">We’ll add live booking once dates are finalized.</p>
 </section>
 {% endblock %}
