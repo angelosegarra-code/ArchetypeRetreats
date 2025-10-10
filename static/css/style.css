@@ -81,18 +81,12 @@ a:hover {
   margin-top: 0; /* ensures hero starts right after header */
 }
 .hero {
-  background-image: url('../static/hero-bali-golden.jpg'); /* update path if needed */
+  position: relative;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   color: #fff;
-  position: relative;
+  text-align: center;
+  padding: 9rem 1rem 10rem; /* increase top padding from 8rem → 9rem */
 }
 
 .hero::after {
