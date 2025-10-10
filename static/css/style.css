@@ -92,7 +92,40 @@ a:hover {
   position: relative;
   z-index: 10;
 }
+/* Hero background + overlay + spacing */
+.hero{
+  /* use CSS var if set in HTML, else fall back to the plain rice image */
+  background: center/cover no-repeat var(--hero, url("/static/images/hero-rice.jpg"));
+  position: relative;
+  padding: 128px 0 56px;   /* space so it doesn't hide under header */
+  margin: 0;
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  /* stronger, cleaner overlay for readability */
+  background: linear-gradient(180deg, rgba(0,0,0,.58) 0%, rgba(0,0,0,.38) 45%, rgba(0,0,0,.25) 100%);
+}
+.hero .hero-inner{
+  position: relative;      /* sit above overlay */
+  z-index: 1;
+  text-align: center;
+}
+.hero h1{
+  color:#fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,.55);
+}
+.hero p.lead{
+  color:#e9f4ef;
+  text-shadow: 0 1px 8px rgba(0,0,0,.45);
+}
 
+/* Sharper font rendering */
+html,body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
 .hero {
   position: relative;
   margin-top: 0; /* ensures hero starts right after header */
