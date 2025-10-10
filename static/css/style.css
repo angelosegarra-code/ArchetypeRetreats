@@ -1,6 +1,16 @@
 /* ====== GLOBAL STYLES ====== */
 /* ====== HEADER OVER HERO ====== */
 
+/* Header clarity + stacking */
+.site-header{
+  position: sticky;       /* stays at top */
+  top: 0;
+  z-index: 1000;          /* stays above hero */
+  background: rgba(16,32,28,0.95); /* richer, almost-black green */
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.site-header a{ color:#fff; }
 .site-header {
   position: absolute;
   top: 0;
