@@ -13,26 +13,24 @@
 </section>
 
 <section class="section">
-  <div class="card">
-    <h2>InnerCube</h2>
-    <p>Five symbols. One inner landscape. Discover the patterns behind how you create, love, and decide.</p>
-    <a href="{{ url_for('test_form') }}" class="btn mt-1">Start the Test →</a>
-  </div>
-</section>
+  <div class="grid">
+    <div class="card col-4">
+      <h2>InnerCube</h2>
+      <p>Five symbols. One inner landscape. Discover the patterns behind how you create, love, and decide.</p>
+      <a href="{{ url_for('test_form') }}" class="btn mt-1">Start the Test →</a>
+    </div>
 
-<section class="section">
-  <div class="card">
-    <h2>Retreats</h2>
-    <p>Quiet, art-filled days to reset your story. Small groups. Gentle structure. Real transformation.</p>
-    <a href="{{ url_for('retreats') }}" class="btn mt-1">Upcoming Dates →</a>
-  </div>
-</section>
+    <div class="card col-4">
+      <h2>Retreats</h2>
+      <p>Quiet, art-filled days to reset your story. Small groups. Gentle structure. Real transformation.</p>
+      <a href="{{ url_for('retreats') }}" class="btn mt-1">Upcoming Dates →</a>
+    </div>
 
-<section class="section">
-  <div class="card">
-    <h2>Books & Guides</h2>
-    <p><em>Your Story Is You</em> and <em>Painting to Poetry</em> — companions for a truer creative life.</p>
-    <a href="{{ url_for('purchase') }}" class="btn mt-1">Browse →</a>
+    <div class="card col-4">
+      <h2>Books & Guides</h2>
+      <p><em>Your Story Is You</em> and <em>Painting to Poetry</em> — companions for a truer creative life.</p>
+      <a href="{{ url_for('purchase') }}" class="btn mt-1">Browse →</a>
+    </div>
   </div>
 </section>
 
