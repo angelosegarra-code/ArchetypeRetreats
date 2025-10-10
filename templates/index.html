@@ -4,33 +4,30 @@
 
 <!-- HERO -->
 <section class="hero"
-         style="
-           background-image: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-                             url('{{ url_for('static', filename='images/hero-bali-golden.jpg') }}');
-           background-size: cover;
-           background-position: center;
-           padding: 140px 0 120px;
-           color: #fff;
-           text-align: center;">
+         style="background-image:
+                linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+                url('{{ url_for('static', filename='images/hero-rice.jpg') }}');">
   <div class="container">
     <h1 class="brand-title" style="margin:0 0 .5rem; font-size: 3rem;">Archetype Retreats</h1>
     <p style="margin:.25rem 0 .75rem; font-size:1.15rem; opacity:.95;">
       <em>Find your story. Shape your life.</em>
     </p>
-    <p style="margin:0 0 1.25rem; font-size:1.05rem; opacity:.9;">
+    <p style="margin:0; font-size:1.05rem; opacity:.9;">
       Quiet, art-filled days to reset your story in the heart of Bali.
     </p>
-    <div>
-      <a class="btn primary" href="{{ url_for('retreats') }}">Explore Retreats</a>
-      <a class="btn" href="{{ url_for('test_form') }}">Take the InnerCube Test</a>
-      <a class="btn" href="{{ url_for('shop') }}">Shop</a>
-    </div>
   </div>
+</section>
+
+<!-- BUTTON STRIP BELOW HERO -->
+<section class="cta-buttons">
+  <a class="btn primary" href="{{ url_for('test_form') }}">Take the InnerCube Test</a>
+  <a class="btn" href="{{ url_for('retreats') }}">Explore Retreats</a>
+  <a class="btn" href="{{ url_for('shop') }}">Shop</a>
 </section>
 
 <!-- THREE CARDS -->
 <section class="section">
-  <div class="container cards-3">
+  <div class="card-container">
     <div class="card">
       <h3>InnerCube</h3>
       <p>Five symbols. One inner landscape. Discover the patterns behind how you create, love, and decide.</p>
