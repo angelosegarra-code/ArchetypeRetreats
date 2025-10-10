@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
+<section class="hero" style="background-image: url('{{ url_for('static', filename='images/hero-bali-golden.jpg') }}');">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Find your story. Shape your life.</h1>
+    <p>Quiet, art-filled days to reset your story in the heart of Bali.</p>
+    <a href="{{ url_for('retreats') }}" class="btn">Explore Retreats</a>
+  </div>
+</section>
+
 <section class="section center">
   <h1>Find your story. Shape your life.</h1>
   <p class="muted">The InnerCube Test reveals your creative archetype. Our retreats and guides help you weave it into the everyday.</p>
