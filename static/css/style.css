@@ -33,7 +33,7 @@ a:hover {
 /* ====== HERO SECTION ====== */
 
 .hero {
-  background-image: url('../static/hero-ricefield.jpg'); /* update path if needed */
+  background-image: url('../static/hero-bali-golden.jpg'); /* update path if needed */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
