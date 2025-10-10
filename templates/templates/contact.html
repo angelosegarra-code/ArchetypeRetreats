@@ -1,31 +1,40 @@
 {% extends "base.html" %}
+
 {% block content %}
-<section class="page-section">
-  <h2>Contact & Inquiries</h2>
-  <p>
-    Thank you for visiting Archetype Retreats.  
-    If you’d like to learn more about the <strong>InnerCube Test</strong>, retreats, or creative collaborations,
-    please reach out using the form below or connect with us on social media.
-  </p>
+<section class="section">
+  <h2>Contact</h2>
+  <p>Questions about retreats, the InnerCube Test, or the books? I’d love to hear from you.</p>
 
-  <form action="mailto:angelo@painting2poetry.com" method="post" enctype="text/plain" class="contact-form">
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="name" required>
+  <div class="card" style="max-width:640px">
+    <form method="get" action="mailto:angelo@angelosegarra.com" enctype="text/plain">
+      <div class="grid2">
+        <label> Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label> Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+      </div>
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" required>
+      <label> Topic
+        <select name="topic">
+          <option>InnerCube Test</option>
+          <option>Retreats</option>
+          <option>Books</option>
+          <option>Other</option>
+        </select>
+      </label>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" placeholder="Tell us how you'd like to collaborate or join a retreat..." required></textarea>
+      <label> Message
+        <textarea name="message" rows="6" placeholder="Write your note…"></textarea>
+      </label>
 
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-
-  <p class="muted" style="margin-top: 20px;">
-    or reach us directly:<br>
-    ✉️ <strong>angelo@painting2poetry.com</strong><br>
-    💬 WeChat: <strong>Intinno</strong><br>
-    🌐 Instagram: <a href="https://instagram.com/segarra.angelo" target="_blank">@segarra.angelo</a>
-  </p>
+      <div class="row">
+        <button class="btn" type="submit">Send email</button>
+        <a class="btn ghost" href="mailto:angelo@angelosegarra.com">Open mail app</a>
+      </div>
+      <p class="tiny muted">For now, this opens your mail app. We’ll switch to on-site sending once SMTP is set.</p>
+    </form>
+  </div>
 </section>
 {% endblock %}
