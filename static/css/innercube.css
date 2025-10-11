@@ -274,3 +274,52 @@ html {
   color: #111;
   transform: translateY(-2px);
 }
+/* ================================
+   Modal styles
+   ================================ */
+body.modal-open { overflow: hidden; }
+
+.modal[hidden] { display: none !important; }
+.modal {
+  position: fixed; inset: 0; z-index: 1000;
+}
+
+.modal__backdrop {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(2px);
+}
+
+.modal__dialog {
+  position: relative;
+  width: min(680px, 92vw);
+  margin: 8vh auto;
+  background: #0f1524;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.45);
+  padding: 1.5rem 1.25rem 1.75rem;
+  color: var(--ink);
+}
+
+.modal__close {
+  position: absolute; right: .5rem; top: .4rem;
+  background: transparent; border: 0; color: var(--muted);
+  font-size: 1.8rem; line-height: 1; cursor: pointer;
+}
+
+.modal__dialog h2 { color: var(--accent); margin: .25rem 0  .75rem; }
+.modal__dialog .muted { color: var(--muted); line-height: 1.7; }
+
+.modal__list { text-align: left; margin: 1rem auto 1.25rem; max-width: 46ch; color: var(--muted); }
+.modal__list li { margin: .4rem 0; }
+
+.modal__form { margin-top: .75rem; }
+.modal__label { display:block; margin:.5rem 0 .35rem; color: var(--muted); }
+.modal__input {
+  width: 100%; border: 1px solid rgba(255,255,255,.12);
+  background: #0b1020; color: var(--ink);
+  border-radius: 8px; padding: .8rem .9rem; resize: vertical;
+}
+
+.modal__cta { margin-top: 1rem; display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; }
