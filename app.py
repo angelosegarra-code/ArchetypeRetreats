@@ -52,6 +52,9 @@ def submit():
         conn.execute('''INSERT INTO users (email,cube,ladder,horse,weather,flowers,archetype,purchase_type,pdf_path,timestamp)
                         VALUES (?,?,?,?,?,?,?,?,?,?)''',(email,data['cube'],data['ladder'],data['horse'],data['weather'],data['flowers'],archetype,'preview',pdf_path,ts))
     return render_template('result.html', archetype=archetype, pdf_path=pdf_path, email=email)
+@app.route('/innercube')
+def innercube():
+    return render_template('innercube.html')
 @app.route('/purchase')
 def purchase(): return render_template('purchase.html')
 @app.route('/download/<path:filename>')
