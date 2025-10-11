@@ -13,14 +13,14 @@
     <div class="hero-inner">
       <h1>The InnerCube Test</h1>
       <p class="lede">
-        A symbolic journey through space, form, and feeling.  
+        A symbolic journey through space, form, and feeling.<br>
         Discover your creative archetype and the story waiting to unfold.
       </p>
 
       <div class="cta-row">
-        <a href="/innercube/start" class="btn primary">Take the Test</a>
-        <a href="/innercube/about" class="btn ghost">Learn More</a>
-        <a href="/contact" class="btn ghost">Ask a Question</a>
+        <a href="#take-test" class="btn primary" id="btn-take-test">Take the Test</a>
+        <a href="#take-test" class="btn ghost">Learn More</a>
+        <a href="#take-test" class="btn ghost">Ask a Question</a>
       </div>
     </div>
   </section>
@@ -30,18 +30,72 @@
     <div class="container">
       <h2>About the InnerCube</h2>
       <p>
-        The InnerCube Test reveals your creative alignment through a series of visual and symbolic choices.
-        Each response reflects how you see, sense, and shape the world around you.
+        The InnerCube Test reveals your creative alignment through a series of visual and symbolic reflections.
+        Each response shows how you perceive and shape the world around you.
       </p>
       <ol class="steps">
         <li><strong>Step 1:</strong> Visualize a cube in open space.</li>
-        <li><strong>Step 2:</strong> Notice size, color, texture, distance.</li>
-        <li><strong>Step 3:</strong> Add the ladder, horse, flowers, and storm.</li>
+        <li><strong>Step 2:</strong> Notice size, color, texture, and distance.</li>
+        <li><strong>Step 3:</strong> Add the ladder, horse, flowers, and weather.</li>
       </ol>
+
       <div class="cta-center">
-        <a href="/innercube/start" class="btn primary">Begin (3 minutes)</a>
+        <a href="#take-test" class="btn primary" id="btn-begin">Begin (3 minutes)</a>
       </div>
     </div>
   </section>
+
+  <!-- TEST EMBED -->
+  <section id="take-test" class="innercube-embed">
+    <div class="container" style="max-width:1000px;margin:0 auto;text-align:center;">
+      <h2>Start the InnerCube Test</h2>
+      <p class="lede">Answer a few symbolic prompts. Takes about 3 minutes.</p>
+
+      <div id="tally-embed" data-src="https://tally.so/embed/w2YBZ9">
+        <div style="height:40px"></div>
+        <noscript>Please enable JavaScript to load the test.</noscript>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    function loadTally() {
+      if (window.tallyLoaded) return;
+      window.tallyLoaded = true;
+      const holder = document.getElementById('tally-embed');
+      const src = holder.dataset.src;
+      holder.innerHTML = `
+        <div class="iframe-wrapper">
+          <iframe data-tally-src="${src}" width="100%" height="720" frameborder="0" marginheight="0"
+            marginwidth="0" title="InnerCube Test"></iframe>
+        </div>`;
+      const s = document.createElement('script');
+      s.src = 'https://tally.so/widgets/embed.js';
+      s.async = true;
+      document.body.appendChild(s);
+    }
+
+    // Load on click
+    document.getElementById('btn-take-test').addEventListener('click', loadTally);
+    document.getElementById('btn-begin').addEventListener('click', loadTally);
+
+    // Load when section is visible
+    const target = document.getElementById('take-test');
+    if ('IntersectionObserver' in window && target) {
+      const obs = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) loadTally();
+      }, { threshold: 0.1 });
+      obs.observe(target);
+    }
+  </script>
 </main>
 {% endblock %}
