@@ -323,3 +323,30 @@ body.modal-open { overflow: hidden; }
 }
 
 .modal__cta { margin-top: 1rem; display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; }
+/* ================================
+   Modal fade-in animation
+   ================================ */
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal__dialog {
+  animation: modalFadeIn 0.3s ease forwards;
+  opacity: 0; /* start hidden until JS opens it */
+}
+
+.modal:not([hidden]) .modal__dialog {
+  opacity: 1;
+}
+
+.modal__backdrop {
+  animation: modalFadeIn 0.4s ease both;
+}
