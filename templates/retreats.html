@@ -1,19 +1,30 @@
 {% extends "base.html" %}
-{% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}">
-{% endblock %}
+
 {% block content %}
-<section class="hero" style="background-image: url('{{ url_for('static', filename='images/hero-retreats-rice.jpg') }}');">
-  <div class="hero-overlay">
+<section class="hero-retreat" style="background-image: url('{{ url_for('static', filename='images/hero-retreats-rice.jpg') }}');">
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
     <h1>Retreat into the Creative Heart of Bali</h1>
-    <p>Small, art-filled groups in tranquil rice fields. Real transformation begins in stillness — rediscover your story here.</p>
+    <p class="subtitle">
+      Small, art-filled gatherings in tranquil rice fields. Real transformation begins in stillness — rediscover your story here.
+    </p>
+  </div>
+
+  <!-- Bottom-centered 3 CTAs -->
+  <div class="cta-bar">
+    <a href="/retreats/quiet-reset" class="btn primary">Quiet Reset · 3 days</a>
+    <a href="/retreats/deepen" class="btn ghost">Deepen · 5 days</a>
+    <a href="/retreats/immersion" class="btn ghost">Immersion · 7 days</a>
   </div>
 </section>
 
 <section class="retreat-details">
   <div class="container centered">
-    <h2>Quiet Reset (3 Days)</h2>
-    <p>Slow mornings, silent walks, and gentle prompts. A soft reset for your creative compass.</p>
+    <h2>Quiet Reset (3 days)</h2>
+    <p>
+      Slow mornings, silent walks, and gentle prompts. A soft reset for your creative compass — rediscover your rhythm in the heart of Bali’s nature.
+    </p>
 
     <ul>
       <li>Small group (6–8)</li>
@@ -22,8 +33,8 @@
     </ul>
 
     <div class="buttons-center">
-      <a href="#" class="btn primary">Upcoming Dates</a>
-      <a href="#" class="btn secondary">Join a Retreat</a>
+      <a href="/retreats/dates" class="btn primary">Upcoming Dates</a>
+      <a href="/retreats/apply" class="btn ghost">Join a Retreat</a>
     </div>
   </div>
 </section>
