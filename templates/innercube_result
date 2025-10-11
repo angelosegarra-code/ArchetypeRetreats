@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/innercube.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="page-innercube-result">
+  <section class="hero-result">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1>Thank You for Taking the InnerCube Test ✨</h1>
+      <p class="lede">
+        Your symbolic journey has begun. We’ve sent your personalized insights to the email you provided.
+      </p>
+      <p class="email-display">📩 <span id="user-email"></span></p>
+
+      <div class="cta-row">
+        <a href="https://your-gumroad-link.com/3page-preview" class="btn primary">
+          Get Your 3-Page Personalized Preview
+        </a>
+        <a href="https://your-gumroad-link.com/book-bundle" class="btn ghost">
+          Get the Full Guidebook + Preview Bundle
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="symbolic-note">
+    <h2>Your Next Step</h2>
+    <p>
+      Each symbol you imagined reflects a part of your inner world. Your results email will reveal your archetype and
+      how it shapes your creative path. Use the guidebook to explore the full narrative behind your symbols and start
+      rewriting your story.
+    </p>
+  </section>
+</main>
+
+<script>
+  // Extract email from URL query string
+  const params = new URLSearchParams(window.location.search);
+  const email = params.get('email');
+  if (email) {
+    document.getElementById('user-email').textContent = email;
+  } else {
+    document.getElementById('user-email').textContent = "No email found.";
+  }
+</script>
+{% endblock %}
