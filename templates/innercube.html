@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/innercube.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="page-innercube">
+  <!-- HERO -->
+  <section class="hero-innercube" style="background-image: url('{{ url_for('static', filename='images/innercube-sunset.jpg') }}');">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+      <h1>The InnerCube Test</h1>
+      <p class="lede">
+        A symbolic journey through space, form, and feeling.  
+        Discover your creative archetype and the story waiting to unfold.
+      </p>
+
+      <div class="cta-row">
+        <a href="/innercube/start" class="btn primary">Take the Test</a>
+        <a href="/innercube/about" class="btn ghost">Learn More</a>
+        <a href="/contact" class="btn ghost">Ask a Question</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <section class="innercube-info">
+    <div class="container">
+      <h2>About the InnerCube</h2>
+      <p>
+        The InnerCube Test reveals your creative alignment through a series of visual and symbolic choices.
+        Each response reflects how you see, sense, and shape the world around you.
+      </p>
+      <ol class="steps">
+        <li><strong>Step 1:</strong> Visualize a cube in open space.</li>
+        <li><strong>Step 2:</strong> Notice size, color, texture, distance.</li>
+        <li><strong>Step 3:</strong> Add the ladder, horse, flowers, and storm.</li>
+      </ol>
+      <div class="cta-center">
+        <a href="/innercube/start" class="btn primary">Begin (3 minutes)</a>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
