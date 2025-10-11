@@ -44,6 +44,9 @@
   <div class="tiny muted">© 2025 Archetype Retreats · All rights reserved</div>
 </footer>
 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% block page_css %}{% endblock %}
+
 {% block scripts %}{% endblock %}
 </body>
 </html>
