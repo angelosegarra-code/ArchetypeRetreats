@@ -1,5 +1,7 @@
 {% extends "base.html" %}
-
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}">
+{% endblock %}
 {% block content %}
 <section class="hero" style="background-image: url('{{ url_for('static', filename='images/hero-retreats-rice.jpg') }}');">
   <div class="hero-overlay">
