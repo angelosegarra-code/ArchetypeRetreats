@@ -1,0 +1,138 @@
+.page-retreats {
+  --ink:#eef2f8;
+  --muted:#b7c2d8;
+  --accent:#9a7ff0;
+  --accent2:#5cc6ff;
+  --bg-dark:#0b0f1b;
+  font-family: "EB Garamond", serif;
+}
+
+/* HERO SECTION */
+.page-retreats .hero-retreat {
+  position: relative;
+  min-height: 88vh;
+  background-size: cover;
+  background-position: center;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  filter: brightness(1.08) contrast(1.05) saturate(1.1);
+}
+
+/* Soft transparent overlay (just enough for readability) */
+.page-retreats .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+              rgba(10, 12, 22, 0.30) 0%,
+              rgba(10, 12, 22, 0.35) 50%,
+              rgba(10, 12, 22, 0.40) 100%);
+  pointer-events: none;
+}
+
+/* Text block */
+.page-retreats .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  padding: 2rem;
+}
+
+.page-retreats .hero-content h1 {
+  margin: 0 0 .4em;
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+.page-retreats .subtitle {
+  font-size: 1.1rem;
+  color: #e0ebf7;
+  margin-bottom: 2em;
+  line-height: 1.6;
+}
+
+/* CTA BAR with three buttons centered at bottom */
+.page-retreats .cta-bar {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 12px;
+}
+
+.page-retreats .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease, opacity 0.25s ease;
+}
+
+.page-retreats .btn.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #0b1020;
+}
+
+.page-retreats .btn.ghost {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(21, 26, 44, 0.28);
+  backdrop-filter: blur(5px);
+}
+
+.page-retreats .btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* RETREAT DETAILS */
+.page-retreats .retreat-details {
+  padding: 5rem 1.5rem;
+  background: #f9fafc;
+  color: #23282e;
+  text-align: center;
+}
+
+.page-retreats .retreat-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.page-retreats .retreat-details p {
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  color: #444b55;
+}
+
+.page-retreats .retreat-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+.page-retreats .retreat-details li {
+  margin: 0.6rem 0;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.page-retreats .retreat-details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent2);
+  font-size: 1.2rem;
+}
