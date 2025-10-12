@@ -39,7 +39,7 @@ init_db(); start_scheduler(DB_PATH)
 @app.route('/')
 def home(): return render_template('index.html')
 @app.route('/test')
-def test_form(): return render_template('test_form.html')
+def test_form(): return render_template('innercube.html')
 @app.route('/submit', methods=['POST'])
 def submit():
     email=request.form.get('email','').strip().lower()
