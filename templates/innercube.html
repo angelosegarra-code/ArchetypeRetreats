@@ -46,18 +46,36 @@
   </section>
 
   <!-- TEST EMBED -->
-  <section id="take-test" class="innercube-embed">
-    <div class="container" style="max-width:1000px;margin:0 auto;text-align:center;">
-      <h2>Start the InnerCube Test</h2>
-      <p class="lede">Answer a few symbolic prompts. Takes about 3 minutes.</p>
+<section id="innercube-test-section" class="innercube-test-section" style="padding:60px 0;">
+  <div class="container" style="max-width:1000px;margin:0 auto;text-align:center;">
+    <h2>Start the InnerCube Test</h2>
+    <p class="lede">Answer a few symbolic prompts. Takes about 3 minutes.</p>
 
-      <div id="tally-embed" data-src="https://tally.so/embed/w2YBZ9">
-        <div style="height:40px"></div>
-        <noscript>Please enable JavaScript to load the test.</noscript>
-      </div>
-    </div>
-  </section>
+    <!-- Tally embed -->
+    <!-- Tally embed -->
+<iframe
+  data-tally-src="https://tally.so/r/w2YBZ9?transparentBackground=1&hideTitle=1"
+  width="100%"
+  height="900"
+  frameborder="0"
+  marginheight="0"
+  marginwidth="0"
+  title="InnerCube Archetype Test">
+</iframe>
 
+<script>
+  (function () {
+    var d = document, src = "https://tally.so/widgets/embed.js";
+    if (!d.querySelector('script[src="' + src + '"]')) {
+      var s = d.createElement("script");
+      s.src = src;
+      s.onload = function () { Tally.loadEmbeds(); };
+      d.body.appendChild(s);
+    } else {
+      Tally.loadEmbeds();
+    }
+  })();
+</script>
   <script>
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(a => {
