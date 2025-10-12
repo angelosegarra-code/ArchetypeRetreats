@@ -51,8 +51,7 @@
     <h2>Start the InnerCube Test</h2>
     <p class="lede">Answer a few symbolic prompts. Takes about 3 minutes.</p>
 
-    <!-- Tally embed -->
-    <!-- Tally embed -->
+   <!-- Tally embed -->
 <iframe
   data-tally-src="https://tally.so/r/w2YBZ9?transparentBackground=1&hideTitle=1"
   width="100%"
@@ -63,6 +62,19 @@
   title="InnerCube Archetype Test">
 </iframe>
 
+<script>
+  (function () {
+    var d = document, src = "https://tally.so/widgets/embed.js";
+    if (!d.querySelector('script[src="' + src + '"]')) {
+      var s = d.createElement("script");
+      s.src = src;
+      s.onload = function () { Tally.loadEmbeds(); };
+      d.body.appendChild(s);
+    } else {
+      Tally.loadEmbeds();
+    }
+  })();
+</script>
 <script>
   (function () {
     var d = document, src = "https://tally.so/widgets/embed.js";
@@ -192,7 +204,7 @@
   }
   document.getElementById('btn-take-test')?.addEventListener('click', loadTally);
   document.getElementById('btn-begin')?.addEventListener('click', loadTally);
-  const target = document.getElementById('take-test');
+  const target = document.getElementById('innercube-test-section');
   if ('IntersectionObserver' in window && target) {
     new IntersectionObserver(es => { if (es[0].isIntersecting) loadTally(); }, {threshold:0.1}).observe(target);
   }
@@ -200,39 +212,14 @@
   document.getElementById('about-begin')?.addEventListener('click', () => {
     closeModal(aboutModal); loadTally();
   });
-  // ✅ ADD THIS NEW SECTION BELOW
-async function onInnerCubeSubmit(result) {
-  const archetype = result.archetype;
-  localStorage.setItem('innercube_archetype', archetype);
-  if (result.email) localStorage.setItem('innercube_email', result.email);
-  if (result.name)  localStorage.setItem('innercube_name',  result.name);
-
-  const makeWebhook = "https://hook.integromat.com/REPLACE_ME";
-  try {
-    await fetch(makeWebhook, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        source: "innercube-web",
-        timestamp: new Date().toISOString(),
-        name: result.name || "",
-        email: result.email || "",
-        archetype,
-        scoreMap: result.scoreMap || {},
-        utm: Object.fromEntries(new URLSearchParams(location.search).entries()),
-        result_url: `${location.origin}/innercube_result.html?archetype=${encodeURIComponent(archetype)}`
-      })
-    });
-  } catch (e) {
-    console.warn("Make webhook failed, proceeding to result page anyway.", e);
-  }
-
-  window.location.href = `/innercube_result.html?archetype=${encodeURIComponent(archetype)}`;
-}
-// ✅ END NEW SECTION
+<script>
+  // Smooth-scroll to the test section when arriving with a hash
+  window.addEventListener('load', () => {
+    const id = location.hash && location.hash.slice(1);
+    const el = id && document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  });
 </script>
-</main>
-{% endblock %}
-</script>
+
 </main>
 {% endblock %}
