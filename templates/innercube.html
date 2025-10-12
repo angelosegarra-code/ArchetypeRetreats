@@ -182,6 +182,39 @@
   document.getElementById('about-begin')?.addEventListener('click', () => {
     closeModal(aboutModal); loadTally();
   });
+  // ✅ ADD THIS NEW SECTION BELOW
+async function onInnerCubeSubmit(result) {
+  const archetype = result.archetype;
+  localStorage.setItem('innercube_archetype', archetype);
+  if (result.email) localStorage.setItem('innercube_email', result.email);
+  if (result.name)  localStorage.setItem('innercube_name',  result.name);
+
+  const makeWebhook = "https://hook.integromat.com/REPLACE_ME";
+  try {
+    await fetch(makeWebhook, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        source: "innercube-web",
+        timestamp: new Date().toISOString(),
+        name: result.name || "",
+        email: result.email || "",
+        archetype,
+        scoreMap: result.scoreMap || {},
+        utm: Object.fromEntries(new URLSearchParams(location.search).entries()),
+        result_url: `${location.origin}/innercube_result.html?archetype=${encodeURIComponent(archetype)}`
+      })
+    });
+  } catch (e) {
+    console.warn("Make webhook failed, proceeding to result page anyway.", e);
+  }
+
+  window.location.href = `/innercube_result.html?archetype=${encodeURIComponent(archetype)}`;
+}
+// ✅ END NEW SECTION
+</script>
+</main>
+{% endblock %}
 </script>
 </main>
 {% endblock %}
