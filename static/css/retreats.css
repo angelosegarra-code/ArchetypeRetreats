@@ -1,169 +1,114 @@
-/* ===========================
-   Retreats Page Styling (scoped)
-   =========================== */
-
-.page-retreats {
-  --ink: #eef2f8;
-  --muted: #b7c2d8;
-  --accent: #9a7ff0;
-  --accent2: #5cc6ff;
-  --bg-dark: #0b0f1b;
-  font-family: "EB Garamond", serif;
-}
-
-/* ===== HERO SECTION ===== */
-.page-retreats .hero-retreat {
+/* === HERO SECTION === */
+.hero-retreat {
   position: relative;
-  min-height: 88vh;
+  background-image: url('../images/hero-bali-villa.jpg');
   background-size: cover;
   background-position: center;
-  color: var(--ink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-repeat: no-repeat;
+  color: white;
   text-align: center;
-  overflow: hidden;
-
-  /* gentle photo punch without killing highlights */
-  filter: brightness(1.08) contrast(1.05) saturate(1.1);
+  padding: 180px 0;
 }
 
-/* lighter transparent overlay so photo stays readable but visible */
-.page-retreats .hero-overlay {
+.hero-overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 12, 22, 0.30) 0%,
-    rgba(10, 12, 22, 0.35) 50%,
-    rgba(10, 12, 22, 0.40) 100%
-  );
-  pointer-events: none;
-}
-
-/* hero content */
-.page-retreats .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 760px;
-  padding: 2rem;
-}
-.page-retreats .hero-content h1 {
-  margin: 0 0 .4em;
-  font-size: clamp(2rem, 4.2vw, 3.2rem);
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
-  color: #ffffff;
-}
-.page-retreats .subtitle {
-  font-size: 1.12rem;
-  color: #e0ebf7;
-  margin-bottom: 2em;
-  line-height: 1.6;
-}
-
-/* ===== BOTTOM CTA BAR (3 buttons centered) ===== */
-.page-retreats .cta-bar {
-  position: absolute;
-  left: 50%;
-  bottom: 24px;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0 12px;
-}
-.page-retreats .btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.15s ease, opacity 0.25s ease;
-}
-.page-retreats .btn.primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color: #0b1020;
-}
-.page-retreats .btn.ghost {
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(21, 26, 44, 0.28);
-  backdrop-filter: blur(5px);
-}
-.page-retreats .btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-/* ===== RETREAT DETAILS SECTION ===== */
-.page-retreats .retreat-details {
-  padding: 5rem 1.5rem;
-  background: #f9fafc;
-  color: #23282e;
-  text-align: center;
-}
-.page-retreats .retreat-details h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-.page-retreats .retreat-details p {
-  font-size: 1.05rem;
-  max-width: 640px;
-  margin: 0 auto 2rem;
-  color: #444b55;
-}
-.page-retreats .retreat-details ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto 2rem;
-  max-width: 400px;
-  text-align: left;
-}
-.page-retreats .retreat-details li {
-  margin: 0.6rem 0;
-  padding-left: 1.4rem;
-  position: relative;
-}
-.page-retreats .retreat-details li::before {
-  content: "•";
-  position: absolute;
+  top: 0;
   left: 0;
-  color: var(--accent2);
-  font-size: 1.2rem;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35); /* soft dark overlay for readability */
 }
 
-/* optional inline button group used inside details */
-.page-retreats .buttons-center {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* ===== ANIMATIONS (soft fade-in) ===== */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+.subtitle {
+  font-size: 1.2em;
+  margin-top: 0.8em;
 }
-.page-retreats .hero-retreat h1,
-.page-retreats .hero-retreat p {
+
+/* === BUTTONS === */
+.btn.primary {
+  display: inline-block;
+  background: #f6a623; /* gold tone */
+  color: white;
+  padding: 12px 28px;
+  border-radius: 4px;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn.primary:hover {
+  background: #e39500;
+}
+
+/* optional ghost button (if reused later) */
+.btn.ghost {
+  display: inline-block;
+  background: transparent;
+  color: #f6a623;
+  border: 2px solid #f6a623;
+  padding: 12px 28px;
+  border-radius: 4px;
+  margin-top: 12px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn.ghost:hover {
+  background: #f6a623;
+  color: white;
+}
+
+/* === CONTENT SECTIONS === */
+.retreats-upcoming, .retreat-details {
+  padding: 100px 0;
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === REVEAL ANIMATION === */
+.reveal {
   opacity: 0;
-  animation: fadeInUp 1.2s ease forwards;
-}
-.page-retreats .hero-retreat p { animation-delay: 0.4s; }
-.page-retreats .cta-bar a {
-  opacity: 0;
-  animation: fadeInUp 1.2s ease forwards;
-  animation-delay: 0.8s;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px){
-  .page-retreats .cta-bar { bottom: 16px; gap: 10px; }
-  .page-retreats .btn { width: 100%; text-align: center; }
-  .page-retreats .hero-content h1 { font-size: 2rem; }
-  .page-retreats .hero-content p { font-size: 1rem; }
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.delay-1 { transition-delay: 120ms; }
+.reveal.delay-2 { transition-delay: 240ms; }
+.reveal.delay-3 { transition-delay: 360ms; }
+
+/* === MOBILE OPTIMIZATION === */
+@media (max-width: 768px) {
+  .hero-retreat {
+    padding: 140px 20px;
+  }
+  .hero-inner {
+    max-width: 90%;
+  }
+  .subtitle {
+    font-size: 1.05em;
+  }
+  .btn.primary, .btn.ghost {
+    display: block;
+    margin: 16px auto;
+    width: fit-content;
+  }
 }
