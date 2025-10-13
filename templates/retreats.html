@@ -1,64 +1,44 @@
 {% extends "base.html" %}
 
 {% block content %}
+<main class="page-retreats">
 
-<!-- HERO SECTION -->
-<section class="hero-retreat">
-  <img src="{{ url_for('static', filename='images/hero-bali-villa-clean.jpg') }}" 
-       alt="Bali Retreat Villa" class="hero-figure__img">
-  <div class="hero-content">
-    <h1>Retreat into the Creative Heart of Bali</h1>
-    <p>Small, art-filled gatherings in tranquil rice fields. Real transformation begins in stillness — rediscover your story here.</p>
-    <div class="cta-bar">
-      <a href="#calendly" class="btn primary">Schedule a Discovery Call</a>
-      <a href="#retreat-form" class="btn ghost">Join a Retreat</a>
+  <!-- Hero Section -->
+  <section class="hero-retreat">
+    <figure class="hero-figure">
+      <img src="{{ url_for('static', filename='images/hero-bali-villa-clean.jpg') }}" 
+           alt="Creative Retreat in Bali" class="hero-figure__img">
+    </figure>
+
+    <div class="hero-content">
+      <h1>Retreat into the Creative Heart of Bali</h1>
+      <p>Small, art-filled groups in tranquil rice fields. Real transformation begins in stillness — rediscover your story here.</p>
+
+      <div class="cta-bar">
+        <a href="#retreat-calendly" class="btn primary">Schedule a Discovery Call</a>
+        <a href="#retreat-form" class="btn ghost">Join a Retreat</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CALENDLY SECTION -->
-<section id="calendly" class="retreat-calendly container">
-  <h2>Schedule a Discovery Call</h2>
-  <p>Schedule a free 30-minute discovery call to explore your creative journey and find the retreat that’s right for you.</p>
-  <div class="calendly-inline-widget"
-       data-url="https://calendly.com/intino/innercube-retreat-discovery-call"
-       style="min-width:320px;height:630px;">
-  </div>
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-</section>
+  <!-- Calendly Embed Section -->
+  <section id="retreat-calendly" class="retreat-calendly">
+    <h2>Schedule a Discovery Call</h2>
+    <p>Book a 30-minute call to explore which retreat aligns best with your creative path.</p>
+    <div style="max-width:700px; margin:0 auto;">
+      <iframe src="https://calendly.com/intino/innercube-retreat-discovery" 
+              width="100%" height="700" frameborder="0"></iframe>
+    </div>
+  </section>
 
-<!-- RETREAT FORM SECTION -->
-<section id="retreat-form" class="retreat-form container">
-  <h2>Join a Retreat</h2>
-  <p>Reserve your spot for an upcoming Archetype Retreat in Bali. Complete this short form to share your intentions, and we’ll be in touch with details.</p>
+  <!-- Tally Form Section -->
+  <section id="retreat-form" class="retreat-form">
+    <h2>Join an Archetype Retreat in Bali</h2>
+    <p>Please take a moment to share your intentions — this helps us match you with the right experience.</p>
+    <iframe data-tally-src="https://tally.so/embed/3yWvLlB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+            width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" title="Retreat Signup Form"></iframe>
+    <script async src="https://tally.so/widgets/embed.js"></script>
+  </section>
 
-  <!-- Tally form embed -->
-  <iframe
-    data-tally-src="https://tally.so/embed/3yVWlB7?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-    width="100%"
-    height="800"
-    frameborder="0"
-    marginheight="0"
-    marginwidth="0"
-    title="Join a Retreat"></iframe>
-
-  <script async src="https://tally.so/widgets/embed.js"></script>
-</section>
-
-{% endblock %}
-<!-- SMOOTH SCROLL -->
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId.length > 1) {
-        e.preventDefault();
-        const target = document.querySelector(targetId);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }
-    });
-  });
-</script>
+</main>
 {% endblock %}
