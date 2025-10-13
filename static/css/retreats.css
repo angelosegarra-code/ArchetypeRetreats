@@ -1,61 +1,75 @@
-/* === HERO SECTION (NO OVERLAY VERSION) === */
-.hero-retreat-nooverlay {
-  text-align: center;
-  background: #fff;
+/* --- HERO (image element, not background) --- */
+.hero-figure {
+  margin: 0;
 }
 
-.hero-banner {
+.hero-figure__wrap {
+  position: relative;
+  display: block;
+  margin: 0;
+  line-height: 0; /* removes gaps around inline images */
+}
+
+.hero-figure__img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
 }
 
-.hero-text {
-  padding: 60px 20px 80px;
-  color: #333;
+/* soft top+bottom gradient so white text reads well */
+.hero-figure__wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 35%, rgba(0,0,0,0.35) 65%, rgba(0,0,0,0.7) 100%);
+  pointer-events: none;
 }
 
-.hero-text h1 {
-  margin-bottom: 16px;
-  font-size: 2rem;
-  color: #111;
+.hero-figure__caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 24px;
+  gap: 12px;
 }
 
-.hero-text .subtitle {
-  font-size: 1.15rem;
-  color: #444;
+.hero-figure__caption h1 {
+  font-size: clamp(28px, 5vw, 54px);
+  line-height: 1.1;
+  margin: 0 0 6px 0;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 
-/* maintain your reveal animation */
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+.hero-figure__caption .subtitle {
+  max-width: 920px;
+  font-size: clamp(16px, 2.2vw, 22px);
+  line-height: 1.5;
+  margin: 0 0 10px 0;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
 }
 
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
+.hero-btn {
+  margin-top: 6px;
 }
 
-/* === BUTTONS === */
+/* existing button styles you already use */
 .btn.primary {
   display: inline-block;
-  background: #f6a623; /* gold tone */
-  color: white;
+  background: #f6a623;
+  color: #fff;
   padding: 12px 28px;
   border-radius: 4px;
-  margin-top: 20px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: background .25s ease;
 }
+.btn.primary:hover { background:#e39500; }
 
-.btn.primary:hover {
-  background: #e39500;
-}
-
-/* optional ghost button (if reused later) */
 .btn.ghost {
   display: inline-block;
   background: transparent;
@@ -63,60 +77,12 @@
   border: 2px solid #f6a623;
   padding: 12px 28px;
   border-radius: 4px;
-  margin-top: 12px;
   text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
 }
+.btn.ghost:hover { background:#f6a623; color:#fff; }
 
-.btn.ghost:hover {
-  background: #f6a623;
-  color: white;
-}
-
-/* === CONTENT SECTIONS === */
-.retreats-upcoming, .retreat-details {
-  padding: 100px 0;
-  text-align: center;
-  color: #333;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* === REVEAL ANIMATION === */
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-  will-change: opacity, transform;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal.delay-1 { transition-delay: 120ms; }
-.reveal.delay-2 { transition-delay: 240ms; }
-.reveal.delay-3 { transition-delay: 360ms; }
-
-/* === MOBILE OPTIMIZATION === */
+/* mobile tweak so caption breathes */
 @media (max-width: 768px) {
-  .hero-retreat {
-    padding: 140px 20px;
-  }
-  .hero-inner {
-    max-width: 90%;
-  }
-  .subtitle {
-    font-size: 1.05em;
-  }
-  .btn.primary, .btn.ghost {
-    display: block;
-    margin: 16px auto;
-    width: fit-content;
-  }
+  .hero-figure__caption { padding: 0 16px; }
 }
