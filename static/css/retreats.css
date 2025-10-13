@@ -1,34 +1,42 @@
-/* === HERO SECTION === */
-.hero-retreat {
-  position: relative;
-  background-image: url('../images/hero-bali-villa.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
+/* === HERO SECTION (NO OVERLAY VERSION) === */
+.hero-retreat-nooverlay {
   text-align: center;
-  padding: 180px 0;
+  background: #fff;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.35); /* soft dark overlay for readability */
+.hero-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
-.hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
+.hero-text {
+  padding: 60px 20px 80px;
+  color: #333;
 }
 
-.subtitle {
-  font-size: 1.2em;
-  margin-top: 0.8em;
+.hero-text h1 {
+  margin-bottom: 16px;
+  font-size: 2rem;
+  color: #111;
+}
+
+.hero-text .subtitle {
+  font-size: 1.15rem;
+  color: #444;
+}
+
+/* maintain your reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* === BUTTONS === */
