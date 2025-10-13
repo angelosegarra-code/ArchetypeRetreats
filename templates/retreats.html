@@ -1,82 +1,64 @@
 {% extends "base.html" %}
 
-{% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}">
-{% endblock %}
-
 {% block content %}
-<!-- HERO SECTION (IMAGE ABOVE TEXT) -->
-<section class="hero-retreat-nooverlay">
-  <img src="{{ url_for('static', filename='images/hero-bali-villa-clean.jpg') }}"
-       alt="Bali Retreat Villa"
-       class="hero-banner">
 
-  <div class="hero-text container">
-    <h1 class="reveal">Retreat into the Creative Heart of Bali</h1>
-    <p class="subtitle reveal delay-1">
-      Schedule a free 30-minute discovery call to explore your InnerCube type,
-      your creative journey, and how an Archetype Retreat can support your transformation.
-    </p>
-
-    <a href="#" class="btn primary reveal delay-2"
-       onclick="Calendly.initPopupWidget({
-         url: 'https://calendly.com/YOUR-CALENDLY-USERNAME/innercube-discovery?background_color=ffffff&text_color=333333&primary_color=f6a623'
-       });return false;">
-       Schedule a Discovery Call
-    </a>
+<!-- HERO SECTION -->
+<section class="hero-retreat">
+  <img src="{{ url_for('static', filename='images/hero-bali-villa-clean.jpg') }}" 
+       alt="Bali Retreat Villa" class="hero-figure__img">
+  <div class="hero-content">
+    <h1>Retreat into the Creative Heart of Bali</h1>
+    <p>Small, art-filled gatherings in tranquil rice fields. Real transformation begins in stillness — rediscover your story here.</p>
+    <div class="cta-bar">
+      <a href="#calendly" class="btn primary">Schedule a Discovery Call</a>
+      <a href="#retreat-form" class="btn ghost">Join a Retreat</a>
+    </div>
   </div>
 </section>
 
-<!-- UPCOMING SECTION -->
-<section id="upcoming" class="retreats-upcoming container">
-  <h2 class="reveal">Upcoming Retreats</h2>
-  <p class="reveal delay-1">Quiet Reset (3 days) · Deepen (5 days) · Immersion (7 days)</p>
-  <p class="reveal delay-2">
-    Slow mornings, silent walks, and guided creative prompts — a soft reset for
-    your creative compass in the heart of Bali’s nature.
-  </p>
+<!-- CALENDLY SECTION -->
+<section id="calendly" class="retreat-calendly container">
+  <h2>Schedule a Discovery Call</h2>
+  <p>Schedule a free 30-minute discovery call to explore your creative journey and find the retreat that’s right for you.</p>
+  <div class="calendly-inline-widget"
+       data-url="https://calendly.com/intino/innercube-retreat-discovery-call"
+       style="min-width:320px;height:630px;">
+  </div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </section>
 
-<!-- DETAILS SECTION -->
-<section class="retreat-details container reveal delay-3">
-  <h3>Quiet Reset (3 days)</h3>
-  <ul>
-    <li>Small group (6–8 participants)</li>
-    <li>Guided journaling & sketching</li>
-    <li>Evening story circles & reflection</li>
-  </ul>
+<!-- RETREAT FORM SECTION -->
+<section id="retreat-form" class="retreat-form container">
+  <h2>Join a Retreat</h2>
+  <p>Reserve your spot for an upcoming Archetype Retreat in Bali. Complete this short form to share your intentions, and we’ll be in touch with details.</p>
+
+  <!-- Tally form embed -->
+  <iframe
+    data-tally-src="https://tally.so/embed/3yVWlB7?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+    width="100%"
+    height="800"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0"
+    title="Join a Retreat"></iframe>
+
+  <script async src="https://tally.so/widgets/embed.js"></script>
 </section>
 
-<!-- Calendly Script -->
-<script type="text/javascript"
-        src="https://assets.calendly.com/assets/external/widget.js"
-        async></script>
-
-<!-- Smooth Scroll + Reveal Script -->
+{% endblock %}
+<!-- SMOOTH SCROLL -->
 <script>
-  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId.length > 1) {
         e.preventDefault();
         const target = document.querySelector(targetId);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     });
   });
-
-  // Fade-in reveal
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
-
 {% endblock %}
