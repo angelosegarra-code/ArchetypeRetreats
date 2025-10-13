@@ -5,21 +5,22 @@
 {% endblock %}
 
 {% block content %}
-<!-- HERO SECTION -->
-<section class="hero-retreat">
-  <div class="hero-overlay"></div>
-  <div class="hero-inner container">
-    <h1 class="reveal">Retreat into the Creative Heart of Bali</h1>
+<!-- HERO SECTION (IMAGE ABOVE TEXT) -->
+<section class="hero-retreat-nooverlay">
+  <img src="{{ url_for('static', filename='images/hero-bali-villa-clean.jpg') }}"
+       alt="Bali Retreat Villa"
+       class="hero-banner">
 
+  <div class="hero-text container">
+    <h1 class="reveal">Retreat into the Creative Heart of Bali</h1>
     <p class="subtitle reveal delay-1">
       Schedule a free 30-minute discovery call to explore your InnerCube type,
       your creative journey, and how an Archetype Retreat can support your transformation.
     </p>
 
-    <!-- Unified Discovery Call Button -->
     <a href="#" class="btn primary reveal delay-2"
        onclick="Calendly.initPopupWidget({
-         url: 'https://calendly.com/intinno/innercube-discovery?background_color=ffffff&text_color=333333&primary_color=f6a623'
+         url: 'https://calendly.com/YOUR-CALENDLY-USERNAME/innercube-discovery?background_color=ffffff&text_color=333333&primary_color=f6a623'
        });return false;">
        Schedule a Discovery Call
     </a>
