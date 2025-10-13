@@ -1,41 +1,81 @@
 {% extends "base.html" %}
 
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}">
+{% endblock %}
+
 {% block content %}
-<section class="hero-retreat" style="background-image: url('{{ url_for('static', filename='images/hero-retreats-rice.jpg') }}');">
+<!-- HERO SECTION -->
+<section class="hero-retreat">
   <div class="hero-overlay"></div>
+  <div class="hero-inner container">
+    <h1 class="reveal">Retreat into the Creative Heart of Bali</h1>
 
-  <div class="container hero-content">
-    <h1>Retreat into the Creative Heart of Bali</h1>
-    <p class="subtitle">
-      Small, art-filled gatherings in tranquil rice fields. Real transformation begins in stillness — rediscover your story here.
+    <p class="subtitle reveal delay-1">
+      Schedule a free 30-minute discovery call to explore your InnerCube type,
+      your creative journey, and how an Archetype Retreat can support your transformation.
     </p>
-  </div>
 
-  <!-- Bottom-centered 3 CTAs -->
-  <div class="cta-bar">
-    <a href="/retreats/quiet-reset" class="btn primary">Quiet Reset · 3 days</a>
-    <a href="/retreats/deepen" class="btn ghost">Deepen · 5 days</a>
-    <a href="/retreats/immersion" class="btn ghost">Immersion · 7 days</a>
+    <!-- Unified Discovery Call Button -->
+    <a href="#" class="btn primary reveal delay-2"
+       onclick="Calendly.initPopupWidget({
+         url: 'https://calendly.com/YOUR-CALENDLY-USERNAME/innercube-discovery?background_color=ffffff&text_color=333333&primary_color=f6a623'
+       });return false;">
+       Schedule a Discovery Call
+    </a>
   </div>
 </section>
 
-<section class="retreat-details">
-  <div class="container centered">
-    <h2>Quiet Reset (3 days)</h2>
-    <p>
-      Slow mornings, silent walks, and gentle prompts. A soft reset for your creative compass — rediscover your rhythm in the heart of Bali’s nature.
-    </p>
-
-    <ul>
-      <li>Small group (6–8)</li>
-      <li>Guided journaling & sketching</li>
-      <li>Evening story circles</li>
-    </ul>
-
-    <div class="buttons-center">
-      <a href="/retreats/dates" class="btn primary">Upcoming Dates</a>
-      <a href="/retreats/apply" class="btn ghost">Join a Retreat</a>
-    </div>
-  </div>
+<!-- UPCOMING SECTION -->
+<section id="upcoming" class="retreats-upcoming container">
+  <h2 class="reveal">Upcoming Retreats</h2>
+  <p class="reveal delay-1">Quiet Reset (3 days) · Deepen (5 days) · Immersion (7 days)</p>
+  <p class="reveal delay-2">
+    Slow mornings, silent walks, and guided creative prompts — a soft reset for
+    your creative compass in the heart of Bali’s nature.
+  </p>
 </section>
+
+<!-- DETAILS SECTION -->
+<section class="retreat-details container reveal delay-3">
+  <h3>Quiet Reset (3 days)</h3>
+  <ul>
+    <li>Small group (6–8 participants)</li>
+    <li>Guided journaling & sketching</li>
+    <li>Evening story circles & reflection</li>
+  </ul>
+</section>
+
+<!-- Calendly Script -->
+<script type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        async></script>
+
+<!-- Smooth Scroll + Reveal Script -->
+<script>
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId.length > 1) {
+        e.preventDefault();
+        const target = document.querySelector(targetId);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Fade-in reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
 {% endblock %}
