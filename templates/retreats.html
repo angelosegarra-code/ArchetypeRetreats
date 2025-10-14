@@ -5,19 +5,17 @@
 
   <!-- HERO SECTION -->
   
-  <section class="hero-retreat"
-  style="
-    background-image: url('{{ url_for('static', filename='images/hero-bali-villa-clean.jpg') }}');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    color: #fff; text-align: center;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding: 120px 20px; min-height: 90vh;">
-  
-  <h1>Retreat into the Creative Heart of Bali</h1>
-  <p>Small, art-filled groups in tranquil rice fields. Real transformation begins in stillness — rediscover your story here.</p>
-
+  <!-- HERO SECTION -->
+<section class="hero-retreat">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h1>Retreat into the Creative Heart of Bali</h1>
+    <p>
+      Small, art-filled groups in tranquil rice fields.<br>
+      Real transformation begins in stillness — rediscover your story here.
+    </p>
+  </div>
+</section>
   <div class="hero-cta">
     <!-- Open Calendly in a new tab -->
     <a href="https://calendly.com/intinno/innercube-discovery-call"
@@ -28,7 +26,34 @@
     <a href="#retreat-intentions" class="btn ghost">Join a Retreat</a>
     </div>
   </section>
+  
+  <!-- RETREAT DESCRIPTIONS SECTION -->
+<section class="retreat-descriptions">
+  <div class="retreat-descriptions__inner">
+    <h2>Choose Your Retreat Experience</h2>
+    <p class="lede">
+      Each retreat is a gentle journey inward — balancing reflection, artful practice, and stillness.
+    </p>
 
+    <div class="retreat-grid">
+      <article class="retreat-card">
+        <h3>Quiet Reset (3 days)</h3>
+        <p>Slow mornings, guided prompts, and silent walks. A soft reset for clarity and calm.</p>
+      </article>
+
+      <article class="retreat-card">
+        <h3>Deepen (5 days)</h3>
+        <p>Immerse in reflective art sessions and evening circles to strengthen intuition and voice.</p>
+      </article>
+
+      <article class="retreat-card">
+        <h3>Immersion (7 days)</h3>
+        <p>A full week to unwind, create, and rediscover direction — surrounded by Bali’s green rhythm.</p>
+      </article>
+    </div>
+  </div>
+</section>
+  
   <!-- CALENDLY SECTION -->
   <section id="retreat-calendly" class="retreat-calendly" style="padding:80px 0; background-color:#fdfbf8;">
     <div class="container" style="max-width:1000px;margin:0 auto;text-align:center;">
