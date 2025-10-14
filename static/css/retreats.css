@@ -99,3 +99,29 @@
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+/* === Calendly & Tally Sections === */
+
+.retreat-calendly h2,
+.retreat-intentions h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.retreat-calendly p,
+.retreat-intentions p {
+  color: #555;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.calendly-inline-widget,
+iframe[data-tally-src] {
+  border: none;
+  width: 100%;
+}
+
+.btn.primary:hover {
+  background-color: #d46e35;
+}
