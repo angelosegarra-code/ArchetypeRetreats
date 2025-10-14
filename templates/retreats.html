@@ -5,31 +5,27 @@
 
   <!-- HERO SECTION -->
   
-    <section class="hero-retreat"
+  <section class="hero-retreat"
   style="
     background-image: url('{{ url_for('static', filename='images/hero-bali-villa-clean.jpg') }}');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 120px 20px;
-    min-height: 90vh;
-  ">
-
+    color: #fff; text-align: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 120px 20px; min-height: 90vh;">
+  
   <h1>Retreat into the Creative Heart of Bali</h1>
-  <p>Small, art-filled gatherings in tranquil rice fields. Real transformation begins in stillness — rediscover your story here.</p>
+  <p>Small, art-filled groups in tranquil rice fields. Real transformation begins in stillness — rediscover your story here.</p>
 
-  <div style="margin-top: 30px;">
-    <a href="#retreat-calendly" class="btn primary" style="background-color:#e97440;color:#fff;padding:12px 24px;text-decoration:none;border-radius:4px;">Schedule a Discovery Call</a>
-    <a href="#retreat-intentions" class="btn ghost" style="margin-left:12px;color:#fff;padding:12px 24px;text-decoration:underline;">Join a Retreat</a>
-  </div>
+  <div class="hero-cta">
+    <!-- Open Calendly in a new tab -->
+    <a href="https://calendly.com/intinno/innercube-discovery-call"
+       target="_blank" rel="noopener"
+       class="btn primary">Schedule a Discovery Call</a>
 
-</section>
+    <!-- Smooth-scroll to Tally section -->
+    <a href="#retreat-intentions" class="btn ghost">Join a Retreat</a>
     </div>
   </section>
 
