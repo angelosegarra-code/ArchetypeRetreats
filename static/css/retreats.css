@@ -23,30 +23,16 @@
   height: 100%;
   /* Soft rose-gold gradient overlay */
   background: linear-gradient(
-    rgba(218, 152, 120, 0.35),  /* warm rose tone at top */
-    rgba(218, 152, 120, 0.15)   /* gentle fade at bottom */
+    rgba(218, 152, 120, 0.35), /* warm rose tone at top */
+    rgba(218, 152, 120, 0.15)  /* gentle fade at bottom */
   );
   z-index: 1;
 }
 
 .hero-retreat > * {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* keeps text on top of overlay */
 }
-.hero-retreat::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.35),
-    rgba(0, 0, 0, 0.15)
-  );
-  z-index: 1;
-}
-
 .hero-retreat > * {
   position: relative;
   z-index: 2;
@@ -184,3 +170,90 @@ iframe[data-tally-src] {
 
 /* Optional: native smooth scroll (if not already set) */
 html { scroll-behavior: smooth; }
+/* === Retreat Descriptions: rice-field background + soft fade === */
+.retreat-descriptions{
+  position: relative;
+  background-image: url('/static/images/rice-fields.jpg');  /* <- add this image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;         /* subtle parallax on desktop */
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+/* soft white veil for readability */
+.retreat-descriptions::before{
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(255,255,255,0.86);
+}
+
+/* gentle top/bottom fades so the section blends with neighbors */
+.retreat-descriptions::after{
+  content: "";
+  position: absolute; left: 0; right: 0;
+  top: 0; height: 80px;
+  background: linear-gradient(#fff, transparent);
+  pointer-events: none;
+}
+.retreat-descriptions .end-fade{
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0; height: 80px;
+  background: linear-gradient(transparent, #fff);
+  pointer-events: none;
+}
+
+@media (max-width: 900px){
+  .retreat-descriptions{ background-attachment: scroll; } /* perf on mobile */
+}
+
+.retreat-descriptions__inner{
+  position: relative; z-index: 1;
+  max-width: 1100px; margin: 0 auto; text-align: center;
+}
+
+.retreat-descriptions h2{
+  font-size: 2rem; margin-bottom: .5em;
+}
+.retreat-descriptions .lede{
+  max-width: 760px; margin: 0 auto 36px;
+  font-size: 1.1rem; line-height: 1.6;
+}
+
+/* Cards */
+.retreat-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+@media (max-width: 960px){
+  .retreat-grid{ grid-template-columns: 1fr; }
+}
+
+.retreat-card{
+  background: #fffaf6;
+  border-radius: 10px;
+  padding: 24px 22px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  text-align: left;
+  opacity: 0;                     /* start hidden */
+  transform: translateY(12px);
+  animation: cardFade .6s ease forwards;
+}
+.retreat-card:nth-child(2){ animation-delay: .08s; }
+.retreat-card:nth-child(3){ animation-delay: .16s; }
+
+.retreat-card h3{ margin: 0 0 .35em; color: #e97440; }
+.retreat-card p{ margin: 0; line-height: 1.6; }
+
+.retreat-card:hover{
+  transform: translateY(0) scale(1.01);
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* fade-in animation */
+@keyframes cardFade{
+  to{ opacity: 1; transform: translateY(0); }
+}
