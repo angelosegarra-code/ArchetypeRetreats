@@ -181,7 +181,12 @@ html { scroll-behavior: smooth; }
   padding: 80px 20px;
   overflow: hidden;
 }
-
+background:
+  linear-gradient(
+    rgba(218, 152, 120, 0.25),
+    rgba(218, 152, 120, 0.15)
+  ),
+  rgba(255, 255, 255, 0.86);
 /* soft white veil for readability */
 .retreat-descriptions::before{
   content: "";
