@@ -1,22 +1,48 @@
 /* === Retreats Page Styling === */
 
 /* Hero Section */
-.hero-retreat {
+..hero-retreat {
   position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: #fff;
-  overflow: hidden;
+  min-height: 90vh;
 }
-
-.hero-retreat .hero-figure__img {
+.hero-retreat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 90vh;
-  object-fit: cover;
-  display: block;
-  filter: brightness(0.75);
-  pointer-events: none; /* 
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.15)
+  );
+  z-index: 1;
 }
 
+.hero-retreat > * {
+  position: relative;
+  z-index: 2;
+}
+.hero-retreat h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-retreat p {
+  max-width: 700px;
+  margin: 0 auto 1.5em;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
 .hero-content {
   position: absolute;
   top: 50%;
