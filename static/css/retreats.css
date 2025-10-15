@@ -163,9 +163,8 @@ html {
   .retreat-descriptions h2 {
     font-size: 1.8rem;
   }
-/* --- Perfect alignment for retreat headings --- */
 .retreat-descriptions h3 {
-  margin-top: 18px;     /* moves titles downward slightly */
-  margin-bottom: 6px;   /* keeps even gap to the paragraph below */
+  margin-top: 22px;    /* slightly more space above for perfect vertical alignment */
+  margin-bottom: 6px;  /* keeps even gap to the paragraph below */
   line-height: 1.3;
 }
