@@ -111,19 +111,24 @@ a:hover {
   z-index: 1;
   text-align: center;
 }
-.hero h1{
-  color:#fff;
-  text-shadow: 0 2px 12px rgba(0,0,0,.55);
+.hero h1 {
+  color: #ffffff; /* pure white for clarity */
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.6),
+    0 0 12px rgba(255, 255, 255, 0.15); /* soft glow for gentle lift */
+  font-weight: 700;
+  letter-spacing: 0.5px; /* slight elegance */
 }
 .hero p.lead{
   color:#e9f4ef;
   text-shadow: 0 1px 8px rgba(0,0,0,.45);
 }
-/* Improve subtitle visibility on home hero */
 .hero p {
-  color: #ffffff; /* bright white for readability */
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45); /* soft contrast for clarity */
+  color: #fffdfc; /* slightly warmer white for natural brightness */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65); /* stronger depth behind letters */
+  font-weight: 400;
 }
+
 /* Sharper font rendering */
 html,body{
   -webkit-font-smoothing: antialiased;
