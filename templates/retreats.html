@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=5">
+{% endblock %}
+
 {% block content %}
 <main class="page-retreats">
-
-  <!-- HERO SECTION -->
   
   <!-- HERO SECTION -->
 <section class="hero-retreat">
