@@ -166,5 +166,5 @@ html {
 }
 /* Subtle vertical alignment for left-hand retreat titles */
 .retreat-descriptions h3 {
-  margin-top: 12px; /* Adjust down a bit — try 12–18px for fine-tuning */
+  margin-top: 22px; /* Adjust down a bit — try 12–18px for fine-tuning */
 }
