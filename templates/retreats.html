@@ -1,101 +1,82 @@
 {% extends "base.html" %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=5">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=6">
 {% endblock %}
 
 {% block content %}
 <main class="page-retreats">
-  
-  <!-- HERO SECTION -->
-<section class="hero-retreat">
-  <div class="hero-overlay"></div>
-  <div class="hero-text">
-    <h1>Retreat into the Creative Heart of Bali</h1>
-    <p>
-      Small, art-filled groups in tranquil rice fields.<br>
-      Real transformation begins in stillness — rediscover your story here.
-    </p>
-  </div>
-</section>
-  <div class="hero-cta">
-    <!-- Open Calendly in a new tab -->
-    <a href="https://calendly.com/intinno/innercube-discovery-call"
-       target="_blank" rel="noopener"
-       class="btn primary">Schedule a Discovery Call</a>
 
-    <!-- Smooth-scroll to Tally section -->
-    <a href="#retreat-intentions" class="btn ghost">Join a Retreat</a>
+  <!-- HERO -->
+  <section class="hero-retreat">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Retreat into the Creative Heart of Bali</h1>
+      <p>
+        Small, art-filled groups in tranquil rice fields.<br>
+        Real transformation begins in stillness — rediscover your story here.
+      </p>
     </div>
   </section>
-  
-  <!-- RETREAT DESCRIPTIONS SECTION -->
-<section class="retreat-descriptions">
-  <div class="retreat-descriptions__inner">
-    <h2>Choose Your Retreat Experience</h2>
-    <p class="lede">
-      Each retreat is a gentle journey inward — balancing reflection, artful practice, and stillness.
-    </p>
 
-    <div class="retreat-grid">
-      <article class="retreat-card">
-        <h3>Quiet Reset (3 days)</h3>
-        <p>Slow mornings, guided prompts, and silent walks. A soft reset for clarity and calm.</p>
-      </article>
-
-      <article class="retreat-card">
-        <h3>Deepen (5 days)</h3>
-        <p>Immerse in reflective art sessions and evening circles to strengthen intuition and voice.</p>
-      </article>
-
-      <article class="retreat-card">
-        <h3>Immersion (7 days)</h3>
-        <p>A full week to unwind, create, and rediscover direction — surrounded by Bali’s green rhythm.</p>
-      </article>
-    </div>
+  <!-- CTA Buttons (scroll to sections below) -->
+  <div class="hero-cta">
+    <a href="#retreat-calendly" class="btn primary">Schedule a Discovery Call</a>
+    <a href="#retreat-intentions" class="btn ghost">Join a Retreat</a>
   </div>
-</section>
-  
+
+  <!-- RETREAT DESCRIPTIONS -->
+  <section class="retreat-descriptions">
+    <h2>Choose Your Retreat Experience</h2>
+    <p>Each retreat is a gentle journey inward — balancing reflection, artful practice, and stillness.</p>
+
+    <h3>Quiet Reset (3 days)</h3>
+    <p>Slow mornings, guided prompts, and silent walks. A soft reset for clarity and calm.</p>
+
+    <h3>Deepen (5 days)</h3>
+    <p>Immerse in reflective art sessions and evening circles to strengthen intuition and voice.</p>
+
+    <h3>Immersion (7 days)</h3>
+    <p>A full week to unwind, create, and rediscover direction — surrounded by Bali’s green rhythm.</p>
+  </section>
+
   <!-- CALENDLY SECTION -->
-  <section id="retreat-calendly" class="retreat-calendly" style="padding:80px 0; background-color:#fdfbf8;">
+  <section id="retreat-calendly" class="retreat-calendly" style="padding:80px 0;background:#f6f6f6;">
     <div class="container" style="max-width:1000px;margin:0 auto;text-align:center;">
       <h2>Schedule a Discovery Call</h2>
       <p>Book a 30-minute call to explore which retreat aligns best with your path.</p>
 
       <div class="calendly-inline-widget"
            data-url="https://calendly.com/intinno/innercube-discovery-call"
-           style="min-width:320px;height:780px;margin-top:30px;"></div>
+           style="min-width:320px;height:760px;"></div>
       <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
       <noscript>
-        Calendly requires JavaScript. You can open it here:
-        <a href="https://calendly.com/intinno/innercube-discovery-call" target="_blank" rel="noopener">Open scheduling page</a>.
+        <p><a href="https://calendly.com/intinno/innercube-discovery-call" target="_blank" rel="noopener">
+          Open Calendly in a new tab</a></p>
       </noscript>
     </div>
   </section>
 
-  <!-- TALLY FORM SECTION -->
-  <section id="retreat-intentions" class="retreat-intentions" style="padding:80px 0; background-color:#fffaf6;">
+  <!-- TALLY SECTION -->
+  <section id="retreat-intentions" class="retreat-intentions" style="padding:80px 0;">
     <div class="container" style="max-width:1000px;margin:0 auto;text-align:center;">
-      <h2>Share Your Intentions</h2>
-      <p>Please take a moment to share your intentions — this helps us match you with the right experience.</p>
+      <h2>Join a Retreat</h2>
+      <p>Share your intentions — we’ll follow up with next steps.</p>
 
       <iframe
         data-tally-src="https://tally.so/embed/3yVWlB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-        width="100%"
-        height="700"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-        title="Retreat Intentions"
-        style="margin-top:40px;">
-      </iframe>
-
-      <script src="https://tally.so/widgets/embed.js" async></script>
-
+        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
+        title="Retreat Intentions Form"></iframe>
+      <script>
+        (function(){var d=document, w="https://tally.so/widgets/embed.js";
+          if(!d.querySelector('script[src="'+w+'"]')){
+            var s=d.createElement("script"); s.src=w; s.async=true; d.body.appendChild(s);
+          }
+        })();
+      </script>
       <noscript>
-        Tally requires JavaScript. You can open the form here:
-        <a href="https://tally.so/r/3yVWlB" target="_blank" rel="noopener">Open form</a>.
+        <p><a href="https://tally.so/r/3yVWlB" target="_blank" rel="noopener">
+          Open the form in a new tab</a></p>
       </noscript>
     </div>
   </section>
