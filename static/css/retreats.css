@@ -1,7 +1,7 @@
 /* === Retreats Page Styling === */
 
 /* Hero Section */
-..hero-retreat {
+.hero-retreat {
   position: relative;
   background-size: cover;
   background-position: center center;
@@ -14,6 +14,7 @@
   color: #fff;
   min-height: 90vh;
 }
+
 .hero-retreat::before {
   content: "";
   position: absolute;
@@ -23,8 +24,8 @@
   height: 100%;
   /* Soft rose-gold gradient overlay */
   background: linear-gradient(
-    rgba(218, 152, 120, 0.35), /* warm rose tone at top */
-    rgba(218, 152, 120, 0.15)  /* gentle fade at bottom */
+    rgba(218, 152, 120, 0.35),
+    rgba(218, 152, 120, 0.15)
   );
   z-index: 1;
 }
@@ -33,10 +34,7 @@
   position: relative;
   z-index: 2; /* keeps text on top of overlay */
 }
-.hero-retreat > * {
-  position: relative;
-  z-index: 2;
-}
+
 .hero-retreat h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5em;
@@ -48,14 +46,16 @@
   font-size: 1.2rem;
   line-height: 1.5;
 }
+
+/* Centered Hero Text */
 .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  z-index: 2; /* 
   text-align: center;
+  z-index: 2;
 }
 
 .hero-content h1 {
@@ -70,118 +70,60 @@
   margin-bottom: 1.5rem;
 }
 
-/* CTA Buttons */
-.cta-bar {
-  margin-top: 1.5rem;
+/* Buttons */
+.hero-cta {
+  margin-top: 28px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.cta-bar a {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.9rem 1.8rem;
-  border-radius: 4px;
+.hero-cta a.btn {
+  position: relative;
+  z-index: 10;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: bold;
 }
 
-.cta-bar .btn-primary {
-  background-color: #f6a623;
+.btn.primary {
+  background: #e97400;
   color: #fff;
-}
-
-.cta-bar .btn-primary:hover {
-  background-color: #e28e0a;
-}
-
-.cta-bar .btn-ghost {
-  background-color: transparent;
-  color: #f6a623;
-  border: 2px solid #f6a623;
-}
-
-.cta-bar .btn-ghost:hover {
-  background-color: #f6a623;
-  color: #fff;
-}
-
-/* Calendly Section */
-.retreat-calendly {
-  text-align: center;
-  margin: 4rem auto;
-  padding: 2rem 1rem;
-  max-width: 800px;
-}
-
-.retreat-calendly h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.retreat-calendly p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #555;
-}
-
-.calendly-inline-widget {
-  margin: 0 auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-/* === Calendly & Tally Sections === */
-
-.retreat-calendly h2,
-.retreat-intentions h2 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.retreat-calendly p,
-.retreat-intentions p {
-  color: #555;
-  font-size: 1.1em;
-  text-align: center;
-}
-
-.calendly-inline-widget,
-iframe[data-tally-src] {
-  border: none;
-  width: 100%;
 }
 
 .btn.primary:hover {
-  background-color: #d46e35;
+  background: #d46e35;
 }
-/* Make overlay non-clickable and lift hero content */
-.hero-retreat::before { pointer-events: none; }
-.hero-retreat > * { position: relative; z-index: 2; }
 
-/* Buttons */
-.hero-cta { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
-.hero-retreat a.btn { position: relative; z-index: 10; text-decoration: none; border-radius: 4px; padding: 12px 24px; }
-.btn.primary { background:#e97440; color:#fff; }
-.btn.primary:hover { background:#d46e35; }
-.btn.ghost { color:#fff; border:1px solid #fff; }
-.btn.ghost:hover { background: rgba(255,255,255,0.12); }
+.btn.ghost {
+  color: #fff;
+  border: 1px solid #fff;
+}
 
-/* Optional: native smooth scroll (if not already set) */
-html { scroll-behavior: smooth; }
-/* === Retreat Descriptions: rice-field background + soft fade === */
-.retreat-descriptions{
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Retreat Descriptions Section */
+.retreat-descriptions {
   position: relative;
-  background-image: url('/static/images/rice-fields.jpg');  /* <- add this image */
+  background-image: url('/static/images/rice-fields.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;         /* subtle parallax on desktop */
+  background-attachment: fixed;
   padding: 80px 20px;
   overflow: hidden;
 }
-/* soft white + rose-gold veil overlay for readability */
+
+/* Gradient Overlay */
 .retreat-descriptions::before {
   content: "";
   position: absolute;
@@ -189,81 +131,48 @@ html { scroll-behavior: smooth; }
   background: linear-gradient(
     rgba(218, 152, 120, 0.25),
     rgba(218, 152, 120, 0.15)
-  ), rgba(255,255,255,0.86);
+  ), rgba(255, 255, 255, 0.86);
   z-index: 1;
   pointer-events: none;
 }
 
-/* ensure text appears above overlay */
+/* Text above overlay */
 .retreat-descriptions * {
   position: relative;
   z-index: 2;
 }
-/* gentle top/bottom fades so the section blends with neighbors */
-.retreat-descriptions::after{
-  content: "";
-  position: absolute; left: 0; right: 0;
-  top: 0; height: 80px;
-  background: linear-gradient(#fff, transparent);
-  pointer-events: none;
-}
-.retreat-descriptions .end-fade{
-  content: "";
-  position: absolute; left: 0; right: 0; bottom: 0; height: 80px;
-  background: linear-gradient(transparent, #fff);
-  pointer-events: none;
+
+/* Typography for retreat descriptions */
+.retreat-descriptions h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-@media (max-width: 900px){
-  .retreat-descriptions{ background-attachment: scroll; } /* perf on mobile */
+.retreat-descriptions h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-.retreat-descriptions__inner{
-  position: relative; z-index: 1;
-  max-width: 1100px; margin: 0 auto; text-align: center;
+.retreat-descriptions p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
 }
 
-.retreat-descriptions h2{
-  font-size: 2rem; margin-bottom: .5em;
-}
-.retreat-descriptions .lede{
-  max-width: 760px; margin: 0 auto 36px;
-  font-size: 1.1rem; line-height: 1.6;
-}
-
-/* Cards */
-.retreat-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-@media (max-width: 960px){
-  .retreat-grid{ grid-template-columns: 1fr; }
-}
-
-.retreat-card{
-  background: #fffaf6;
-  border-radius: 10px;
-  padding: 24px 22px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
-  text-align: left;
-  opacity: 0;                     /* start hidden */
-  transform: translateY(12px);
-  animation: cardFade .6s ease forwards;
-}
-.retreat-card:nth-child(2){ animation-delay: .08s; }
-.retreat-card:nth-child(3){ animation-delay: .16s; }
-
-.retreat-card h3{ margin: 0 0 .35em; color: #e97440; }
-.retreat-card p{ margin: 0; line-height: 1.6; }
-
-.retreat-card:hover{
-  transform: translateY(0) scale(1.01);
-  box-shadow: 0 10px 24px rgba(0,0,0,.10);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-/* fade-in animation */
-@keyframes cardFade{
-  to{ opacity: 1; transform: translateY(0); }
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-retreat h1 {
+    font-size: 2rem;
+  }
+  .hero-retreat p {
+    font-size: 1rem;
+  }
+  .retreat-descriptions h2 {
+    font-size: 1.8rem;
+  }
 }
