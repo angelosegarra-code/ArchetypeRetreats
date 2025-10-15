@@ -181,19 +181,24 @@ html { scroll-behavior: smooth; }
   padding: 80px 20px;
   overflow: hidden;
 }
-background:
-  linear-gradient(
+/* soft white + rose-gold veil overlay for readability */
+.retreat-descriptions::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
     rgba(218, 152, 120, 0.25),
     rgba(218, 152, 120, 0.15)
-  ),
-  rgba(255, 255, 255, 0.86);
-/* soft white veil for readability */
-.retreat-descriptions::before{
-  content: "";
-  position: absolute; inset: 0;
-  background: rgba(255,255,255,0.86);
+  ), rgba(255,255,255,0.86);
+  z-index: 1;
+  pointer-events: none;
 }
 
+/* ensure text appears above overlay */
+.retreat-descriptions * {
+  position: relative;
+  z-index: 2;
+}
 /* gentle top/bottom fades so the section blends with neighbors */
 .retreat-descriptions::after{
   content: "";
