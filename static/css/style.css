@@ -74,10 +74,14 @@
   font-weight: 700;
   letter-spacing: 0.6px;
 }
+
 .hero p {
-  color: #fffdfa;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  color: #ffffff; /* pure white for maximum readability */
+  text-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.75),
+    0 0 10px rgba(255, 255, 255, 0.25); /* gentle light halo */
   font-weight: 400;
+  letter-spacing: 0.3px;
 }
 
 /* — Responsive navbar tweaks — */
