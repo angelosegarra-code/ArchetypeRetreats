@@ -1,76 +1,59 @@
-o/* === Retreats Page Styling === */
+/* === Retreats Page Styling === */
 
 /* Hero Section */
 .hero-retreat {
   position: relative;
+  /* ✅ Point to the Buddha image (exact filename/case) */
   background-image: url('/static/images/hero-buddha-pool.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+
+  /* layout & sizing */
+  min-height: 90vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
-  min-height: 90vh;
+  overflow: hidden;
 }
 
+/* soft dark veil so white text is readable */
 .hero-retreat::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Soft rose-gold gradient overlay */
+  inset: 0;
   background: linear-gradient(
-    rgba(218, 152, 120, 0.35),
-    rgba(218, 152, 120, 0.15)
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.35)
   );
   z-index: 1;
 }
 
+/* keep hero text above the overlay */
 .hero-retreat > * {
   position: relative;
-  z-index: 2; /* keeps text on top of overlay */
-}
-
-.hero-retreat h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5em;
-}
-
-.hero-retreat p {
-  max-width: 700px;
-  margin: 0 auto 1.5em;
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
-/* Centered Hero Text */
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  text-align: center;
   z-index: 2;
 }
 
-.hero-content h1 {
-  font-size: 2.4rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
+/* headline & subhead */
+.hero-text h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  margin: 0 0 .6rem 0;
 }
-
-.hero-content p {
-  font-size: 1.1rem;
+.hero-text p {
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin: 0;
+  color: rgba(255,255,255,.92);
 }
 
+/* spacing on small screens */
+@media (max-width: 640px) {
+  .hero-retreat { min-height: 70vh; padding: 48px 18px; }
+}
 /* Buttons */
 .hero-cta {
   margin-top: 28px;
