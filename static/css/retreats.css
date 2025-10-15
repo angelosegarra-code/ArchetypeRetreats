@@ -42,12 +42,16 @@
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.2;
   margin: 0 0 .6rem 0;
+  color: #ffffff !important;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.5);
 }
+
 .hero-text p {
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: 1.6;
   margin: 0;
-  color: rgba(255,255,255,.92);
+  color: rgba(255,255,255,0.95) !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 /* spacing on small screens */
