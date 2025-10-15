@@ -119,7 +119,11 @@ a:hover {
   color:#e9f4ef;
   text-shadow: 0 1px 8px rgba(0,0,0,.45);
 }
-
+/* Improve subtitle visibility on home hero */
+.hero p {
+  color: #ffffff; /* bright white for readability */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45); /* soft contrast for clarity */
+}
 /* Sharper font rendering */
 html,body{
   -webkit-font-smoothing: antialiased;
@@ -355,4 +359,9 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+/* Improve subtitle visibility on home hero */
+.hero p {
+  color: #ffffff; /* bright white for readability */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45); /* soft contrast for clarity */
 }
