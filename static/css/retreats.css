@@ -1,9 +1,9 @@
-/* === Retreats Page Styling === */
+o/* === Retreats Page Styling === */
 
 /* Hero Section */
 .hero-retreat {
   position: relative;
-  background-image: url('/static/images/buddha-pool.jpg');
+  background-image: url('/static/images/hero-buddha-pool.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
