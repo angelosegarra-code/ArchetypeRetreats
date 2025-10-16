@@ -11,11 +11,34 @@
   </div>
 </section>
 
-<!-- BUTTON STRIP BELOW HERO -->
-<section class="cta-buttons">
-  <a class="btn primary" href="{{ url_for('test_form') }}">Take the Free Archetype Test</a>
-  <a class="btn" href="{{ url_for('retreats') }}">Explore Retreats</a>
-  <a class="btn" href="{{ url_for('shop') }}">Shop</a>
+<!-- === CTA IMAGE CARDS === -->
+<section class="cta-cards">
+  <!-- InnerCube / Test -->
+  <a class="cta-card" href="{{ url_for('innercube') }}">
+    <span class="cta-card__bg" style="background-image:url('{{ url_for('static', filename='images/home/innercube-offering.jpg') }}');"></span>
+    <span class="cta-card__content">
+      <h3>Take the Free Archetype Test</h3>
+      <p>Discover your InnerCube patterns.</p>
+    </span>
+  </a>
+
+  <!-- Retreats -->
+  <a class="cta-card" href="{{ url_for('retreats') }}">
+    <span class="cta-card__bg" style="background-image:url('{{ url_for('static', filename='images/rice-fields.jpg') }}');"></span>
+    <span class="cta-card__content">
+      <h3>Explore Retreats</h3>
+      <p>Quiet, art-filled days in Bali.</p>
+    </span>
+  </a>
+
+  <!-- Shop -->
+  <a class="cta-card" href="{{ url_for('shop') }}">
+    <span class="cta-card__bg" style="background-image:url('{{ url_for('static', filename='images/home/books-stack.jpg') }}');"></span>
+    <span class="cta-card__content">
+      <h3>Shop</h3>
+      <p>Books & guides for your practice.</p>
+    </span>
+  </a>
 </section>
 
 <!-- THREE CARDS -->
