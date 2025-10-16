@@ -514,3 +514,18 @@ footer a:hover {
   font-size: 0.9rem;
   letter-spacing: 0.3px;
 }
+/* --- Footer --- */
+.site-footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #f6f4f2; /* matches testimonial background */
+  color: #555;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  margin-top: 40px;
+}
+
+.site-footer p {
+  margin: 0;
+  letter-spacing: 0.3px;
+}
