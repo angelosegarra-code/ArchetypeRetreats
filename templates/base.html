@@ -1,26 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Archetype Retreats</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-</head>
 
+  <!-- Main site CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', v=42) }}">
+
+  <!-- Page-specific CSS hook -->
+  {% block extra_css %}{% endblock %}
+</head>
 <body>
 
-<header>
-  <div class="logo">
-    <a href="{{ url_for('home') }}">Archetype Retreats</a>
+<header class="site-header">
+  <div class="container">
+    <div class="brand"><a href="{{ url_for('home') }}">Archetype Retreats</a></div>
+    <nav class="nav">
+      <a href="{{ url_for('home') }}"      class="{% if request.endpoint=='home' %}active{% endif %}">Home</a>
+      <a href="{{ url_for('innercube') }}" class="{% if request.endpoint=='innercube' %}active{% endif %}">InnerCube Test</a>
+      <a href="{{ url_for('retreats') }}"  class="{% if request.endpoint=='retreats' %}active{% endif %}">Retreats</a>
+      <a href="{{ url_for('shop') }}"      class="{% if request.endpoint=='shop' %}active{% endif %}">Shop</a>
+      <a href="{{ url_for('about') }}"     class="{% if request.endpoint=='about' %}active{% endif %}">About</a>
+      <a href="{{ url_for('contact') }}"   class="{% if request.endpoint=='contact' %}active{% endif %}">Contact</a>
+    </nav>
   </div>
-
-  <nav class="nav">
-    <a href="{{ url_for('home') }}" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a>
-    <a href="{{ url_for('innercube') }}" class="{% if request.endpoint == 'innercube' %}active{% endif %}">InnerCube Test</a>
-    <a href="{{ url_for('retreats') }}" class="{% if request.endpoint == 'retreats' %}active{% endif %}">Retreats</a>
-    <a href="{{ url_for('shop') }}" class="{% if request.endpoint == 'shop' %}active{% endif %}">Shop</a>
-    <a href="{{ url_for('about') }}" class="{% if request.endpoint == 'about' %}active{% endif %}">About</a>
-    <a href="{{ url_for('contact') }}" class="{% if request.endpoint == 'contact' %}active{% endif %}">Contact</a>
-  </nav>
 </header>
 
 <main class="container">
@@ -30,10 +34,7 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="brand-small">Archetype Retreats</div>
-    <p class="muted">
-      Quiet, art-filled days to reset your story.  
-      Small groups. Real transformation.
-    </p>
+    <p class="muted">Quiet, art-filled days to reset your story. Small groups. Real transformation.</p>
   </div>
 </footer>
 
