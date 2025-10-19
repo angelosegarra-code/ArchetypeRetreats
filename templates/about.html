@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Archetype Retreats</title>
+
+  <!-- Main site CSS (your existing) -->
+  <link rel="stylesheet" href="/static/css/main.css" />
+  <!-- About page CSS (new) -->
+  <link rel="stylesheet" href="/static/css/about.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/index.html">Home</a>
+    <a href="/innercube.html">InnerCube Test</a>
+    <a href="/retreats.html">Retreats</a>
+    <a href="/shop.html">Shop</a>
+    <a href="/about.html" class="active">About</a>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section fade-section">
+    <div class="about-overlay"></div>
+    <div class="about-content">
+      <h1>About Archetype Retreats</h1>
+      <p><strong>Archetype Retreats</strong> is a place to slow down, listen inward, and reconnect the heart and mind. We use gentle creative practices and reflective prompts to help you see the patterns shaping your life — and choose new ones with clarity.</p>
+
+      <h2>What is an archetype?</h2>
+      <p>Archetypes are <strong>recurring patterns</strong> in how we think, feel, and respond. They often begin with early impressions or memorable moments that “stick.” Over time, those impressions form the <strong>storylines</strong> we live by. Archetypes don’t define you — they simply <strong>help name what’s already happening</strong>, so you can work with it consciously.</p>
+
+      <h2>How Archetype Retreats supports growth</h2>
+      <ul>
+        <li><strong>Begin at the beginning</strong> – Trace the thread back to where your pattern started (gently, without reliving trauma).</li>
+        <li><strong>See the pattern, simply</strong> – With the InnerCube and guided reflection, notice how your story repeats — and where it’s asking to change.</li>
+        <li><strong>Rebalance heart and mind</strong> – The mind becomes a <strong>tool</strong>, not the end. Intuition, embodiment, and creativity come back online.</li>
+        <li><strong>Choose what’s next</strong> – Small, grounded practices turn insight into daily rhythm, so change lasts after the retreat.</li>
+      </ul>
+
+      <h2>What you’ll experience</h2>
+      <ul>
+        <li><strong>InnerCube sessions</strong> exploring four archetypes (Dreamer, Observer, Alchemist, Visionary)</li>
+        <li><strong>Quiet mornings</strong> with breath, journaling, and light movement</li>
+        <li><strong>Creative practice</strong> for insight through art or writing</li>
+        <li><strong>Nature immersion</strong> among rice fields and calm spaces</li>
+        <li><strong>Small group circles</strong> for safe reflection</li>
+        <li><strong>Personal integration plan</strong> to take home</li>
+      </ul>
+
+      <h2>Who this is for</h2>
+      <p>You sense there’s more to your story and want a clear, kind way to find it. You’re creative (or curious), but don’t want labels or rigid programs. You prefer <strong>gentle transformation</strong> over “productivity hacks.” You want heart and mind working together, not at odds.</p>
+
+      <h2>What changes afterward</h2>
+      <ul>
+        <li>A simpler way to understand your patterns — without self-judgment</li>
+        <li>A few daily rituals that keep you steady and open</li>
+        <li>More room for joy, focus, and genuine choice</li>
+        <li>A truer relationship with your own creative voice</li>
+      </ul>
+
+      <p class="about-cta">Start with the <a href="/innercube.html">InnerCube Preview</a> or join a <a href="/retreats.html">Bali Retreat</a> when you’re ready for a deeper reset. Your story isn’t fixed. It’s <strong>becoming</strong> — and you can shape it with awareness.</p>
+    </div>
+  </section>
+
+  <!-- Scroll reveal JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const revealables = document.querySelectorAll('.fade-section, .fade-left');
+      const revealOnScroll = () => {
+        const h = window.innerHeight;
+        revealables.forEach(el => {
+          const top = el.getBoundingClientRect().top;
+          if (top < h - 100) el.classList.add('visible');
+        });
+      };
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll();
+    });
+  </script>
+</body>
+</html>
