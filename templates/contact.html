@@ -19,7 +19,7 @@
 
   <div class="contact-message">
     <h2>Message Us</h2>
-    <form action="https://formspree.io/f/your_form_id" method="POST">
+      <form onsubmit="event.preventDefault(); window.location='thank-you.html';">
       <input type="text" name="name" placeholder="Your name" required>
       <input type="email" name="_replyto" placeholder="Your email" required>
       <textarea name="message" placeholder="Write your message..." rows="5" required></textarea>
