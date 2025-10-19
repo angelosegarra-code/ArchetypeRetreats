@@ -1,1 +1,17 @@
-<!DOCTYPE html><html><head>{% include '_head.html' %}</head><body><h2>Thank you, {{ name }}</h2><p>We’ll email you with next steps.</p></body></html>
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section container">
+  <h1>Thank You 🌿</h1>
+  <p>Your message has been sent successfully. I’ll get back to you soon — usually within 1–2 days.</p>
+
+  <p>In the meantime, you can:</p>
+  <ul>
+    <li><a href="{{ url_for('innercube') }}">Take the InnerCube Test</a></li>
+    <li><a href="{{ url_for('retreats') }}">Explore Upcoming Retreats</a></li>
+    <li><a href="{{ url_for('shop') }}">Browse Books & Guides</a></li>
+  </ul>
+
+  <p class="muted">Thank you for being part of the creative journey.</p>
+</section>
+{% endblock %}
