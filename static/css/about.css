@@ -54,3 +54,100 @@
   .about-content h2 { font-size: 1.2rem; }
   .nav { gap: 14px; }
 }
+/* === Contact Page === */
+.contact-hero {
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.contact-hero .overlay {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 60px;
+  border-radius: 12px;
+  display: inline-block;
+  max-width: 700px;
+}
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  text-align: center;
+}
+.contact-card,
+.contact-message {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  padding: 30px;
+  width: 340px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.contact-message form input,
+.contact-message form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+.contact-message button {
+  background-color: #5fa7a3;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-message button:hover {
+  background-color: #4b8b87;
+}
+
+/* === Thank You Page === */
+.thanks-hero {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  padding: 60px 20px;
+  background: radial-gradient(ellipse at top, rgba(0,0,0,.06), transparent 60%),
+              linear-gradient(180deg, rgba(0,0,0,.03), transparent 40%);
+}
+.thanks-card {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  max-width: 760px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+}
+.thanks-icon {
+  width: 64px; height: 64px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 36px; font-weight: 700; color: #fff;
+  background: linear-gradient(135deg, #2f7669, #5fa7a3);
+  box-shadow: 0 8px 22px rgba(47,118,105,.3);
+}
+.thanks-actions {
+  margin-top: 18px;
+  display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+}
+.thanks-card .btn.primary { background:#2f7669; color:#fff; padding:10px 20px; border-radius:5px; text-decoration:none; }
+.thanks-card .btn.ghost { background:transparent; border:1px solid #2f7669; color:#2f7669; padding:10px 20px; border-radius:5px; text-decoration:none; }
+.thanks-card .btn.primary:hover { background:#276358; }
+
+/* === Fade Transition for Redirect === */
+.fade-out {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+.fade-out.hidden {
+  opacity: 0;
+}
