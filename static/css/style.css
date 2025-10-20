@@ -529,3 +529,41 @@ footer a:hover {
   margin: 0;
   letter-spacing: 0.3px;
 }
+.contact-hero {
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.contact-hero .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  padding: 60px 20px;
+  border-radius: 12px;
+  display: inline-block;
+}
+.contact-details {
+  display: grid;
+  gap: 40px;
+  max-width: 900px;
+  margin: 60px auto;
+}
+.contact-card, .contact-message {
+  background: rgba(255,255,255,0.6);
+  padding: 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+button {
+  background: #2f5d4e;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background: #366b59;
+}
