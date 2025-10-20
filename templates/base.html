@@ -12,7 +12,7 @@
   <!-- Page-specific extra CSS (optional; About page uses this) -->
   {% block extra_css %}{% endblock %}
 </head>
-<body>
+<body class="{% block body_class %}{% endblock %}">
 
   <!-- Site header + nav -->
   <header class="site-header">
