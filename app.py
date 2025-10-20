@@ -108,16 +108,22 @@ def robots_txt(): return app.send_static_file('robots.txt')
 @app.route('/retreats')
 def retreats():
     return render_template('retreats.html')
+
 @app.route('/shop')
 def shop():
     return render_template('shop.html')
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
-    @app.route('/thank-you')
-def thank_you():
-    return render_template('thank_you.html')
-    @app.route('/about')
+
+@app.route('/about')
 def about():
     return render_template('about.html')
-if __name__=='__main__': app.run(host='0.0.0.0', port=8080)
+
+@app.route('/thank-you')
+def thank_you():
+    return render_template('thank_you.html')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
