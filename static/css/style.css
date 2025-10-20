@@ -257,31 +257,18 @@ html,body{
 }
 
 /* Mobile responsive stacking */
-/* ====== HERO FADE-IN ANIMATION ====== */
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Apply to hero text elements */
-.hero h1,
-.hero .lead,
-.hero .hero-cta {
+/* Apply fade only on homepage hero (not globally) */
+body.home .hero h1,
+body.home .hero .lead,
+body.home .hero .hero-cta {
   opacity: 0;
   animation: fadeUp 1.6s ease-out forwards;
 }
 
-.hero {
+body.home .hero {
   animation: heroFade 1.2s ease-in forwards;
   opacity: 0;
 }
-
 @keyframes heroFade {
   0% { opacity: 0; }
   100% { opacity: 1; }
