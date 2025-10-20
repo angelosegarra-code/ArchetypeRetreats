@@ -48,7 +48,53 @@
   .about-content h2 { font-size: 1.2rem; }
   .nav { gap: 14px; }
 }
+/* Section uses the photo as a full hero background */
+.about-section {
+  position: relative;
+  min-height: 70vh;                 /* gives it height so the bg is visible */
+  background: center / cover no-repeat;
+  color: #fff;
+  padding: 120px 20px 80px;         /* space for content */
+  overflow: hidden;
+}
 
+/* Soft veil over the photo for readability */
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);     /* darken a touch */
+  backdrop-filter: blur(4px);       /* optional subtle blur */
+  z-index: 1;
+}
+
+/* Content sits ON TOP, no white box */
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  background: transparent;          /* <— remove the faint white card */
+  padding: 0;                       /* card padding not needed anymore */
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.35);  /* improve legibility on photo */
+}
+
+.about-content h1,
+.about-content h2 {
+  margin: 0 0 0.8rem;
+  font-weight: 600;
+}
+
+.about-content a { color: #ffd36a; text-decoration: underline; }
+.about-content a:hover { color: #fff; }
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .about-section { min-height: 60vh; padding: 96px 16px 64px; }
+  .about-content h1 { font-size: 1.85rem; }
+  .about-content h2 { font-size: 1.25rem; }
+}
 /* === Contact Page === */
 .contact-hero {
   background-size: cover;
