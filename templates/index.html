@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% block body_class %}home{% endblock %}
 
 <section class="hero"
   style="background-image:url('{{ url_for('static', filename='images/hero-rice-sunrise.jpg') }}');">
