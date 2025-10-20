@@ -1,23 +1,17 @@
 /* === Retreats Page Styling === */
 
 /* Hero Section */
-.hero-retreat {
+  .hero-retreat {
   position: relative;
-  /* ✅ Point to the Buddha image (exact filename/case) */
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  /* layout & sizing */
   min-height: 90vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;      /* stack title + button vertically */
+  justify-content: center;     /* center vertically */
+  align-items: center;         /* center horizontally */
   text-align: center;
   color: #fff;
   overflow: hidden;
 }
-
 /* soft dark veil so white text is readable */
 .hero-retreat::before {
   content: "";
