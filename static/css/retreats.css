@@ -29,7 +29,19 @@
   position: relative;
   z-index: 2;
 }
+.hero-text {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 24px;
+}
 
+.hero-cta {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
 /* headline & subhead */
 .hero-text h1 {
   font-size: clamp(2rem, 4vw, 3rem);
