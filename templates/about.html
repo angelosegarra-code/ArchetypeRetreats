@@ -1,28 +1,28 @@
 {% extends "base.html" %}
+{% block title %}About • Archetype Retreats{% endblock %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css', v=5) }}">
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css', v=7) }}">
 {% endblock %}
 
 {% block content %}
-<section class="about-section fade-section"
-    style="background-image:url('{{ url_for('static', filename='images/about-bg.jpeg.jpeg') }}');">
-    <div class="about-overlay"></div>
+<section class="about-section">
+  <div class="about-overlay"></div>
 
-    <div class="about-content">
-        <h1>About Archetype Retreats</h1>
-        <p><strong>Archetype Retreats</strong> is a place to slow down, listen inward, and reconnect with the rhythm of your creative life.</p>
+  <div class="about-content">
+    <h1>About Archetype Retreats</h1>
+    <p><strong>Archetype Retreats</strong> is a place to slow down, listen inward, and reconnect with the rhythm of your creative life.</p>
 
-        <h2>What is an archetype?</h2>
-        <p>Archetypes are <strong>recurring patterns</strong> in how we think, feel, and respond. They reflect deep symbolic energies that shape our stories and guide our growth.</p>
+    <h2>What is an archetype?</h2>
+    <p>Archetypes are <strong>recurring patterns</strong> in how we think, feel, and respond. They reflect deep symbolic energies that shape our choices.</p>
 
-        <h2>How Archetype Retreats supports growth</h2>
-        <p>We help you trace the thread of your inner story — discovering where your journey began and how it continues to unfold. 
-        This process brings together intuition, creativity, and reflection, guiding you closer to the connection between heart and mind.</p>
+    <h2>How we support growth</h2>
+    <p>We help you trace the thread of your inner story—discovering where your journey began and how it continues to unfold.</p>
 
-        <h2>Join Us</h2>
-        <p>Quiet, art-filled days in Bali. Gentle structure. Real transformation.  
-        <a href="{{ url_for('retreats') }}">→ Explore upcoming dates</a></p>
-    </div>
+    <h2>Join us</h2>
+    <p>Quiet, art-filled days in Bali. Gentle structure. Real transformation.
+      <a href="{{ url_for('retreats') }}">Explore upcoming dates →</a>
+    </p>
+  </div>
 </section>
 {% endblock %}
