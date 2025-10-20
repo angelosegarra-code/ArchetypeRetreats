@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 
-{% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=6">
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css', v=7) }}">
 {% endblock %}
 
 {% block content %}
 <main class="page-retreats">
 
   <!-- HERO -->
-  <section class="hero-retreat">
+  <section class="hero-retreat"
+           style="background-image:url('{{ url_for('static', filename='images/rice-field-bg.jpg') }}');">
     <div class="hero-overlay"></div>
     <div class="hero-text">
       <h1>Retreat into the Creative Heart of Bali</h1>
@@ -19,9 +20,9 @@
     </div>
   </section>
 
-  <!-- CTA Buttons (scroll to sections below) -->
+  <!-- CTA Buttons -->
   <div class="hero-cta">
-    <a href="#retreat-calendly" class="btn primary">Schedule a Discovery Call</a>
+    <a href="#retreat-calendar" class="btn primary">Schedule a Discovery Call</a>
     <a href="#retreat-intentions" class="btn ghost">Join a Retreat</a>
   </div>
 
@@ -30,55 +31,30 @@
     <h2>Choose Your Retreat Experience</h2>
     <p>Each retreat is a gentle journey inward — balancing reflection, artful practice, and stillness.</p>
 
-    <h3>Quiet Reset (3 days)</h3>
-    <p>Slow mornings, guided prompts, and silent walks. A soft reset for clarity and calm.</p>
+    <div class="retreat-cards">
 
-    <h3>Deepen (5 days)</h3>
-    <p>Immerse in reflective art sessions and evening circles to strengthen intuition and voice.</p>
+      <div class="retreat-card">
+        <h3>Quiet Reset (3 days)</h3>
+        <p>Slow mornings, guided prompts, and silent walks. A soft reset for clarity and calm.</p>
+      </div>
 
-    <h3>Immersion (7 days)</h3>
-    <p>A full week to unwind, create, and rediscover direction — surrounded by Bali’s green rhythm.</p>
-  </section>
+      <div class="retreat-card">
+        <h3>Deepen (5 days)</h3>
+        <p>Immerse in reflective art sessions and evening circles to strengthen intuition and voice.</p>
+      </div>
 
-  <!-- CALENDLY SECTION -->
-  <section id="retreat-calendly" class="retreat-calendly" style="padding:80px 0;background:#f6f6f6;">
-    <div class="container" style="max-width:1000px;margin:0 auto;text-align:center;">
-      <h2>Schedule a Discovery Call</h2>
-      <p>Book a 30-minute call to explore which retreat aligns best with your path.</p>
-
-      <div class="calendly-inline-widget"
-           data-url="https://calendly.com/intinno/innercube-discovery-call"
-           style="min-width:320px;height:760px;"></div>
-      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      <noscript>
-        <p><a href="https://calendly.com/intinno/innercube-discovery-call" target="_blank" rel="noopener">
-          Open Calendly in a new tab</a></p>
-      </noscript>
+      <div class="retreat-card">
+        <h3>Immersion (7 days)</h3>
+        <p>A full week to unwind, create, and rediscover direction — surrounded by Bali’s green rhythm.</p>
+      </div>
     </div>
   </section>
 
-  <!-- TALLY SECTION -->
-  <section id="retreat-intentions" class="retreat-intentions" style="padding:80px 0;">
-    <div class="container" style="max-width:1000px;margin:0 auto;text-align:center;">
-      <h2>Join a Retreat</h2>
-      <p>Share your intentions — we’ll follow up with next steps.</p>
-
-      <iframe
-        data-tally-src="https://tally.so/embed/3yVWlB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
-        title="Retreat Intentions Form"></iframe>
-      <script>
-        (function(){var d=document, w="https://tally.so/widgets/embed.js";
-          if(!d.querySelector('script[src="'+w+'"]')){
-            var s=d.createElement("script"); s.src=w; s.async=true; d.body.appendChild(s);
-          }
-        })();
-      </script>
-      <noscript>
-        <p><a href="https://tally.so/r/3yVWlB" target="_blank" rel="noopener">
-          Open the form in a new tab</a></p>
-      </noscript>
-    </div>
+  <!-- DISCOVERY CALL -->
+  <section id="retreat-calendar" class="retreat-calendar">
+    <h2>Schedule a Discovery Call</h2>
+    <p>Book a 30-minute call to explore which retreat best fits your creative path.</p>
+    <a href="https://calendly.com/archetyperetreats/discovery" target="_blank" class="btn primary">Book Now</a>
   </section>
 
 </main>
