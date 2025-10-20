@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-<section class="contact-hero" 
-  style="background-image:url('{{ url_for('static', filename='images/bali-field-blur.jpg') }}');">
+<section class="contact-hero"
+         style="background-image:url('{{ url_for('static', filename='images/bali-field-blur.jpg') }}');">
   <div class="overlay">
     <h1>Contact Us</h1>
     <p>We’d love to hear from you — whether it’s about retreats, creative collaboration, or joining our community of artists and seekers.</p>
@@ -12,16 +12,21 @@
 <section class="contact-details">
   <div class="contact-card">
     <h2>Reach Out</h2>
-    <p>Email: <a href="mailto:hello@archetyperetreats.com">hello@archetyperetreats.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/archetyperetreats" target="_blank">@archetyperetreats</a></p>
+    <p>Email:
+      <a href="mailto:hello@archetyperetreats.com">hello@archetyperetreats.com</a>
+    </p>
+    <p>Instagram:
+      <a href="https://instagram.com/archetyperetreats" target="_blank">@archetyperetreats</a>
+    </p>
     <p>Bali Office: Ubud, Gianyar, Indonesia</p>
   </div>
 
   <div class="contact-message">
     <h2>Message Us</h2>
-      <form onsubmit="event.preventDefault(); window.location='thank_you.html';">
+
+    <form method="POST" action="{{ url_for('thank_you') }}">
       <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="_replyto" placeholder="Your email" required>
+      <input type="email" name="email" placeholder="Your email" required>
       <textarea name="message" placeholder="Write your message..." rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
