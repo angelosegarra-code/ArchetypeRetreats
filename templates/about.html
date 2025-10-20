@@ -2,27 +2,28 @@
 {% block title %}About • Archetype Retreats{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css', v=7) }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}?v=12">
 {% endblock %}
 
 {% block content %}
-<section class="about-section">
+<section class="about-section"
+  style="background-image:url('{{ url_for('static', filename='images/about-bg.jpeg.jpeg') }}');">
+  <!-- ^^^ use your exact filename (case-sensitive). If your file is different, change it here. -->
+
   <div class="about-overlay"></div>
 
   <div class="about-content">
     <h1>About Archetype Retreats</h1>
-    <p><strong>Archetype Retreats</strong> is a place to slow down, listen inward, and reconnect with the rhythm of your creative life.</p>
+    <p><strong>Archetype Retreats</strong> is a space to slow down, listen inward, and reconnect with the rhythm of your creative life.</p>
 
     <h2>What is an archetype?</h2>
-    <p>Archetypes are <strong>recurring patterns</strong> in how we think, feel, and respond. They reflect deep symbolic energies that shape our choices.</p>
+    <p>Archetypes are recurring patterns in how we think, feel, and respond. They reflect deep symbolic energies that shape our choices and stories.</p>
 
     <h2>How we support growth</h2>
-    <p>We help you trace the thread of your inner story—discovering where your journey began and how it continues to unfold.</p>
+    <p>We help you trace the thread of your inner story—discovering where your journey began and how it continues to unfold. As you reconnect with intuition and creative practice, the mind becomes a tool, not the destination—bringing heart and mind into alignment.</p>
 
     <h2>Join us</h2>
-    <p>Quiet, art-filled days in Bali. Gentle structure. Real transformation.
-      <a href="{{ url_for('retreats') }}">Explore upcoming dates →</a>
-    </p>
+    <p>Quiet, art-filled days in Bali. Gentle structure. Real transformation. <a href="{{ url_for('retreats') }}">Explore retreats →</a></p>
   </div>
 </section>
 {% endblock %}
