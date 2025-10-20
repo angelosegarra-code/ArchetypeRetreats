@@ -4,7 +4,6 @@
 .hero-retreat {
   position: relative;
   /* ✅ Point to the Buddha image (exact filename/case) */
-  background-image: url('/static/images/hero-buddha-pool.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
