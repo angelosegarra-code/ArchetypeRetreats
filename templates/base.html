@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>{% block title %}Archetype Retreats{% endblock %}</title>
 
-  <!-- Shared, minimal CSS only (header/footer/reset) -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}?v=1">
+  <!-- Shared (header/footer only) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2001">
 
-  <!-- Page-specific CSS (each template can inject its own) -->
+  <!-- Page-specific CSS -->
   {% block page_css %}{% endblock %}
 </head>
-<body class="{% block body_class %}{% endblock %}">
+<body>
 
 <header class="site-header">
   <div class="site-header__inner">
@@ -29,10 +29,7 @@
 
 {% block content %}{% endblock %}
 
-<footer class="site-footer">
-  © <span id="year"></span> Archetype Retreats
-</footer>
-
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<footer class="site-footer">© <span id="year"></span> Archetype Retreats</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
 </html>
