@@ -1,11 +1,93 @@
-.retreat-hero{position:relative;min-height:60vh;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center}
-.retreat-hero .overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.55),rgba(0,0,0,.25))}
-.retreat-hero .inner{position:relative;color:#fff;padding:0 1rem;max-width:850px}
-.retreat-hero h1{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:.4rem;text-shadow:0 4px 12px rgba(0,0,0,.6)}
-.retreat-hero p{text-shadow:0 3px 10px rgba(0,0,0,.55)}
+/* ---- Parallax Hero ---- */
+.retreat-hero.parallax {
+  position: relative;
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  background: var(--hero) center / cover no-repeat fixed;
+}
+.retreat-hero .veil {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.28));
+}
+.retreat-hero .inner {
+  position: relative; z-index: 1;
+  max-width: 900px; padding: 0 22px;
+}
+.retreat-hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  margin-bottom: .5rem;
+  text-shadow: 0 4px 12px rgba(0,0,0,.6);
+}
+.retreat-hero p {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  text-shadow: 0 3px 10px rgba(0,0,0,.55);
+  opacity: .98;
+}
 
-.retreat-body{background:#fafafa;padding:40px 0 70px}
-.retreat-body .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
-.retreat-body h2{margin:26px 0 12px;color:#1f5a47}
-.embed-box{background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);overflow:hidden}
-.embed-box iframe{display:block;width:100%;border:0}
+/* Hero CTAs */
+.hero-ctas { margin-top: 18px; display: inline-flex; gap: 16px; flex-wrap: wrap; }
+.btn {
+  display:inline-block; background:#1f5a47; color:#fff; padding:10px 16px;
+  border-radius:10px; transition:transform .15s, box-shadow .15s, background .2s;
+  box-shadow: 0 6px 16px rgba(0,0,0,.18);
+}
+.btn:hover { background:#2b6b58; transform: translateY(-2px); box-shadow:0 10px 20px rgba(0,0,0,.22); }
+.link { color:#cfeaff; border-bottom:1px solid rgba(255,255,255,.35); padding-bottom:2px; }
+.link:hover { color:#ffffff; border-color:#ffffff; }
+
+/* ---- Packages ---- */
+.packages { background:#ffffff; padding: 54px 0 26px; }
+.packages .wrap { max-width: 1100px; margin:0 auto; padding: 0 24px; }
+.packages h2 { text-align:center; color:#1f5a47; margin-bottom: 22px; }
+
+.grid {
+  display:grid; gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+}
+.card {
+  background:#fff; border-radius:14px; padding: 20px 18px 16px;
+  border:1px solid rgba(0,0,0,.06);
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover { transform: translateY(-3px); box-shadow:0 12px 26px rgba(0,0,0,.1); }
+.card h3 { color:#16342f; margin-bottom:6px; font-size:1.2rem; }
+.price { color:#2b6b58; font-weight:600; margin-bottom:8px; font-size:1.05rem; }
+.card ul { list-style: none; margin: 0 0 12px; padding:0; }
+.card li { padding-left: 18px; position:relative; margin: 6px 0; color:#4b5b58; }
+.card li::before { content: "•"; position:absolute; left:0; color:#2b6b58; font-weight:700; }
+.cta-row { display:flex; gap:12px; align-items:center; }
+
+/* ---- Embeds ---- */
+.embed-section { background:#f7f8f9; padding: 44px 0 70px; }
+.embed-section .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+.embed-section h2 { color:#1f5a47; margin: 10px 0 14px; }
+.embed-box {
+  background:#fff; border-radius:12px; overflow:hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08); border: 1px solid rgba(0,0,0,.04);
+}
+.embed-box iframe { display:block; width:100%; border:0; }
+
+/* ---- Reserve grid ---- */
+.reserve-note { color:#506260; margin: 6px 0 18px; }
+.reserve-grid {
+  display:grid; gap:20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.reserve-card {
+  background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06); padding:18px;
+}
+.reserve-card h3 { color:#16342f; margin-bottom:6px; }
+.reserve-card .price { color:#2b6b58; font-weight:600; margin-bottom:4px; }
+.deposit-line { color:#4b5b58; margin-bottom:10px; }
+.btn.pay { width:100%; text-align:center; }
+
+/* ---- Mobile tweaks ---- */
+@media (max-width: 768px){
+  .retreat-hero.parallax{ min-height: 60vh; }
+  .cta-row{ flex-wrap: wrap; }
+}
