@@ -66,20 +66,39 @@
 }
 
 /* — Hero inner text — */
+/* === Hero Text Styling & Animation === */
 .hero h1 {
   color: #ffffff;
   text-shadow:
-    0 3px 10px rgba(0, 0, 0, 0.8),
-    0 0 18px rgba(255, 255, 255, 0.2);
+    0 3px 8px rgba(0, 0, 0, 0.65),
+    0 0 18px rgba(255, 255, 255, 0.25);
   font-weight: 700;
   letter-spacing: 0.6px;
+  opacity: 0;
+  animation: fadeInUp 1.3s ease-out forwards;
 }
 
 .hero p,
 .hero .lede {
-  color: #ffffff !important; /* pure white, overrides anything else */
+  color: #ffffff;
   font-weight: 400;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7); /* adds depth for readability */
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.7),
+    0 0 12px rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  animation: fadeInUp 1.6s ease-out forwards;
+}
+
+/* Smooth upward fade animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* — Responsive navbar tweaks — */
