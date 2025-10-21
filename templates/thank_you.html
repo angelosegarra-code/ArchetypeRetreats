@@ -1,11 +1,8 @@
 {% extends "base.html" %}
-
-{% block title %}Thank You · Archetype Retreats{% endblock %}
-
 {% block content %}
-<section class="thankyou">
-  <h1>Thank you for your message</h1>
-  <p>We’ll be in touch soon.</p>
-  <p><a href="{{ url_for('home') }}">← Back to Home</a></p>
+<section class="thank-you">
+  <h1>Thank you!</h1>
+  <p>Your message has been sent. We'll be in touch soon.</p>
+  <a href="{{ url_for('index') }}">← Back to Home</a>
 </section>
 {% endblock %}
