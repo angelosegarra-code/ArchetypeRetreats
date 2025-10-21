@@ -2,10 +2,12 @@
 {% block title %}Contact · Archetype Retreats{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css', v=6) }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css', v=7) }}">
 {% endblock %}
 
 {% block content %}
+
+<!-- HERO SECTION -->
 <section class="contact-hero" style="background-image:url('{{ url_for('static', filename='images/hear-you.jpg') }}');">
   <div class="overlay"></div>
   <div class="wrap">
@@ -14,8 +16,11 @@
   </div>
 </section>
 
+<!-- CONTACT BODY -->
 <section class="contact-body">
   <div class="grid">
+
+    <!-- INFO CARD -->
     <div class="contact-card">
       <h2>Reach Out</h2>
       <p>Email: <a href="mailto:hello@archetyperetreats.com">hello@archetyperetreats.com</a></p>
@@ -23,18 +28,48 @@
       <p>Bali Office: Ubud, Gianyar, Indonesia</p>
     </div>
 
+    <!-- FORM CARD -->
     <div class="contact-card">
       <h2>Message Us</h2>
-      <form action="https://formspree.io/f/xldpkzvg" method="POST" class="contact-form">
+
+      <form id="contact-form" action="https://formspree.io/f/xldpkzvg" method="POST" class="contact-form">
         <label for="name">Name</label>
         <input id="name" type="text" name="name" required>
+
         <label for="email">Email</label>
-        <input id="email" type="email" name="email" required>
+        <input id="email" type="email" name="_replyto" required>
+
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
+
         <button type="submit">Send Message</button>
+        <p id="thank-you" style="display:none; margin-top:15px; color:#3b7068; font-weight:500;">
+          ✅ Thank you! Your message has been sent successfully.
+        </p>
       </form>
+
+      <script>
+        const form = document.getElementById('contact-form');
+        const thankYou = document.getElementById('thank-you');
+
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const data = new FormData(form);
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (response.ok) {
+            thankYou.style.display = 'block';
+            form.reset();
+            // Uncomment the next line if you want to auto-redirect after 2 seconds:
+            // setTimeout(() => window.location.href = "/thank-you", 2000);
+          }
+        });
+      </script>
     </div>
   </div>
 </section>
+
 {% endblock %}
