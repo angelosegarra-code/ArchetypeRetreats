@@ -1,27 +1,18 @@
 {% extends "base.html" %}
-
 {% block title %}About · Archetype Retreats{% endblock %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}?v=13">
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}?v=2001">
 {% endblock %}
 
 {% block content %}
-<section class="about-section">
-  <div class="about-overlay"></div>
-
-  <div class="about-content">
+<section class="about-hero" style="background-image:url('{{ url_for('static', filename='images/about-bg.jpg.jpg') }}');">
+  <div class="veil"></div>
+  <div class="about-card">
     <h1>About Archetype Retreats</h1>
-    <p><strong>Archetype Retreats</strong> is a place to slow down, listen inward, and reconnect with the rhythm of your creative life.</p>
-
-    <h2>What is an archetype?</h2>
-    <p>Archetypes are <strong>recurring patterns</strong> in how we think, feel, and respond. They reflect deep symbolic energies that shape our choices and stories.</p>
-
-    <h2>How we support growth</h2>
-    <p>We help you trace the thread of your inner story—discovering where your journey began and how it continues to unfold. As you reconnect with intuition and craft, heart and mind come into alignment.</p>
-
-    <h2>Join us</h2>
-    <p>Quiet, art-filled days in Bali. Gentle structure. Real transformation. <a href="{{ url_for('retreats') }}">Explore retreats →</a></p>
+    <p>We work with archetypes—recurring patterns in how we think, feel, and respond. By tracing the thread of your earliest influences, you begin to see how your story formed… and how it can be gently rewritten from the inside out.</p>
+    <p>As intuition and craft come back into dialogue, heart and mind align. Your story becomes clearer, kinder, and truer to the person you’re becoming.</p>
+    <p><a href="{{ url_for('retreats') }}">Explore Retreats →</a> &nbsp; • &nbsp; <a href="{{ url_for('innercube') }}">Take the InnerCube Test →</a></p>
   </div>
 </section>
 {% endblock %}
