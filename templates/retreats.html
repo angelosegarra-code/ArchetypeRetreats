@@ -1,61 +1,35 @@
 {% extends "base.html" %}
+{% block title %}Retreats · Archetype Retreats{% endblock %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css', v=7) }}">
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=2001">
 {% endblock %}
 
 {% block content %}
-<main class="page-retreats">
-
-  <!-- HERO -->
- <section class="hero-retreat"
-  style="background-image:url('{{ url_for('static', filename='images/hero-buddha-pool.jpg') }}');
-         background-size:cover;
-         background-position:center;
-         background-repeat:no-repeat;">
-  <div class="hero-overlay"></div>
-  <div class="hero-text">
-    <h1>Retreat into the Creative Heart of Bali</h1>
-    <p>Small, art-filled groups in tranquil rice fields.<br>
-       Real transformation begins in stillness — rediscover your story here.</p>
+<section class="retreat-hero" style="background-image:url('{{ url_for('static', filename='images/hero-buddha-pool.jpg') }}');">
+  <div class="overlay"></div>
+  <div class="inner">
+    <h1>Retreat into the heart of Bali</h1>
+    <p>Small, art-filled groups among tranquil rice fields.</p>
   </div>
 </section>
-  <!-- CTA Buttons -->
-  <div class="hero-cta">
-    <a href="#retreat-calendar" class="btn primary">Schedule a Discovery Call</a>
-    <a href="#retreat-intentions" class="btn ghost">Join a Retreat</a>
-  </div>
 
-  <!-- RETREAT DESCRIPTIONS -->
-  <section class="retreat-descriptions">
-    <h2>Choose Your Retreat Experience</h2>
-    <p>Each retreat is a gentle journey inward — balancing reflection, artful practice, and stillness.</p>
-
-    <div class="retreat-cards">
-
-      <div class="retreat-card">
-        <h3>Quiet Reset (3 days)</h3>
-        <p>Slow mornings, guided prompts, and silent walks. A soft reset for clarity and calm.</p>
-      </div>
-
-      <div class="retreat-card">
-        <h3>Deepen (5 days)</h3>
-        <p>Immerse in reflective art sessions and evening circles to strengthen intuition and voice.</p>
-      </div>
-
-      <div class="retreat-card">
-        <h3>Immersion (7 days)</h3>
-        <p>A full week to unwind, create, and rediscover direction — surrounded by Bali’s green rhythm.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- DISCOVERY CALL -->
-  <section id="retreat-calendar" class="retreat-calendar">
+<section class="retreat-body">
+  <div class="wrap">
     <h2>Schedule a Discovery Call</h2>
-    <p>Book a 30-minute call to explore which retreat best fits your creative path.</p>
-    <a href="https://calendly.com/archetyperetreats/discovery" target="_blank" class="btn primary">Book Now</a>
-  </section>
+    <div class="embed-box">
+      <iframe
+        src="https://calendly.com/intinno/innercube-discovery-call?hide_event_type_details=1&hide_gdpr_banner=1"
+        width="100%" height="700" frameborder="0"></iframe>
+    </div>
 
-</main>
+    <h2>Register Interest</h2>
+    <div class="embed-box">
+      <iframe
+        src="https://tally.so/embed/3yVWlB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" title="Retreat Interest">
+      </iframe>
+    </div>
+  </div>
+</section>
 {% endblock %}
