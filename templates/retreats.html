@@ -1,55 +1,114 @@
 {% extends "base.html" %}
-{% block title %}Retreats · Archetype Retreats{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=3201">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=9">
 {% endblock %}
 
 {% block content %}
+<main class="page-retreats">
 
-<section class="retreat-hero">
-  <div class="overlay"></div>
-  <div class="hero-inner">
-    <h1>Retreat into the Heart of Bali</h1>
-    <p>Small, art-filled groups among tranquil rice fields. Real transformation begins in stillness.</p>
-  </div>
-</section>
-
-<section class="packages">
-  <div class="wrap">
-    <h2>Choose Your Pace</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Quiet Reset — 3 Days</h3>
-        <p class="price">USD $750 per person</p>
-        <ul>
-          <li>Slow mornings & guided prompts</li>
-          <li>Two creative labs & nature walks</li>
-          <li>Evening reflection circle</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Deepen — 5 Days</h3>
-        <p class="price">USD $1,250 per person</p>
-        <ul>
-          <li>Daily practice & studio sessions</li>
-          <li>InnerCube archetype integration</li>
-          <li>Optional sunrise meditation</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Immersion — 7 Days</h3>
-        <p class="price">USD $1,750 per person</p>
-        <ul>
-          <li>Full creative arc: stillness → story → sharing</li>
-          <li>1:1 check-ins & evening salons</li>
-          <li>Closing reading & celebration</li>
-        </ul>
-      </article>
+  <!-- HERO -->
+  <section class="hero-retreat">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Retreat into the Creative Heart of Bali</h1>
+      <p class="lead">Small, art-filled groups among tranquil rice fields. Real transformation begins in stillness.</p>
+      <div class="hero-cta">
+        <a href="#calendly" class="btn primary">Schedule a Discovery Call</a>
+        <a href="#retreat-options" class="btn ghost">Join a Retreat</a>
+      </div>
     </div>
+  </section>
+
+  <!-- DESCRIPTIONS + PRICING -->
+  <section id="retreat-options" class="retreat-grid section">
+    <!-- 3 DAYS -->
+    <article class="retreat-card">
+      <h3>Quiet Reset — <span>3 Days</span></h3>
+      <ul>
+        <li>Slow mornings & guided prompts</li>
+        <li>Two creative labs & nature walks</li>
+        <li>Evening reflection circle</li>
+      </ul>
+      <div class="price">USD <strong>750</strong> per person</div>
+
+      <!-- PayPal (replace the email!) -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="pay">
+        <input type="hidden" name="cmd" value="_xclick">
+        <!-- REPLACE with your PayPal email -->
+        <input type="hidden" name="business" value="intinno@icloud.com">
+        <input type="hidden" name="item_name" value="Quiet Reset — 3 Days">
+        <input type="hidden" name="amount" value="750.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="submit" value="Reserve with PayPal">
+      </form>
+    </article>
+
+    <!-- 5 DAYS -->
+    <article class="retreat-card">
+      <h3>Deepen — <span>5 Days</span></h3>
+      <ul>
+        <li>Daily practice & studio sessions</li>
+        <li>Guided journaling & evening salons</li>
+        <li>InnerCube archetype integration</li>
+      </ul>
+      <div class="price">USD <strong>1,250</strong> per person</div>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="pay">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="intinno@icloud.com">
+        <input type="hidden" name="item_name" value="Deepen — 5 Days">
+        <input type="hidden" name="amount" value="1250.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="submit" value="Reserve with PayPal">
+      </form>
+    </article>
+
+    <!-- 7 DAYS -->
+    <article class="retreat-card">
+      <h3>Immersion — <span>7 Days</span></h3>
+      <ul>
+        <li>Full-week arc with generous rest</li>
+        <li>Guided practice, critique & circles</li>
+        <li>Nature day + closing reading</li>
+      </ul>
+      <div class="price">USD <strong>1,950</strong> per person</div>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="pay">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="intinno@icloud.com">
+        <input type="hidden" name="item_name" value="Immersion — 7 Days">
+        <input type="hidden" name="amount" value="1950.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="submit" value="Reserve with PayPal">
+      </form>
+    </article>
+  </section>
+
+  <!-- QUICK RESERVE FORM (posts to your existing /reserve route) -->
+  <section class="reserve section">
+    <h2>Prefer to hold a spot?</h2>
+    <form action="{{ url_for('reserve') }}" method="post" class="reserve-form">
+      <input type="text"   name="name"  placeholder="Your name" required>
+      <input type="email"  name="email" placeholder="Your email" required>
+      <select name="purchase_type">
+        <option value="3-day">Quiet Reset — 3 Days</option>
+        <option value="5-day">Deepen — 5 Days</option>
+        <option value="7-day">Immersion — 7 Days</option>
+      </select>
+      <button type="submit" class="btn primary">Hold My Spot</button>
+    </form>
+  </section>
+
+  <!-- CALENDLY -->
+<section id="calendly" class="section calendly">
+  <h2>Schedule a Discovery Call</h2>
+  <div class="calendly-inline-widget"
+       data-url="https://calendly.com/intinno/innercube-discovery-call?hide_event_type_details=1&hide_gdpr_banner=1"
+       style="min-width:320px;height:740px;">
   </div>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </section>
 
+</main>
 {% endblock %}
