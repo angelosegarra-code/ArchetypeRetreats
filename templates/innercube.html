@@ -1,44 +1,24 @@
 {% extends "base.html" %}
+{% block title %}InnerCube Test · Archetype Retreats{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/innercube.css') }}?v=2001">
+{% endblock %}
 
 {% block content %}
-
-<!-- Hero -->
-<section class="hero" style="background-image:url('{{ url_for('static', filename='images/innercube-sunset.jpg') }}');">
-  <div class="hero-overlay">
+<section class="ic-hero">
+  <div class="ic-wrap">
     <h1>InnerCube Test</h1>
-    <p class="sub">A short reflection to reveal your starting pattern.</p>
+    <p class="lede">Five symbols. One inner landscape. Begin your 5–7 minute test below.</p>
   </div>
 </section>
 
-<!-- Explainer -->
-<section class="section">
-  <div class="container">
-    <h2>How it works</h2>
-    <p>
-      Answer a handful of prompts. We’ll compute your four–archetype scores
-      and email your result. If you choose, you can later purchase the
-      3-page preview or full workbook—no pressure.
-    </p>
-  </div>
-</section>
-
-<!-- Tally embed (optional) -->
-<section class="section">
-  <div class="container" style="max-width:900px;">
-    <!-- If you want the embedded form, keep this iframe -->
+<section class="ic-body">
+  <div class="ic-wrap">
     <iframe
-      src="https://tally.so/r/https://tally.so/r/w2YBZ9"
-      width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
-      title="InnerCube Test">
+      src="https://tally.so/embed/3yVWlB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      width="100%" height="620" frameborder="0" marginheight="0" marginwidth="0" title="InnerCube Test">
     </iframe>
-
-    <!-- Fallback button (or use this only, if you don't want the embed) -->
-    <p style="text-align:center; margin-top:18px;">
-      <a class="btn primary" href="https://tally.so/r/https://tally.so/r/w2YBZ9" target="_blank" rel="noopener">
-        Open the InnerCube Test
-      </a>
-    </p>
   </div>
 </section>
-
 {% endblock %}
