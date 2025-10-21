@@ -1,0 +1,53 @@
+/* THANK YOU PAGE STYLING */
+
+.thankyou-hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  padding: 160px 20px;
+  text-align: center;
+  min-height: 75vh;
+}
+
+.thankyou-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.thankyou-hero .wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: auto;
+}
+
+.thankyou-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.2rem);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+.thankyou-hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f5f5f5;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #3b7068;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2f5b54;
+}
