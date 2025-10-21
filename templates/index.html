@@ -1,105 +1,58 @@
 {% extends "base.html" %}
+{% block title %}Home · Archetype Retreats{% endblock %}
+{% block body_class %}home{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=1002">
+{% endblock %}
 
 {% block content %}
-<!-- HERO SECTION -->
-<section class="hero"
-  style="background-image:url('{{ url_for('static', filename='images/hero-rice-sunrise.jpg') }}');">
+<section class="hero" style="background-image:url('{{ url_for('static', filename='images/hero-rice-sunrise.jpg') }}');">
   <div class="hero-overlay"></div>
-
   <div class="hero-text">
     <h1>Begin where inspiration lives</h1>
-    <p class="hero-lede">
-      Step into a world where creativity meets transformation — and your story unfolds anew.
-    </p>
+    <p>Step into a world where creativity meets transformation — and your story unfolds anew.</p>
   </div>
 </section>
 
-<!-- CTA IMAGE CARDS -->
-<section class="cta-cards">
-  <!-- InnerCube Test -->
-  <a class="cta-card" href="{{ url_for('innercube') }}">
-    <span class="cta-card__bg"
-      style="background-image:url('{{ url_for('static', filename='images/innercube-offering.jpg') }}');"></span>
-    <span class="cta-card__content">
-      <h3>Take the Free Archetype Test</h3>
-      <p>Discover your InnerCube patterns.</p>
-    </span>
+<section class="cards">
+  <a class="card" href="{{ url_for('innercube') }}">
+    <img src="{{ url_for('static', filename='images/innercube-offering.jpg') }}" alt="InnerCube">
+    <h3>Take the Free Archetype Test</h3>
+    <p>Discover your InnerCube patterns.</p>
   </a>
 
-  <!-- Retreats -->
-  <a class="cta-card" href="{{ url_for('retreats') }}">
-    <span class="cta-card__bg"
-      style="background-image:url('{{ url_for('static', filename='images/rice-fields.jpg') }}');"></span>
-    <span class="cta-card__content">
-      <h3>Explore Retreats</h3>
-      <p>Quiet, art-filled days in Bali.</p>
-    </span>
+  <a class="card" href="{{ url_for('retreats') }}">
+    <img src="{{ url_for('static', filename='images/rice-fields.jpg') }}" alt="Retreats in Bali">
+    <h3>Explore Retreats</h3>
+    <p>Quiet, art-filled days in Bali.</p>
   </a>
 
-  <!-- Shop -->
-  <a class="cta-card" href="{{ url_for('shop') }}">
-    <span class="cta-card__bg"
-      style="background-image:url('{{ url_for('static', filename='images/yoga-nature-bali.jpg') }}');"></span>
-    <span class="cta-card__content">
-      <h3>Books &amp; Guides</h3>
-      <p>Companions for your creative practice.</p>
-    </span>
+  <a class="card" href="{{ url_for('shop') }}">
+    <img src="{{ url_for('static', filename='images/yoga-nature-bali.jpg') }}" alt="Books and Guides">
+    <h3>Books &amp; Guides</h3>
+    <p>Companions for your creative practice.</p>
   </a>
 </section>
-
-<!-- THREE CARDS SECTION -->
-<section class="section">
-  <div class="card-container">
-
-    <div class="card">
-      <h3>InnerCube</h3>
-      <p>Five symbols. One inner landscape. Discover the patterns behind how you create, love, and decide.</p>
-      <a href="{{ url_for('test_form') }}" class="btn">Start the Test →</a>
-    </div>
-
-    <div class="card">
-      <h3>Retreats</h3>
-      <p>Quiet, art-filled days to reset your story. Small groups. Gentle structure. Real transformation.</p>
-      <a href="{{ url_for('retreats') }}" class="btn">Upcoming Dates →</a>
-    </div>
-
-    <div class="card">
-      <h3>Books &amp; Guides</h3>
-      <p><em>Your Story Is You</em> and <em>Painting to Poetry</em> — companions for a truer creative life.</p>
-      <a href="{{ url_for('shop') }}" class="btn">Browse →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
+<!-- === TESTIMONIALS === -->
+<section class="testimonials" id="testimonials">
   <h2>What People Are Saying</h2>
+
   <div class="testimonial-grid">
     <div class="testimonial">
-      <p>“The InnerCube opened a doorway I didn’t know existed within me. The retreat gave that insight form, and I left Bali renewed.”</p>
-      <span>— Maya L., Dreamer-Storyteller</span>
+      <p>“The InnerCube opened a doorway I didn’t know existed within me. The retreat gave that insight form, and I left braver.”</p>
+      <span>— Maya L., Dreamer–Storyteller</span>
     </div>
 
     <div class="testimonial">
-      <p>“I came looking for rest and found renewal. The Archetype Retreat helped me translate reflection into action with art.”</p>
-      <span>— Daniel S., Observer-Seeker</span>
+      <p>“I came looking for rest and found renewal. The Archetype Retreat helped me translate reflection into action.”</p>
+      <span>— Daniel S., Observer–Seeker</span>
     </div>
 
     <div class="testimonial">
-      <p>“Taking the InnerCube test was like finding a mirror for my creativity. The retreat turned that reflection into real change.”</p>
-      <span>— Lin C., Alchemist-Listener</span>
+      <p>“Taking the InnerCube test was like finding a mirror for my creativity. The retreat turned that reflection into a practice.”</p>
+      <span>— Lin C., Alchemist–Listener</span>
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <p>© <span id="year"></span> Archetype Retreats. All rights reserved.</p>
-</footer>
-
-<script>
-  // auto-update footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 {% endblock %}
