@@ -1,8 +1,18 @@
 {% extends "base.html" %}
+{% block title %}Thank You · Archetype Retreats{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/thank_you.css', v=3) }}">
+{% endblock %}
+
 {% block content %}
-<section class="thank-you">
-  <h1>Thank you!</h1>
-  <p>Your message has been sent. We'll be in touch soon.</p>
-  <a href="{{ url_for('index') }}">← Back to Home</a>
+<section class="thankyou-hero" style="background-image:url('{{ url_for('static', filename='images/hear-you.jpg') }}');">
+  <div class="overlay"></div>
+  <div class="wrap">
+    <h1>Thank You</h1>
+    <p>Your message has been received with gratitude.<br>
+    We’ll be in touch soon about your inquiry — whether it’s a retreat, creative collaboration, or the InnerCube journey.</p>
+    <a href="{{ url_for('index') }}" class="btn">← Return Home</a>
+  </div>
 </section>
 {% endblock %}
