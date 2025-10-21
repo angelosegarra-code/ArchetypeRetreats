@@ -1,404 +1,55 @@
-/* InnerCube Page Styles */
-
-.page-innercube {
-  --ink: #eef2f8;
-  --muted: #cfd3d8;
-  --accent: #f4b183;
-  --accent2: #fdf2e2;
-  --bg-dark: #1c1b19;
-  font-family: "EB Garamond", serif;
-}
-
-/* Hero Section */
-.hero-innercube {
-  position: relative;
-  min-height: 90vh;
-  background-size: cover;
-  background-position: center;
-  color: var(--ink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 3rem 2rem;
-  filter: brightness(1.15) contrast(1.1) saturate(1.1);
-}
-
-/* Overlay */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.6)
-  );
-}
-
-/* Inner content */
-.hero-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 720px;
-}
-
-.hero-inner h1 {
-  font-size: 2.8rem;
-  letter-spacing: 0.03em;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.hero-inner p.lede {
-  font-size: 1.25rem;
-  color: var(--muted);
-  margin-bottom: 2rem;
-}
-
-/* CTA Buttons */
-.cta-row {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn {
-  text-decoration: none;
-  padding: 0.8rem 1.8rem;
-  border-radius: 2rem;
-  font-weight: 500;
-  transition: all 0.25s ease-in-out;
-}
-
-.btn.primary {
-  background: var(--accent);
-  color: #222;
-}
-
-.btn.primary:hover {
-  background: #ffdca0;
-  transform: translateY(-2px);
-}
-
-.btn.ghost {
-  border: 1px solid var(--muted);
-  color: var(--ink);
-}
-
-.btn.ghost:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
-}
-
-/* Info Section (optional for below hero) */
-.innercube-info {
-  padding: 4rem 2rem;
-  text-align: center;
-  background: var(--bg-dark);
-  color: var(--muted);
-}
-
-.innercube-info h2 {
-  color: var(--accent);
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-/* ================================
-   InnerCube Result Page (Sunset Theme)
-   ================================ */
-
-.page-innercube-result {
-  background-color: var(--bg-dark);
-  color: var(--ink);
-  font-family: "EB Garamond", serif;
-}
-
-/* Hero section */
-.hero-result {
-  position: relative;
-  min-height: 88vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--ink);
-  overflow: hidden;
-  filter: brightness(1.08) contrast(1.06) saturate(1.05);
-}
-
-.hero-result .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(11, 15, 27, 0.3), rgba(11, 15, 27, 0.9));
-  z-index: 1;
-}
-
-.hero-result .hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  padding: 2rem;
-}
-
-.hero-result h1 {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-}
-
-.hero-result .lede {
-  font-size: 1.1rem;
-  color: var(--muted);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-
-.email-display {
-  color: var(--accent);
-  font-weight: 600;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-
-/* Buttons */
-.cta-row {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn.primary {
-  background: var(--accent);
-  color: #111;
-}
-
-.btn.primary:hover {
-  background: var(--accent2);
-  transform: translateY(-2px);
-}
-
-.btn.ghost {
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn.ghost:hover {
-  background: var(--accent);
-  color: #111;
-  transform: translateY(-2px);
-}
-
-/* Symbolic Note */
-.symbolic-note {
-  padding: 4rem 1.5rem;
-  text-align: center;
-  background: #101523;
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-.symbolic-note h2 {
-  color: var(--accent);
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-/* ================================
-   InnerCube Embed Section
-   ================================ */
-
-.innercube-embed {
-  padding: 5rem 1.5rem;
-  background: linear-gradient(to bottom, #0b0f1b 10%, #151c2a 90%);
-  color: var(--muted);
+/* === INNERCUBE HERO === */
+.ic-hero {
+  background: #0f1f1c url('../images/innercube-hero.jpg') center/cover no-repeat;
+  padding: 90px 0 40px;
+  color: #fff;
   text-align: center;
 }
 
-.innercube-embed h2 {
-  color: var(--accent);
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.03em;
-}
-
-.innercube-embed .lede {
-  color: var(--ink);
-  font-size: 1.1rem;
-  opacity: 0.85;
-  margin-bottom: 2rem;
-}
-
-.iframe-wrapper {
-  max-width: 1000px;
+.ic-wrap {
+  max-width: 900px;
   margin: 0 auto;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-  background: #101523;
+  padding: 0 24px;
 }
 
-.iframe-wrapper iframe {
+.ic-hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 8px;
+}
+
+.ic-hero .lede {
+  color: #e9f2ef;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* === TALLY EMBED AREA === */
+.ic-body {
+  background: #fafafa;
+  padding: 30px 0 60px;
+}
+
+.ic-body .ic-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.ic-body iframe {
   width: 100%;
-  min-height: 720px;
-  border: none;
+  min-height: 70vh;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  background: #fff;
 }
 
-/* Smooth anchor scroll for consistent experience */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Button styling consistency */
-.btn.primary {
-  background: var(--accent);
-  color: #111;
-}
-
-.btn.primary:hover {
-  background: var(--accent2);
-  transform: translateY(-2px);
-}
-
-.btn.ghost {
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn.ghost:hover {
-  background: var(--accent);
-  color: #111;
-  transform: translateY(-2px);
-}
-/* ================================
-   Modal styles
-   ================================ */
-body.modal-open { overflow: hidden; }
-
-.modal[hidden] { display: none !important; }
-.modal {
-  position: fixed; inset: 0; z-index: 1000;
-}
-
-.modal__backdrop {
-  position: absolute; inset: 0;
-  background: rgba(0,0,0,.55);
-  backdrop-filter: blur(2px);
-}
-
-.modal__dialog {
-  position: relative;
-  width: min(680px, 92vw);
-  margin: 8vh auto;
-  background: #0f1524;
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 12px;
-  box-shadow: 0 12px 40px rgba(0,0,0,.45);
-  padding: 1.5rem 1.25rem 1.75rem;
-  color: var(--ink);
-}
-
-.modal__close {
-  position: absolute; right: .5rem; top: .4rem;
-  background: transparent; border: 0; color: var(--muted);
-  font-size: 1.8rem; line-height: 1; cursor: pointer;
-}
-
-.modal__dialog h2 { color: var(--accent); margin: .25rem 0  .75rem; }
-.modal__dialog .muted { color: var(--muted); line-height: 1.7; }
-
-.modal__list { text-align: left; margin: 1rem auto 1.25rem; max-width: 46ch; color: var(--muted); }
-.modal__list li { margin: .4rem 0; }
-
-.modal__form { margin-top: .75rem; }
-.modal__label { display:block; margin:.5rem 0 .35rem; color: var(--muted); }
-.modal__input {
-  width: 100%; border: 1px solid rgba(255,255,255,.12);
-  background: #0b1020; color: var(--ink);
-  border-radius: 8px; padding: .8rem .9rem; resize: vertical;
-}
-
-.modal__cta { margin-top: 1rem; display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; }
-/* ================================
-   Modal fade-in animation
-   ================================ */
-
-@keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.97) translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-.modal__dialog {
-  animation: modalFadeIn 0.3s ease forwards;
-  opacity: 0; /* start hidden until JS opens it */
-}
-
-.modal:not([hidden]) .modal__dialog {
-  opacity: 1;
-}
-
-.modal__backdrop {
-  animation: modalFadeIn 0.4s ease both;
-}
-/* === Mobile Responsive Tweaks for InnerCube Page === */
-
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
-  .page-innercube .hero-inner h1 {
-    font-size: 2rem;
-    line-height: 1.3;
+  .ic-hero {
+    padding: 60px 0 30px;
   }
-
-  .page-innercube .hero-inner p {
-    font-size: 1rem;
-    margin: 0.8em auto 1.5em;
-    max-width: 90%;
-  }
-
-  .cta-row {
-    flex-direction: column;
-    gap: 0.8em;
-  }
-
-  .cta-row a {
-    width: 80%;
-    max-width: 260px;
-    margin: 0 auto;
-  }
-
-  .innercube-test-section {
-    padding: 40px 16px;
-  }
-
-  iframe[data-tally-src] {
-    height: 720px;
-  }
-}
-
-@media (max-width: 480px) {
-  .page-innercube .hero-inner h1 {
-    font-size: 1.6rem;
-  }
-
-  .page-innercube .hero-inner p {
-    font-size: 0.9rem;
-  }
-
-  .cta-row a {
-    font-size: 0.9rem;
-    padding: 10px 22px;
-  }
-
-  iframe[data-tally-src] {
-    height: 640px;
+  .ic-hero h1 {
+    font-size: 1.8rem;
   }
 }
