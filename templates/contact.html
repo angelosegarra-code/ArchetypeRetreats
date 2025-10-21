@@ -1,28 +1,45 @@
 {% extends "base.html" %}
+
 {% block title %}Contact · Archetype Retreats{% endblock %}
 
-{% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}?v=2001">
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css', v=3) }}">
 {% endblock %}
 
 {% block content %}
-<section class="contact">
+<section class="contact-hero" style="background-image:url('{{ url_for('static', filename='images/bali-field-blur.jpg') }}');">
+  <div class="overlay"></div>
   <div class="wrap">
     <h1>Contact</h1>
-    <p class="lede">Questions about the InnerCube, retreats, or bookings? Send a note—we’ll respond as soon as we can.</p>
+    <p>We’d love to hear from you — questions about retreats, collaboration, or joining our creative circle.</p>
+  </div>
+</section>
 
-    <form class="contact-form" method="post" action="{{ url_for('submit_contact') }}">
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" required>
+<section class="contact-body">
+  <div class="grid">
+    <div class="card">
+      <h2>Reach Out</h2>
+      <p>Email: <a href="mailto:hello@archetyperetreats.com">hello@archetyperetreats.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/archetyperetreats" target="_blank">@archetyperetreats</a></p>
+      <p>Bali Office: Ubud, Gianyar, Indonesia</p>
+    </div>
 
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <button type="submit">Send</button>
-    </form>
+    <div class="card">
+      <h2>Message Us</h2>
+      <!-- Front-end only: redirect to Thank You (no server handling) -->
+      <form onsubmit="event.preventDefault(); window.location='{{ url_for('thank_you') }}';">
+        <label>Name
+          <input type="text" name="name" required>
+        </label>
+        <label>Email
+          <input type="email" name="_replyto" required>
+        </label>
+        <label>Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </div>
 </section>
 {% endblock %}
