@@ -1,159 +1,66 @@
 /* === CONTACT PAGE STYLING === */
 
-/* Hero Section */
-.contact-hero {
-  position: relative;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
+{% extends "base.html" %}
+{% block title %}Contact · Archetype Retreats{% endblock %}
 
-.contact-hero .overlay {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.65) 0%,
-    rgba(0, 0, 0, 0.45) 45%,
-    rgba(0, 0, 0, 0.25) 85%
-  );
-  z-index: 0;
-}
+{# Load the page CSS (works with either block name) #}
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css', v=6) }}">
+{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css', v=6) }}">
+{% endblock %}
 
-.contact-hero .wrap {
-  position: relative;
-  z-index: 1;
-  max-width: 720px;
-  padding: 2rem;
-}
+{% block content %}
 
-.contact-hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.8rem;
-  color: #ffffff;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-}
+<!-- HERO (uses your hear-you.jpg background) -->
+<section class="contact-hero"
+         style="background-image:url('{{ url_for('static', filename='images/hear-you.jpg') }}');">
+  <div class="overlay"></div>
+  <div class="wrap">
+    <h1>Contact</h1>
+    <p>We’d love to hear from you — questions about retreats, collaboration, or joining our creative circle.</p>
+  </div>
+</section>
 
-.contact-hero p {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #f0f0f0;
-  line-height: 1.6;
-  margin: 0 auto;
-  max-width: 600px;
-}
+<!-- BODY -->
+<section class="contact-body">
+  <div class="grid">
+    <!-- Info card -->
+    <div class="contact-card">
+      <h2>Reach Out</h2>
+      <p>Email: <a href="mailto:hello@archetyperetreats.com">hello@archetyperetreats.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/archetyperetreats" target="_blank" rel="noopener">@archetyperetreats</a></p>
+      <p>Bali Office: Ubud, Gianyar, Indonesia</p>
+    </div>
 
-/* Main Body */
-.contact-body {
-  background: #fafafa;
-  padding: 5rem 2rem;
-  display: flex;
-  justify-content: center;
-}
+    <!-- Formspree form -->
+    <div class="contact-card">
+      <h2>Message Us</h2>
 
-.contact-body .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 3rem;
-  width: 100%;
-  max-width: 1000px;
-}
+      <form action="https://formspree.io/f/xldpkzvg" method="POST" class="contact-form">
+        <!-- Visible fields -->
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" required>
 
-.contact-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  padding: 2.5rem;
-  text-align: left;
-}
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required>
 
-.contact-card h2 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #1f5a47;
-  margin-bottom: 1rem;
-}
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-.contact-card p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.7;
-}
+        <!-- Helpful meta (subject + thank-you redirect) -->
+        <input type="hidden" name="_subject" value="New message from Archetype Retreats contact form">
+        <input type="hidden" name="_next" value="{{ url_for('thank_you') }}">
 
-.contact-card a {
-  color: #1f5a47;
-  text-decoration: none;
-  font-weight: 500;
-}
+        <!-- Honeypot (spam trap) -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-.contact-card a:hover {
-  text-decoration: underline;
-}
+        <button type="submit">Send Message</button>
+      </form>
 
-/* Form */
-form {
-  display: flex;
-  flex-direction: column;
-}
+    </div>
+  </div>
+</section>
 
-label {
-  font-size: 0.95rem;
-  color: #444;
-  margin-top: 1rem;
-  margin-bottom: 0.3rem;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-button[type="submit"] {
-  margin-top: 1.5rem;
-  background-color: #1f5a47;
-  color: #fff;
-  border: none;
-  padding: 0.9rem 1.6rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.25s ease;
-}
-
-button[type="submit"]:hover {
-  background-color: #174f3b;
-}
-
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .contact-body {
-    padding: 3rem 1.5rem;
-  }
-
-  .contact-hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .contact-card {
-    padding: 2rem;
-  }
-}
+{% endblock %}
