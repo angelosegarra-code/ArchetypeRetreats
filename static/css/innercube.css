@@ -1,10 +1,48 @@
-.ic-hero{background:#0f1f1c url('../images/innercube-sunset.jpg') center/cover no-repeat;padding:90px 0 40px;color:#fff;text-align:center}
-.ic-wrap{max-width:980px;margin:0 auto;padding:0 24px}
-.ic-hero h1{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:8px}
-.ic-hero .lede{color:#e9f2ef;font-weight:300;line-height:1.5}
+.ic-hero {
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url('../images/innercube-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 120px 20px 100px;
+}
 
-.ic-body{background:#fafafa;padding:30px 0 60px}
-.ic-body .ic-wrap{max-width:980px;margin:0 auto;padding:0 24px}
-.ic-body iframe{width:100%;min-height:70vh;border:0;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.08);background:#fff}
+.ic-title {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
 
-@media (max-width:768px){.ic-hero{padding:60px 0 30px}.ic-hero h1{font-size:1.8rem}}
+.ic-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.ic-body {
+  padding: 60px 20px;
+  background: #f7f8f9;
+}
+
+.ic-body iframe {
+  width: 100%;
+  min-height: 80vh;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+  background: #fff;
+  display: block;
+}
+
+.ic-info {
+  text-align: center;
+  padding: 60px 20px 100px;
+  background: #fff;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.ic-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+}
