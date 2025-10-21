@@ -1,27 +1,28 @@
-/* === Contact Page Styling === */
+/* === CONTACT PAGE STYLING === */
 
-/* Hero section with background + parallax */
+/* Hero Section */
 .contact-hero {
   position: relative;
-  min-height: 65vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
-  background: url("/static/images/hear-you.jpg") center/cover no-repeat fixed;
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
-.contact-hero::before {
+.contact-hero .overlay {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.55) 0%,
-    rgba(0, 0, 0, 0.35) 40%,
-    rgba(0, 0, 0, 0.15) 80%
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.25) 85%
   );
   z-index: 0;
 }
@@ -29,133 +30,130 @@
 .contact-hero .wrap {
   position: relative;
   z-index: 1;
-  max-width: 800px;
-  padding: 0 20px;
+  max-width: 720px;
+  padding: 2rem;
 }
 
 .contact-hero h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  margin-bottom: 0.5rem;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-  letter-spacing: 0.4px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .contact-hero p {
   font-size: 1.1rem;
+  font-weight: 400;
+  color: #f0f0f0;
   line-height: 1.6;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-  opacity: 0.9;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
-/* --- Contact Content --- */
+/* Main Body */
 .contact-body {
   background: #fafafa;
-  padding: 80px 20px;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-body .grid {
-  max-width: 1100px;
-  margin: 0 auto;
   display: grid;
-  gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 3rem;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .contact-card {
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-  padding: 32px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  text-align: left;
 }
 
 .contact-card h2 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
   color: #1f5a47;
+  margin-bottom: 1rem;
 }
 
 .contact-card p {
+  font-size: 1rem;
   color: #333;
-  margin-bottom: 12px;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .contact-card a {
   color: #1f5a47;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .contact-card a:hover {
   text-decoration: underline;
 }
 
-/* --- Form Styles --- */
+/* Form */
 form {
   display: flex;
   flex-direction: column;
 }
 
-form label {
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: #222;
+label {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
 }
 
-form input,
-form textarea {
-  font: inherit;
-  padding: 12px 14px;
-  margin-bottom: 16px;
-  border-radius: 10px;
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
   border: 1px solid #ddd;
-  background: #fff;
-  transition: box-shadow 0.2s ease;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
 }
 
-form input:focus,
-form textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(31, 90, 71, 0.25);
+textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 button[type="submit"] {
-  align-self: flex-start;
-  padding: 12px 22px;
-  background: #1f5a47;
+  margin-top: 1.5rem;
+  background-color: #1f5a47;
   color: #fff;
-  font-weight: 600;
   border: none;
-  border-radius: 24px;
+  padding: 0.9rem 1.6rem;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.25s ease, transform 0.25s ease;
+  font-size: 1rem;
+  transition: background 0.25s ease;
 }
 
 button[type="submit"]:hover {
-  background: #26775c;
-  transform: translateY(-1px);
+  background-color: #174f3b;
 }
 
-/* --- Thank You Page --- */
-.thankyou {
-  padding: 100px 20px;
-  text-align: center;
-  background: #fefefe;
-}
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .contact-body {
+    padding: 3rem 1.5rem;
+  }
 
-.thankyou h1 {
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  color: #1f5a47;
-  margin-bottom: 12px;
-}
+  .contact-hero h1 {
+    font-size: 2.2rem;
+  }
 
-.thankyou p {
-  font-size: 1.1rem;
-  color: #444;
+  .contact-card {
+    padding: 2rem;
+  }
 }
