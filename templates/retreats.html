@@ -2,34 +2,151 @@
 {% block title %}Retreats · Archetype Retreats{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=2001">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=3102">
 {% endblock %}
 
 {% block content %}
-<section class="retreat-hero" style="background-image:url('{{ url_for('static', filename='images/hero-buddha-pool.jpg') }}');">
-  <div class="overlay"></div>
+
+<!-- PARALLAX HERO -->
+<section class="retreat-hero parallax" style="--hero:url('{{ url_for('static', filename='images/hero-buddha-pool.jpg') }}');">
+  <div class="veil"></div>
   <div class="inner">
-    <h1>Retreat into the heart of Bali</h1>
-    <p>Small, art-filled groups among tranquil rice fields.</p>
+    <h1>Retreat into the Heart of Bali</h1>
+    <p>Small, art-filled groups among tranquil rice fields. Real transformation begins in stillness.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#schedule">Schedule a Discovery Call</a>
+      <a class="link" href="#reserve">Reserve Your Spot</a>
+    </div>
   </div>
 </section>
 
-<section class="retreat-body">
+<!-- PACKAGES -->
+<section class="packages">
+  <div class="wrap">
+    <h2>Choose Your Pace</h2>
+    <div class="grid">
+      <!-- 3 DAY -->
+      <article class="card">
+        <h3>Quiet Reset — 3 Days</h3>
+        <p class="price">USD $750 per person</p>
+        <ul>
+          <li>Slow mornings & guided prompts</li>
+          <li>Two creative labs & nature walks</li>
+          <li>Evening reflection circle</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn" href="#schedule">Talk to Us</a>
+          <a class="muted" href="#reserve">Reserve Spot</a>
+        </div>
+      </article>
+
+      <!-- 5 DAY -->
+      <article class="card">
+        <h3>Deepen — 5 Days</h3>
+        <p class="price">USD $1,250 per person</p>
+        <ul>
+          <li>Daily practice & studio sessions</li>
+          <li>InnerCube archetype integration</li>
+          <li>Optional rice-field sunrise</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn" href="#schedule">Talk to Us</a>
+          <a class="muted" href="#reserve">Reserve Spot</a>
+        </div>
+      </article>
+
+      <!-- 7 DAY -->
+      <article class="card">
+        <h3>Immersion — 7 Days</h3>
+        <p class="price">USD $1,750 per person</p>
+        <ul>
+          <li>Full arc: stillness → story → sharing</li>
+          <li>1:1 check-ins & evening salons</li>
+          <li>Closing reading/performance</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn" href="#schedule">Talk to Us</a>
+          <a class="muted" href="#reserve">Reserve Spot</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDLY -->
+<section class="embed-section" id="schedule">
   <div class="wrap">
     <h2>Schedule a Discovery Call</h2>
     <div class="embed-box">
       <iframe
         src="https://calendly.com/intinno/innercube-discovery-call?hide_event_type_details=1&hide_gdpr_banner=1"
-        width="100%" height="700" frameborder="0"></iframe>
-    </div>
-
-    <h2>Register Interest</h2>
-    <div class="embed-box">
-      <iframe
-        src="https://tally.so/embed/3yVWlB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-        width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" title="Retreat Interest">
-      </iframe>
+        width="100%" height="740" frameborder="0"></iframe>
     </div>
   </div>
 </section>
+
+<!-- PAYPAL RESERVE SECTION -->
+<section class="embed-section" id="reserve">
+  <div class="wrap">
+    <h2>Reserve Your Spot (Deposit)</h2>
+    <p class="reserve-note">Your deposit holds your place; balance due 14 days before arrival. Fully refundable within 7 days of booking.</p>
+
+    <div class="reserve-grid">
+      <!-- 3-Day -->
+      <div class="reserve-card">
+        <h3>Quiet Reset — 3 Days</h3>
+        <p class="price">USD $750 per person</p>
+        <p class="deposit-line">Deposit: $200</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="intinno@icloud.com">
+          <input type="hidden" name="item_name" value="Archetype Retreat — 3-Day Quiet Reset (Deposit)">
+          <input type="hidden" name="amount" value="200.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="no_shipping" value="1">
+          <input type="hidden" name="return" value="https://archetyperetreats.onrender.com/thank-you">
+          <input type="hidden" name="cancel_return" value="https://archetyperetreats.onrender.com/retreats#reserve">
+          <button type="submit" class="btn pay">Pay Deposit</button>
+        </form>
+      </div>
+
+      <!-- 5-Day -->
+      <div class="reserve-card">
+        <h3>Deepen — 5 Days</h3>
+        <p class="price">USD $1,250 per person</p>
+        <p class="deposit-line">Deposit: $300</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="intinno@icloud.com">
+          <input type="hidden" name="item_name" value="Archetype Retreat — 5-Day Deepen (Deposit)">
+          <input type="hidden" name="amount" value="300.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="no_shipping" value="1">
+          <input type="hidden" name="return" value="https://archetyperetreats.onrender.com/thank-you">
+          <input type="hidden" name="cancel_return" value="https://archetyperetreats.onrender.com/retreats#reserve">
+          <button type="submit" class="btn pay">Pay Deposit</button>
+        </form>
+      </div>
+
+      <!-- 7-Day -->
+      <div class="reserve-card">
+        <h3>Immersion — 7 Days</h3>
+        <p class="price">USD $1,750 per person</p>
+        <p class="deposit-line">Deposit: $400</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="intinno@icloud.com">
+          <input type="hidden" name="item_name" value="Archetype Retreat — 7-Day Immersion (Deposit)">
+          <input type="hidden" name="amount" value="400.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="no_shipping" value="1">
+          <input type="hidden" name="return" value="https://archetyperetreats.onrender.com/thank-you">
+          <input type="hidden" name="cancel_return" value="https://archetyperetreats.onrender.com/retreats#reserve">
+          <button type="submit" class="btn pay">Pay Deposit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
