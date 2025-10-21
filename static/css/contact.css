@@ -1,61 +1,49 @@
-.contact {
-  background: #f9f9f9;
-  padding: 60px 0 80px;
+/* Contact hero */
+.contact-hero {
+  position: relative;
+  min-height: 48vh;
+  display: flex; align-items: center; justify-content: center;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
+  color: #fff; text-align: center; overflow: hidden;
+}
+.contact-hero .overlay{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.25));
+}
+.contact-hero .wrap{ position:relative; z-index:1; padding: 40px 20px; }
+.contact-hero h1{ font-size: clamp(2rem,4vw,3rem); margin:0 0 .5rem; text-shadow: 0 4px 18px rgba(0,0,0,.55); }
+.contact-hero p{ max-width: 780px; margin: 0 auto; text-shadow: 0 2px 10px rgba(0,0,0,.6); }
+
+/* Body */
+.contact-body{ padding: 60px 20px; }
+.contact-body .grid{
+  max-width: 1100px; margin: 0 auto;
+  display: grid; gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 840px){
+  .contact-body .grid{ grid-template-columns: 1fr; }
 }
 
-.contact .wrap {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 0 24px;
-  text-align: center;
+.card{
+  background: #fff; border-radius: 12px; padding: 24px;
+  box-shadow: 0 8px 26px rgba(0,0,0,.06);
 }
+.card h2{ margin: 0 0 10px; color: #1f5a47; }
+.card p{ margin: 8px 0; }
 
-.contact h1 {
-  color: #1f5a47;
-  margin-bottom: 8px;
+/* Form */
+form label{ display:block; font-weight:600; margin:12px 0 6px; color:#333; }
+input, textarea{
+  width:100%; border:1px solid #e3e3e3; border-radius:10px; padding:12px 14px; font: inherit;
+  background:#fafafa;
 }
+button[type="submit"]{
+  margin-top:16px; padding:10px 18px; border-radius:24px; border:0;
+  background:#1f5a47; color:#fff; font-weight:700; cursor:pointer;
+}
+button[type="submit"]:hover{ filter:brightness(1.08); }
 
-.contact .lede {
-  color: #4a5a57;
-  margin: 8px auto 28px;
-  max-width: 680px;
-}
-
-.contact-form {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-  text-align: left;
-  padding: 26px;
-}
-
-.contact-form label {
-  font-weight: 600;
-  color: #333;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  background: #1f5a47;
-  color: #fff;
-  padding: 12px 22px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.contact-form button:hover {
-  background: #2b6b58;
-}
+/* Thank-you */
+.thankyou{ padding: 80px 20px; text-align:center; }
+.thankyou h1{ margin:0 0 8px; }
