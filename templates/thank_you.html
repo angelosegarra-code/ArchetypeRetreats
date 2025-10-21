@@ -1,17 +1,11 @@
 {% extends "base.html" %}
 
+{% block title %}Thank You · Archetype Retreats{% endblock %}
+
 {% block content %}
-<section class="section container">
-  <h1>Thank You 🌿</h1>
-  <p>Your message has been sent successfully. I’ll get back to you soon — usually within 1–2 days.</p>
-
-  <p>In the meantime, you can:</p>
-  <ul>
-    <li><a href="{{ url_for('innercube') }}">Take the InnerCube Test</a></li>
-    <li><a href="{{ url_for('retreats') }}">Explore Upcoming Retreats</a></li>
-    <li><a href="{{ url_for('shop') }}">Browse Books & Guides</a></li>
-  </ul>
-
-  <p class="muted">Thank you for being part of the creative journey.</p>
+<section class="thankyou">
+  <h1>Thank you for your message</h1>
+  <p>We’ll be in touch soon.</p>
+  <p><a href="{{ url_for('home') }}">← Back to Home</a></p>
 </section>
 {% endblock %}
