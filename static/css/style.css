@@ -223,7 +223,57 @@ html,body{
   text-decoration: none;
   transition: all 0.25s ease;
 }
+/* ===== Override CTA Cards Back to Dark Overlay Style ===== */
+.cta-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 260px;
+  text-decoration: none;
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
 
+.cta-card__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.cta-card:hover .cta-card__bg {
+  transform: scale(1.05);
+}
+
+.cta-card__content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.cta-card__content h3,
+.cta-card__content p {
+  color: #ffffff !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.cta-card__content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.cta-card__content p {
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
 .cta-buttons .btn:hover {
   background: #d0e5db;
   color: #000;
