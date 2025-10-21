@@ -1,66 +1,71 @@
-/* === CONTACT PAGE STYLING === */
+/* CONTACT PAGE STYLING */
 
-{% extends "base.html" %}
-{% block title %}Contact · Archetype Retreats{% endblock %}
+.contact-hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
 
-{# Load the page CSS (works with either block name) #}
-{% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css', v=6) }}">
-{% endblock %}
-{% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css', v=6) }}">
-{% endblock %}
+.contact-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
 
-{% block content %}
+.contact-hero .wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: auto;
+}
 
-<!-- HERO (uses your hear-you.jpg background) -->
-<section class="contact-hero"
-         style="background-image:url('{{ url_for('static', filename='images/hear-you.jpg') }}');">
-  <div class="overlay"></div>
-  <div class="wrap">
-    <h1>Contact</h1>
-    <p>We’d love to hear from you — questions about retreats, collaboration, or joining our creative circle.</p>
-  </div>
-</section>
+.contact-body {
+  background: #faf8f5;
+  padding: 80px 20px;
+}
 
-<!-- BODY -->
-<section class="contact-body">
-  <div class="grid">
-    <!-- Info card -->
-    <div class="contact-card">
-      <h2>Reach Out</h2>
-      <p>Email: <a href="mailto:hello@archetyperetreats.com">hello@archetyperetreats.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/archetyperetreats" target="_blank" rel="noopener">@archetyperetreats</a></p>
-      <p>Bali Office: Ubud, Gianyar, Indonesia</p>
-    </div>
+.contact-body .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    <!-- Formspree form -->
-    <div class="contact-card">
-      <h2>Message Us</h2>
+.contact-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 30px 40px;
+  flex: 1 1 400px;
+  min-width: 300px;
+}
 
-      <form action="https://formspree.io/f/xldpkzvg" method="POST" class="contact-form">
-        <!-- Visible fields -->
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" required>
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+}
 
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required>
+.contact-form button {
+  background: #3b7068;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <!-- Helpful meta (subject + thank-you redirect) -->
-        <input type="hidden" name="_subject" value="New message from Archetype Retreats contact form">
-        <input type="hidden" name="_next" value="{{ url_for('thank_you') }}">
-
-        <!-- Honeypot (spam trap) -->
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-        <button type="submit">Send Message</button>
-      </form>
-
-    </div>
-  </div>
-</section>
-
-{% endblock %}
+.contact-form button:hover {
+  background: #2f5b54;
+}
