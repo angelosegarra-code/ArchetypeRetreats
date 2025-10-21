@@ -1,23 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% block body_class %}home{% endblock %}
-
-<section class="hero" 
+<!-- HERO SECTION -->
+<section class="hero"
   style="background-image:url('{{ url_for('static', filename='images/hero-rice-sunrise.jpg') }}');">
   <div class="hero-overlay"></div>
 
   <div class="hero-text">
     <h1>Begin where inspiration lives</h1>
-    <p>Step into a world where creativity meets transformation — and your story unfolds anew.</p>
+    <p class="hero-lede">
+      Step into a world where creativity meets transformation — and your story unfolds anew.
+    </p>
   </div>
 </section>
 
-<!-- === CTA IMAGE CARDS === -->
+<!-- CTA IMAGE CARDS -->
 <section class="cta-cards">
-  <!-- InnerCube / Test -->
+  <!-- InnerCube Test -->
   <a class="cta-card" href="{{ url_for('innercube') }}">
-    <span class="cta-card__bg" style="background-image:url('{{ url_for('static', filename='images/innercube-offering.jpg') }}');"></span>
+    <span class="cta-card__bg"
+      style="background-image:url('{{ url_for('static', filename='images/innercube-offer.jpg') }}');"></span>
     <span class="cta-card__content">
       <h3>Take the Free Archetype Test</h3>
       <p>Discover your InnerCube patterns.</p>
@@ -26,7 +28,8 @@
 
   <!-- Retreats -->
   <a class="cta-card" href="{{ url_for('retreats') }}">
-    <span class="cta-card__bg" style="background-image:url('{{ url_for('static', filename='images/rice-fields.jpg') }}');"></span>
+    <span class="cta-card__bg"
+      style="background-image:url('{{ url_for('static', filename='images/rice-fields.jpg') }}');"></span>
     <span class="cta-card__content">
       <h3>Explore Retreats</h3>
       <p>Quiet, art-filled days in Bali.</p>
@@ -35,18 +38,19 @@
 
   <!-- Shop -->
   <a class="cta-card" href="{{ url_for('shop') }}">
-    <span class="cta-card__bg" style="background-image:url('{{ url_for('static', filename='images/yoga-nature-bali.jpg') }}');"></span>
+    <span class="cta-card__bg"
+      style="background-image:url('{{ url_for('static', filename='images/yoga-nature-bali.jpg') }}');"></span>
     <span class="cta-card__content">
-      <h3>Shop</h3>
-      <p>Books & guides for your practice.</p>
+      <h3>Books &amp; Guides</h3>
+      <p>Companions for your creative practice.</p>
     </span>
   </a>
 </section>
 
-<!-- THREE CARDS -->
+<!-- THREE CARDS SECTION -->
 <section class="section">
   <div class="card-container">
-    
+
     <div class="card">
       <h3>InnerCube</h3>
       <p>Five symbols. One inner landscape. Discover the patterns behind how you create, love, and decide.</p>
@@ -65,32 +69,37 @@
       <a href="{{ url_for('shop') }}" class="btn">Browse →</a>
     </div>
 
+  </div>
 </section>
 
-<!-- TESTIMONIALS SECTION -->
+<!-- TESTIMONIALS -->
 <section class="testimonials">
   <h2>What People Are Saying</h2>
   <div class="testimonial-grid">
     <div class="testimonial">
-      <p>“The InnerCube opened a doorway I didn’t know existed within me. The retreat gave that insight form, and I left Bali feeling truly aligned.”</p>
+      <p>“The InnerCube opened a doorway I didn’t know existed within me. The retreat gave that insight form, and I left Bali renewed.”</p>
       <span>— Maya L., Dreamer-Storyteller</span>
     </div>
+
     <div class="testimonial">
-      <p>“I came looking for rest and found renewal. The Archetype Retreat helped me translate reflection into action with such gentle clarity.”</p>
+      <p>“I came looking for rest and found renewal. The Archetype Retreat helped me translate reflection into action with art.”</p>
       <span>— Daniel S., Observer-Seeker</span>
     </div>
+
     <div class="testimonial">
-      <p>“Taking the InnerCube test was like finding a mirror for my creativity. The retreat turned that reflection into real transformation.”</p>
+      <p>“Taking the InnerCube test was like finding a mirror for my creativity. The retreat turned that reflection into real change.”</p>
       <span>— Lin C., Alchemist-Listener</span>
     </div>
   </div>
 </section>
+
+<!-- FOOTER -->
 <footer class="site-footer">
-  <p>&copy; <span id="year"></span> Archetype Retreats. All rights reserved.</p>
+  <p>© <span id="year"></span> Archetype Retreats. All rights reserved.</p>
 </footer>
 
 <script>
-  // Automatically updates year
+  // auto-update footer year
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 {% endblock %}
