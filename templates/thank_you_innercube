@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Thank You • InnerCube</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/thank_you.css') }}">
+</head>
+
+<body class="thank-body">
+  <!-- Top nav (same as your other pages) -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="{{ url_for('home') }}">Archetype Retreats</a>
+      <nav class="main-nav">
+        <a href="{{ url_for('innercube') }}">InnerCube</a>
+        <a href="{{ url_for('retreats') }}">Retreats</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main content -->
+  <main class="thank-wrapper">
+    <section class="thank-card">
+      <h1 class="thank-head">Thank you. 🌿</h1>
+
+      <p class="thank-lead">
+        Your InnerCube preview is on its way to your email.
+      </p>
+
+      <p class="thank-text">
+        Check your inbox for your archetype, your starting story,
+        and a first look at how your imagination is wired.
+        If you don’t see it in a minute, please check spam or promotions.
+      </p>
+
+      <div class="cta-block">
+        <a class="cta-btn primary"
+           href="https://gum.co/innercubefull"
+           target="_blank" rel="noopener">
+           Get Full 3-Page Report ($4.99)
+        </a>
+
+        <a class="cta-btn secondary"
+           href="https://gum.co/innercubebundle"
+           target="_blank" rel="noopener">
+           Bundle: Report + 114-Page Guide ($14.95)
+        </a>
+      </div>
+
+      <div class="sub-offer">
+        <p class="sub-copy">
+          Want to go deeper in real life?
+          Join us in Bali for a small, art-led reset in the rice fields.
+        </p>
+        <a class="link-retreat" href="{{ url_for('retreats') }}">
+          Explore Retreats →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="foot-note">
+      © {{ current_year }} Archetype Retreats · All rights reserved
+    </p>
+  </footer>
+</body>
+</html>
