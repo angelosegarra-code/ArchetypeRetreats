@@ -1,62 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Thank You • InnerCube</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Thank You • InnerCube</title>
 
-    <!-- global site styles (header font, overall tone) -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-    <!-- innercube section styles (background, vibe) -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/innercube.css') }}">
-
-    <!-- thank-you page card styles (centered card, gradient bg, gold bar) -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/thank_you.css') }}">
+  <!-- global site + section styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/innercube.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/thank_you.css') }}">
 </head>
 
 <body class="thank-body">
+  <!-- small brand line (not a nav bar) -->
+  <header class="site-header">
+    © Archetype Retreats · InnerCube
+  </header>
 
-    <!-- light brand line at the top -->
-    <header class="site-header">
-        Archetype Retreats · InnerCube
-    </header>
+  <!-- main centered card -->
+  <main class="thank-wrapper">
+    <h1 class="thank-head">Thank you. 🌿</h1>
 
-    <!-- main confirmation card -->
-    <main class="thank-wrapper">
+    <p class="thank-text">
+      Your InnerCube preview is on its way to your email.
+    </p>
 
-        <h1 class="thank-head">Thank you. 🌿</h1>
+    <p class="thank-text">
+      Check your inbox for your archetype, your starting story,
+      and a first look at how your imagination is wired.
+      If you don’t see it in a minute, please check spam or promotions.
+    </p>
 
-        <p class="thank-text">
-            Your InnerCube preview is on its way to your email.
-        </p>
+    <p class="thank-text">
+      Get Full 3-Page Report ($4.99)<br />
+      Bundle: Report + 114-Page Guide ($14.95)
+    </p>
 
-        <p class="thank-text">
-            Check your inbox for your archetype, your starting story,
-            and a first look at how your imagination is wired.
-            If you don’t see it in a minute, please check spam or promotions.
-        </p>
+    <p class="thank-text">
+      Want to go deeper in real life?<br />
+      Join us in Bali for a small, art-led reset in the rice fields.
+    </p>
 
-        <p class="thank-text">
-            Get Full 3-Page Report ($4.99)<br />
-            Bundle: Report + 114-Page Guide ($14.95)
-        </p>
+    <p class="thank-text">
+      <a href="/retreats">Explore Retreats →</a>
+    </p>
+  </main>
 
-        <p class="thank-text">
-            Want to go deeper in real life?<br />
-            Join us in Bali for a small, art-led reset in the rice fields.
-        </p>
-
-        <p class="thank-text">
-            <a href="/retreats">Explore Retreats →</a>
-        </p>
-
-    </main>
-
-    <!-- footer -->
-    <footer class="page-footer">
-        © Archetype Retreats · All rights reserved
-    </footer>
-
+  <footer class="page-footer">
+    © Archetype Retreats · All rights reserved
+  </footer>
 </body>
 </html>
