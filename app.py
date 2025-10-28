@@ -12,7 +12,7 @@ app = Flask(
     static_url_path="/static",
     template_folder="templates"
 )
-
+# redeploy trigger for static css visibility
 # Optional: prevent CSS caching during testing
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
