@@ -1,53 +1,128 @@
-/* THANK YOU PAGE STYLING */
+/* --- thank_you.css (Archetype Retreats final version) --- */
 
-.thankyou-hero {
-  background-size: cover;
-  background-position: center;
+/* PAGE BACKGROUND + LAYOUT */
+body.thank-body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  /* flex centers the main card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* soft white -> gold -> green wash */
+  background: linear-gradient(
+    180deg,
+    #fafafa 0%,
+    #fdf9f2 35%,
+    #eef8f2 100%
+  );
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+
   position: relative;
-  color: white;
-  padding: 160px 20px;
-  text-align: center;
-  min-height: 75vh;
 }
 
-.thankyou-hero .overlay {
+/* GOLD/GREEN ACCENT BAR ACROSS TOP */
+body.thank-body::before {
+  content: "";
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    #b8901e 0%,
+    #1b6b4b 100%
+  );
+  opacity: 1;
 }
 
-.thankyou-hero .wrap {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-  margin: auto;
-}
-
-.thankyou-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.2rem);
-  margin-bottom: 1rem;
-  letter-spacing: 0.5px;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
-}
-
-.thankyou-hero p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #f5f5f5;
-  margin-bottom: 2rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #3b7068;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
+/* HEADER (SMALL BRAND STRIP AT TOP) */
+.site-header {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
   font-weight: 500;
-  transition: background 0.3s ease;
+  color: #111;
+  pointer-events: none;
 }
 
-.btn:hover {
-  background-color: #2f5b54;
+/* MAIN CARD */
+.thank-wrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  max-width: 540px;
+  width: calc(100% - 2rem);
+
+  text-align: center;
+
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* HEADING */
+h1.thank-head {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  color: #111;
+  font-weight: 600;
+}
+
+/* BODY TEXT */
+p.thank-text {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #444;
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+}
+
+/* LINK STYLE (GOLD -> GREEN HOVER) */
+a {
+  color: #b8901e;           /* Archetype gold */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  color: #1b6b4b;           /* Archetype emerald */
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer.page-footer {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .thank-wrapper {
+    padding: 1.5rem;
+    width: calc(100% - 1.5rem);
+  }
+
+  h1.thank-head {
+    font-size: 1.6rem;
+  }
+
+  p.thank-text {
+    font-size: 1rem;
+  }
 }
