@@ -1,4 +1,3 @@
-/* --- thank_you.css (Archetype Retreats final version) --- */
 
 /* PAGE BACKGROUND + LAYOUT */
 body.thank-body {
@@ -6,13 +5,11 @@ body.thank-body {
   padding: 0;
   min-height: 100vh;
 
-  /* flex centers the main card */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  /* soft white -> gold -> green wash */
   background: linear-gradient(
     180deg,
     #fafafa 0%,
@@ -22,11 +19,10 @@ body.thank-body {
 
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
-
   position: relative;
 }
 
-/* GOLD/GREEN ACCENT BAR ACROSS TOP */
+/* GOLD–GREEN ACCENT BAR */
 body.thank-body::before {
   content: "";
   position: absolute;
@@ -34,37 +30,30 @@ body.thank-body::before {
   left: 0;
   width: 100%;
   height: 6px;
-  background: linear-gradient(
-    90deg,
-    #b8901e 0%,
-    #1b6b4b 100%
-  );
-  opacity: 1;
+  background: linear-gradient(90deg, #b8901e, #1b6b4b);
 }
 
-/* HEADER (SMALL BRAND STRIP AT TOP) */
+/* SMALL BRAND HEADER */
 .site-header {
   position: absolute;
-  top: 12px;
+  top: 18px;
   left: 0;
   width: 100%;
   text-align: center;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #111;
+  color: #555;
   pointer-events: none;
 }
 
 /* MAIN CARD */
 .thank-wrapper {
-  background: #ffffff;
+  background: #fff;
   border-radius: 12px;
   padding: 2rem 2.5rem;
   max-width: 540px;
   width: calc(100% - 2rem);
-
   text-align: center;
-
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -87,16 +76,16 @@ p.thank-text {
   font-weight: 400;
 }
 
-/* LINK STYLE (GOLD -> GREEN HOVER) */
+/* LINK STYLE */
 a {
-  color: #b8901e;           /* Archetype gold */
+  color: #b8901e;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.25s ease;
 }
 
 a:hover {
-  color: #1b6b4b;           /* Archetype emerald */
+  color: #1b6b4b;
   text-decoration: underline;
 }
 
