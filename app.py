@@ -125,11 +125,9 @@ def about():
 def thank_you():
     return render_template('thank_you.html')
 
-@app.route("/thank-you-innercube")
-def thank_you_innercube():
-    from datetime import datetime
-    year = datetime.now().year
-    return render_template("thank_you_innercube.html", current_year=year)
-
+@app.route("/innercube_thankyou")
+def innercube_thankyou():
+    return render_template("innercube_thankyou.html")
+    
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
