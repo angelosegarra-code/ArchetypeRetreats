@@ -129,5 +129,6 @@ def thank_you():
 def innercube_thankyou():
     return render_template("innercube_thankyou.html")
     
+    
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
