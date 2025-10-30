@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You – Archetype Retreats</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    body {
+      background-color: #f9f9f7;
+      font-family: "EB Garamond", serif;
+      color: #222;
+      text-align: center;
+      margin: 0;
+      padding: 60px 20px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-family: "Futura", sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 15px;
+      color: #1f3726;
+    }
+
+    p {
+      max-width: 520px;
+      margin: 0 auto 20px;
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #b0a160;
+      color: white;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 4px;
+      font-family: "Futura", sans-serif;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease;
+      margin-top: 25px;
+    }
+
+    .btn:hover {
+      background-color: #8e864e;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 80px 40px;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Thank You for Joining the Archetype Retreat</h1>
+  <p>Your registration and payment have been received 🌿</p>
+  <p>We’ll contact you within 24–48 hours to confirm your preferred retreat dates  
+     and share the available options for the months you selected.</p>
+  <p>If you paid your deposit, your place is now reserved.  
+     If you completed full payment, your booking is confirmed and we’ll follow up with next-step details shortly.</p>
+  <p>In the meantime, begin visualizing your time in Bali —  
+     a journey of renewal through gentle art and awareness.</p>
+
+  <a href="/retreats" class="btn">Return to Retreats</a>
+</body>
+</html>
