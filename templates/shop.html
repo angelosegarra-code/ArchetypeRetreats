@@ -1,8 +1,30 @@
-{% extends "base.html" %}
-{% block content %}
-<section class="container">
-  <h1>Shop</h1>
-  <p>Our art prints, books, and guides are coming soon.</p>
-  <p>Check back for <strong>InnerCube Previews</strong>, <strong>Your Story is You</strong> guides, and more creative tools.</p>
+<section id="shop">
+  <div class="shop-intro">
+    <h2>Shop</h2>
+    <p>Books and guides by <strong>Angelo Segarra</strong> — exploring creativity, transformation, and the art of becoming.</p>
+  </div>
+
+  <div class="product-grid">
+    
+    <!-- Book 1 -->
+    <div class="product-card">
+      <img src="images/the-art-of-becoming-cover.jpg" alt="The Art of Becoming book cover">
+      <h3>The Art of Becoming</h3>
+      <p class="subtitle">Reimagine · Reignite · Rewrite Your Story</p>
+      <p>Every story is a work of art in progress. This 153-page journey bridges creativity and transformation through archetypes and reflection.</p>
+      <a class="gumroad-button" href="https://angelo.gumroad.com/l/theartofbecoming" target="_blank">Buy Now</a>
+    </div>
+
+    <!-- Book 2 -->
+    <div class="product-card">
+      <img src="images/painting-to-poetry-cover.jpg" alt="Painting to Poetry book cover">
+      <h3>Painting to Poetry</h3>
+      <p class="subtitle">Find Your Voice · Master Your Niche</p>
+      <p>A guidebook on turning art into insight — blending creativity with storytelling to awaken the language of color and feeling.</p>
+      <a class="gumroad-button" href="https://angelo.gumroad.com/l/paintingtpoetry" target="_blank">Buy Now</a>
+    </div>
+
+  </div>
 </section>
-{% endblock %}
+
+<script src="https://gumroad.com/js/gumroad-embed.js"></script>
