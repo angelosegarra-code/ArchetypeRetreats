@@ -1,3 +1,10 @@
+{% extends "base.html" %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/shop.css') }}">
+{% endblock %}
+
+{% block content %}
 <section id="shop">
   <div class="shop-intro">
     <h2>Shop</h2>
@@ -5,26 +12,27 @@
   </div>
 
   <div class="product-grid">
-    
+
     <!-- Book 1 -->
     <div class="product-card">
-      <img src="images/the-art-of-becoming-cover.jpg" alt="The Art of Becoming book cover">
+      <img src="{{ url_for('static', filename='images/the-art-of-becoming-cover.jpg') }}" alt="The Art of Becoming book cover">
       <h3>The Art of Becoming</h3>
       <p class="subtitle">Reimagine · Reignite · Rewrite Your Story</p>
-      <p>Every story is a work of art in progress. This 153-page journey bridges creativity and transformation through archetypes and reflection.</p>
+      <p>Every story is a work of art in progress. This 153-page journey bridges creativity and transformation through archetypal insight.</p>
       <a class="gumroad-button" href="https://angelo.gumroad.com/l/theartofbecoming" target="_blank">Buy Now</a>
     </div>
 
     <!-- Book 2 -->
     <div class="product-card">
-      <img src="images/painting-poetry.jpg" alt="Painting to Poetry book cover">
+      <img src="{{ url_for('static', filename='images/painting-poetry.jpg') }}" alt="Painting to Poetry book cover">
       <h3>Painting to Poetry</h3>
       <p class="subtitle">Find Your Voice · Master Your Niche</p>
       <p>A guidebook on turning art into insight — blending creativity with storytelling to awaken the language of color and feeling.</p>
-      <a class="gumroad-button" href="https://angelo.gumroad.com/l/paintingtpoetry" target="_blank">Buy Now</a>
+      <a class="gumroad-button" href="https://angelo.gumroad.com/l/paintingtopoetry" target="_blank">Buy Now</a>
     </div>
 
   </div>
 </section>
 
 <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+{% endblock %}
