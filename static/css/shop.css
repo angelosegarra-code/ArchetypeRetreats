@@ -1,100 +1,84 @@
-/* ===========================
-   SHOP PAGE STYLING
-   =========================== */
-
-.shop-container {
-  max-width: 950px;
-  margin: 0 auto;
+/* SHOP PAGE STYLES */
+#shop {
   padding: 60px 20px;
-  font-family: "EB Garamond", Georgia, serif;
-  color: #2b1d0e;
-  background-color: #faf7f0;
-  line-height: 1.65;
-}
-
-.shop-container h1 {
+  background: #fafafa;
+  color: #222;
   text-align: center;
-  font-size: 2.1rem;
-  color: #3a2e1f;
-  letter-spacing: 1px;
-  margin-bottom: 50px;
 }
 
-.shop-intro {
-  text-align: center;
-  margin-bottom: 60px;
-  font-size: 1.05rem;
-  color: #4c3a22;
+.shop-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-family: "EB Garamond", serif;
 }
 
-.book-card {
+.shop-intro p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.product-grid {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  justify-content: center;
   gap: 40px;
-  margin-bottom: 70px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #e4dbc9;
 }
 
-.book-card img {
-  width: 220px;
-  height: auto;
-  border-radius: 4px;
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  width: 320px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.book-info {
-  flex: 1;
-  min-width: 250px;
+.product-card:hover {
+  transform: translateY(-5px);
 }
 
-.book-info h2 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  color: #3a2e1f;
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.book-info em {
-  color: #826f4c;
+.product-card h3 {
+  font-size: 1.25rem;
+  font-family: "EB Garamond", serif;
+  margin-bottom: 8px;
 }
 
-.book-info p {
-  font-size: 1rem;
-  color: #4b3d2a;
-  margin-bottom: 22px;
+.subtitle {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 12px;
 }
 
-/* Gumroad-style button (beige-gold tone) */
-.book-info a {
+.gumroad-button {
   display: inline-block;
+  background: linear-gradient(90deg, #2f6959 0%, #005b4f 100%);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  color: #fff;
-  background: linear-gradient(90deg, #b89249 0%, #8f6b2b 100%);
-  padding: 11px 28px;
-  border-radius: 6px;
-  letter-spacing: 0.4px;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.book-info a:hover {
-  background: linear-gradient(90deg, #8f6b2b 0%, #b89249 100%);
+.gumroad-button:hover {
+  background: linear-gradient(90deg, #005b4f 0%, #00463e 100%);
   transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-  .book-card {
+  .product-grid {
     flex-direction: column;
-    text-align: center;
-  }
-
-  .book-card img {
-    margin: 0 auto 25px;
-    width: 70%;
-  }
-
-  .book-info {
-    text-align: center;
+    align-items: center;
   }
 }
