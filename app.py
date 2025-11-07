@@ -12,6 +12,14 @@ app = Flask(
     static_url_path="/static",
     template_folder="templates"
 )
+# Redirect "www." URLs to root domain for HTTPS consistency
+from flask import redirect, request
+
+@app.before_request
+def redirect_www():
+    url = request.url
+    if url.startswith("http://www.") or url.startswith("https://www."):
+        return redirect(url.replace("://www.", "://", 1), code=301)
 # redeploy trigger for static css visibility
 # Optional: prevent CSS caching during testing
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
