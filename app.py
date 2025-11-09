@@ -138,15 +138,15 @@ def innercube_thankyou():
     return render_template("innercube_thankyou.html")
     
 @app.route('/retreats')
-def retreats():
+def retreats_page():
     return render_template('retreats.html')
 
 @app.route('/shop')
-def shop():
+def shop_page():
     return render_template('shop.html')
 
 @app.route('/innercube')
-def innercube():
+def innercube_page():
     return render_template('innercube.html')   
     
 if __name__ == '__main__':
