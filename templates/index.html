@@ -34,116 +34,134 @@
     <p>Companions for your creative practice.</p>
   </a>
 </section>
-<!-- ===================================== -->
-<!-- BEGIN YOUR JOURNEY + ONLINE COURSE INVITE (INTERNAL LINKS + FADE-IN + TIGHTER SPACING) -->
-<!-- ===================================== -->
 
+ <!-- ===== CLEAN BEGIN YOUR JOURNEY + ONLINE COURSE INVITE ===== -->
 <style>
-  /* === Fade-in animation === */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+  /* --- Clean styling for sections --- */
+  .begin-journey, .early-interest {
+    text-align: center;
+    padding: 40px 20px 40px;
+    color: #333;
   }
 
-  /* === Responsive Styling === */
+  .begin-journey {
+    background: #fdfdfc;
+  }
+
+  .early-interest {
+    background: #f9f8f6;
+    border-top: 1px solid #eee;
+  }
+
+  .begin-journey h2, .early-interest h3 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  .begin-journey p, .early-interest p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 20px;
+  }
+
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .button-row a {
+    padding: 12px 28px;
+    border: 2px solid #d6b66b;
+    border-radius: 30px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .button-primary {
+    background: #d6b66b;
+    color: white;
+  }
+
+  .button-secondary {
+    background: transparent;
+    color: #d6b66b;
+  }
+
+  .button-primary:hover,
+  .button-secondary:hover {
+    background: #c0a35f;
+    color: white;
+    border-color: #c0a35f;
+  }
+
   @media (max-width: 768px) {
-    .begin-journey, .early-interest {
-      padding: 35px 18px 30px !important;
-    }
     .begin-journey h2, .early-interest h3 {
-      font-size: 1.7em !important;
-      margin-bottom: 8px !important;
+      font-size: 1.6em;
     }
     .begin-journey p, .early-interest p {
-      font-size: 1em !important;
-      line-height: 1.55 !important;
-      margin-bottom: 18px !important;
-    }
-    .begin-journey a, .early-interest a {
-      padding: 10px 20px !important;
-      font-size: 0.95em !important;
-    }
-    .begin-journey div[style*="flex"], .early-interest div[style*="flex"] {
-      flex-direction: column !important;
-      gap: 10px !important;
+      font-size: 1em;
     }
   }
-  /* --- Fix for non-clickable buttons --- */
-.begin-journey, .begin-journey a {
-  position: relative;
-  z-index: 5;
-  pointer-events: auto;
-}
 </style>
 
-  <section class="begin-journey" id="begin-journey"
-         style="text-align:center;padding:40px 20px 30px;background:#fdfdfc;color:#333;position:relative;z-index:5;">
+<!-- ===== BEGIN YOUR JOURNEY SECTION ===== -->
+<section class="begin-journey" id="begin-journey">
   <div class="journey-container" style="max-width:800px;margin:0 auto;">
-    <h2 style="font-size:2.1em;margin-bottom:8px;font-weight:600;color:#222;letter-spacing:0.4px;">
-      Begin Your Journey
-    </h2>
-
-    <p style="max-width:700px;margin:0 auto 24px;line-height:1.7;font-size:1.05em;color:#444;">
+    <h2>Begin Your Journey</h2>
+    <p>
       Every story begins within. At Archetype Retreats, we invite you to rediscover your creative essence—
-      through art, reflection, and the InnerCube journey. Whether through our Bali retreats, online
-      courses, or <em>The Art of Becoming</em>, you’ll learn to reimagine your story and reconnect with
-      the quiet intelligence of your intuition.
+      through art, reflection, and the InnerCube journey. Whether through our Bali retreats, online courses,
+      or <em>The Art of Becoming</em>, you’ll learn to reimagine your story and reconnect with the quiet
+      intelligence of your intuition.
     </p>
-
-    <p style="max-width:700px;margin:0 auto 20px;line-height:1.7;font-size:1.05em;color:#444;">
+    <p>
       Wherever you are in your journey, there’s a way to begin. You can explore your inner archetype,
-      read <em>The Art of Becoming</em>, or join a retreat to deepen your experience. And soon, for those
-      who can’t travel, an eight-lesson online course will offer the same transformative path from wherever
-      you are.
+      read <em>The Art of Becoming</em>, or join a retreat to deepen your experience. And soon, for those who
+      can’t travel, an eight-lesson online course will offer the same transformative path from wherever you are.
     </p>
-
-    <strong style="display:block;margin-bottom:24px;color:#333;">
+    <strong style="display:block;margin-top:10px;margin-bottom:24px;color:#333;">
       Choose what speaks to your heart — your story unfolds from here.
     </strong>
 
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-top:10px;">
-      <a href="/innercube.html"
-         style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;
-                border-radius:30px;transition:all .3s ease;background:#d6b66b;color:white;">
-         Take the InnerCube Test
-      </a>
-
-      <a href="/retreats.html"
-         style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;
-                border-radius:30px;transition:all .3s ease;background:transparent;color:#d6b66b;">
-         Explore Retreats
-      </a>
-
-      <a href="/shop.html"
-         style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;
-                border-radius:30px;transition:all .3s ease;background:#d6b66b;color:white;">
-         Shop Books & Courses
-      </a>
+    <div class="button-row">
+      <a href="/innercube.html" class="button-primary">Take the InnerCube Test</a>
+      <a href="/retreats.html" class="button-secondary">Explore Retreats</a>
+      <a href="/shop.html" class="button-primary">Shop Books & Courses</a>
     </div>
   </div>
 </section>
-<section class="early-interest fade-in" 
-         style="text-align:center;padding:40px 20px 40px;background:#f9f8f6;color:#333;border-top:1px solid #eee;">
+
+<!-- ===== EARLY INTEREST SECTION ===== -->
+<section class="early-interest" id="early-interest">
   <div class="interest-container" style="max-width:700px;margin:0 auto;">
-    <h3 style="font-size:1.9em;margin-bottom:10px;font-weight:600;color:#222;">
-      Eight-Lesson Online Journey
-    </h3>
-    <p style="max-width:600px;margin:0 auto 22px;color:#555;line-height:1.6;">
+    <h3>Eight-Lesson Online Journey</h3>
+    <p>
       Can’t make it to Bali? Join the experience from wherever you are.<br>
       Sign up below to be the first to know when the online course opens.
     </p>
-    <a href="#" data-tally-open="mO5gJQ" data-tally-width="600" data-tally-overlay="1"
-       style="display:inline-block;background:#d6b66b;color:white;padding:10px 22px;border-radius:30px;
-              text-decoration:none;font-size:1em;transition:background .3s ease,transform .3s ease;">
-      Notify Me When It’s Ready
+    <a href="#"
+       data-tally-open="m05gQ"
+       data-tally-width="600"
+       data-tally-overlay="1"
+       style="display:inline-block;background:#d6b66b;color:white;
+              padding:10px 22px;border-radius:30px;text-decoration:none;
+              transition:background .3s ease,transform .3s ease;">
+       Notify Me When It’s Ready
     </a>
   </div>
 </section>
+<!-- ===== END CLEAN SECTION ===== -->   
+
+  
 
 <script async src="https://tally.so/widgets/embed.js"></script>
 
