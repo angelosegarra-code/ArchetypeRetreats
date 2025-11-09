@@ -137,7 +137,7 @@ def thank_you():
 def innercube_thankyou():
     return render_template("innercube_thankyou.html")
     
- @app.route('/retreats')
+@app.route('/retreats')
 def retreats():
     return render_template('retreats.html')
 
