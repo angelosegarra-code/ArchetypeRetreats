@@ -35,15 +35,53 @@
   </a>
 </section>
 <!-- ===================================== -->
-<!-- BEGIN YOUR JOURNEY + ONLINE COURSE INVITE -->
+<!-- BEGIN YOUR JOURNEY + ONLINE COURSE INVITE (INTERNAL LINKS + FADE-IN + TIGHTER SPACING) -->
 <!-- ===================================== -->
 
-<section class="begin-journey fade-in" style="text-align:center;padding:80px 20px;background:#fdfdfc;color:#333;">
+<style>
+  /* === Fade-in animation === */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* === Responsive Styling === */
+  @media (max-width: 768px) {
+    .begin-journey, .early-interest {
+      padding: 35px 18px 30px !important;
+    }
+    .begin-journey h2, .early-interest h3 {
+      font-size: 1.7em !important;
+      margin-bottom: 8px !important;
+    }
+    .begin-journey p, .early-interest p {
+      font-size: 1em !important;
+      line-height: 1.55 !important;
+      margin-bottom: 18px !important;
+    }
+    .begin-journey a, .early-interest a {
+      padding: 10px 20px !important;
+      font-size: 0.95em !important;
+    }
+    .begin-journey div[style*="flex"], .early-interest div[style*="flex"] {
+      flex-direction: column !important;
+      gap: 10px !important;
+    }
+  }
+</style>
+
+<section class="begin-journey fade-in" 
+         style="text-align:center;padding:40px 20px 30px;background:#fdfdfc;color:#333;">
   <div class="journey-container" style="max-width:800px;margin:0 auto;">
-    <h2 style="font-size:2.4em;margin-bottom:20px;font-weight:600;color:#222;letter-spacing:0.5px;">
+    <h2 style="font-size:2.1em;margin-bottom:8px;font-weight:600;color:#222;letter-spacing:0.4px;">
       Begin Your Journey
     </h2>
-    <p style="max-width:700px;margin:0 auto 40px;line-height:1.7;font-size:1.1em;color:#444;">
+    <p style="max-width:700px;margin:0 auto 20px;line-height:1.7;font-size:1.05em;color:#444;">
       Wherever you are in your journey, there’s a way to begin.<br><br>
       You can explore your inner archetype, read <em>The Art of Becoming</em>, 
       or join a retreat to deepen your experience.<br><br>
@@ -52,29 +90,62 @@
       <strong>Choose what speaks to your heart — your story unfolds from here.</strong>
     </p>
 
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;">
-      <a href="/innercube.html" style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;border-radius:30px;transition:all .3s ease;background:#d6b66b;color:white;">Take the InnerCube Test</a>
-      <a href="/retreats.html" style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;border-radius:30px;transition:all .3s ease;background:transparent;color:#d6b66b;">Explore Retreats</a>
-      <a href="/shop.html" style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;border-radius:30px;transition:all .3s ease;background:#d6b66b;color:white;">Shop Books & Courses</a>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:5px;">
+      <a href="/innercubetest.html"
+         style="padding:10px 24px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;
+                border-radius:30px;transition:all .3s ease;background:#d6b66b;color:white;">
+         Take the InnerCube Test
+      </a>
+
+      <a href="/retreats.html"
+         style="padding:10px 24px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;
+                border-radius:30px;transition:all .3s ease;background:transparent;color:#d6b66b;">
+         Explore Retreats
+      </a>
+
+      <a href="/shop.html"
+         style="padding:10px 24px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;
+                border-radius:30px;transition:all .3s ease;background:#d6b66b;color:white;">
+         Shop Books & Courses
+      </a>
     </div>
   </div>
 </section>
 
-<section class="early-interest fade-in" style="text-align:center;padding:80px 20px;background:#f9f8f6;color:#333;border-top:1px solid #eee;">
+<section class="early-interest fade-in" 
+         style="text-align:center;padding:40px 20px 40px;background:#f9f8f6;color:#333;border-top:1px solid #eee;">
   <div class="interest-container" style="max-width:700px;margin:0 auto;">
-    <h3 style="font-size:2em;margin-bottom:20px;font-weight:600;color:#222;">Eight-Lesson Online Journey</h3>
-    <p style="max-width:600px;margin:0 auto 30px;color:#555;line-height:1.6;">
+    <h3 style="font-size:1.9em;margin-bottom:10px;font-weight:600;color:#222;">
+      Eight-Lesson Online Journey
+    </h3>
+    <p style="max-width:600px;margin:0 auto 22px;color:#555;line-height:1.6;">
       Can’t make it to Bali? Join the experience from wherever you are.<br>
       Sign up below to be the first to know when the online course opens.
     </p>
     <a href="#" data-tally-open="mO5gJQ" data-tally-width="600" data-tally-overlay="1"
-       style="display:inline-block;background:#d6b66b;color:white;padding:12px 26px;border-radius:30px;text-decoration:none;font-size:1em;transition:background .3s ease,transform .3s ease;">
+       style="display:inline-block;background:#d6b66b;color:white;padding:10px 22px;border-radius:30px;
+              text-decoration:none;font-size:1em;transition:background .3s ease,transform .3s ease;">
       Notify Me When It’s Ready
     </a>
   </div>
 </section>
 
 <script async src="https://tally.so/widgets/embed.js"></script>
+
+<!-- Fade-in scroll script -->
+<script>
+  const fadeElems = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeElems.forEach(elem => observer.observe(elem));
+</script>
 <!-- === TESTIMONIALS === -->
 <section class="testimonials" id="testimonials">
   <h2>What People Are Saying</h2>
