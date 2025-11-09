@@ -137,6 +137,17 @@ def thank_you():
 def innercube_thankyou():
     return render_template("innercube_thankyou.html")
     
+ @app.route('/retreats')
+def retreats():
+    return render_template('retreats.html')
+
+@app.route('/shop')
+def shop():
+    return render_template('shop.html')
+
+@app.route('/innercube')
+def innercube():
+    return render_template('innercube.html')   
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
