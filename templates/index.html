@@ -73,48 +73,60 @@
       gap: 10px !important;
     }
   }
+  /* --- Fix for non-clickable buttons --- */
+.begin-journey, .begin-journey a {
+  position: relative;
+  z-index: 5;
+  pointer-events: auto;
+}
 </style>
 
-<section class="begin-journey fade-in" 
-         style="text-align:center;padding:40px 20px 30px;background:#fdfdfc;color:#333;">
+  <section class="begin-journey" id="begin-journey"
+         style="text-align:center;padding:40px 20px 30px;background:#fdfdfc;color:#333;position:relative;z-index:5;">
   <div class="journey-container" style="max-width:800px;margin:0 auto;">
     <h2 style="font-size:2.1em;margin-bottom:8px;font-weight:600;color:#222;letter-spacing:0.4px;">
       Begin Your Journey
     </h2>
+
     <p style="max-width:700px;margin:0 auto 24px;line-height:1.7;font-size:1.05em;color:#444;">
-Every story begins within. At Archetype Retreats, we invite you to rediscover your creative essence— 
-through art, reflection, and the InnerCube journey. Whether through our Bali retreats, online 
-courses, or <em>The Art of Becoming</em>, you’ll learn to reimagine your story and reconnect with 
-the quiet intelligence of your intuition.  
-</p>
-    <p style="max-width:700px;margin:0 auto 20px;line-height:1.7;font-size:1.05em;color:#444;">
-      Wherever you are in your journey, there’s a way to begin.<br><br>
-      You can explore your inner archetype, read <em>The Art of Becoming</em>, 
-      or join a retreat to deepen your experience.<br><br>
-      And soon, for those who can’t travel, an eight-lesson online course will offer 
-      the same transformative path from wherever you are.<br><br>
-      <strong>Choose what speaks to your heart — your story unfolds from here.</strong>
+      Every story begins within. At Archetype Retreats, we invite you to rediscover your creative essence—
+      through art, reflection, and the InnerCube journey. Whether through our Bali retreats, online
+      courses, or <em>The Art of Becoming</em>, you’ll learn to reimagine your story and reconnect with
+      the quiet intelligence of your intuition.
     </p>
 
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-top:20px;">
-  <a href="/innercube.html"
-     style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;border-radius:30px;transition:all .3s ease;background:#d6b66b;color:white;cursor:pointer;">
-     Take the InnerCube Test
-  </a>
+    <p style="max-width:700px;margin:0 auto 20px;line-height:1.7;font-size:1.05em;color:#444;">
+      Wherever you are in your journey, there’s a way to begin. You can explore your inner archetype,
+      read <em>The Art of Becoming</em>, or join a retreat to deepen your experience. And soon, for those
+      who can’t travel, an eight-lesson online course will offer the same transformative path from wherever
+      you are.
+    </p>
 
-  <a href="/retreats.html"
-     style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;border-radius:30px;transition:all .3s ease;background:transparent;color:#d6b66b;cursor:pointer;">
-     Explore Retreats
-  </a>
+    <strong style="display:block;margin-bottom:24px;color:#333;">
+      Choose what speaks to your heart — your story unfolds from here.
+    </strong>
 
-  <a href="/shop.html"
-     style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;border-radius:30px;transition:all .3s ease;background:#d6b66b;color:white;cursor:pointer;">
-     Shop Books & Courses
-  </a>
-</div>
-    
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-top:10px;">
+      <a href="/innercubetest.html"
+         style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;
+                border-radius:30px;transition:all .3s ease;background:#d6b66b;color:white;">
+         Take the InnerCube Test
+      </a>
+
+      <a href="/retreats.html"
+         style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;
+                border-radius:30px;transition:all .3s ease;background:transparent;color:#d6b66b;">
+         Explore Retreats
+      </a>
+
+      <a href="/shop.html"
+         style="padding:12px 28px;border:2px solid #d6b66b;text-decoration:none;font-size:1em;
+                border-radius:30px;transition:all .3s ease;background:#d6b66b;color:white;">
+         Shop Books & Courses
+      </a>
+    </div>
+  </div>
 </section>
-
 <section class="early-interest fade-in" 
          style="text-align:center;padding:40px 20px 40px;background:#f9f8f6;color:#333;border-top:1px solid #eee;">
   <div class="interest-container" style="max-width:700px;margin:0 auto;">
