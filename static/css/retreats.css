@@ -129,3 +129,98 @@
   .retreat-grid { grid-template-columns: 1fr; }
   .reserve-form { grid-template-columns: 1fr; }
 }
+/* Archetype Retreat Options – Gold Theme */
+.retreat-tier-section.gold-theme {
+  background-color: #fffaf2;
+  padding: 70px 20px;
+  text-align: center;
+  border-top: 1px solid #e9e2d2;
+}
+
+.retreat-tier-section.gold-theme h2 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #3a3a3a;
+  margin-bottom: 16px;
+}
+
+.retreat-intro {
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+.retreat-tier {
+  background-color: #ffffff;
+  border: 1px solid #e2d8c3;
+  border-radius: 12px;
+  padding: 40px 30px;
+  margin: 40px auto;
+  max-width: 760px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.retreat-tier h3 {
+  color: #4a4a4a;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.retreat-tier p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.retreat-tier ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 20px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.retreat-tier ul li {
+  position: relative;
+  margin: 8px 0;
+  padding-left: 22px;
+}
+
+.retreat-tier ul li::before {
+  content: "•";
+  color: #b29a65;
+  position: absolute;
+  left: 0;
+}
+
+.retreat-btn.gold {
+  background-color: #b29a65;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.retreat-btn.gold:hover {
+  background-color: #cdb77c;
+}
+
+.retreat-closing {
+  margin-top: 40px;
+  color: #555;
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+/* Price note styling */
+.price-note {
+  color: #6b6b6b;
+  font-size: 0.95em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-style: italic;
+  line-height: 1.5;
+}
