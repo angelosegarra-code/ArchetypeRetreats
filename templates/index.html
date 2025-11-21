@@ -7,6 +7,197 @@
 {% endblock %}
 
 {% block content %}
+<!-- ========================= -->
+<!--   FULL HOMEPAGE SECTION   -->
+<!-- ========================= -->
+
+<style>
+/* ============================================== */
+/* SCOPED HOMEPAGE STYLES — Safe, self-contained */
+/* ============================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 78vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-text {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 2.7em;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.hero-text p {
+  font-size: 1.15em;
+  margin-top: 10px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 20px 5px;
+  font-size: 1.35em;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0 20px 20px;
+  line-height: 1.55;
+}
+
+/* Break the Pattern section */
+.btp-section {
+  background: #faf9f6;
+  padding: 60px 20px;
+  border-top: 1px solid #ece9e4;
+  text-align: center;
+}
+
+.btp-section h2 {
+  font-size: 2.2em;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.btp-section p {
+  font-size: 1.1em;
+  line-height: 1.65;
+  max-width: 700px;
+  margin: 0 auto 18px;
+  color: #444;
+}
+
+.btp-banner {
+  width: 100%;
+  max-width: 620px;
+  margin: 28px auto;
+  border-radius: 14px;
+  display: block;
+}
+
+/* CTA Button */
+.btp-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 13px 32px;
+  background: #c4a062;
+  color: white;
+  font-weight: 500;
+  border-radius: 32px;
+  text-decoration: none;
+  font-size: 1.05em;
+  transition: background 0.25s ease;
+}
+
+.btp-button:hover {
+  background: #b08c55;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #ffffff;
+  padding: 65px 20px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.1em;
+  margin-bottom: 35px;
+}
+
+.testimonial-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.testimonial {
+  background: #f7f5f2;
+  padding: 22px 22px 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.testimonial p {
+  line-height: 1.6;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2em;
+  }
+  .hero {
+    height: 68vh;
+  }
+}
+</style>
+
+
+
+<!-- ========================= -->
+<!-- HERO BANNER -->
+<!-- ========================= -->
 <section class="hero" style="background-image:url('{{ url_for('static', filename='images/hero-rice-sunrise.jpg') }}');">
   <div class="hero-overlay"></div>
   <div class="hero-text">
@@ -15,233 +206,63 @@
   </div>
 </section>
 
+
+
+<!-- ========================= -->
+<!-- THREE FEATURE CARDS -->
+<!-- ========================= -->
 <section class="cards">
   <a class="card" href="{{ url_for('innercube') }}">
-    <img src="{{ url_for('static', filename='images/innercube-offering.jpg') }}" alt="InnerCube">
+    <img src="{{ url_for('static', filename='images/innercube-offering.jpg') }}">
     <h3>Take the Free Archetype Test</h3>
     <p>Discover your InnerCube patterns.</p>
   </a>
 
   <a class="card" href="{{ url_for('retreats') }}">
-    <img src="{{ url_for('static', filename='images/rice-fields.jpg') }}" alt="Retreats in Bali">
+    <img src="{{ url_for('static', filename='images/rice-fields.jpg') }}">
     <h3>Explore Retreats</h3>
     <p>Quiet, art-filled days in Bali.</p>
   </a>
 
   <a class="card" href="{{ url_for('shop') }}">
-    <img src="{{ url_for('static', filename='images/yoga-nature-bali.jpg') }}" alt="Books and Guides">
-    <h3>Books &amp; Guides</h3>
+    <img src="{{ url_for('static', filename='images/yoga-nature-bali.jpg') }}">
+    <h3>Books & Guides</h3>
     <p>Companions for your creative practice.</p>
   </a>
 </section>
 
- <!-- ===== CLEAN BEGIN YOUR JOURNEY + ONLINE COURSE INVITE ===== -->
-<style>
-  /* --- Clean styling for sections --- */
-  .begin-journey, .early-interest {
-    text-align: center;
-    padding: 40px 20px 40px;
-    color: #333;
-  }
 
-  .begin-journey {
-    background: #fdfdfc;
-  }
 
-  .early-interest {
-    background: #f9f8f6;
-    border-top: 1px solid #eee;
-  }
+<!-- ========================= -->
+<!-- BREAK THE PATTERN FEATURE -->
+<!-- ========================= -->
+<section class="btp-section" id="break-pattern">
+  <h2>Break the Pattern</h2>
+  <p>A gentle 72-hour reset for understanding your emotional loop — and finally changing it.</p>
 
-  .begin-journey h2, .early-interest h3 {
-    font-size: 2em;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 10px;
-    letter-spacing: 0.3px;
-  }
+  <picture>
+    <source media="(max-width: 768px)" 
+            srcset="{{ url_for('static', filename='images/btp-banner-mobile.jpg') }}">
+    <img src="{{ url_for('static', filename='images/btp-banner-desktop.jpg') }}"
+         alt="Break the Pattern – 72-Hour Reset"
+         class="btp-banner">
+  </picture>
 
-  .begin-journey p, .early-interest p {
-    font-size: 1.05em;
-    line-height: 1.7;
-    color: #444;
-    max-width: 700px;
-    margin: 0 auto 20px;
-  }
+  <p>Learn why your emotional survival patterns formed — and how to create new ones rooted in clarity, intuition, and inner peace.</p>
 
-  .button-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-  }
-
-  .button-row a {
-    padding: 12px 28px;
-    border: 2px solid #d6b66b;
-    border-radius: 30px;
-    font-size: 1em;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .button-primary {
-    background: #d6b66b;
-    color: white;
-  }
-
-  .button-secondary {
-    background: transparent;
-    color: #d6b66b;
-  }
-
-  .button-primary:hover,
-  .button-secondary:hover {
-    background: #c0a35f;
-    color: white;
-    border-color: #c0a35f;
-  }
-
-  @media (max-width: 768px) {
-    .begin-journey h2, .early-interest h3 {
-      font-size: 1.6em;
-    }
-    .begin-journey p, .early-interest p {
-      font-size: 1em;
-    }
-  }
-<style>
-  
-/* ===== LOCAL STYLE: Book Preview Section ===== */
-.book-preview {
-  text-align: center;
-  padding: 45px 0; /* reduced from 60px for tighter flow */
-  background-color: #f9f7f3; /* same tone as main sections */
-  border-top: 1px solid #eae7e2;
-  color: #333;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.book-preview-container {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.book-preview h2 {
-  font-size: 2em;
-  color: #2f463b; /* deep green */
-  margin-bottom: 12px;
-  letter-spacing: 0.4px;
-}
-
-.book-preview p {
-  font-size: 1.05em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #444;
-}
-
-.book-preview-button {
-  display: block;
-  background-color: #486a5a;
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 34px; /* slightly more compact */
-  border-radius: 30px;
-  font-size: 1.05em;
-  font-weight: 500;
-  margin: 10px auto 0 auto; /* centered + refined spacing */
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-  width: fit-content;
-}
-
-.book-preview-button:hover {
-  background-color: #3a5a4d;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-</style>
-
-<!-- ===== BEGIN YOUR JOURNEY SECTION ===== -->
-<section class="begin-journey" id="begin-journey" style="text-align:center;padding:40px 20px;background:#fdfdfc;color:#333;">
-  <div style="max-width:800px;margin:0 auto;">
-    <h2 style="font-size:2.1em;margin-bottom:8px;font-weight:600;color:#222;">Begin Your Journey</h2>
-    <p style="max-width:700px;margin:0 auto 20px;line-height:1.7;font-size:1.05em;color:#444;">
-      Every story begins within. At Archetype Retreats, we invite you to rediscover your creative essence—through art, reflection, and the InnerCube journey. Whether through our Bali retreats, online courses, or <em>The Art of Becoming</em>, you’ll learn to reimagine your story and reconnect with the quiet intelligence of your intuition.
-    </p>
-    <p style="max-width:700px;margin:0 auto 24px;line-height:1.7;font-size:1.05em;color:#444;">
-      Wherever you are in your journey, there’s a way to begin. You can explore your inner archetype, read <em>The Art of Becoming</em>, or join a retreat to deepen your experience. And soon, for those who can’t travel, an eight-lesson online course will offer the same transformative path from wherever you are.
-    </p>
-
-    <strong style="display:block;margin-bottom:22px;">Choose what speaks to your heart — your story unfolds from here.</strong>
-
-    <div style="margin-top:20px;">
-      <a href="/innercube" style="display:inline-block;margin:6px;padding:12px 26px;background-color:#c4a062;color:white;text-decoration:none;border-radius:30px;font-size:1em;transition:background 0.3s;">Take the InnerCube Test</a>
-      <a href="/retreats" style="display:inline-block;margin:6px;padding:12px 26px;background-color:#c4a062;color:white;text-decoration:none;border-radius:30px;font-size:1em;transition:background 0.3s;">Explore Retreats</a>
-      <a href="/shop" style="display:inline-block;margin:6px;padding:12px 26px;background-color:#c4a062;color:white;text-decoration:none;border-radius:30px;font-size:1em;transition:background 0.3s;">Shop Books & Courses</a>
-    </div>
-  </div>
-</section>
-<!-- ===== FREE BOOK PREVIEW SECTION (LOCAL STYLED) ===== -->
-<section id="book-preview" class="book-preview">
-  <div class="book-preview-container">
-    <h2>📖 Free Preview: <em>The Art of Becoming</em></h2>
-    <p>
-      Read the opening chapters of <em>The Art of Becoming</em> — a reflective journey into creativity, intuition, and transformation.  
-      Begin your exploration today and see how your story unfolds.
-    </p>
-    <a href="/static/the-art-of-becoming-Preview.pdf" class="book-preview-button" target="_blank" rel="noopener noreferrer">
-      Download Free Preview
-    </a>
-  </div>
-</section>    
-<!-- ===== EARLY INTEREST SECTION ===== -->
-<section class="early-interest" id="early-interest">
-  <div class="interest-container" style="max-width:700px;margin:0 auto;">
-    <h3>Eight-Lesson Online Journey</h3>
-    <p>
-      Can’t make it to Bali? Join the experience from wherever you are.<br>
-      Sign up below to be the first to know when the online course opens.
-    </p>
-    <a href="#" data-tally-open="LZ1kej" data-tally-overlay="1" data-tally-width="600"
-  style="display:inline-block;margin-top:15px;padding:12px 26px;background-color:#c4a062;color:white;text-decoration:none;border-radius:30px;font-size:1em;transition:background 0.3s;">
-  Notify Me When It’s Ready
-</a>
-  </div>
+  <a class="btp-button" href="/break-the-pattern">Explore the Mini-Course</a>
 </section>
 
-<!-- ===== END CLEAN SECTION ===== -->   
 
-  
 
-<script async src="https://tally.so/widgets/embed.js"></script>
-
-<!-- Fade-in scroll script -->
-<script>
-  const fadeElems = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  fadeElems.forEach(elem => observer.observe(elem));
-</script>
-<!-- === TESTIMONIALS === -->
+<!-- ========================= -->
+<!-- TESTIMONIALS -->
+<!-- ========================= -->
 <section class="testimonials" id="testimonials">
   <h2>What People Are Saying</h2>
 
   <div class="testimonial-grid">
+
     <div class="testimonial">
       <p>“The InnerCube opened a doorway I didn’t know existed within me. The retreat gave that insight form, and I left braver.”</p>
       <span>— Maya L., Dreamer–Storyteller</span>
@@ -256,6 +277,7 @@
       <p>“Taking the InnerCube test was like finding a mirror for my creativity. The retreat turned that reflection into a practice.”</p>
       <span>— Lin C., Alchemist–Listener</span>
     </div>
+
   </div>
 </section>
 {% endblock %}
