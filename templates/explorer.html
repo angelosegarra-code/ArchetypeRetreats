@@ -1,40 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Archetype Explorer — Archetype Retreats</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Independent CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/explorer.css') }}">
 </head>
 
 <body>
-  <div class="wrap">
-
-    <section class="intro">
+  <main class="wrap">
+    <header class="hero">
       <h1>Archetype Explorer</h1>
-      <div class="sub">
+      <p class="sub">
         A brief mirror to notice how you move through the world. No sign-up.
-        <br> No scores. Just recognition.
+        <br><span class="muted">No scores. Just recognition.</span>
+      </p>
+      <p class="hint">Choose what feels most natural — not what sounds best.</p>
+    </header>
+
+    <section id="quiz" class="quiz"></section>
+
+    <div class="bar">
+      <div class="progress" id="progressText">0/10 answered</div>
+      <div class="actions">
+        <button class="btn ghost" id="btnReset" type="button">Reset</button>
+        <button class="btn primary" id="btnResult" type="button">See Result</button>
       </div>
-      <div class="hint">Choose what feels most natural — not what sounds best.</div>
-      <div class="progress" id="progress">0/10 answered</div>
-    </section>
-
-    <!-- Quiz renders here -->
-    <div id="quiz"></div>
-
-    <!-- Buttons -->
-    <div class="actions">
-      <button class="btn ghost" id="btnReset" type="button">Reset</button>
-      <button class="btn primary" id="btnResult" type="button">See Result</button>
     </div>
 
-    <!-- Inline errors -->
-    <div id="out"></div>
-
-    <!-- Results section (your new layout) -->
     <section id="results" class="results hidden">
       <div class="result-header">
         <div class="badge">
@@ -45,7 +38,6 @@
       </div>
 
       <div class="result-body" id="resultBody">—</div>
-
       <ul class="result-lines" id="resultLines"></ul>
 
       <div class="result-cta">
@@ -53,278 +45,251 @@
           This is a mirror, not a label. If it resonates, keep it. If it doesn’t, let it go.
         </div>
         <div class="actions">
-          <button class="btn ghost" id="resetBtn" type="button">Reset</button>
+          <button class="btn ghost" id="resetBtn2" type="button">Reset</button>
           <a class="btn primary" href="/shop">Explore the Reset</a>
         </div>
       </div>
     </section>
 
-  </div>
+    <footer class="foot">
+      <a href="/" class="back">← Back to Archetype Retreats</a>
+    </footer>
+  </main>
 
   <script>
-    // -------------------------
-    // 10 Questions (Dreamer, Visionary, Observer, Alchemist)
-    // -------------------------
+    // --- Archetypes (simple order) ---
     const ARCH = {
       dreamer: {
         name: "Dreamer",
-        description: "You begin in possibility. You sense what could be, before it has words.",
-        lines: [
-          "You trust the subtle signal.",
-          "You move by intuition, not proof.",
-          "When you rush, you lose the thread."
-        ]
+        description: "You start with possibility. You sense what could emerge before it has words.",
+        lines: ["You lead with imagination.", "You notice subtle openings.", "You trust the first spark."]
       },
       visionary: {
         name: "Visionary",
-        description: "You orient toward direction. You look for trajectory and meaning.",
-        lines: [
-          "You see the arc, not the moment.",
-          "You want alignment more than comfort.",
-          "Your clarity sharpens when you simplify."
-        ]
+        description: "You orient toward direction. You look for where things are going and why it matters.",
+        lines: ["You think in trajectories.", "You prefer a clear horizon.", "You move with intention."]
       },
       observer: {
         name: "Observer",
-        description: "You watch first. You study the dynamic before you step in.",
-        lines: [
-          "You notice patterns others miss.",
-          "You prefer precision over speed.",
-          "Your power is in accurate seeing."
-        ]
+        description: "You begin by seeing. You read the dynamic first, then decide what’s true.",
+        lines: ["You notice patterns quickly.", "You stay steady under noise.", "You learn before you act."]
       },
       alchemist: {
         name: "Alchemist",
-        description: "You adjust as you go. You transform situations from inside the moment.",
-        lines: [
-          "You learn by doing.",
-          "You can pivot without panic.",
-          "You turn friction into movement."
-        ]
+        description: "You adapt in motion. You step in, test, adjust, and transform what’s happening.",
+        lines: ["You change systems from within.", "You iterate instead of waiting.", "You turn friction into fuel."]
       }
     };
 
+    // --- Questions (10) ---
     const QUESTIONS = [
       {
-        text: "When you enter a new situation, what happens first?",
-        options: [
-          { key: "dreamer",   label: "I sense what could emerge" },
-          { key: "visionary", label: "I look for where this is going" },
-          { key: "observer",  label: "I watch to understand the dynamic" },
-          { key: "alchemist", label: "I step in and adjust as I go" }
+        q: "When you enter a new situation, what happens first?",
+        a: [
+          { t: "I sense what could emerge", k: "dreamer" },
+          { t: "I look for where this is going", k: "visionary" },
+          { t: "I watch to understand the dynamic", k: "observer" },
+          { t: "I step in and adjust as I go", k: "alchemist" }
         ]
       },
       {
-        text: "When something feels unclear, you tend to:",
-        options: [
-          { key: "dreamer",   label: "Sit with it until it takes shape" },
-          { key: "visionary", label: "Ask what the larger purpose is" },
-          { key: "observer",  label: "Gather details until the pattern shows" },
-          { key: "alchemist", label: "Try something small and see what changes" }
+        q: "When something feels unclear, you tend to:",
+        a: [
+          { t: "Sit with it until it takes shape", k: "dreamer" },
+          { t: "Find the thread that leads forward", k: "visionary" },
+          { t: "Collect details until it resolves", k: "observer" },
+          { t: "Try something and refine in real time", k: "alchemist" }
         ]
       },
       {
-        text: "In relationships, you’re most sensitive to:",
-        options: [
-          { key: "dreamer",   label: "Unspoken feelings and atmospheres" },
-          { key: "visionary", label: "Shared direction and future" },
-          { key: "observer",  label: "Consistency and honest signals" },
-          { key: "alchemist", label: "What can be improved right now" }
+        q: "Your strength under stress is usually:",
+        a: [
+          { t: "Staying open to a new possibility", k: "dreamer" },
+          { t: "Remembering the long-term meaning", k: "visionary" },
+          { t: "Staying calm and reading what’s real", k: "observer" },
+          { t: "Taking action and shifting momentum", k: "alchemist" }
         ]
       },
       {
-        text: "When you’re under pressure, you naturally:",
-        options: [
-          { key: "dreamer",   label: "Withdraw to reconnect to the inner signal" },
-          { key: "visionary", label: "Refocus on the objective and path" },
-          { key: "observer",  label: "Pause and analyze what’s really happening" },
-          { key: "alchemist", label: "Act quickly and course-correct" }
+        q: "People often come to you for:",
+        a: [
+          { t: "Fresh ideas and perspective", k: "dreamer" },
+          { t: "Direction and clarity", k: "visionary" },
+          { t: "Insight and honest reflection", k: "observer" },
+          { t: "Solutions and transformation", k: "alchemist" }
         ]
       },
       {
-        text: "Your best decisions usually come from:",
-        options: [
-          { key: "dreamer",   label: "A quiet ‘yes’ you can’t explain" },
-          { key: "visionary", label: "Seeing the long-term outcome" },
-          { key: "observer",  label: "Evidence, patterns, and timing" },
-          { key: "alchemist", label: "Iteration — trying, learning, refining" }
+        q: "When you’re creating something, you prefer to:",
+        a: [
+          { t: "Explore and let it reveal itself", k: "dreamer" },
+          { t: "Design the arc before you begin", k: "visionary" },
+          { t: "Study, research, and refine", k: "observer" },
+          { t: "Prototype fast and iterate", k: "alchemist" }
         ]
       },
       {
-        text: "When you create something, you prefer to:",
-        options: [
-          { key: "dreamer",   label: "Let it arrive organically" },
-          { key: "visionary", label: "Work from a concept or theme" },
-          { key: "observer",  label: "Study references and structure" },
-          { key: "alchemist", label: "Play, test, and reshape constantly" }
+        q: "Your natural leadership style is:",
+        a: [
+          { t: "Inspiring imagination", k: "dreamer" },
+          { t: "Setting a compelling direction", k: "visionary" },
+          { t: "Seeing what others miss", k: "observer" },
+          { t: "Making change practical", k: "alchemist" }
         ]
       },
       {
-        text: "If someone disagrees with you, you’re likely to:",
-        options: [
-          { key: "dreamer",   label: "Feel the emotional truth underneath" },
-          { key: "visionary", label: "Reframe toward shared goals" },
-          { key: "observer",  label: "Ask questions and clarify definitions" },
-          { key: "alchemist", label: "Adapt your approach to move forward" }
+        q: "When faced with a big decision, you usually:",
+        a: [
+          { t: "Notice the option that feels alive", k: "dreamer" },
+          { t: "Choose the path with the best future", k: "visionary" },
+          { t: "Wait until you see the full picture", k: "observer" },
+          { t: "Move, learn, adjust, and commit", k: "alchemist" }
         ]
       },
       {
-        text: "You feel most ‘yourself’ when you are:",
-        options: [
-          { key: "dreamer",   label: "In solitude, sensing and imagining" },
-          { key: "visionary", label: "Building toward a meaningful future" },
-          { key: "observer",  label: "Studying, learning, noticing" },
-          { key: "alchemist", label: "In motion, transforming, doing" }
+        q: "What drains you fastest?",
+        a: [
+          { t: "Being forced into rigid certainty", k: "dreamer" },
+          { t: "Wandering without direction", k: "visionary" },
+          { t: "Noise, chaos, and emotional pressure", k: "observer" },
+          { t: "Endless talking with no movement", k: "alchemist" }
         ]
       },
       {
-        text: "What do you trust most?",
-        options: [
-          { key: "dreamer",   label: "Intuition" },
-          { key: "visionary", label: "Direction" },
-          { key: "observer",  label: "Accuracy" },
-          { key: "alchemist", label: "Change" }
+        q: "Your blind spot can look like:",
+        a: [
+          { t: "Floating too long in possibility", k: "dreamer" },
+          { t: "Pushing a vision too early", k: "visionary" },
+          { t: "Watching instead of entering", k: "observer" },
+          { t: "Changing things before understanding them", k: "alchemist" }
         ]
       },
       {
-        text: "When life resets you, your first instinct is to:",
-        options: [
-          { key: "dreamer",   label: "Return to the inner voice" },
-          { key: "visionary", label: "Redesign the path" },
-          { key: "observer",  label: "Understand the pattern" },
-          { key: "alchemist", label: "Rebuild through action" }
+        q: "At your best, you feel like:",
+        a: [
+          { t: "A doorway opening", k: "dreamer" },
+          { t: "A compass pointing true", k: "visionary" },
+          { t: "A clear mirror", k: "observer" },
+          { t: "A catalyst", k: "alchemist" }
         ]
       }
     ];
 
-    // -------------------------
-    // Render
-    // -------------------------
+    // --- Render ---
     const quizEl = document.getElementById("quiz");
-    const progressEl = document.getElementById("progress");
-    const outEl = document.getElementById("out");
-
+    const progressEl = document.getElementById("progressText");
     const resultsEl = document.getElementById("results");
-    const resultTitleEl = document.getElementById("resultTitle");
-    const resultBodyEl = document.getElementById("resultBody");
-    const resultLinesEl = document.getElementById("resultLines");
+    const outTitle = document.getElementById("resultTitle");
+    const outBody = document.getElementById("resultBody");
+    const outLines = document.getElementById("resultLines");
 
-    function renderQuiz(){
+    function renderQuiz() {
       quizEl.innerHTML = "";
-      QUESTIONS.forEach((q, idx) => {
-        const wrap = document.createElement("div");
-        wrap.className = "q";
+      QUESTIONS.forEach((item, idx) => {
+        const card = document.createElement("div");
+        card.className = "card";
 
         const h = document.createElement("h3");
-        h.textContent = `${idx + 1}. ${q.text}`;
-        wrap.appendChild(h);
+        h.innerHTML = `<span class="n">${idx + 1}.</span> ${item.q}`;
+        card.appendChild(h);
 
-        q.options.forEach((opt) => {
+        const opts = document.createElement("div");
+        opts.className = "options";
+
+        item.a.forEach((opt, j) => {
+          const id = `q${idx}_${j}`;
           const label = document.createElement("label");
           label.className = "opt";
-
-          const input = document.createElement("input");
-          input.type = "radio";
-          input.name = `q${idx}`;
-          input.value = opt.key;
-          input.addEventListener("change", updateProgress);
-
-          label.appendChild(input);
-          label.appendChild(document.createTextNode(opt.label));
-          wrap.appendChild(label);
+          label.innerHTML = `
+            <input type="radio" name="q${idx}" value="${opt.k}" id="${id}">
+            <span>${opt.t}</span>
+          `;
+          opts.appendChild(label);
         });
 
-        quizEl.appendChild(wrap);
+        card.appendChild(opts);
+        quizEl.appendChild(card);
+      });
+
+      document.querySelectorAll('input[type="radio"]').forEach(i => {
+        i.addEventListener("change", updateProgress);
       });
 
       updateProgress();
     }
 
-    function getAnswers(){
-      const answers = [];
-      for(let i=0;i<QUESTIONS.length;i++){
-        const checked = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(checked ? checked.value : null);
+    function updateProgress() {
+      let done = 0;
+      for (let i = 0; i < QUESTIONS.length; i++) {
+        const picked = document.querySelector(`input[name="q${i}"]:checked`);
+        if (picked) done++;
       }
-      return answers;
-    }
-
-    function updateProgress(){
-      const answers = getAnswers();
-      const done = answers.filter(Boolean).length;
       progressEl.textContent = `${done}/${QUESTIONS.length} answered`;
     }
 
-    function tally(answers){
-      const counts = { dreamer:0, visionary:0, observer:0, alchemist:0 };
-      const order = []; // for tie-break
-      answers.forEach(a => {
-        if(a){
-          counts[a] += 1;
-          order.push(a);
-        }
-      });
-      return { counts, order };
-    }
-
-    function pickArchetype(counts, order){
-      const entries = Object.entries(counts);
-      entries.sort((a,b)=> b[1]-a[1]);
-      const top = entries[0][1];
-      const tied = entries.filter(e => e[1] === top).map(e => e[0]);
-      if(tied.length === 1) return tied[0];
-      // tie-break: whichever appears first in chosen order
-      for(const v of order){
-        if(tied.includes(v)) return v;
+    function getAnswers() {
+      const picks = [];
+      for (let i = 0; i < QUESTIONS.length; i++) {
+        const picked = document.querySelector(`input[name="q${i}"]:checked`);
+        picks.push(picked ? picked.value : null);
       }
-      return tied[0];
+      return picks;
     }
 
-    function showResult(key){
+    function pickArchetype(answers) {
+      const counts = { dreamer: 0, visionary: 0, observer: 0, alchemist: 0 };
+      const order = [];
+      answers.forEach(v => {
+        if (!v) return;
+        counts[v]++;
+        order.push(v);
+      });
+
+      const max = Math.max(...Object.values(counts));
+      const tied = Object.keys(counts).filter(k => counts[k] === max);
+
+      // tie-break: earliest chosen in their answer order
+      for (const v of order) {
+        if (tied.includes(v)) return v;
+      }
+      return tied[0] || "observer";
+    }
+
+    function showResult(key) {
       const data = ARCH[key];
+      outTitle.textContent = data.name;
+      outBody.textContent = data.description;
 
-      // hide inline out
-      outEl.innerHTML = "";
-
-      // fill results section
-      resultTitleEl.textContent = data.name;
-      resultBodyEl.innerHTML = `<p class="lead">${data.description}</p>`;
-
-      resultLinesEl.innerHTML = "";
+      outLines.innerHTML = "";
       data.lines.forEach(line => {
         const li = document.createElement("li");
         li.textContent = line;
-        resultLinesEl.appendChild(li);
+        outLines.appendChild(li);
       });
 
       resultsEl.classList.remove("hidden");
       resultsEl.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    // Buttons
-    document.getElementById("btnResult").addEventListener("click", () => {
-      const answers = getAnswers();
-      if(answers.some(v => v === null)){
-        outEl.innerHTML = `<div class="err">Please answer all 10 questions.</div>`;
-        return;
-      }
-      const { counts, order } = tally(answers);
-      const primary = pickArchetype(counts, order);
-      showResult(primary);
-    });
-
-    function resetAll(){
+    function resetAll() {
       document.querySelectorAll('input[type="radio"]').forEach(i => i.checked = false);
-      outEl.innerHTML = "";
       resultsEl.classList.add("hidden");
       updateProgress();
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    document.getElementById("btnReset").addEventListener("click", resetAll);
-    document.getElementById("resetBtn").addEventListener("click", resetAll);
+    document.getElementById("btnResult").addEventListener("click", () => {
+      const answers = getAnswers();
+      if (answers.some(v => v === null)) {
+        alert("Please answer all 10 questions.");
+        return;
+      }
+      showResult(pickArchetype(answers));
+    });
 
-    // GO
+    document.getElementById("btnReset").addEventListener("click", resetAll);
+    document.getElementById("resetBtn2").addEventListener("click", resetAll);
+
     renderQuiz();
   </script>
 </body>
