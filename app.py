@@ -147,7 +147,11 @@ def shop_page():
 
 @app.route('/innercube')
 def innercube_page():
-    return render_template('innercube.html')   
+    return render_template('innercube.html') 
+
+@app.route('/explorer')
+def explorer_page():
+    return render_template('explorer.html')
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
