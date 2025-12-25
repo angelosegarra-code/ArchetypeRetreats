@@ -67,40 +67,41 @@
 }
 
 .explorer-home .explorer-card {
+  text-align: center; 
   max-width: 860px;
   margin: 0 auto;
   padding: 28px 24px;
   border-radius: 18px;
   background: linear-gradient(
-    180deg,
-    rgba(20,20,20,0.92),
-    rgba(8,8,8,0.96)
-  );
-  border: 1px solid rgba(255,255,255,0.12);
+  180deg,
+  rgba(34, 45, 34, 0.94),   /* deep olive */
+  rgba(22, 30, 22, 0.97)    /* forest shadow */
+);
+  border: 1px solid rgba(180, 195, 165, 0.18);
   box-shadow: 0 30px 120px rgba(0,0,0,0.55);
   color: rgba(255,255,255,0.88);
 }
 
 .explorer-badge {
+  margin: 0 auto; 
   display: inline-flex;
   align-items: center;
   gap: 10px;
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 13px;
-  background: rgba(215,179,106,0.12);
-  border: 1px solid rgba(215,179,106,0.35);
-  color: #e6c97a;
+  background: rgba(154, 170, 120, 0.18);
+  border: 1px solid rgba(154, 170, 120, 0.35);
+  color: #dfe8c8;
 }
 
 .explorer-badge .dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #d7b36a;
-  box-shadow: 0 0 0 4px rgba(215,179,106,0.25);
+  background: #9aac78;
+  box-shadow: 0 0 0 4px rgba(154,170,120,0.25);
 }
-
 .explorer-home h2 {
   font-size: 28px;
   margin: 14px 0 10px;
@@ -114,8 +115,9 @@
 
 .explorer-actions {
   display: flex;
+  justify-content: center;   /* ⬅️ THIS is the key */
   gap: 14px;
-  margin-top: 18px;
+  margin-top: 20px;
   flex-wrap: wrap;
 }
 
