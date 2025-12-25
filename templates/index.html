@@ -7,14 +7,62 @@
 {% endblock %}
 
 {% block content %}
+
+<!-- ========================= -->
+<!--   FULL HOMEPAGE STYLES    -->
+<!-- ========================= -->
 <style>
+/* ============================================== */
+/* SCOPED HOMEPAGE STYLES — Safe, self-contained */
+/* ============================================== */
+
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 52vh;          /* reduced from 78vh */
+  min-height: 420px;     /* keeps it elegant on large screens */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-text {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 12px 20px;
+}
+
+.hero-text h1 {
+  font-size: 2.2em;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1.05em;
+  opacity: 0.85;
+  margin: 10px 0 0;
+}
+
 /* ===============================
    Archetype Explorer (Homepage)
    Scoped — does not affect other sections
    =============================== */
 
 .explorer-home {
-  margin: 60px auto;
+  margin: 36px auto 60px;   /* sits under hero */
   padding: 0 20px;
 }
 
@@ -79,166 +127,7 @@
   color: rgba(255,255,255,0.55);
 }
 
-   /* Smooth transition from hero to explorer */
-.hero + .explorer-home {
-  margin-top: -40px;
-}
-
-.explorer-home .explorer-card {
-  position: relative;
-}
-   
-</style>
-
-<section class="explorer-home">
-  <div class="explorer-card">
-
-    <div class="explorer-badge">
-      <span class="dot"></span>
-      Instant · No sign-up
-    </div>
-
-    <h2>Archetype Explorer</h2>
-
-    <p>
-      A quick archetype mirror — no email, no scoring, just recognition.
-      Get an instant archetype result, then explore the deeper InnerCube system if you want.
-    </p>
-
-    <div class="explorer-actions">
-      <a class="btn primary" href="/explorer">Try the Explorer</a>
-      <a class="btn ghost" href="/innercube">Take the Full InnerCube Test</a>
-    </div>
-
-    <div class="explorer-note">
-      This is a mirror, not a label. If it resonates, keep it. If it doesn’t, let it go.
-    </div>
-
-  </div>
-</section>
-
-<!-- ========================= -->
-<!--   FULL HOMEPAGE SECTION   -->
-<!-- ========================= -->
-
-<style>
-/* ============================================== */
-/* SCOPED HOMEPAGE STYLES — Safe, self-contained */
-/* ============================================== */
-
-.hero {
-  position: relative;
-  width: 100%;
-  .hero {
-  height: 52vh;          /* was 78vh */
-  min-height: 420px;     /* keeps it elegant on large screens */
-}
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-}
-
-.hero-text {
-  position: relative;
-  text-align: center;
-  color: white;
-  max-width: 700px;
-  .hero-text {
-  padding: 12px 20px;
-}
-
-.hero-text h1 {
-  .hero-text h1 {
-  font-size: 2.2em;
-  letter-spacing: 0.4px;
-  font-weight: 600;
-}
-
-.hero-text p {
-  font-size: 1.05em;
-  opacity: 0.85;
-}
-
- /* =========================
-   Archetype Explorer (Home)
-   Scoped – does not affect cards
-   ========================= */
-
-.explorer-home {
-  margin: 60px auto;
-  padding: 0 20px;
-}
-
-.explorer-home .explorer-card {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 28px 24px;
-  border-radius: 18px;
-  background: linear-gradient(
-    180deg,
-    rgba(20,20,20,0.92),
-    rgba(8,8,8,0.96)
-  );
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: 0 30px 120px rgba(0,0,0,0.55);
-  color: rgba(255,255,255,0.88);
-}
-
-.explorer-home h2 {
-  font-size: 28px;
-  margin: 8px 0 10px;
-}
-
-.explorer-home p {
-  max-width: 60ch;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.7);
-}
-
-.explorer-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 13px;
-  background: rgba(215,179,106,0.12);
-  border: 1px solid rgba(215,179,106,0.35);
-  color: #e6c97a;
-}
-
-.explorer-badge .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #d7b36a;
-  box-shadow: 0 0 0 4px rgba(215,179,106,0.25);
-}
-
-.explorer-actions {
-  display: flex;
-  gap: 14px;
-  margin-top: 18px;
-  flex-wrap: wrap;
-}
-
-.explorer-note {
-  margin-top: 16px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.12);
-  font-size: 13px;
-  color: rgba(255,255,255,0.55);
-} 
-
-  /* Cards */
+/* Cards */
 .cards {
   display: flex;
   gap: 20px;
@@ -280,29 +169,7 @@
   margin: 0 20px 20px;
   line-height: 1.55;
 }
-<section class="explorer-home">
-  <div class="explorer-card">
-    <div class="explorer-badge">
-      <span class="dot"></span>
-      Instant • No sign-up
-    </div>
 
-    <h2>Archetype Explorer</h2>
-    <p>
-      A quick archetype mirror — no email, no scoring, just recognition.
-      Get an instant archetype result, then explore the deeper InnerCube system if you want.
-    </p>
-
-    <div class="explorer-actions">
-      <a class="btn primary" href="/explorer">Try the Explorer</a>
-      <a class="btn ghost" href="/innercube">Take the Full InnerCube Test</a>
-    </div>
-
-    <div class="explorer-note">
-      This is a mirror, not a label. If it resonates, keep it. If it doesn’t, let it go.
-    </div>
-  </div>
-</section>
 /* Break the Pattern section */
 .btp-section {
   background: #faf9f6;
@@ -392,16 +259,15 @@
 
 /* Mobile */
 @media(max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2em;
-  }
   .hero {
-    height: 68vh;
+    height: 60vh;
+    min-height: 360px;
+  }
+  .hero-text h1 {
+    font-size: 2.0em;
   }
 }
 </style>
-
-
 
 <!-- ========================= -->
 <!-- HERO BANNER -->
@@ -414,7 +280,35 @@
   </div>
 </section>
 
+<!-- ========================= -->
+<!-- ARCHETYPE EXPLORER (UNDER HERO) -->
+<!-- ========================= -->
+<section class="explorer-home">
+  <div class="explorer-card">
 
+    <div class="explorer-badge">
+      <span class="dot"></span>
+      Instant · No sign-up
+    </div>
+
+    <h2>Archetype Explorer</h2>
+
+    <p>
+      A quick archetype mirror — no email, no scoring, just recognition.
+      Get an instant archetype result, then explore the deeper InnerCube system if you want.
+    </p>
+
+    <div class="explorer-actions">
+      <a class="btn primary" href="/explorer">Try the Explorer</a>
+      <a class="btn ghost" href="/innercube">Take the Full InnerCube Test</a>
+    </div>
+
+    <div class="explorer-note">
+      This is a mirror, not a label. If it resonates, keep it. If it doesn’t, let it go.
+    </div>
+
+  </div>
+</section>
 
 <!-- ========================= -->
 <!-- THREE FEATURE CARDS -->
@@ -439,8 +333,6 @@
   </a>
 </section>
 
-
-
 <!-- ========================= -->
 <!-- BREAK THE PATTERN FEATURE -->
 <!-- ========================= -->
@@ -449,7 +341,7 @@
   <p>A gentle 72-hour reset for understanding your emotional loop — and finally changing it.</p>
 
   <picture>
-    <source media="(max-width: 768px)" 
+    <source media="(max-width: 768px)"
             srcset="{{ url_for('static', filename='images/btp-banner-mobile.jpg') }}">
     <img src="{{ url_for('static', filename='images/btp-banner-desktop.jpg') }}"
          alt="Break the Pattern – 72-Hour Reset"
@@ -458,15 +350,13 @@
 
   <p>Learn why your emotional survival patterns formed — and how to create new ones rooted in clarity, intuition, and inner peace.</p>
 
-  <a class="btp-button" 
-   href="https://intinno.gumroad.com/l/rwoynu" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   Get the 72-Hour Workbook – $14
-</a>
+  <a class="btp-button"
+     href="https://intinno.gumroad.com/l/rwoynu"
+     target="_blank"
+     rel="noopener noreferrer">
+     Get the 72-Hour Workbook – $14
+  </a>
 </section>
-
-
 
 <!-- ========================= -->
 <!-- TESTIMONIALS -->
@@ -493,4 +383,5 @@
 
   </div>
 </section>
+
 {% endblock %}
