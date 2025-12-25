@@ -56,36 +56,41 @@
    Scoped – safe & isolated
    ====================================================== */
 
+/* Pull it up slightly under the hero */
 .hero + .explorer-home{
-  margin-top: -26px;
+  margin-top: -24px;
 }
 
+/* Match the same max width as your cards section */
 .explorer-home{
-  margin: 36px auto 48px;
+  margin: 34px auto 46px;
   padding: 0 20px;
+  max-width: 1000px;  /* matches .cards max width */
 }
 
 .explorer-card{
-  max-width: 820px;
+  width: 100%;
   margin: 0 auto;
-  padding: 26px 26px 22px;
+  padding: 26px 28px 22px;
   border-radius: 18px;
   text-align: center;
 
+  /* LIGHTER olive / stone blend */
   background: linear-gradient(
     180deg,
-    rgba(28,40,30,0.90),
-    rgba(12,16,12,0.92)
+    rgba(245,246,240,0.92),
+    rgba(232,236,225,0.94)
   );
 
-  border: 1px solid rgba(185,201,160,0.18);
-  box-shadow: 0 22px 80px rgba(0,0,0,0.35);
-  color: rgba(255,255,255,0.88);
+  border: 1px solid rgba(70,90,60,0.16);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.12);
 
+  color: rgba(25,28,25,0.92);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
 
+/* Badge should LOOK like a pill, but NOT feel clickable */
 .explorer-badge{
   display: inline-flex;
   align-items: center;
@@ -97,7 +102,10 @@
 
   background: rgba(140,165,110,0.14);
   border: 1px solid rgba(140,165,110,0.35);
-  color: rgba(235,245,225,0.92);
+  color: rgba(35,45,35,0.90);
+
+  cursor: default;
+  user-select: none;
 }
 
 .explorer-badge .dot{
@@ -105,7 +113,7 @@
   height: 10px;
   border-radius: 50%;
   background: rgb(140,165,110);
-  box-shadow: 0 0 0 4px rgba(140,165,110,0.22);
+  box-shadow: 0 0 0 4px rgba(140,165,110,0.18);
 }
 
 .explorer-card h2{
@@ -114,33 +122,75 @@
 }
 
 .explorer-card p{
-  max-width: 62ch;
+  max-width: 66ch;
   margin: 0 auto;
   line-height: 1.6;
-  color: rgba(255,255,255,0.72);
+  color: rgba(25,28,25,0.78);
 }
 
+/* FORCE the links to look like buttons (even if home.css overrides .btn) */
 .explorer-actions{
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 14px;
   margin-top: 18px;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.explorer-actions .btn{
-  padding: 12px 20px;
+.explorer-actions a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
   border-radius: 999px;
+  text-decoration: none !important;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  border: 1px solid rgba(70,90,60,0.20);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  min-height: 44px;
 }
 
+/* Primary button */
+.explorer-actions a.primary{
+  background: rgba(140,165,110,0.22);
+  color: rgba(25,28,25,0.92);
+  border-color: rgba(140,165,110,0.45);
+}
+
+/* Secondary button */
+.explorer-actions a.ghost{
+  background: rgba(255,255,255,0.55);
+  color: rgba(25,28,25,0.92);
+}
+
+/* Hover */
+.explorer-actions a:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+}
+
+/* Note */
 .explorer-note{
   margin-top: 16px;
   padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.12);
+  border-top: 1px solid rgba(70,90,60,0.14);
   font-size: 13px;
-  color: rgba(255,255,255,0.58);
+  color: rgba(25,28,25,0.62);
 }
 
+/* Mobile: stack buttons */
+@media(max-width:768px){
+  .explorer-card{ padding: 22px 18px; }
+  .explorer-actions{
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+}
 /* ======================================================
    FEATURE CARDS
    ====================================================== */
@@ -278,8 +328,8 @@
     </p>
 
     <div class="explorer-actions">
-      <a class="btn primary" href="/explorer">Try the Explorer</a>
-      <a class="btn ghost" href="/innercube">Take the Full InnerCube Test</a>
+      <a class="primary" href="/explorer">Try the Explorer</a>
+      <a class="ghost" href="/innercube">Take the Full InnerCube Test</a>
     </div>
 
     <div class="explorer-note">
