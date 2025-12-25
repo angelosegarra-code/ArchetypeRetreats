@@ -52,7 +52,78 @@
   margin-top: 10px;
 }
 
-/* Cards */
+ /* =========================
+   Archetype Explorer (Home)
+   Scoped – does not affect cards
+   ========================= */
+
+.explorer-home {
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.explorer-home .explorer-card {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(20,20,20,0.92),
+    rgba(8,8,8,0.96)
+  );
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 30px 120px rgba(0,0,0,0.55);
+  color: rgba(255,255,255,0.88);
+}
+
+.explorer-home h2 {
+  font-size: 28px;
+  margin: 8px 0 10px;
+}
+
+.explorer-home p {
+  max-width: 60ch;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.7);
+}
+
+.explorer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  background: rgba(215,179,106,0.12);
+  border: 1px solid rgba(215,179,106,0.35);
+  color: #e6c97a;
+}
+
+.explorer-badge .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d7b36a;
+  box-shadow: 0 0 0 4px rgba(215,179,106,0.25);
+}
+
+.explorer-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.explorer-note {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+} 
+
+  /* Cards */
 .cards {
   display: flex;
   gap: 20px;
