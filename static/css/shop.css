@@ -82,3 +82,61 @@
     align-items: center;
   }
 }
+/* ================================
+   SHOP SECTIONS
+   ================================ */
+
+.shop-section {
+  margin-top: 60px;
+}
+
+.shop-section h3 {
+  font-size: 1.6em;
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.section-note {
+  max-width: 620px;
+  margin: 0 auto 30px;
+  text-align: center;
+  font-size: 0.95em;
+  color: rgba(0,0,0,0.6);
+}
+
+/* ================================
+   FEATURED PRODUCT
+   ================================ */
+
+.product-grid.single {
+  display: flex;
+  justify-content: center;
+}
+
+.product-card.featured {
+  max-width: 420px;
+  border: 1px solid rgba(196,160,98,0.45);
+  background: #fffdf7;
+}
+
+.product-card.featured h4 {
+  font-size: 1.25em;
+}
+
+/* ================================
+   PRODUCT HEADINGS
+   ================================ */
+
+.product-card h4 {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.product-card .subtitle {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 8px;
+}
