@@ -6,33 +6,83 @@
 
 {% block content %}
 <section id="shop">
+
+  <!-- SHOP INTRO -->
   <div class="shop-intro">
-    <h2>Shop</h2>
-    <p>Books and guides by <strong>Angelo Segarra</strong> — exploring creativity, transformation, and the art of becoming.</p>
+    <h2>Continue Your Becoming</h2>
+    <p>
+      Books and guides by <strong>Angelo Segarra</strong> — invitations into creativity,
+      reflection, and transformation. Choose what feels right to explore next.
+    </p>
   </div>
 
-  <div class="product-grid">
+  <!-- BEGIN HERE -->
+  <div class="shop-section">
+    <h3>Begin Here</h3>
 
-    <!-- Book 1 -->
-    <div class="product-card">
-      <img src="{{ url_for('static', filename='images/the-art-of-becoming.jpg') }}" alt="The Art of Becoming book cover">
-      <h3>The Art of Becoming</h3>
-      <p class="subtitle">Reimagine · Reignite · Rewrite Your Story</p>
-      <p>Every story is a work of art in progress. This 153-page journey bridges creativity and transformation through archetypal insight.</p>
-     <!-- The Art of Becoming -->
-    <a class="gumroad-button" href="https://intinno.gumroad.com/l/wuvfl" target="_blank" rel="noopener">Buy Now</a>
+    <div class="product-grid single">
+      <div class="product-card featured">
+        <img src="{{ url_for('static', filename='images/break-the-pattern.jpg') }}" alt="Break the Pattern – 72 Hour Reset">
+        <h4>Break the Pattern — 72-Hour Reset</h4>
+        <p class="subtitle">A gentle interruption to an old emotional loop</p>
+        <p>
+          A short, grounded reset designed to help you recognize your pattern —
+          and create space for something new, without force or pressure.
+        </p>
+        <a class="gumroad-button" href="https://intinno.gumroad.com/l/rwoynu" target="_blank" rel="noopener">
+          Explore the Reset
+        </a>
+      </div>
     </div>
-
-    <!-- Book 2 -->
-    <div class="product-card">
-      <img src="{{ url_for('static', filename='images/painting-poetry.jpg') }}" alt="Painting to Poetry book cover">
-      <h3>Painting to Poetry</h3>
-      <p class="subtitle">Find Your Voice · Master Your Niche</p>
-      <p>A guidebook on turning art into insight — blending creativity with storytelling to awaken the language of color and feeling.</p>
-      <a class="gumroad-button" href="https://intinno.gumroad.com/l/vvulsq" target="_blank" rel="noopener">Buy Now</a>
-    </div>
-
   </div>
+
+  <!-- READ & REFLECT -->
+  <div class="shop-section">
+    <h3>Read & Reflect</h3>
+
+    <div class="product-grid">
+
+      <!-- Book 1 -->
+      <div class="product-card">
+        <img src="{{ url_for('static', filename='images/the-art-of-becoming.jpg') }}" alt="The Art of Becoming book cover">
+        <h4>The Art of Becoming</h4>
+        <p class="subtitle">Reimagine · Reignite · Rewrite Your Story</p>
+        <p>
+          A journey through creativity, resistance, and transformation —
+          bridging archetypal insight with lived experience.
+        </p>
+        <a class="gumroad-button" href="https://intinno.gumroad.com/l/wuvfl" target="_blank" rel="noopener">
+          View Book
+        </a>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="product-card">
+        <img src="{{ url_for('static', filename='images/painting-poetry.jpg') }}" alt="Painting to Poetry book cover">
+        <h4>Painting to Poetry</h4>
+        <p class="subtitle">Find Your Voice · Master Your Niche</p>
+        <p>
+          A guide to translating visual expression into insight —
+          exploring how art becomes language and meaning.
+        </p>
+        <a class="gumroad-button" href="https://intinno.gumroad.com/l/vvulsq" target="_blank" rel="noopener">
+          View Book
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- GO DEEPER (placeholder for all Gumroad products) -->
+  <div class="shop-section">
+    <h3>Go Deeper</h3>
+    <p class="section-note">
+      Deeper guides, archetype explorations, and extended reflections —
+      for those who want to spend more time with the work.
+    </p>
+    <!-- Future Gumroad products will live here -->
+  </div>
+
 </section>
 
 <script src="https://gumroad.com/js/gumroad-embed.js"></script>
