@@ -1,36 +1,52 @@
 {% extends "base.html" %}
 
-{% block title %}Contact · Archetype Retreats{% endblock %}
-
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css', v=6) }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}?v=6">
 {% endblock %}
 
 {% block content %}
+  <!-- HERO -->
+  <section class="contact-hero" style="background-image:url('{{ url_for('static', filename='images/hear-you.jpg') }}');">
+    <div class="overlay"></div>
+    <div class="wrap">
+      <h1>Contact</h1>
+      <p>We’d love to hear from you — questions about retreats, collaboration, or joining our creative circle.</p>
+    </div>
+  </section>
 
-<!-- ================= HERO SECTION ================= -->
-<section class="contact-hero" style="background-image:url('{{ url_for('static', filename='images/hear-you.jpg') }}');">
-  <div class="overlay"></div>
-  <div class="wrap">
-    <h1>Contact</h1>
-    <p>We’d love to hear from you — questions about retreats, collaboration, or joining our creative circle.</p>
-  </div>
-</section>
+  <!-- GRID -->
+  <section class="contact-section">
+    <div class="contact-grid">
 
-<div class="contact-card">
-  <h2>Message</h2>
+      <div class="contact-card">
+        <h2>Reach Out</h2>
+        <p><strong>Email:</strong> <a href="mailto:angelo@angelosegarra.com">angelo@angelosegarra.com</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/archetyperetreats" target="_blank" rel="noopener">@archetyperetreats</a></p>
+        <p><strong>Bali Office:</strong> Ubud, Gianyar, Indonesia</p>
+      </div>
 
-  <iframe
-    data-tally-src="https://tally.so/embed/A72zjN?alignLeft=1&hideTitle=1&transparentBackground=1"
-    width="100%"
-    height="520"
-    frameborder="0"
-    marginheight="0"
-    marginwidth="0">
-  </iframe>
-</div>
+      <div class="contact-card">
+        <h2>Message</h2>
 
-<script async src="https://tally.so/widgets/embed.js"></script>
-<p class="response-note">
-  Messages are read personally. We usually reply within 24–48 hours.
-</p>
+        <iframe
+          data-tally-src="https://tally.so/embed/A72zjN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="520"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Contact form">
+        </iframe>
+
+        <p class="response-note">
+          We usually reply within 24–48 hours. If you don’t hear back, check spam or write to
+          <a href="mailto:angelo@angelosegarra.com">angelo@angelosegarra.com</a>.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <script async src="https://tally.so/widgets/embed.js"></script>
+{% endblock %}
