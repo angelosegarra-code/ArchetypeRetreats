@@ -1,210 +1,189 @@
 {% extends "base.html" %}
-
 {% block title %}Alchemy for Organizations · Archetype Retreats{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/alchemy.css') }}?v=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/alchemy.css') }}?v=2">
 {% endblock %}
 
 {% block content %}
 
-<section class="alchemy-hero" style="background-image:url('{{ url_for('static', filename='images/alchemy-hero.jpg') }}');">
-  <div class="overlay"></div>
-  <div class="wrap">
-    <div class="badge">Alchemy · Organizations & Teams</div>
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+<section class="alchemy-hero">
+  <div class="alchemy-wrap">
+    <div class="alchemy-badge">
+      <span class="dot"></span>
+      Alchemy · Organizations & Teams
+    </div>
+
     <h1>Change that people can actually feel.</h1>
-    <p>
-      Alchemy is a facilitated reflection process that helps teams see the patterns
-      driving communication, pressure, conflict, and decision-making — and practice new responses in real time.
+
+    <p class="alchemy-subtitle">
+      A facilitated process for helping teams see the patterns driving pressure, communication, and decision-making —
+      and practice new responses in real time.
     </p>
 
-    <div class="actions">
+    <p class="alchemy-lede">
+      Not therapy. Not training. A structured space where the system can finally see itself.
+    </p>
+
+    <div class="alchemy-actions">
       <a class="btn primary" href="/contact">Request a Session</a>
       <a class="btn ghost" href="/explorer">Try the Archetype Explorer</a>
     </div>
-
-    <p class="note">
-      Not therapy. Not training. A structured space where the system can finally see itself.
-    </p>
   </div>
 </section>
 
-
+<!-- ========================= -->
+<!-- WHAT THIS IS -->
+<!-- ========================= -->
 <section class="alchemy-section">
-  <div class="container">
-
+  <div class="alchemy-wrap narrow">
     <h2>What this is</h2>
     <p>
-      Most change efforts fail because they stay at the surface: tools, strategy, behavior tips.
+      Most change efforts fail because they stay on the surface: tools, strategy, behavior tips.
       Alchemy works deeper — at the level of meaning-making and survival patterns.
       That’s where the loop actually lives.
     </p>
 
-    <div class="grid-3">
-      <div class="panel">
-        <h3>Facilitated</h3>
-        <p>
-          A trained facilitator guides the session so it stays out of blame and inside observation.
-          The goal is clarity, not performance.
-        </p>
-      </div>
-      <div class="panel">
-        <h3>Experiential</h3>
-        <p>
-          Participants work with a set of structured prompts (“cards”) that surface real patterns quickly —
-          without forcing personal disclosure.
-        </p>
-      </div>
-      <div class="panel">
-        <h3>Practical</h3>
-        <p>
-          Every session ends with a small, testable shift — language, boundary, or practice —
-          that teams can apply immediately.
-        </p>
-      </div>
-    </div>
-
+    <ul class="alchemy-bullets">
+      <li><strong>Facilitated:</strong> a trained guide keeps the session out of blame and inside observation.</li>
+      <li><strong>Experiential:</strong> structured prompts surface real patterns quickly without forced disclosure.</li>
+      <li><strong>Practical:</strong> each session ends with one small, testable shift the team can apply immediately.</li>
+    </ul>
   </div>
 </section>
 
-
+<!-- ========================= -->
+<!-- WHAT IT HELPS WITH -->
+<!-- ========================= -->
 <section class="alchemy-section alt">
-  <div class="container">
+  <div class="alchemy-wrap">
     <h2>What it helps with</h2>
 
-    <div class="grid-2">
-      <div class="panel">
-        <h3>Pressure & performance loops</h3>
-        <ul>
-          <li>Over-functioning and burnout cycles</li>
-          <li>Perfectionism, urgency, and reactivity</li>
-          <li>Low psychological safety under deadlines</li>
-        </ul>
-      </div>
+    <div class="bridge-card" style="grid-template-columns: 1fr;">
+      <div class="bridge-left">
+        <div class="alchemy-tags">
+          <span>Pressure loops</span>
+          <span>Communication</span>
+          <span>Conflict repair</span>
+          <span>Change resistance</span>
+          <span>Team cohesion</span>
+        </div>
 
-      <div class="panel">
-        <h3>Communication & conflict</h3>
-        <ul>
-          <li>Defensiveness, avoidance, and blame</li>
+        <ul class="alchemy-bullets">
+          <li>Over-functioning, urgency, and burnout cycles</li>
+          <li>Defensiveness, avoidance, and blame patterns</li>
           <li>Unspoken expectations and role confusion</li>
-          <li>Repair conversations after friction</li>
-        </ul>
-      </div>
-
-      <div class="panel">
-        <h3>Change & adoption</h3>
-        <ul>
-          <li>Resistance that looks like “noncompliance”</li>
           <li>Stalled initiatives and circular meetings</li>
-          <li>Building flexible, adaptive teams</li>
-        </ul>
-      </div>
-
-      <div class="panel">
-        <h3>Team cohesion</h3>
-        <ul>
           <li>Trust-building without forced vulnerability</li>
-          <li>Better boundaries and cleaner collaboration</li>
-          <li>Shared language for patterns</li>
         </ul>
+
+        <p class="small" style="margin-top: 10px;">
+          Alchemy doesn’t “fix people.” It helps teams observe the pattern and choose a different response.
+        </p>
       </div>
     </div>
-
   </div>
 </section>
 
-
+<!-- ========================= -->
+<!-- HOW A SESSION WORKS -->
+<!-- ========================= -->
 <section class="alchemy-section">
-  <div class="container">
+  <div class="alchemy-wrap narrow">
     <h2>How a session works</h2>
 
-    <div class="steps">
+    <div class="alchemy-steps">
       <div class="step">
-        <div class="num">1</div>
+        <div class="step-num">1</div>
         <div>
           <h3>Orientation</h3>
-          <p>We set a simple container: observe patterns, avoid blame, stay present, stay honest.</p>
+          <p>Set a simple container: observe patterns, avoid blame, stay present, stay honest.</p>
         </div>
       </div>
 
       <div class="step">
-        <div class="num">2</div>
+        <div class="step-num">2</div>
         <div>
           <h3>Pattern selection</h3>
-          <p>Participants choose prompts that match what’s happening right now (no randomness required).</p>
+          <p>Participants choose prompts that match what’s happening now (no randomness required).</p>
         </div>
       </div>
 
       <div class="step">
-        <div class="num">3</div>
+        <div class="step-num">3</div>
         <div>
           <h3>Facilitated reflection</h3>
-          <p>We name the loop: what triggers it, what it protects, and what it costs the team.</p>
+          <p>Name the loop: what triggers it, what it protects, and what it costs the team.</p>
         </div>
       </div>
 
       <div class="step">
-        <div class="num">4</div>
+        <div class="step-num">4</div>
         <div>
           <h3>One practical shift</h3>
-          <p>We choose one small action that changes the loop: a phrase, a boundary, a meeting rule, a practice.</p>
+          <p>Choose one small action that changes the loop: a phrase, a boundary, a meeting rule, a practice.</p>
         </div>
       </div>
     </div>
 
-    <div class="callout">
-      <strong>Holding question (mid-session):</strong>
-      <span>“What is this pattern trying to protect — and what is it costing us?”</span>
+    <div class="sessions-box">
+      <div class="meta-title">Mid-session holding question</div>
+      <div class="meta-sub">“What is this pattern trying to protect — and what is it costing us?”</div>
+      <div class="small" style="margin-top: 10px;">
+        If the group drifts into debate, advice, or blame, return to the question.
+      </div>
     </div>
-
   </div>
 </section>
 
-
+<!-- ========================= -->
+<!-- FORMATS -->
+<!-- ========================= -->
 <section class="alchemy-section alt">
-  <div class="container">
+  <div class="alchemy-wrap">
     <h2>Formats</h2>
 
-    <div class="grid-3">
-      <div class="panel">
-        <h3>Single Session</h3>
-        <p>Best for teams that need clarity fast: pressure, conflict, or decision bottlenecks.</p>
+    <div class="bridge-card">
+      <div class="bridge-left">
+        <div class="bridge-badge">
+          <span class="dot"></span>
+          Simple options
+        </div>
+
+        <ul class="alchemy-bullets">
+          <li><strong>Single Session:</strong> clarity fast (pressure, conflict, decision bottlenecks).</li>
+          <li><strong>3-Session Arc:</strong> practice new responses and stabilize a new pattern.</li>
+          <li><strong>Facilitator Training:</strong> train internal leaders to hold second-order space.</li>
+        </ul>
+
+        <div class="bridge-note">
+          Sessions can be online or in-person (Bali / travel). Team size is flexible.
+        </div>
+
+        <div class="bridge-actions">
+          <a class="btn primary" href="/contact">Request a Session</a>
+          <a class="btn ghost" href="/alchemy">Back to Alchemy</a>
+        </div>
       </div>
 
-      <div class="panel">
-        <h3>3-Session Arc</h3>
-        <p>A short series where teams practice new responses and stabilize a new pattern.</p>
-      </div>
-
-      <div class="panel">
-        <h3>Facilitator Training</h3>
-        <p>Train internal leaders to run sessions with integrity and keep work in second-order space.</p>
+      <div class="bridge-meta">
+        <div class="meta-item">
+          <div class="meta-title">Outcome</div>
+          <div class="meta-sub">A shared language for patterns — and one shift the team can test immediately.</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-title">Ideal for</div>
+          <div class="meta-sub">Teams that feel “stuck,” reactive, or overloaded — even when people are capable.</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-title">Next step</div>
+          <div class="meta-sub">Start with a short call. I’ll recommend the smallest effective format.</div>
+        </div>
       </div>
     </div>
-
-    <p class="note">
-      Sessions can be in-person (Bali / travel) or online. Team size is flexible.
-    </p>
-
-  </div>
-</section>
-
-
-<section class="alchemy-cta">
-  <div class="container">
-    <h2>Ready to explore it?</h2>
-    <p>
-      Tell me what your team is facing and I’ll recommend a format that fits — without overbuilding.
-    </p>
-
-    <div class="actions">
-      <a class="btn primary" href="/contact">Contact / Request a Session</a>
-      <a class="btn ghost" href="/alchemy">Back to Alchemy</a>
-    </div>
-
-    <p class="note">
-      If you’re not sure where to start, try the Archetype Explorer first — it gives instant insight and sets language for sessions.
-    </p>
   </div>
 </section>
 
