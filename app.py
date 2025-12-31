@@ -158,6 +158,10 @@ def innercube_page():
 @app.route('/explorer')
 def explorer_page():
     return render_template('explorer.html')
+
+@app.route("/alchemy/organizations")
+def alchemy_organizations():
+    return render_template("alchemy_organizations.html")
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
