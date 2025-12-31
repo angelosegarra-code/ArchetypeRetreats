@@ -24,7 +24,13 @@ def redirect_www():
 # Optional: prevent CSS caching during testing
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
+from flask import render_template
+
+@app.route("/alchemy")
+def alchemy():
+    return render_template("alchemy.html")
 # Explicit static route (helps on Render)
+
 @app.route('/static/<path:filename>')
 def static_files(filename):
     from flask import send_from_directory
