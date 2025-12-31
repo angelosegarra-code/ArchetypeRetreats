@@ -17,71 +17,20 @@
   </div>
 </section>
 
-<!-- ================= BODY ================= -->
-<section class="contact-body">
-  <div class="grid">
+<div class="contact-card">
+  <h2>Message</h2>
 
-    <!-- ===== CONTACT INFO ===== -->
-    <div class="contact-card">
-      <h2>Reach Out</h2>
-      <p>Email: <a href="mailto:hello@archetyperetreats.com">hello@archetyperetreats.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/archetyperetreats" target="_blank">@archetyperetreats</a></p>
-      <p>Bali Office: Ubud, Gianyar, Indonesia</p>
-    </div>
+  <iframe
+    data-tally-src="https://tally.so/embed/A72zjN?alignLeft=1&hideTitle=1&transparentBackground=1"
+    width="100%"
+    height="520"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0">
+  </iframe>
+</div>
 
-    <!-- ===== FORM ===== -->
-    <div class="contact-card">
-      <h2>Message Us</h2>
-      <form
-        class="contact-form"
-        action="https://formspree.io/f/xldpkzvg"
-        method="POST"
-        id="contactForm"
-      >
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="_replyto" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-
-      <p id="thank-you" style="display:none; margin-top:15px; color:#3b7068; font-weight:500;">
-        ✅ Thank you! Your message has been sent successfully.
-      </p>
-
-      <p class="response-note">
-        We usually reply within 24–48 hours.<br>
-        If you don’t hear back, please check your spam folder or write to
-        <a href="mailto:hello@archetyperetreats.com">hello@archetyperetreats.com</a>.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= SCRIPT ================= -->
-<script>
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-    if (response.ok) {
-      form.reset();
-      document.getElementById('thank-you').style.display = 'block';
-    } else {
-      alert('There was a problem sending your message. Please try again.');
-    }
-  });
-</script>
-
-{% endblock %}
+<script async src="https://tally.so/widgets/embed.js"></script>
+<p class="response-note">
+  Messages are read personally. We usually reply within 24–48 hours.
+</p>
