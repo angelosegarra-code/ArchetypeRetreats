@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+
+{% block title %}Alchemy · Archetype Retreats{% endblock %}
+{% block body_class %}alchemy{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/alchemy.css') }}?v=1001">
+{% endblock %}
+
+{% block content %}
+
+<section class="alchemy-hero">
+  <div class="alchemy-wrap">
+    <div class="alchemy-badge">
+      <span class="dot"></span>
+      Live · Small group · Facilitated
+    </div>
+
+    <h1>Alchemy</h1>
+    <p class="alchemy-subtitle">A guided archetype experience.</p>
+
+    <p class="alchemy-lede">
+      A shared mirror for understanding how we change — together.
+      Not a personality test. Not therapy.
+      A live, facilitated space for recognition.
+    </p>
+
+    <div class="alchemy-actions">
+      <a class="btn primary" href="#sessions">Join a Facilitated Session</a>
+      <a class="btn ghost" href="#how">Learn how it works</a>
+    </div>
+  </div>
+</section>
+
+<section class="alchemy-section" id="how">
+  <div class="alchemy-wrap narrow">
+    <h2>What Is Alchemy?</h2>
+    <p>
+      Alchemy is a structured group experience where insight emerges through interaction, not instruction.
+      Participants are guided through archetypal prompts and reflections that reveal how patterns protect —
+      and how they may quietly limit.
+    </p>
+
+    <ul class="alchemy-bullets">
+      <li>Guided reflection and archetypal prompts</li>
+      <li>Group mirroring (with consent, without judgment)</li>
+      <li>No diagnosing, no fixing, no labels</li>
+      <li>A clear structure held by a facilitator</li>
+    </ul>
+  </div>
+</section>
+
+<section class="alchemy-section alt">
+  <div class="alchemy-wrap narrow">
+    <h2>What Happens in a Session</h2>
+    <p>
+      A small group gathers. Cards are drawn. Questions are answered.
+      Participants reflect — not only on themselves, but on how others experience them.
+      Patterns begin to appear, not because they are explained, but because they are seen.
+    </p>
+
+    <div class="alchemy-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Arrive</h3>
+          <p>We begin slowly. No performance. No pressure. Just presence.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Reflect</h3>
+          <p>Archetypal prompts reveal how you move under pressure, desire, and change.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Mirror</h3>
+          <p>The group reflects what it sees — using “I experience…” language, not advice.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Integrate</h3>
+          <p>You leave with a pattern to watch, and a simple shift to practice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alchemy-section" id="why">
+  <div class="alchemy-wrap narrow">
+    <h2>Why Alchemy Works</h2>
+    <p>
+      Most self-work happens alone.
+      But many of our deepest patterns were formed in relationship — and can only be seen clearly in relationship.
+      Alchemy creates a respectful space where awareness replaces self-judgment and insight becomes possible.
+    </p>
+  </div>
+</section>
+
+<section class="alchemy-section alt" id="for">
+  <div class="alchemy-wrap narrow">
+    <h2>Who This Is For</h2>
+    <p>
+      Alchemy is for people who are curious about how they change — and why.
+      No prior knowledge of archetypes is needed.
+    </p>
+
+    <div class="alchemy-tags">
+      <span>Creatives & artists</span>
+      <span>Coaches & facilitators</span>
+      <span>Friends & partners</span>
+      <span>Teams & groups</span>
+      <span>Anyone looping a pattern</span>
+    </div>
+  </div>
+</section>
+
+<!-- QUIET BRIDGE TO EXPLORER -->
+<section class="alchemy-section bridge" id="bridge">
+  <div class="alchemy-wrap">
+    <div class="bridge-card">
+      <div class="bridge-left">
+        <div class="bridge-badge">
+          <span class="dot"></span>
+          Not ready for live yet?
+        </div>
+
+        <h2>Start with a private mirror.</h2>
+        <p>
+          If you want a gentle entry point, try the Archetype Explorer.
+          It’s instant, anonymous, and takes less than two minutes.
+        </p>
+
+        <div class="bridge-actions">
+          <a class="btn primary" href="/explorer">Try Archetype Explorer</a>
+          <a class="btn ghost" href="/innercube">Go deeper with InnerCube</a>
+        </div>
+
+        <div class="bridge-note">
+          Alchemy is a mirror, not a label. If it resonates, keep it. If it doesn’t, let it go.
+        </div>
+      </div>
+
+      <div class="bridge-right">
+        <div class="bridge-meta">
+          <div class="meta-item">
+            <div class="meta-title">Explorer</div>
+            <div class="meta-sub">Instant result</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-title">Anonymous</div>
+            <div class="meta-sub">No sign-up</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-title">Next step</div>
+            <div class="meta-sub">Join Alchemy live</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="alchemy-section" id="sessions">
+  <div class="alchemy-wrap narrow">
+    <h2>Join a Session</h2>
+    <p>
+      Sessions are facilitated live and kept intentionally small.
+      No preparation is required — only curiosity, honesty, and presence.
+    </p>
+
+    <!-- Replace this placeholder with your booking embed or schedule list -->
+    <div class="sessions-box">
+      <p class="small">
+        Coming soon: session calendar & booking.
+        If you’d like to be notified when the first sessions open, use the contact page.
+      </p>
+      <div class="alchemy-actions">
+        <a class="btn primary" href="/contact">Notify me</a>
+        <a class="btn ghost" href="/">Return home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
