@@ -1,7 +1,10 @@
-{% extends "base.html" %}
+  {% extends "base.html" %}
+
+{% block title %}Alchemy for Organizations · Archetype Retreats{% endblock %}
+{% block body_class %}alchemy organizations{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/alchemy-organizations.css') }}?v=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/alchemy-organizations.css') }}?v=1101">
 {% endblock %}
 
 {% block content %}
@@ -9,57 +12,63 @@
 <!-- HERO -->
 <section class="alchemy-hero">
   <div class="alchemy-wrap">
+
     <div class="alchemy-badge">
       <span class="dot"></span>
-      Facilitated practice for teams
+      Structured facilitation for teams
     </div>
 
     <h1>Alchemy for Organizations</h1>
+
     <p class="alchemy-subtitle">
-      A structured way to move from friction to insight — without therapy language.
+      A practical way to move from friction to insight — without therapy language.
     </p>
 
     <p class="alchemy-lede">
-      Alchemy helps teams surface recurring patterns (pressure, desire, avoidance, conflict) and shift how the system responds.
-      It’s not training — it’s a guided session where the group learns to observe itself.
+      Alchemy helps teams surface recurring patterns (pressure, desire, avoidance, conflict) and shift how the system responds.<br>
+      Not training. Not “culture theatre.”<br>
+      A guided session where the group learns to observe itself.
     </p>
 
     <div class="alchemy-actions">
-      <a class="btn primary" href="{{ url_for('contact') }}">Request a session</a>
-      <a class="btn ghost" href="#how">How it works</a>
+      <a class="btn primary" href="/contact">Request a pilot</a>
+      <a class="btn secondary" href="#pricing">See pricing</a>
     </div>
 
-    <div class="alchemy-tags">
-      <span>Team alignment</span>
-      <span>Conflict repair</span>
-      <span>Change readiness</span>
-      <span>Culture + communication</span>
-      <span>Decision clarity</span>
-    </div>
   </div>
 </section>
 
 <!-- WHAT THIS IS -->
 <section class="alchemy-section">
   <div class="alchemy-wrap narrow">
+
     <h2>What this is</h2>
+
     <ul class="alchemy-bullets">
-      <li><strong>Plain and functional:</strong> language stays practical — no jargon required.</li>
-      <li><strong>Second-order change:</strong> we don’t just “solve the issue,” we shift the pattern that recreates it.</li>
-      <li><strong>Low-risk participation:</strong> people speak from observation, not confession.</li>
+      <li>A facilitator-led session using a simple, card-based method</li>
+      <li>Names what’s happening now — without blame</li>
+      <li>Shifts from “solving issues” to changing the pattern that recreates them</li>
+      <li>Ends with a clear micro-agreement the team can repeat</li>
     </ul>
+
+    <p class="alchemy-note">
+      Language stays plain and functional. No diagnosis. No labels. No forced vulnerability.
+    </p>
+
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="how" class="alchemy-section alt">
+<section class="alchemy-section alt" id="how">
   <div class="alchemy-wrap narrow">
+
     <h2>How it works (60–90 minutes)</h2>
 
     <div class="alchemy-steps">
+
       <div class="step">
         <div class="step-num">1</div>
-        <div>
+        <div class="step-body">
           <h3>Choose the pattern</h3>
           <p>Participants select 2–3 cards that accurately describe what’s happening right now.</p>
         </div>
@@ -67,15 +76,15 @@
 
       <div class="step">
         <div class="step-num">2</div>
-        <div>
+        <div class="step-body">
           <h3>Name it without blame</h3>
-          <p>The facilitator helps translate complaint into observation so the system can see itself.</p>
+          <p>The facilitator translates complaint into observation so the system can see itself.</p>
         </div>
       </div>
 
       <div class="step">
         <div class="step-num">3</div>
-        <div>
+        <div class="step-body">
           <h3>Shift the response</h3>
           <p>We practice a new micro-move: a sentence, boundary, request, or reframe the team can repeat.</p>
         </div>
@@ -83,66 +92,173 @@
 
       <div class="step">
         <div class="step-num">4</div>
-        <div>
-          <h3>Turn it into a team agreement</h3>
-          <p>We capture one simple agreement the team can test for 7 days, then review.</p>
+        <div class="step-body">
+          <h3>Make it repeatable</h3>
+          <p>The session ends with a clear agreement and a simple “watch-for” pattern to track in real time.</p>
         </div>
       </div>
+
     </div>
 
-    <div class="sessions-box">
-      <p class="small">
-        Optional follow-up: a second session improves results because the team returns with real data from the week.
-      </p>
-    </div>
   </div>
 </section>
 
-       <!-- CTA / PILOT -->
-<section class="alchemy-section bridge">
-  <div class="alchemy-wrap">
-    <div class="bridge-card">
+<!-- FIT -->
+<section class="alchemy-section" id="fit">
+  <div class="alchemy-wrap narrow">
 
-      <div class="bridge-left">
-        <div class="bridge-badge">
-          <span class="dot"></span>
-          Pilot option
+    <h2>Good fit / Not a fit</h2>
+    <ul class="alchemy-bullets">
+      <li><strong>Good fit:</strong> Teams willing to observe patterns, not just debate positions.</li>
+      <li><strong>Good fit:</strong> Leaders who want clarity without blame or “therapy talk.”</li>
+      <li><strong>Not a fit:</strong> Spaces that require confession, shame, or emotional performance.</li>
+      <li><strong>Not a fit:</strong> Teams seeking a quick fix without changing their behaviors.</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- COMMON USE CASES -->
+<section class="alchemy-section alt">
+  <div class="alchemy-wrap narrow">
+
+    <h2>Common use cases</h2>
+
+    <ul class="alchemy-bullets">
+      <li>Recurring conflict, looping meetings, or repeated misunderstandings</li>
+      <li>Leadership misalignment and decision paralysis</li>
+      <li>Change readiness and resistance patterns</li>
+      <li>Culture + communication breakdowns after growth or re-org</li>
+      <li>Cross-functional friction (handoffs, accountability, priorities)</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="alchemy-section" id="pricing">
+  <div class="alchemy-wrap narrow">
+
+    <h2>Pricing & formats</h2>
+    <p>
+      These are simple starting packages. If your team size or needs differ, we’ll tailor the format.
+    </p>
+
+    <div class="alchemy-steps">
+
+      <div class="step">
+        <div class="step-num">A</div>
+        <div class="step-body">
+          <h3>Pilot Session</h3>
+          <p>
+            <strong>$450</strong> · 60–90 minutes · up to 12 participants<br>
+            Includes: brief intake, facilitation, and a one-page recap (pattern + micro-agreement).
+          </p>
         </div>
-
-        <h2>Start with a pilot session</h2>
-        <p>
-          We’ll start with one facilitated session (60–90 minutes) to identify the pattern,
-          name it without blame, and leave with a clear micro-agreement the team can repeat.
-        </p>
-
-        <div class="bridge-actions">
-          <a class="btn primary" href="{{ url_for('contact') }}">Request a session</a>
-          <a class="btn secondary" href="{{ url_for('contact') }}">Ask a question</a>
-        </div>
-
-        <p class="bridge-note">
-          If you’re not sure this fits, send a short note describing what’s happening in the team
-          (pressure, conflict, indecision, avoidance). We’ll reply with a simple recommendation.
-        </p>
       </div>
 
-      <div class="bridge-meta">
-        <div class="meta-item">
-          <div class="meta-title">Format</div>
-          <div class="meta-sub">60–90 minutes • remote or on-site (Bali)</div>
+      <div class="step">
+        <div class="step-num">B</div>
+        <div class="step-body">
+          <h3>3-Session Alignment Sprint</h3>
+          <p>
+            <strong>$1,200</strong> · three sessions over 3–6 weeks · up to 12 participants<br>
+            Includes: intake + pattern map, three facilitated sessions, and a team “repeatable language” sheet.
+          </p>
         </div>
+      </div>
 
-        <div class="meta-item">
-          <div class="meta-title">Best for</div>
-          <div class="meta-sub">Teams • leadership groups • project resets</div>
-        </div>
-
-        <div class="meta-item">
-          <div class="meta-title">Outcome</div>
-          <div class="meta-sub">Shared clarity + one repeatable agreement</div>
+      <div class="step">
+        <div class="step-num">C</div>
+        <div class="step-body">
+          <h3>6-Session Pattern Reset</h3>
+          <p>
+            <strong>$2,200</strong> · six sessions over 6–12 weeks · up to 15 participants<br>
+            Includes: deeper pattern tracking, meeting hygiene upgrades, and reinforcement of team agreements.
+          </p>
         </div>
       </div>
 
     </div>
+
+    <p class="alchemy-note">
+      Larger teams: we run multiple groups and synthesize patterns across the system.
+      Travel / on-site facilitation can be arranged if needed.
+    </p>
+
+    <div class="alchemy-actions">
+      <a class="btn primary" href="/contact">Request a pilot</a>
+      <a class="btn ghost" href="#cases">See examples</a>
+    </div>
+
   </div>
 </section>
+
+<!-- CASE EXAMPLES -->
+<section class="alchemy-section alt" id="cases">
+  <div class="alchemy-wrap narrow">
+
+    <h2>Case examples</h2>
+
+    <div class="alchemy-steps">
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Leadership team stuck in circular debate</h3>
+          <p>
+            Pattern: “avoidance disguised as analysis.”<br>
+            Shift: a two-sentence decision protocol + a “what we’re avoiding” check-in.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Cross-functional handoff friction</h3>
+          <p>
+            Pattern: “silent expectations + late resentment.”<br>
+            Shift: a shared definition of “done” + a repeatable request format.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Team morale dropping after change</h3>
+          <p>
+            Pattern: “pressure + withdrawal.”<br>
+            Shift: micro-agreements for clarity, ownership, and clean escalation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="alchemy-section" id="faq">
+  <div class="alchemy-wrap narrow">
+
+    <h2>FAQ</h2>
+
+    <ul class="alchemy-bullets">
+      <li><strong>Is this therapy?</strong> No. This is structured facilitation focused on team patterns and practical changes.</li>
+      <li><strong>Do people have to share personal details?</strong> No. Participation is observation-based, not confession-based.</li>
+      <li><strong>What if the team is defensive?</strong> That’s normal. We work with what’s present and keep language clean and safe.</li>
+      <li><strong>Do you provide training materials?</strong> You’ll receive a recap and repeatable language. If you want training, we can add it.</li>
+    </ul>
+
+    <div class="alchemy-actions">
+      <a class="btn primary" href="/contact">Ask about your team</a>
+      <a class="btn secondary" href="/alchemy">Back to Alchemy</a>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
