@@ -9,6 +9,7 @@
 
 {% block content %}
 
+<!-- ================= HERO ================= -->
 <section class="alchemy-hero">
   <div class="alchemy-wrap">
 
@@ -30,35 +31,47 @@
     </p>
 
     <div class="alchemy-actions">
-      <a class="btn primary" href="#sessions">
-        Alchemy for Individuals
-      </a>
-
-      <a class="btn secondary" href="{{ url_for('alchemy_organizations') }}">
-        Alchemy for Organizations
-      </a>
+      <a class="btn primary" href="#sessions">Alchemy for Individuals</a>
+      <a class="btn secondary" href="/alchemy/organizations">Alchemy for Organizations</a>
     </div>
 
   </div>
 </section>
 
-    <h2>Who this is for</h2>
-    <ul class="alchemy-bullets">
-      <li>People willing to observe patterns, not just discuss problems</li>
-      <li>Teams or individuals navigating recurring friction or stuck dynamics</li>
-      <li>Those who want practical insight without therapeutic language</li>
-    </ul>
+<!-- ================= FIT ================= -->
+<section class="alchemy-section alt" id="fit">
+  <div class="alchemy-wrap">
+    <h2>Is this for you?</h2>
+    <p class="alchemy-subcopy">A quick filter so the experience stays clean and useful.</p>
 
-    <h2>Who this is not for</h2>
-    <ul class="alchemy-bullets">
-      <li>Anyone looking for quick fixes or motivational hype</li>
-      <li>Spaces that require confession, blame, or emotional performance</li>
-      <li>Organizations unwilling to look at their own patterns</li>
-    </ul>
+    <div class="fit-grid">
+      <div class="fit-card">
+        <h3>Who this is for</h3>
+        <ul class="alchemy-bullets">
+          <li>People willing to observe patterns, not just discuss problems</li>
+          <li>Teams or individuals navigating recurring friction or stuck dynamics</li>
+          <li>Those who want practical insight without therapeutic language</li>
+        </ul>
+      </div>
 
+      <div class="fit-card muted">
+        <h3>Who this is not for</h3>
+        <ul class="alchemy-bullets">
+          <li>Anyone looking for quick fixes or motivational hype</li>
+          <li>Spaces that require confession, blame, or emotional performance</li>
+          <li>Organizations unwilling to look at their own patterns</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fit-actions">
+      <a class="btn primary" href="#sessions">Join a Facilitated Session</a>
+      <a class="btn secondary" href="/alchemy/organizations">Teams &amp; Organizations</a>
+    </div>
   </div>
 </section>
-  
+
+<!-- ================= WHAT ================= -->
 <section class="alchemy-section" id="how">
   <div class="alchemy-wrap narrow">
     <h2>What Is Alchemy?</h2>
@@ -77,6 +90,7 @@
   </div>
 </section>
 
+<!-- ================= SESSION FLOW ================= -->
 <section class="alchemy-section alt">
   <div class="alchemy-wrap narrow">
     <h2>What Happens in a Session</h2>
@@ -122,22 +136,25 @@
   </div>
 </section>
 
+<!-- ================= WHY ================= -->
 <section class="alchemy-section" id="why">
   <div class="alchemy-wrap narrow">
     <h2>Why Alchemy Works</h2>
     <p>
       Most self-work happens alone.
-      But many of our deepest patterns were formed in relationship — and can only be seen clearly in relationship.
-      Alchemy creates a respectful space where awareness replaces self-judgment and insight becomes possible.
+      But many of our deepest patterns were formed in relationship —
+      and can only be seen clearly in relationship.
+      Alchemy replaces self-judgment with awareness.
     </p>
   </div>
 </section>
 
+<!-- ================= WHO ================= -->
 <section class="alchemy-section alt" id="for">
   <div class="alchemy-wrap narrow">
     <h2>Who This Is For</h2>
     <p>
-      Alchemy is for people who are curious about how they change — and why.
+      Alchemy is for people curious about how they change — and why.
       No prior knowledge of archetypes is needed.
     </p>
 
@@ -151,7 +168,7 @@
   </div>
 </section>
 
-<!-- QUIET BRIDGE TO EXPLORER -->
+<!-- ================= BRIDGE ================= -->
 <section class="alchemy-section bridge" id="bridge">
   <div class="alchemy-wrap">
     <div class="bridge-card">
@@ -173,7 +190,7 @@
         </div>
 
         <div class="bridge-note">
-          Alchemy is a mirror, not a label. If it resonates, keep it. If it doesn’t, let it go.
+          Alchemy is a mirror, not a label.
         </div>
       </div>
 
@@ -198,19 +215,18 @@
   </div>
 </section>
 
+<!-- ================= SESSIONS ================= -->
 <section class="alchemy-section" id="sessions">
   <div class="alchemy-wrap narrow">
     <h2>Join a Session</h2>
     <p>
       Sessions are facilitated live and kept intentionally small.
-      No preparation is required — only curiosity, honesty, and presence.
+      No preparation required — only curiosity and presence.
     </p>
 
-    <!-- Replace this placeholder with your booking embed or schedule list -->
     <div class="sessions-box">
       <p class="small">
         Coming soon: session calendar & booking.
-        If you’d like to be notified when the first sessions open, use the contact page.
       </p>
       <div class="alchemy-actions">
         <a class="btn primary" href="/contact">Notify me</a>
