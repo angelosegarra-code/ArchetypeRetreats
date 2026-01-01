@@ -9,18 +9,23 @@
 <!-- HERO -->
 <section class="alchemy-hero">
   <div class="alchemy-wrap">
-    <div class="alchemy-badge"><span class="dot"></span> Facilitated practice for teams</div>
+    <div class="alchemy-badge">
+      <span class="dot"></span>
+      Facilitated practice for teams
+    </div>
 
     <h1>Alchemy for Organizations</h1>
-    <p class="alchemy-subtitle">A structured way to move from friction to insight — without therapy language.</p>
+    <p class="alchemy-subtitle">
+      A structured way to move from friction to insight — without therapy language.
+    </p>
 
     <p class="alchemy-lede">
       Alchemy helps teams surface recurring patterns (pressure, desire, avoidance, conflict) and shift how the system responds.
-      It’s not training and it’s not a workshop full of advice — it’s a guided practice where the group learns to observe itself.
+      It’s not training — it’s a guided session where the group learns to observe itself.
     </p>
 
     <div class="alchemy-actions">
-      <a class="btn primary" href="{{ url_for('contact') }}?topic=alchemy">Request a session</a>
+      <a class="btn primary" href="{{ url_for('contact') }}">Request a session</a>
       <a class="btn ghost" href="#how">How it works</a>
     </div>
 
@@ -34,15 +39,10 @@
   </div>
 </section>
 
-<!-- WHAT IT IS -->
+<!-- WHAT THIS IS -->
 <section class="alchemy-section">
   <div class="alchemy-wrap narrow">
     <h2>What this is</h2>
-    <p>
-      A facilitator-led session using a simple card-based method to help people name what’s happening, choose a different
-      response, and practice it together in real time.
-    </p>
-
     <ul class="alchemy-bullets">
       <li><strong>Plain and functional:</strong> language stays practical — no jargon required.</li>
       <li><strong>Second-order change:</strong> we don’t just “solve the issue,” we shift the pattern that recreates it.</li>
@@ -85,15 +85,14 @@
         <div class="step-num">4</div>
         <div>
           <h3>Turn it into a team agreement</h3>
-          <p>We finish with one clear commitment that changes behavior in the next week.</p>
+          <p>We capture one simple agreement the team can test for 7 days, then review.</p>
         </div>
       </div>
     </div>
 
     <div class="sessions-box">
       <p class="small">
-        Typical starting modules: <strong>Pressure</strong>, <strong>Desire</strong>, <strong>Avoidance</strong>, <strong>Conflict</strong>.
-        Teams can book a single session or a short series for deeper integration.
+        Optional follow-up: a second session improves results because the team returns with real data from the week.
       </p>
     </div>
   </div>
@@ -104,54 +103,40 @@
   <div class="alchemy-wrap">
     <div class="bridge-card">
       <div class="bridge-left">
-        <div class="bridge-badge">Map → Practice</div>
-        <h2>From insight to change</h2>
+        <div class="bridge-badge">
+          <span class="dot" style="background:#7d8c73; box-shadow: 0 0 0 4px rgba(125,140,115,0.22);"></span>
+          For teams that want momentum
+        </div>
+
+        <h2>Ready to run a pilot?</h2>
         <p>
-          The “map” (tests, symbols, archetypes) helps people recognize their default pattern.
-          Alchemy is the practice — where the group can feel the pattern in real time and choose a different move.
-          That’s when the system starts to reorganize itself.
+          We’ll start with one facilitated session, then decide whether to expand into a short series based on what the system reveals.
         </p>
 
         <div class="bridge-actions">
-          <a class="btn primary" href="{{ url_for('contact') }}?topic=alchemy">Book a discovery call</a>
-          <a class="btn ghost" href="{{ url_for('explorer_page') }}">Try the Explorer</a>
+          <a class="btn primary" href="{{ url_for('contact') }}">Request a session</a>
+          <a class="btn ghost" href="{{ url_for('contact') }}">Ask a question</a>
         </div>
 
-        <p class="bridge-note">
-          Facilitator cue (keeps the room in second-order space): <em>“What’s the pattern — not the problem?”</em>
-        </p>
+        <div class="bridge-note">
+          You can keep this page simple now. Pricing + case examples can be added later.
+        </div>
       </div>
 
       <div class="bridge-meta">
         <div class="meta-item">
           <div class="meta-title">Format</div>
-          <div class="meta-sub">Online or in-person</div>
+          <div class="meta-sub">Online or in-person (Bali + travel by request)</div>
         </div>
         <div class="meta-item">
-          <div class="meta-title">Group size</div>
-          <div class="meta-sub">4–20 participants</div>
+          <div class="meta-title">Team size</div>
+          <div class="meta-sub">4–14 is ideal</div>
         </div>
         <div class="meta-item">
-          <div class="meta-title">Outcomes</div>
-          <div class="meta-sub">Clarity, cohesion, next-week commitments</div>
+          <div class="meta-title">Outcome</div>
+          <div class="meta-sub">A shared pattern + one repeatable micro-shift</div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="alchemy-section alt">
-  <div class="alchemy-wrap narrow">
-    <h2>Interested in bringing this to your team?</h2>
-    <p>
-      Send a message and tell us your team size and what you’re trying to shift. We’ll recommend a single session or a short
-      series, depending on what you need.
-    </p>
-
-    <div class="alchemy-actions">
-      <a class="btn primary" href="{{ url_for('contact') }}?topic=alchemy">Contact</a>
-      <a class="btn ghost" href="{{ url_for('retreats_page') }}">Retreats</a>
     </div>
   </div>
 </section>
