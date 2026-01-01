@@ -1,0 +1,157 @@
+/* ==========================
+   ALCHEMY — ORGANIZATIONS
+   ========================== */
+
+.org-hero {
+  padding: 96px 0 64px;
+  background:
+    radial-gradient(1200px 600px at 30% 10%, rgba(196,160,98,0.18), transparent 55%),
+    linear-gradient(180deg, rgba(16,20,18,0.96), rgba(10,12,11,0.98));
+  color: rgba(255,255,255,0.92);
+}
+
+.org-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.org-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  background: rgba(196,160,98,0.16);
+  border: 1px solid rgba(196,160,98,0.34);
+}
+
+.org-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c4a062;
+  box-shadow: 0 0 0 4px rgba(196,160,98,0.22);
+}
+
+.org-hero h1 {
+  font-size: 44px;
+  margin: 16px 0 10px;
+}
+
+.org-subtitle {
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 70ch;
+  color: rgba(255,255,255,0.78);
+}
+
+/* SECTIONS */
+.org-section {
+  padding: 64px 0;
+  background: #ffffff;
+  border-top: 1px solid #efece6;
+}
+
+.org-section.alt {
+  background: #faf9f6;
+}
+
+.org-section h2 {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.org-section p {
+  line-height: 1.75;
+  color: rgba(0,0,0,0.72);
+}
+
+/* GRID */
+.org-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.org-card {
+  padding: 22px 20px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.06);
+}
+
+.org-card h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.org-card p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(0,0,0,0.65);
+}
+
+/* STEPS */
+.org-steps {
+  margin-top: 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.org-step {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  padding: 18px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.org-step-num {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  background: rgba(196,160,98,0.18);
+  border: 1px solid rgba(196,160,98,0.35);
+}
+
+/* CTA */
+.org-cta {
+  margin-top: 28px;
+  padding: 26px 24px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #f7f5f0, #f2efe9);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.org-cta p {
+  margin-bottom: 14px;
+}
+
+.org-cta a {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: #2f5b54;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 960px) {
+  .org-grid {
+    grid-template-columns: 1fr;
+  }
+  .org-hero h1 {
+    font-size: 36px;
+  }
+}
