@@ -239,6 +239,34 @@
   color: rgba(0,0,0,0.60);
 }
 
+/* Buttons (in case site buttons aren't global) */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration:none;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.btn.primary{
+  background: #c4a062;
+  border-color: rgba(196,160,98,0.65);
+  color: #1b1710;
+}
+
+.btn.ghost{
+  background: transparent;
+  color: rgba(255,255,255,0.92);
+}
+.alchemy-section .btn.ghost{
+  color: rgba(0,0,0,0.78);
+  border-color: rgba(0,0,0,0.14);
+}
+
 /* Mobile */
 @media (max-width: 860px){
   .bridge-card{
