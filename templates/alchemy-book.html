@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+
+{% block title %}The Alchemy of Change · Archetype Retreats{% endblock %}
+{% block body_class %}alchemy-page{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=1005">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO / HEADER -->
+<section class="page-hero"
+  style="background-image: url('{{ url_for('static', filename='images/hero-field.jpg') }}');">
+  <div class="page-hero-overlay"></div>
+
+  <div class="page-hero-inner">
+    <p class="kicker">The Book</p>
+    <h1>The Alchemy of Change</h1>
+    <p class="subtitle">When Awareness Enters the Field</p>
+
+    <p class="lead">
+      This is not a program. Not a productivity method.
+      It is a shift in perception — from fixing problems to seeing the conditions that produce them.
+    </p>
+
+    <div class="button-row">
+      <!-- TODO: Replace with your Gumroad link when ready -->
+      <a class="btn primary" href="#" target="_blank" rel="noopener">Get the Book on Gumroad</a>
+      <a class="btn" href="/contact">Join the Conversation</a>
+    </div>
+
+    <p class="micro">
+      If you’re not ready to buy, start by joining the email list through Contact.
+      No spam. Infrequent notes.
+    </p>
+  </div>
+</section>
+
+
+<!-- BOOK INTRO -->
+<section class="section">
+  <div class="container">
+
+    <div class="panel book-panel">
+      <img
+        class="book-cover"
+        src="{{ url_for('static', filename='images/alchemy-cover.jpg') }}"
+        alt="The Alchemy of Change book cover"
+      />
+
+      <div class="book-copy">
+        <h2>What This Book Is</h2>
+        <p>
+          <em>The Alchemy of Change</em> is a short, foundational work on second-order change:
+          the kind of transformation that happens when a system becomes aware of itself.
+        </p>
+        <p>
+          It explores the narrative field — how meaning forms, how patterns persist,
+          and why awareness changes what problem-solving cannot.
+        </p>
+
+        <div class="button-row">
+          <!-- TODO: Replace with your Gumroad link -->
+          <a class="btn primary" href="#" target="_blank" rel="noopener">Get the Book</a>
+          <a class="btn" href="/innercube-test">Take the InnerCube Test</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- WHO IT'S FOR -->
+<section class="section">
+  <div class="container">
+    <h2>Who This Is For</h2>
+
+    <div class="card-grid alchemy-grid">
+
+      <div class="card card-static">
+        <h3>Individuals</h3>
+        <p>
+          You feel a repeating loop — not just a habit, but a pattern of meaning.
+          You want change that doesn’t rely on force.
+        </p>
+      </div>
+
+      <div class="card card-static">
+        <h3>Groups &amp; Teams</h3>
+        <p>
+          You sense the system behind the conversations.
+          You want a way to hold attention together without collapsing into blame.
+        </p>
+      </div>
+
+      <div class="card card-static">
+        <h3>Organizations</h3>
+        <p>
+          You’ve “improved” and optimized, but something deeper stays unchanged.
+          You want the conditions of the culture to become visible.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="note">
+      If you’re looking for a step-by-step business framework or a motivational productivity book,
+      this isn’t that. This is a different kind of doorway.
+    </p>
+  </div>
+</section>
+
+
+<!-- SAMPLE -->
+<section class="section">
+  <div class="container">
+    <div class="panel">
+      <h2>Read a Short Sample</h2>
+      <p>
+        The work begins not with knowing what to do,
+        but with being aware of what is already happening —
+        in the psyche, in the room, and in the system.
+      </p>
+
+      <div class="excerpt">
+        <p><strong>From “The Narrative Field”</strong></p>
+        <p>
+          This is the art beneath all facilitation — the alchemy beneath all transformation.
+          It begins not with knowing what to do, but with being aware of what is already happening.
+          And when awareness enters the field, the story finds its next movement on its own.
+        </p>
+      </div>
+
+      <!-- Optional later: link to a PDF sample -->
+      <!--
+      <div class="button-row">
+        <a class="btn" href="{{ url_for('static', filename='samples/alchemy-sample.pdf') }}" target="_blank" rel="noopener">
+          Download a 3-Page Sample (PDF)
+        </a>
+      </div>
+      -->
+    </div>
+  </div>
+</section>
+
+
+<!-- NEXT STEPS -->
+<section class="section">
+  <div class="container">
+    <h2>If This Resonates</h2>
+
+    <div class="card-grid alchemy-grid">
+
+      <a class="card" href="/alchemy#organizations">
+        <h3>Organizational Work</h3>
+        <p>
+          For teams and organizations moving from first-order optimization
+          to second-order awareness and reorganization.
+        </p>
+        <span class="card-link">Learn how it works</span>
+      </a>
+
+      <a class="card" href="/retreats">
+        <h3>Retreats &amp; Small Groups</h3>
+        <p>
+          Contained environments where shared attention becomes possible —
+          and change emerges without force.
+        </p>
+        <span class="card-link">Explore retreats</span>
+      </a>
+
+      <a class="card" href="/contact">
+        <h3>Join the Conversation</h3>
+        <p>
+          If you want to receive new writing and announcements,
+          join through Contact and I’ll add you to the list.
+        </p>
+        <span class="card-link">Contact</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ORGANIZATIONS ANCHOR (for /alchemy#organizations) -->
+<section class="section" id="organizations">
+  <div class="container">
+    <div class="panel">
+      <h2>Second-Order Change for Organizations</h2>
+      <p>
+        Alchemy, as described in this work, is second-order change.
+        Paradoxically, it is not a method for improving systems.
+        It is a way of holding attention that allows systems to reorganize their own patterns
+        without collapsing into blame or defensiveness.
+      </p>
+
+      <p>
+        This is the moment when the system begins to be aware that it is a system.
+      </p>
+
+      <div class="button-row">
+        <a class="btn primary" href="/contact">Inquire About Small-Group Work</a>
+        <a class="btn" href="/retreats">Explore Retreat Options</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
