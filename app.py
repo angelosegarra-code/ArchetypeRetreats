@@ -26,8 +26,8 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 from flask import render_template
 
-@app.route("/alchemy")
-def alchemy():
+@app.route("/alchemy-old", endpoint="alchemy_old")
+def alchemy_old():
     return render_template("alchemy.html")
 # Explicit static route (helps on Render)
 
@@ -159,12 +159,12 @@ def innercube_page():
 def explorer_page():
     return render_template('explorer.html')
 
-@app.route("/alchemy/organizations")
+@app.route("/alchemy/organizations", endpoint="alchemy_orgs")
 def alchemy_organizations():
     return render_template("alchemy_organizations.html")
-
-@app.route("/alchemy")
-def alchemy():
+    
+@app.route("/alchemy", endpoint="alchemy_book")
+def alchemy_book():
     return render_template("alchemy-book.html")
     
 if __name__ == '__main__':
