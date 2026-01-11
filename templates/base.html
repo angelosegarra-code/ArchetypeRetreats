@@ -14,21 +14,17 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="site-header__inner">
-    <div class="site-title"><a href="{{ url_for('home') }}">Archetype Retreats</a></div>
-    <nav class="site-nav">
-      <a href="{{ url_for('home') }}">Home</a>
-      <a href="{{ url_for('innercube') }}">InnerCube Test</a>
-      <a href="{{ url_for('alchemy_page') }}">Alchemy</a>
-      <a href="{{ url_for('retreats') }}">Retreats</a>
-      <a href="{{ url_for('shop') }}">Shop</a>
-      <a href="{{ url_for('about') }}">About</a>
-      <a href="{{ url_for('contact') }}">Contact</a>
-    </nav>
-  </div>
-</header>
+<div class="site-title"><a href="/">Archetype Retreats</a></div>
 
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/innercube">InnerCube Test</a>
+  <a href="/alchemy">Alchemy</a>
+  <a href="/retreats">Retreats</a>
+  <a href="/shop">Shop</a>
+  <a href="/about">About</a>
+  <a href="/contact">Contact</a>
+</nav>
 {% block content %}{% endblock %}
 
 <footer class="site-footer">© <span id="year"></span> Archetype Retreats</footer>
