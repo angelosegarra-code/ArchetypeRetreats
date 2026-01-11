@@ -1,388 +1,232 @@
 {% extends "base.html" %}
+
 {% block title %}Home · Archetype Retreats{% endblock %}
 {% block body_class %}home{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=1003">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=1004">
 {% endblock %}
 
 {% block content %}
 
-<style>
-/* ======================================================
-   HERO — refined height & calmer transition
-   ====================================================== */
-
-.hero{
-  position: relative;
-  width: 100%;
-  height: 48vh;
-  min-height: 420px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-overlay{
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-}
-
-.hero-text{
-  position: relative;
-  text-align: center;
-  color: white;
-  max-width: 720px;
-  padding: 16px 24px;
-}
-
-.hero-text h1{
-  font-size: 2.3em;
-  letter-spacing: 0.4px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.hero-text p{
-  font-size: 1.05em;
-  opacity: 0.85;
-}
-
-/* ======================================================
-   ARCHETYPE EXPLORER (Homepage)
-   Scoped – safe & isolated
-   ====================================================== */
-
-/* Pull it up slightly under the hero */
-.hero + .explorer-home{
-  margin-top: -24px;
-}
-
-/* Match the same max width as your cards section */
-.explorer-home{
-  margin: 34px auto 46px;
-  padding: 0 20px;
-  max-width: 1000px;  /* matches .cards max width */
-}
-
-.explorer-card{
-  width: 100%;
-  margin: 0 auto;
-  padding: 26px 28px 22px;
-  border-radius: 18px;
-  text-align: center;
-
-  /* LIGHTER olive / stone blend */
-  background: linear-gradient(
-    180deg,
-    rgba(245,246,240,0.92),
-    rgba(232,236,225,0.94)
-  );
-
-  border: 1px solid rgba(70,90,60,0.16);
-  box-shadow: 0 18px 60px rgba(0,0,0,0.12);
-
-  color: rgba(25,28,25,0.92);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-
-/* Badge should LOOK like a pill, but NOT feel clickable */
-.explorer-badge{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 13px;
-  margin-bottom: 14px;
-
-  background: rgba(140,165,110,0.14);
-  border: 1px solid rgba(140,165,110,0.35);
-  color: rgba(35,45,35,0.90);
-
-  cursor: default;
-  user-select: none;
-}
-
-.explorer-badge .dot{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgb(140,165,110);
-  box-shadow: 0 0 0 4px rgba(140,165,110,0.18);
-}
-
-.explorer-card h2{
-  font-size: 30px;
-  margin: 6px 0 10px;
-}
-
-.explorer-card p{
-  max-width: 66ch;
-  margin: 0 auto;
-  line-height: 1.6;
-  color: rgba(25,28,25,0.78);
-}
-
-/* FORCE the links to look like buttons (even if home.css overrides .btn) */
-.explorer-actions{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 18px;
-  justify-content: center;
-  align-items: center;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.explorer-actions a{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 18px;
-  border-radius: 999px;
-  text-decoration: none !important;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  border: 1px solid rgba(70,90,60,0.20);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-  min-height: 44px;
-}
-
-/* Primary button */
-.explorer-actions a.primary{
-  background: rgba(140,165,110,0.22);
-  color: rgba(25,28,25,0.92);
-  border-color: rgba(140,165,110,0.45);
-}
-
-/* Secondary button */
-.explorer-actions a.ghost{
-  background: rgba(255,255,255,0.55);
-  color: rgba(25,28,25,0.92);
-}
-
-/* Hover */
-.explorer-actions a:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
-}
-
-/* Note */
-.explorer-note{
-  margin-top: 16px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(70,90,60,0.14);
-  font-size: 13px;
-  color: rgba(25,28,25,0.62);
-}
-
-/* Mobile: stack buttons */
-@media(max-width:768px){
-  .explorer-card{ padding: 22px 18px; }
-  .explorer-actions{
-    grid-template-columns: 1fr;
-    max-width: 520px;
-  }
-}
-/* ======================================================
-   FEATURE CARDS
-   ====================================================== */
-
-.cards{
-  display: flex;
-  gap: 20px;
-  margin: 40px auto;
-  max-width: 1000px;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0 20px;
-}
-
-.card{
-  width: 300px;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  text-decoration: none;
-  color: #333;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease;
-}
-
-.card:hover{
-  transform: translateY(-6px);
-}
-
-.card img{
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-}
-
-.card h3{
-  margin: 15px 20px 5px;
-  font-size: 1.35em;
-  font-weight: 600;
-}
-
-.card p{
-  margin: 0 20px 20px;
-  line-height: 1.55;
-}
-
-/* ======================================================
-   BREAK THE PATTERN
-   ====================================================== */
-
-.btp-section{
-  background: #faf9f6;
-  padding: 60px 20px;
-  border-top: 1px solid #ece9e4;
-  text-align: center;
-}
-
-.btp-section h2{
-  font-size: 2.2em;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.btp-section p{
-  font-size: 1.1em;
-  line-height: 1.65;
-  max-width: 700px;
-  margin: 0 auto 18px;
-  color: #444;
-}
-
-.btp-banner{
-  width: 100%;
-  max-width: 620px;
-  margin: 28px auto;
-  border-radius: 14px;
-  display: block;
-}
-
-.btp-button{
-  display: inline-block;
-  margin-top: 18px;
-  padding: 13px 32px;
-  background: #c4a062;
-  color: white;
-  font-weight: 500;
-  border-radius: 32px;
-  text-decoration: none;
-  font-size: 1.05em;
-}
-
-.btp-button:hover{
-  background: #b08c55;
-}
-
-/* ======================================================
-   MOBILE
-   ====================================================== */
-
-@media(max-width:768px){
-  .hero{ height: 62vh; }
-  .hero-text h1{ font-size: 2em; }
-  .explorer-card{ padding: 22px 18px; }
-}
-</style>
-
-<!-- ========================= -->
 <!-- HERO -->
-<!-- ========================= -->
-
-<section class="hero" style="background-image:url('{{ url_for('static', filename='images/hero-rice-sunrise.jpg') }}');">
+<section class="hero"
+  style="background-image: url('{{ url_for('static', filename='images/hero-field.jpg') }}');">
+  
   <div class="hero-overlay"></div>
+
   <div class="hero-text">
-    <h1>Begin where inspiration lives</h1>
-    <p>Step into a world where creativity meets transformation — and your story unfolds anew.</p>
-  </div>
-</section>
+    <h1>Begin Where Inspiration Lives</h1>
+    <p class="hero-subtitle">When Awareness Enters the Field</p>
 
-<!-- ========================= -->
-<!-- ARCHETYPE EXPLORER -->
-<!-- ========================= -->
-
-<section class="explorer-home">
-  <div class="explorer-card">
-    <div class="explorer-badge">
-      <span class="dot"></span>
-      Instant · No sign-up
-    </div>
-
-    <h2>Archetype Explorer</h2>
-
-    <p>
-      A quick archetype mirror — no email, no scoring, just recognition.
-      Get an instant archetype result, then explore the deeper InnerCube system if you want.
+    <p class="hero-description">
+      A book — and a body of work — exploring how individuals, teams, and organizations
+      move from first-order problem-solving to second-order change.
     </p>
 
-    <div class="explorer-actions">
-      <a class="primary" href="/explorer">Try the Explorer</a>
-      <a class="ghost" href="/innercube">Take the Full InnerCube Test</a>
-    </div>
-
-    <div class="explorer-note">
-      This is a mirror, not a label. If it resonates, keep it. If it doesn’t, let it go.
+    <div class="hero-buttons">
+      <a class="btn primary" href="/alchemy-of-change">Explore the Book</a>
+      <a class="btn" href="/alchemy">Discover the Work</a>
     </div>
   </div>
 </section>
 
-<!-- ========================= -->
-<!-- FEATURE CARDS -->
-<!-- ========================= -->
 
-<section class="cards">
-  <a class="card" href="{{ url_for('innercube') }}">
-    <img src="{{ url_for('static', filename='images/innercube-offering.jpg') }}">
-    <h3>Take the Free Archetype Test</h3>
-    <p>Discover your InnerCube patterns.</p>
-  </a>
+<!-- FROM IMPROVEMENT TO AWARENESS -->
+<section class="section">
+  <div class="container">
+    <h2>From Improvement to Awareness</h2>
 
-  <a class="card" href="{{ url_for('retreats') }}">
-    <img src="{{ url_for('static', filename='images/rice-fields.jpg') }}">
-    <h3>Explore Retreats</h3>
-    <p>Quiet, art-filled days in Bali.</p>
-  </a>
+    <p>Most approaches to change begin with a problem to solve. This work begins somewhere else.</p>
 
-  <a class="card" href="{{ url_for('shop') }}">
-    <img src="{{ url_for('static', filename='images/yoga-nature-bali.jpg') }}">
-    <h3>Books & Guides</h3>
-    <p>Companions for your creative practice.</p>
-  </a>
+    <p>
+      First-order change focuses on improving what already exists.
+      Second-order change alters the conditions that shape behavior, culture, and meaning.
+    </p>
+
+    <p>
+      <em>The Alchemy of Change</em> introduces this distinction and how it unfolds
+      personally, relationally, and collectively.
+    </p>
+  </div>
 </section>
 
-<!-- ========================= -->
-<!-- BREAK THE PATTERN -->
-<!-- ========================= -->
 
-<section class="btp-section" id="break-pattern">
-  <h2>Break the Pattern</h2>
-  <p>A gentle 72-hour reset for understanding your emotional loop — and finally changing it.</p>
+<!-- ARCHETYPE EXPLORER -->
+<section class="section">
+  <div class="container">
+    <div class="panel">
 
-  <picture>
-    <source media="(max-width:768px)" srcset="{{ url_for('static', filename='images/btp-banner-mobile.jpg') }}">
-    <img src="{{ url_for('static', filename='images/btp-banner-desktop.jpg') }}" class="btp-banner">
-  </picture>
+      <div class="panel-top">
+        <span class="pill">Instant · No sign-up</span>
+      </div>
 
-  <p>Learn why your emotional survival patterns formed — and how to create new ones rooted in clarity, intuition, and inner peace.</p>
+      <h2>One Way to Begin</h2>
 
-  <a class="btp-button"
-     href="https://intinno.gumroad.com/l/rwoynu"
-     target="_blank"
-     rel="noopener noreferrer">
-    Get the 72-Hour Workbook – $14
-  </a>
+      <p>
+        Some people begin through reflection and reading.
+        Others through symbolic self-recognition.
+      </p>
+
+      <p>
+        The Archetype Explorer is a brief mirror — not a diagnosis —
+        designed to reveal how attention and narrative organize experience.
+      </p>
+
+      <p><em>If it resonates, keep it. If it doesn’t, let it go.</em></p>
+
+      <div class="button-row">
+        <a class="btn primary" href="/archetype-explorer">Try the Explorer</a>
+        <a class="btn" href="/innercube-test">Take the Full InnerCube Test</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- THREE PATHS -->
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+
+      <a class="card" href="/shop">
+        <h3>Individual Inquiry</h3>
+        <p>
+          Reflection, creative practice, and symbolic tools for recognizing
+          the patterns shaping your inner and outer life.
+        </p>
+        <span class="card-link">Explore Books &amp; Guides</span>
+      </a>
+
+      <a class="card" href="/alchemy#organizations">
+        <h3>Second-Order Change</h3>
+        <p>
+          Work with organizations and teams seeking awareness of the systems
+          shaping culture, behavior, and decision-making — beyond surface-level improvement.
+        </p>
+        <span class="card-link">Organizational Work</span>
+      </a>
+
+      <a class="card" href="/retreats">
+        <h3>Shared Fields of Practice</h3>
+        <p>
+          Retreats and small groups create contained environments where
+          shared awareness allows systems to reorganize naturally.
+        </p>
+        <span class="card-link">Explore Retreats</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- WHY GROUPS -->
+<section class="section">
+  <div class="container">
+    <h2>Why Retreats and Small Groups Matter</h2>
+
+    <p>Second-order change cannot be implemented.</p>
+
+    <p>
+      It requires time, containment, and shared attention —
+      conditions rarely available in everyday life or organizational structures.
+    </p>
+
+    <p>
+      Retreats and facilitated groups create temporary fields
+      where systems can recognize themselves.
+      What emerges is not a plan, but a shift in perception.
+    </p>
+
+    <p class="quote">
+      <em>When no one is asked to change, change becomes possible.</em>
+    </p>
+  </div>
+</section>
+
+
+<!-- BOOK ANCHOR -->
+<section class="section">
+  <div class="container">
+    <div class="panel book-panel">
+
+      <img
+        class="book-cover"
+        src="{{ url_for('static', filename='images/alchemy-cover.jpg') }}"
+        alt="The Alchemy of Change book cover"
+      />
+
+      <div>
+        <h2>Begin with the Book</h2>
+
+        <p>
+          <em>The Alchemy of Change</em> is the conceptual foundation for this work —
+          from individual inquiry to organizational practice and retreats.
+        </p>
+
+        <p>It is not a method. It is a way of seeing.</p>
+
+        <div class="button-row">
+          <a class="btn primary" href="/alchemy-of-change">Get the Book</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FACILITATOR PATH -->
+<section class="section">
+  <div class="container">
+    <div class="panel">
+
+      <h2>Learn to Hold the Field</h2>
+
+      <p>
+        Some people begin this work for personal clarity.
+        Over time, they feel drawn to hold attention for others —
+        in groups, teams, and organizations.
+      </p>
+
+      <p>
+        Facilitation here is not technique-based.
+        It is a practice of perception,
+        allowing systems to reorganize without force or blame.
+      </p>
+
+      <div class="button-row">
+        <a class="btn primary" href="/facilitator-path">Explore the Facilitator Path</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTINUING THE CONVERSATION -->
+<section class="section">
+  <div class="container">
+    <h2>Continuing the Conversation</h2>
+
+    <p>
+      From time to time, I work with individuals, groups, and organizations
+      who want to explore this work in a more applied or relational way.
+    </p>
+
+    <p>
+      You’re welcome to reach out —
+      or join a small, infrequent email list
+      where new writing and projects are shared.
+    </p>
+
+    <div class="button-row">
+      <a class="btn" href="/contact">Contact</a>
+      <a class="btn" href="/mailing-list">Join the Email List</a>
+    </div>
+  </div>
 </section>
 
 {% endblock %}
