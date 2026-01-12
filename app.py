@@ -168,10 +168,9 @@ def alchemy_book_page():
 def alchemy_organizations_page():
     return render_template("alchemy_organizations.html")
    
-    @app.route("/book")
+@app.route("/book")
 def book_page():
     return render_template("book.html")
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
