@@ -2,32 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{% block title %}Archetype Retreats{% endblock %}</title>
 
-  <!-- Shared (header/footer only) -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2001">
+  <!-- Shared site CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=3001">
 
   <!-- Page-specific CSS -->
   {% block page_css %}{% endblock %}
-{% block extra_css %}{% endblock %}
+  {% block extra_css %}{% endblock %}
 </head>
+
 <body>
 
-<div class="site-title"><a href="/">Archetype Retreats</a></div>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-title" href="{{ url_for('home') }}">Archetype Retreats</a>
 
-<nav class="site-nav">
-  <a href="/">Home</a>
-  <a href="/innercube">InnerCube Test</a>
-  <a href="/alchemy">Alchemy</a>
-  <a href="/retreats">Retreats</a>
-  <a href="/shop">Shop</a>
-  <a href="/about">About</a>
-  <a href="/contact">Contact</a>
-</nav>
-{% block content %}{% endblock %}
+      <nav class="site-nav" aria-label="Primary">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('innercube_page') }}">InnerCube Test</a>
+        <a href="{{ url_for('alchemy_page') }}">Alchemy</a>
+        <a href="{{ url_for('retreats_page') }}">Retreats</a>
+        <a href="{{ url_for('shop_page') }}">Shop</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<footer class="site-footer">© <span id="year"></span> Archetype Retreats</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Archetype Retreats
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
