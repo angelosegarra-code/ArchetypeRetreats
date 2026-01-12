@@ -205,3 +205,42 @@ main {
   flex-wrap: wrap;
   margin-top: 24px;
 }
+/* ===============================
+   BUTTON STYLING – ALCHEMY THEME
+   =============================== */
+
+.button-row a,
+.button,
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* Primary button (Explore / Discover) */
+.button.primary,
+.button-row a:first-child {
+  background: linear-gradient(
+    135deg,
+    #c9a35a,
+    #a87c2f
+  );
+  color: #1a1408;
+  box-shadow: 0 6px 18px rgba(168, 124, 47, 0.35);
+}
+
+/* Secondary button */
+.button-row a:not(:first-child) {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Hover states */
+.button-row a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
