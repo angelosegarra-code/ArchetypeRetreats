@@ -26,11 +26,6 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 from flask import render_template
 
-@app.route("/alchemy-old", endpoint="alchemy_old")
-def alchemy_old():
-    return render_template("alchemy.html")
-# Explicit static route (helps on Render)
-
 @app.route('/static/<path:filename>')
 def static_files(filename):
     from flask import send_from_directory
@@ -163,11 +158,15 @@ def explorer_page():
 
 @app.route("/alchemy")
 def alchemy_page():
+    return render_template("alchemy.html")  # landing/overview page
+
+@app.route("/alchemy/book")
+def alchemy_book_page():
     return render_template("alchemy-book.html")
 
 @app.route("/alchemy/organizations")
 def alchemy_organizations_page():
     return render_template("alchemy_organizations.html")
-    
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
