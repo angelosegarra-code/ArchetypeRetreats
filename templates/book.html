@@ -1,7 +1,3 @@
-@app.route("/book")
-def book_page():
-    return render_template("book.html")
-
 <a href="{{ url_for('book_page') }}">Get the Book</a>
 
 {% extends "base.html" %}
