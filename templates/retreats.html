@@ -1,9 +1,5 @@
 {% extends "base.html" %}
 
-{% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=9">
-{% endblock %}
-
 {% block content %}
 <main class="page-retreats">
 
@@ -11,203 +7,90 @@
   <section class="hero-retreat">
     <div class="hero-overlay"></div>
     <div class="hero-text">
-      <h1>Retreat into the Creative Heart of Bali</h1>
-      <p class="lead">Small, art-filled groups among tranquil rice fields. Real transformation begins in stillness.</p>
+      <h1>Archetype Immersions</h1>
+      <p class="lead">
+        Guided immersive experiences for individuals, teams, and organizations —
+        integrating creativity, archetypal intelligence, and embodied reflection.
+      </p>
       <div class="hero-cta">
-        <a href="#calendly" class="btn primary">Schedule a Discovery Call</a>
-        <a href="#retreat-options" class="btn ghost">Join a Retreat</a>
+        <a href="#calendar" class="btn primary">Schedule a Discovery Call</a>
+        <a href="#immersion-options" class="btn ghost">View Immersion Options</a>
       </div>
     </div>
   </section>
 
-  <!-- DESCRIPTIONS + PRICING -->
-  <section id="retreat-options" class="retreat-grid section">
-    <!-- 3 DAYS -->
-    <article class="retreat-card">
-      <h3>Quiet Reset — <span>3 Days</span></h3>
+  <!-- INTRO -->
+  <section class="section intro">
+    <p class="intro-text">
+      Archetype Immersions are held in Bali and designed for recalibration, clarity,
+      and integration. Participants may arrive individually, as intact teams,
+      or as part of a hosted organization.
+    </p>
+  </section>
+
+  <!-- IMMERSION OPTIONS -->
+  <section id="immersion-options" class="section immersion-grid">
+
+    <article class="immersion-card">
+      <h3>Quiet Reset <span>3 Days</span></h3>
       <ul>
-        <li>Slow mornings & guided prompts</li>
-        <li>Two creative labs & nature walks</li>
-        <li>Evening reflection circle</li>
+        <li>Guided creative practices</li>
+        <li>Nature walks & reflection sessions</li>
+        <li>Small-group dialogue & integration</li>
       </ul>
       <div class="price">USD <strong>750</strong> per person</div>
-
-      <!-- PayPal (replace the email!) -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="pay">
-        <input type="hidden" name="cmd" value="_xclick">
-        <!-- REPLACE with your PayPal email -->
-        <input type="hidden" name="business" value="intinno@icloud.com">
-        <input type="hidden" name="item_name" value="Quiet Reset — 3 Days">
-        <input type="hidden" name="amount" value="750.00">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="submit" value="Reserve with PayPal">
-      </form>
+      <p class="note">Ideal for individuals or short organizational visits</p>
     </article>
 
-    <!-- 5 DAYS -->
-    <article class="retreat-card">
-      <h3>Deepen — <span>5 Days</span></h3>
+    <article class="immersion-card">
+      <h3>Deepen <span>5 Days</span></h3>
       <ul>
-        <li>Daily practice & studio sessions</li>
-        <li>Guided journaling & evening salons</li>
+        <li>Daily studio & embodiment practices</li>
         <li>InnerCube archetype integration</li>
+        <li>Facilitated dialogue & synthesis</li>
       </ul>
       <div class="price">USD <strong>1,250</strong> per person</div>
-
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="pay">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="intinno@icloud.com">
-        <input type="hidden" name="item_name" value="Deepen — 5 Days">
-        <input type="hidden" name="amount" value="1250.00">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="submit" value="Reserve with PayPal">
-      </form>
+      <p class="note">Best for teams, leadership groups, and creatives</p>
     </article>
 
-    <!-- 7 DAYS -->
-    <article class="retreat-card">
-      <h3>Immersion — <span>7 Days</span></h3>
+    <article class="immersion-card">
+      <h3>Immersion <span>7 Days</span></h3>
       <ul>
-        <li>Full-week arc with generous rest</li>
-        <li>Guided practice, critique & circles</li>
-        <li>Nature day + closing reading</li>
+        <li>Full arc immersion with rest & rhythm</li>
+        <li>Guided critique, dialogue & integration</li>
+        <li>Closing synthesis & future mapping</li>
       </ul>
       <div class="price">USD <strong>1,950</strong> per person</div>
-
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="pay">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="intinno@icloud.com">
-        <input type="hidden" name="item_name" value="Immersion — 7 Days">
-        <input type="hidden" name="amount" value="1950.00">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="submit" value="Reserve with PayPal">
-      </form>
+      <p class="note">Designed for deep transformation and organizational reset</p>
     </article>
+
   </section>
-  
-<div style="background:#f8f6f2; border-left:4px solid #bda875; padding:20px 25px; margin:40px auto; max-width:640px; border-radius:6px; font-family:'EB Garamond',serif; text-align:center; color:#333;">
-  <p style="margin:0; font-size:1.05rem; line-height:1.6;">
-    🌿 <strong>Early Invitation</strong> — Reserve your space by <strong>December 15</strong>  
-    to receive <strong>20% off</strong> any retreat experience (3, 5, or 7 days).  
-    <br><br>
-    Each program is a guided creative immersion — blending reflection, art, and awareness practices  
-    designed to help you return to your essence and reimagine what’s possible.
-  </p>
-</div>
 
-<!-- RETREAT REGISTRATION FORM -->
-<section class="tally-section">
-  <h2>Join the Archetype Retreat in Bali</h2>
-  <p style="font-family: 'EB Garamond', serif; font-size: 1.1rem; color: #333; max-width: 620px; margin: 0 auto 35px auto; text-align:center;">
-    A quiet invitation to reimagine what's possible — and recreate yourself through gentle art, reflection, and awareness exercises surrounded by Bali’s natural rhythm.
-  </p>
-
-  <iframe 
-    src="https://tally.so/embed/3yVWlB?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
-    width="100%"
-    height="1000"
-    frameborder="0"
-    marginheight="0"
-    marginwidth="0"
-    title="Archetype Retreat Registration"
-    style="border:none;max-width:100%;overflow:hidden;">
-  </iframe>
-
-  <script async src="https://tally.so/widgets/embed.js"></script>
-</section>
-
-<style>
-  .tally-section {
-    background: #faf8f2;               /* warmer linen background */
-    padding: 60px 25px;
-    border-radius: 12px;
-    max-width: 820px;
-    margin: 60px auto;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
-    font-family: 'EB Garamond', serif;
-  }
-
-  .tally-section h2 {
-    text-align: center;
-    color: #333;
-    font-size: 1.8rem;
-    letter-spacing: 0.02rem;
-    margin-bottom: 25px;
-  }
-
-  iframe {
-    border: none;
-    border-radius: 8px;
-  }
-
-  @media (max-width: 600px) {
-    .tally-section {
-      padding: 40px 15px;
-      margin: 30px auto;
-    }
-  }
-</style>
-
-<script async src="https://tally.so/widgets/embed.js"></script>
-
-  <p style="margin-top: 35px; font-size: 0.95rem; font-family: 'EB Garamond', serif; color: #444; max-width: 620px; margin-left: auto; margin-right: auto; line-height: 1.6; text-align: center;">
-  Once your registration and deposit are received, our team will reach out within <strong>24–48 hours</strong> to confirm your preferred retreat dates, provide travel details, and answer any questions you may have.  
-  <br><br>
-  We look forward to welcoming you to Bali — a sanctuary for renewal and creative discovery.
-</p>
-  <!-- Archetype Retreat Options: Gold on White -->
-<section class="retreat-tier-section gold-theme">
-  <h2>Choose Your Archetype Retreat Experience</h2>
-  <p class="retreat-intro">
-    Two paths to rediscover yourself — one immersed in stillness and care, the other flowing with freedom and choice.
-  </p>
-
-  <!-- All-Inclusive -->
-  <div class="retreat-tier">
-    <h3>🌿 All-Inclusive Stay</h3>
+  <!-- PRICING NOTE -->
+  <section class="section pricing-note">
     <p>
-      A complete, worry-free journey in Bali. Your accommodation, meals, and creative sessions are all arranged so you can fully immerse in the art of becoming.
+      Prices reflect program facilitation and materials.
+      Accommodation and meals may be arranged separately depending on
+      individual or organizational needs.
     </p>
-    <ul>
-      <li>Luxury accommodation and meals included</li>
-      <li>Daily archetype and creativity sessions</li>
-      <li>Airport transfers and retreat materials</li>
-    </ul>
-    <p class="price-note">
-      <em>Prices vary depending on accommodation type, season, and availability. All options will be confirmed upon inquiry.</em>
-    </p>
-    <a href="https://tally.so/r/LZ1kej" target="_blank" class="retreat-btn gold">Reserve All-Inclusive</a>
-  </div>
+  </section>
 
-  <!-- Workshop-Only -->
-  <div class="retreat-tier">
-    <h3>✨ Workshop-Only Experience</h3>
-    <p>
-      For travelers who prefer flexibility. Attend daily sessions while staying at your own chosen hotel in Ubud — blending creativity and independence.
-    </p>
-    <ul>
-      <li>Full access to all workshops and materials</li>
-      <li>Choose your own lodging nearby</li>
-      <li>Flexible dining and local exploration</li>
-    </ul>
-    <a href="https://tally.so/r/LZ1kej" target="_blank" class="retreat-btn gold">Join Workshop-Only</a>
-  </div>
-
-  <div class="retreat-closing">
-    <p>
-      No matter which path you choose, your retreat begins with one intention — to awaken the archetype within you.
-    </p>
-  </div>
-</section>
   <!-- CALENDLY -->
-<section id="calendly" class="section calendly">
-  <h2>Schedule a Discovery Call</h2>
-  <div class="calendly-inline-widget"
-       data-url="https://calendly.com/intinno/innercube-discovery-call?hide_event_type_details=1&hide_gdpr_banner=1"
-       style="min-width:320px;height:740px;">
-  </div>
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-</section>
+  <section id="calendar" class="section calendly">
+    <h2>Schedule a Discovery Call</h2>
+    <p class="calendly-intro">
+      A short conversation to explore fit, timing, and structure —
+      for individuals, teams, or organizations.
+    </p>
+
+    <div
+      class="calendly-inline-widget"
+      data-url="https://calendly.com/intinno/innercube-discovery-call?hide_event_type_details=1&hide_gdpr_banner=1"
+      style="min-width:320px;height:740px;">
+    </div>
+
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </section>
 
 </main>
 {% endblock %}
