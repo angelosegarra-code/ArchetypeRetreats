@@ -16,3 +16,108 @@ a{text-decoration:none;color:inherit}
 
 /* UTILITY */
 .container{max-width:1100px;margin:0 auto;padding:0 24px}
+/* ===============================
+   HEADER & NAV — FINAL FIX
+   =============================== */
+
+/* Ensure header content stays centered */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Make nav visually clear and readable */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.site-nav a {
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.site-nav a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* Mobile nav cleanup */
+@media (max-width: 760px) {
+  .site-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+/* ===============================
+   BUTTONS (GLOBAL)
+   =============================== */
+
+.button-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+a.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+a.button:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-1px);
+}
+
+a.button.primary {
+  background: #ffffff;
+  color: #111;
+  border-color: #ffffff;
+}
+
+a.button.primary:hover {
+  background: #f2f2f2;
+}
+
+/* ===============================
+   MAIN CONTENT SPACING
+   =============================== */
+
+main {
+  display: block;
+}
+
+/* Prevent hero text from feeling left-shifted */
+.hero .hero-text {
+  margin: 0 auto;
+  text-align: center;
+}
