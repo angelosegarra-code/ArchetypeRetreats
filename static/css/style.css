@@ -1,246 +1,140 @@
-/* RESET + BASE */
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"EB Garamond",Georgia,serif;color:#222;background:#fff;line-height:1.6}
-a{text-decoration:none;color:inherit}
-
-/* HEADER (left title, right links; white, no purple) */
-.site-header{position:sticky;top:0;z-index:1000;background:rgba(22,38,36,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
-.site-header__inner{max-width:1100px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
-.site-title a{color:#fff;font-weight:700;font-size:1.25rem;letter-spacing:.2px}
-.site-nav{display:flex;gap:22px}
-.site-nav a,.site-nav a:visited{color:#f7f7f7;font-weight:500;transition:color .2s}
-.site-nav a:hover,.site-nav a[aria-current="page"]{color:#bfe0ff}
-
-/* FOOTER */
-.site-footer{text-align:center;padding:40px 0;color:#555;background:#f7f9f8;font-size:.9rem}
-
-/* UTILITY */
-.container{max-width:1100px;margin:0 auto;padding:0 24px}
-/* ===============================
-   HEADER & NAV — FINAL FIX
-   =============================== */
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>{% block title %}Archetype Retreats{% endblock %}</title>
-
-  <!-- Shared Styles -->
-  <link
-    rel="stylesheet"
-    href="{{ url_for('static', filename='css/style.css') }}?v=2002"
-  />
-
-  <!-- Page-specific CSS hooks -->
-  {% block page_css %}{% endblock %}
-  {% block extra_css %}{% endblock %}
-</head>
-
-<body>
-
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="site-header__inner">
-
-      <!-- Site Title (left anchored) -->
-      <a class="site-title" href="{{ url_for('home') }}">
-        Archetype Retreats
-      </a>
-
-      <!-- Primary Navigation (centered) -->
-      <nav class="site-nav" aria-label="Primary">
-        <a href="{{ url_for('home') }}">Home</a>
-        <a href="{{ url_for('innercube_page') }}">InnerCube Test</a>
-        <a href="{{ url_for('alchemy_page') }}">Alchemy</a>
-        <a href="{{ url_for('retreats_page') }}">Retreats</a>
-        <a href="{{ url_for('shop_page') }}">Shop</a>
-        <a href="{{ url_for('about') }}">About</a>
-        <a href="{{ url_for('contact') }}">Contact</a>
-      </nav>
-
-    </div>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main>
-    {% block content %}{% endblock %}
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    © <span id="year"></span> Archetype Retreats
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent =
-      new Date().getFullYear();
-  </script>
-
-</body>
-</html>
-
-/* Mobile nav cleanup */
-@media (max-width: 760px) {
-  .site-header__inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .site-nav {
-    width: 100%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
+/* =========================
+   RESET + BASE
+========================= */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "EB Garamond", Georgia, serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.6;
 }
+a { color: inherit; text-decoration: none; }
 
-/* ===============================
-   BUTTONS (GLOBAL)
-   =============================== */
-
-.button-row {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-a.button {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  background: rgba(255,255,255,0.12);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.35);
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-a.button:hover {
-  background: rgba(255,255,255,0.2);
-  transform: translateY(-1px);
-}
-
-a.button.primary {
-  background: #ffffff;
-  color: #111;
-  border-color: #ffffff;
-}
-
-a.button.primary:hover {
-  background: #f2f2f2;
-}
-
-/* ===============================
-   MAIN CONTENT SPACING
-   =============================== */
-
-main {
-  display: block;
-}
-
-/* Prevent hero text from feeling left-shifted */
-.hero .hero-text {
+/* =========================
+   LAYOUT HELPERS
+========================= */
+.container {
+  max-width: 1100px;
   margin: 0 auto;
-  text-align: center;
+  padding: 0 24px;
 }
-/* ===============================
-   HEADER ALIGNMENT FIX
-   =============================== */
 
+/* =========================
+   HEADER / NAV
+   - Title visible
+   - Nav centered
+========================= */
 .site-header {
-  background: rgba(15, 12, 10, 0.85);
-  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(22, 38, 36, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
 .site-header__inner {
   max-width: 1100px;
   margin: 0 auto;
   padding: 14px 24px;
+
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto 1fr; /* title | nav | spacer */
   align-items: center;
+  gap: 18px;
 }
 
 .site-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  justify-self: start;
   color: #fff;
-  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 1.15rem;
 }
 
-/* Center the nav visually */
 .site-nav {
+  justify-self: center;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .site-nav a {
-  color: rgba(255,255,255,0.85);
-  font-size: 0.9rem;
+  color: rgba(255,255,255,0.88);
+  font-size: 0.95rem;
   padding: 6px 10px;
   border-radius: 10px;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .site-nav a:hover {
+  background: rgba(255,255,255,0.10);
   color: #fff;
-  background: rgba(255,255,255,0.08);
 }
-     /* ===============================
-   BUTTON LAYOUT
-   =============================== */
 
+/* spacer keeps nav centered */
+.site-header__spacer { justify-self: end; }
+
+/* Mobile: stack nicely */
+@media (max-width: 840px) {
+  .site-header__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .site-title { justify-self: center; }
+  .site-header__spacer { display: none; }
+}
+
+/* =========================
+   BUTTONS (SITE-WIDE)
+========================= */
 .button-row {
   display: flex;
-  justify-content: center;
-  gap: 16px;
+  gap: 14px;
+  justify-content: center;  /* centers the buttons */
+  align-items: center;
   flex-wrap: wrap;
-  margin-top: 24px;
+  margin-top: 18px;
 }
-/* ===============================
-   BUTTON STYLING – ALCHEMY THEME
-   =============================== */
 
-.button-row a,
-.button,
-.btn {
+.button, .btn {
   display: inline-block;
-  padding: 10px 22px;
+  padding: 10px 18px;
   border-radius: 999px;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: all 0.25s ease;
-}
-
-/* Primary button (Explore / Discover) */
-.button.primary,
-.button-row a:first-child {
-  background: linear-gradient(
-    135deg,
-    #c9a35a,
-    #a87c2f
-  );
-  color: #1a1408;
-  box-shadow: 0 6px 18px rgba(168, 124, 47, 0.35);
-}
-
-/* Secondary button */
-.button-row a:not(:first-child) {
-  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(0,0,0,0.35);
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
-/* Hover states */
-.button-row a:hover {
+.button:hover, .btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.50);
+  border-color: rgba(255,255,255,0.55);
+}
+
+.button.primary, .btn.primary {
+  background: rgba(255,255,255,0.92);
+  color: #111;
+  border-color: rgba(255,255,255,0.92);
+}
+
+.button.primary:hover, .btn.primary:hover {
+  background: #fff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #666;
+  background: #f7f9f8;
+  font-size: 0.95rem;
 }
