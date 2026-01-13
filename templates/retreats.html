@@ -1,140 +1,151 @@
 {% extends "base.html" %}
 
+{% block title %}Retreats — Archetype Retreats{% endblock %}
+
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=1">
 {% endblock %}
 
 {% block content %}
 <main class="page-retreats">
 
   <!-- HERO -->
-  <section class="hero-retreat">
-    <div class="hero-text">
-      <h1>Archetype Immersions</h1>
+  <section class="retreat-hero">
+    <div class="wrap">
+      <h1>Archetype Immersions in Bali</h1>
       <p class="lead">
-        Guided immersive experiences for individuals, teams, and organizations —
-        integrating creativity, archetypal intelligence, and second-order change.
+        Guided experiences for individuals, teams, and organizations — integrating creativity,
+        archetypal intelligence, and second-order change.
       </p>
 
-      <div class="hero-cta">
-        <a href="#calendar" class="btn primary">Schedule a Discovery Call</a>
-        <a href="#immersions" class="btn ghost">View Immersion Options</a>
+      <div class="cta-row">
+        <a class="btn primary" href="#calendar">Schedule a Discovery Call</a>
+        <a class="btn ghost" href="#immersions">View Immersion Options</a>
       </div>
+
+      <p class="micro">
+        Hosted in Bali. Designed for recalibration, clarity, and integration — whether you arrive alone,
+        with a team, or as part of an organization.
+      </p>
     </div>
   </section>
 
   <!-- INTRO -->
-  <section class="section retreat-intro">
-    <p>
-      Archetype Immersions are held in Bali and designed for recalibration, clarity,
-      and integration. Participants may arrive individually, as intact teams, or
-      as part of an organization.
-    </p>
-    <p>
-      These are not retreats in the conventional sense. They are carefully
-      facilitated environments where systems learn how to listen to themselves —
-      to their people, their patterns, and the forces shaping them.
-    </p>
+  <section class="retreat-intro">
+    <div class="wrap narrow">
+      <p>
+        These are not retreats in the conventional sense. They are carefully facilitated environments
+        where people learn to listen — to themselves, to each other, and to the patterns shaping their lives and work.
+      </p>
+    </div>
   </section>
 
   <!-- IMMERSION OPTIONS -->
-  <section id="immersions" class="section retreat-grid">
-
-    <!-- INDIVIDUAL -->
-    <article class="retreat-card">
-      <h2>Individual Immersion — Bali</h2>
-      <p class="retreat-subtitle">7-Day Guided Experience</p>
-
-      <ul>
-        <li>Daily creative and reflective practice</li>
-        <li>Archetypal and narrative inquiry</li>
-        <li>Nature-based integration sessions</li>
-        <li>Small-group dialogue and synthesis</li>
-        <li>Personal recalibration and direction setting</li>
-      </ul>
-
-      <div class="price">
-        <strong>USD $2,800</strong> per person
-      </div>
-
-      <p class="retreat-note">
-        Designed for individuals seeking meaningful change, creative renewal,
-        or a deeper understanding of their current life and work patterns.
+  <section id="immersions" class="retreat-offers">
+    <div class="wrap">
+      <h2>Choose Your Immersion</h2>
+      <p class="subhead">
+        Three entry points — for individuals, organizations, and those who prefer to begin online.
       </p>
 
-      <a href="#calendar" class="btn primary">Apply for Individual Immersion</a>
-    </article>
+      <div class="cards">
 
-    <!-- ORGANIZATIONS -->
-    <article class="retreat-card">
-      <h2>Organization Immersion — Consulting Engagements</h2>
-      <p class="retreat-subtitle">On-site, Remote, or Hybrid</p>
+        <!-- INDIVIDUAL -->
+        <article class="card">
+          <h3>Individual Immersion — Bali</h3>
+          <p class="kicker">7-day guided experience</p>
 
-      <ul>
-        <li>System-level diagnosis and pattern recognition</li>
-        <li>Leadership and team facilitation</li>
-        <li>Narrative and archetypal intelligence integration</li>
-        <li>Culture and behavior recalibration</li>
-        <li>Practical frameworks for sustained change</li>
-      </ul>
+          <ul>
+            <li>Daily creative and reflective practice</li>
+            <li>Archetypal & narrative inquiry</li>
+            <li>Nature-based integration sessions</li>
+            <li>Small-group dialogue & synthesis</li>
+            <li>Personal recalibration and direction-setting</li>
+          </ul>
 
-      <div class="price">
-        Engagements <strong>starting at USD $22,000</strong>
+          <div class="price">
+            <span class="amount">USD 2,800</span>
+            <span class="note">per person • lodging not included</span>
+          </div>
+
+          <div class="action">
+            <a class="btn primary" href="{{ url_for('contact') }}">Request Dates</a>
+          </div>
+        </article>
+
+        <!-- ORGANIZATIONS -->
+        <article class="card">
+          <h3>Organization Immersion — Bali</h3>
+          <p class="kicker">On-site leadership + culture reset</p>
+
+          <ul>
+            <li>Designed for teams, founders, and leadership groups</li>
+            <li>Facilitated system listening + narrative mapping</li>
+            <li>Archetype-based coordination and decision clarity</li>
+            <li>Group practice, synthesis sessions, and integration plan</li>
+            <li>Optional pre-work + follow-through support</li>
+          </ul>
+
+          <div class="price">
+            <span class="amount">USD 12,000</span>
+            <span class="note">per week • up to 12 participants</span>
+          </div>
+
+          <div class="price small">
+            <span class="amount">USD 32,000</span>
+            <span class="note">per month • weekly facilitation + support</span>
+          </div>
+
+          <div class="price small">
+            <span class="amount">USD 78,000</span>
+            <span class="note">3-month arc • deep integration + culture change</span>
+          </div>
+
+          <div class="action">
+            <a class="btn primary" href="#calendar">Book a Call</a>
+          </div>
+        </article>
+
+        <!-- ONLINE -->
+        <article class="card">
+          <h3>Online Program</h3>
+          <p class="kicker">For individuals or distributed teams</p>
+
+          <ul>
+            <li>Weekly guided practice + reflection structure</li>
+            <li>Archetype integration and narrative re-patterning</li>
+            <li>Live sessions (or async options when needed)</li>
+            <li>Simple exercises that build real change over time</li>
+            <li>Optional upgrade into Bali immersion</li>
+          </ul>
+
+          <div class="price">
+            <span class="amount">USD 290</span>
+            <span class="note">per person / month</span>
+          </div>
+
+          <div class="action">
+            <a class="btn ghost" href="{{ url_for('contact') }}">Ask About Online</a>
+          </div>
+        </article>
+
       </div>
 
-      <p class="retreat-note">
-        Offered as 1-week intensives, 1-month integrations, or 3-month
-        transformation engagements. Final scope and pricing are tailored
-        to team size, duration, and objectives.
-      </p>
-
-      <a href="#calendar" class="btn primary">Discuss Organizational Engagement</a>
-    </article>
-
-    <!-- ONLINE -->
-    <article class="retreat-card">
-      <h2>Online Immersions</h2>
-      <p class="retreat-subtitle">Individuals & Distributed Teams</p>
-
-      <ul>
-        <li>Live facilitated sessions</li>
-        <li>Guided reflection and narrative work</li>
-        <li>Creative and cognitive practices</li>
-        <li>Integration between sessions</li>
-      </ul>
-
-      <div class="price">
-        From <strong>USD $750</strong>
+      <div class="footnote">
+        <p>
+          Want help choosing the best entry point? Book a short call and we’ll match the immersion
+          to your goal, timeline, and group size.
+        </p>
       </div>
-
-      <p class="retreat-note">
-        Suitable for individuals or teams unable to travel, while still
-        seeking depth, clarity, and meaningful change.
-      </p>
-
-      <a href="#calendar" class="btn ghost">Explore Online Options</a>
-    </article>
-
-  </section>
-
-  <!-- CLOSING -->
-  <section class="section retreat-closing">
-    <p>
-      No matter the format, each immersion begins with a single intention —
-      to create the conditions where insight becomes lived change.
-    </p>
+    </div>
   </section>
 
   <!-- CALENDLY -->
-  <section id="calendar" class="section calendly">
-    <h2>Schedule a Discovery Call</h2>
-    <div
-      class="calendly-inline-widget"
-      data-url="https://calendly.com/intinno/innercube-discovery-call?hide_event_type_details=1&hide_gdpr_banner=1"
-      style="min-width:320px;height:740px;">
-    </div>
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  </section>
+  <section id="calendar" class="retreat-calendar">
+    <div class="wrap">
+      <h2>Schedule a Discovery Call</h2>
+      <p class="subhead">A short conversation to clarify fit, timing, and next steps.</p>
 
-</main>
-{% endblock %}
+      <div class="calendar-box">
+        <div class="calendly-inline-widget"
+             data-url="https://calendly.com/intinno/innercube-discovery-call?
