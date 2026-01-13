@@ -1,141 +1,47 @@
 {% extends "base.html" %}
 
-{% block title %}Retreats — Archetype Retreats{% endblock %}
-
 {% block page_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=2">
 {% endblock %}
 
 {% block content %}
-<main class="page-retreats">
+<div class="page-retreats">
 
   <!-- HERO -->
   <section class="retreat-hero">
-    <div class="wrap">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner wrap">
       <h1>Archetype Immersions in Bali</h1>
-      <p class="lead">
-        Guided experiences for individuals, teams, and organizations — integrating creativity,
-        archetypal intelligence, and second-order change.
+
+      <p class="hero-subhead">
+        Guided experiences for individuals, teams, and organizations — integrating creativity, archetypal intelligence, and second-order change.
       </p>
 
-      <div class="cta-row">
+      <div class="hero-actions">
+        <!-- Button 1: scrolls to calendly section -->
         <a class="btn primary" href="#calendar">Schedule a Discovery Call</a>
-        <a class="btn ghost" href="#immersions">View Immersion Options</a>
+
+        <!-- Button 2: scrolls to immersion options -->
+        <a class="btn soft" href="#options">View Immersion Options</a>
       </div>
 
-      <p class="micro">
-        Hosted in Bali. Designed for recalibration, clarity, and integration — whether you arrive alone,
-        with a team, or as part of an organization.
+      <p class="hero-note">
+        Hosted in Bali. Designed for recalibration, clarity, and integration — whether you arrive alone, with a team, or as part of an organization.
       </p>
     </div>
   </section>
 
-  <!-- INTRO -->
-  <section class="retreat-intro">
-    <div class="wrap narrow">
-      <p>
-        These are not retreats in the conventional sense. They are carefully facilitated environments
-        where people learn to listen — to themselves, to each other, and to the patterns shaping their lives and work.
-      </p>
-    </div>
-  </section>
-
-  <!-- IMMERSION OPTIONS -->
-  <section id="immersions" class="retreat-offers">
+  <!-- OPTIONS -->
+  <section id="options" class="retreat-section">
     <div class="wrap">
       <h2>Choose Your Immersion</h2>
-      <p class="subhead">
-        Three entry points — for individuals, organizations, and those who prefer to begin online.
-      </p>
+      <p class="subhead">Three entry points — for individuals, organizations, and those who prefer to begin online.</p>
 
-      <div class="cards">
-
-        <!-- INDIVIDUAL -->
-        <article class="card">
-          <h3>Individual Immersion — Bali</h3>
-          <p class="kicker">7-day guided experience</p>
-
-          <ul>
-            <li>Daily creative and reflective practice</li>
-            <li>Archetypal & narrative inquiry</li>
-            <li>Nature-based integration sessions</li>
-            <li>Small-group dialogue & synthesis</li>
-            <li>Personal recalibration and direction-setting</li>
-          </ul>
-
-          <div class="price">
-            <span class="amount">USD 2,800</span>
-            <span class="note">per person • lodging not included</span>
-          </div>
-
-          <div class="action">
-            <a class="btn primary" href="{{ url_for('contact') }}">Request Dates</a>
-          </div>
-        </article>
-
-        <!-- ORGANIZATIONS -->
-        <article class="card">
-          <h3>Organization Immersion — Bali</h3>
-          <p class="kicker">On-site leadership + culture reset</p>
-
-          <ul>
-            <li>Designed for teams, founders, and leadership groups</li>
-            <li>Facilitated system listening + narrative mapping</li>
-            <li>Archetype-based coordination and decision clarity</li>
-            <li>Group practice, synthesis sessions, and integration plan</li>
-            <li>Optional pre-work + follow-through support</li>
-          </ul>
-
-          <div class="price">
-            <span class="amount">USD 12,000</span>
-            <span class="note">per week • up to 12 participants</span>
-          </div>
-
-          <div class="price small">
-            <span class="amount">USD 32,000</span>
-            <span class="note">per month • weekly facilitation + support</span>
-          </div>
-
-          <div class="price small">
-            <span class="amount">USD 78,000</span>
-            <span class="note">3-month arc • deep integration + culture change</span>
-          </div>
-
-          <div class="action">
-            <a class="btn primary" href="#calendar">Book a Call</a>
-          </div>
-        </article>
-
-        <!-- ONLINE -->
-        <article class="card">
-          <h3>Online Program</h3>
-          <p class="kicker">For individuals or distributed teams</p>
-
-          <ul>
-            <li>Weekly guided practice + reflection structure</li>
-            <li>Archetype integration and narrative re-patterning</li>
-            <li>Live sessions (or async options when needed)</li>
-            <li>Simple exercises that build real change over time</li>
-            <li>Optional upgrade into Bali immersion</li>
-          </ul>
-
-          <div class="price">
-            <span class="amount">USD 290</span>
-            <span class="note">per person / month</span>
-          </div>
-
-          <div class="action">
-            <a class="btn ghost" href="{{ url_for('contact') }}">Ask About Online</a>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="footnote">
-        <p>
-          Want help choosing the best entry point? Book a short call and we’ll match the immersion
-          to your goal, timeline, and group size.
-        </p>
+      <!-- Keep your existing option blocks/cards here -->
+      <!-- Example: -->
+      <div class="immersion-grid">
+        <!-- Your existing content -->
       </div>
     </div>
   </section>
@@ -147,9 +53,17 @@
       <p class="subhead">A short conversation to clarify fit, timing, and next steps.</p>
 
       <div class="calendar-box">
-             </div> <!-- calendly-inline-widget -->
-      </div> <!-- calendar-box -->
-    </div> <!-- wrap -->
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/intinno/innercube-discovery-call"
+          style="min-width:320px;height:700px;">
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- IMPORTANT: load Calendly script ON THIS PAGE -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+</div>
 {% endblock %}
