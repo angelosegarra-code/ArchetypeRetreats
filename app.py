@@ -171,6 +171,8 @@ def alchemy_organizations_page():
 @app.route("/book")
 def book_page():
     return render_template("book.html")
+    
+# force redeploy
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
