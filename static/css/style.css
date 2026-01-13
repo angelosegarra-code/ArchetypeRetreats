@@ -406,7 +406,62 @@ a { color: inherit; text-decoration: none; }
   .btn { width: 100%; text-align: center; }
   .hero-cta { gap: 10px; }
 }
-   
+ /* =========================
+   BUTTON COLOR SYSTEM
+   ========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* PRIMARY — Discovery / Action */
+.btn.primary {
+  background: linear-gradient(
+    135deg,
+    #1f2a44,
+    #2f3f66
+  );
+  color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(31, 42, 68, 0.35);
+}
+
+.btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(31, 42, 68, 0.45);
+}
+
+/* SECONDARY — Inquiry / Online / Learn More */
+.btn.ghost {
+  background: rgba(255,255,255,0.85);
+  color: #6b5a2d;
+  border: 1px solid rgba(120,100,50,0.35);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.btn.ghost:hover {
+  background: rgba(250,245,235,1);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(120,100,50,0.25);
+}
+
+/* BUTTON GROUPS */
+.hero-cta,
+.action {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}  
 /* =========================
    FOOTER
 ========================= */
