@@ -229,14 +229,169 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-/* ---------- RESPONSIVE ---------- */
 
-@media (max-width: 700px) {
-  .hero-retreat {
-    padding: 90px 20px 70px;
+/* ============================
+   RETREATS (IMMERSIONS) — POLISH PACK
+   Scoped to .page-retreats so it won't affect other pages
+   Paste at bottom of static/css/retreats.css
+============================ */
+
+.page-retreats {
+  background: #f7f7f7;
+  color: #111;
+}
+
+/* Make sure .wrap behaves (if global .wrap exists, this will simply align) */
+.page-retreats .wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HERO */
+.page-retreats .retreat-hero {
+  position: relative;
+  padding: 110px 0 70px;
+  background:
+    radial-gradient(1200px 600px at 20% 20%, rgba(255,255,255,0.85), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(20,20,20,0.08), rgba(20,20,20,0.03));
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.page-retreats .retreat-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.10), rgba(0,0,0,0.02));
+  pointer-events: none;
+}
+
+.page-retreats .retreat-hero .hero-inner {
+  position: relative;
+  text-align: center;
+}
+
+.page-retreats .retreat-hero h1 {
+  font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+  line-height: 1.1;
+  margin: 0 0 14px;
+  letter-spacing: 0.2px;
+}
+
+.page-retreats .hero-subhead {
+  max-width: 880px;
+  margin: 0 auto 22px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.72);
+}
+
+.page-retreats .hero-note {
+  max-width: 900px;
+  margin: 18px auto 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(0,0,0,0.62);
+}
+
+/* HERO BUTTONS */
+.page-retreats .hero-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Ensure buttons look consistent even if global .btn exists */
+.page-retreats a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  border: 1px solid rgba(0,0,0,0.14);
+  transition: transform 0.08s ease, filter 0.12s ease, box-shadow 0.12s ease;
+}
+
+.page-retreats a.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+
+.page-retreats a.btn.primary {
+  color: rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.14);
+  background: linear-gradient(135deg, rgba(20,110,90,0.92), rgba(15,70,120,0.92));
+}
+
+.page-retreats a.btn.soft {
+  color: rgba(0,0,0,0.78);
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(0,0,0,0.12);
+  backdrop-filter: blur(8px);
+}
+
+/* SECTIONS */
+.page-retreats .retreat-section {
+  padding: 70px 0;
+}
+
+.page-retreats .retreat-section h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  margin: 0 0 10px;
+}
+
+.page-retreats .retreat-section .subhead,
+.page-retreats .retreat-calendar .subhead {
+  margin: 0 0 24px;
+  color: rgba(0,0,0,0.62);
+  line-height: 1.6;
+}
+
+/* OPTIONAL: a nice grid if you want to turn your immersion blocks into cards */
+.page-retreats .immersion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 18px;
+}
+
+/* CALENDAR */
+.page-retreats .retreat-calendar {
+  padding: 70px 0 90px;
+  background: rgba(0,0,0,0.02);
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.page-retreats .calendar-box {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .page-retreats .retreat-hero {
+    padding: 90px 0 55px;
   }
 
-  .retreat-card {
-    padding: 34px 28px;
+  .page-retreats .hero-subhead {
+    font-size: 1.02rem;
+  }
+
+  .page-retreats a.btn {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .page-retreats .calendar-box {
+    padding: 10px;
   }
 }
