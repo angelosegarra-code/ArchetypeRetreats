@@ -1,479 +1,121 @@
-/* =========================
-   RESET + BASE
-========================= */
+/* ===== Global Base ===== */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
-  font-family: "EB Garamond", Georgia, serif;
-  color: #222;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #16342f;
   background: #fff;
-  line-height: 1.6;
-}
-a { color: inherit; text-decoration: none; }
-
-/* =========================
-   LAYOUT HELPERS
-========================= */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
 }
 
-/* =========================
-   HEADER / NAV
-   - Title visible
-   - Nav centered
-========================= */
-.site-header {
+a { color: inherit; }
+
+/* ===== Header / Nav ===== */
+.site-header{
   position: sticky;
   top: 0;
-  z-index: 1000;
-  background: rgba(22, 38, 36, 0.92);
+  z-index: 999;
+  background: rgba(15, 18, 22, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
-.site-header__inner {
+.header-inner{
   max-width: 1100px;
   margin: 0 auto;
-  padding: 14px 24px;
-
-  display: grid;
-  grid-template-columns: 1fr auto 1fr; /* title | nav | spacer */
-  align-items: center;
-  gap: 18px;
-}
-
-.site-title {
-  justify-self: start;
-  color: #fff;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-size: 1.15rem;
-}
-
-.site-nav {
-  justify-self: center;
+  padding: 14px 18px;
   display: flex;
-  gap: 16px;
   align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-title a{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.site-nav{
+  display: flex;
+  gap: 14px;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-.site-nav a {
-  color: rgba(255,255,255,0.88);
+.site-nav a{
+  text-decoration: none;
+  color: rgba(255,255,255,0.85);
   font-size: 0.95rem;
-  padding: 6px 10px;
+  padding: 8px 10px;
   border-radius: 10px;
-  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.site-nav a:hover {
+.site-nav a:hover{
   background: rgba(255,255,255,0.10);
   color: #fff;
 }
 
-/* spacer keeps nav centered */
-.site-header__spacer { justify-self: end; }
-
-/* Mobile: stack nicely */
-@media (max-width: 840px) {
-  .site-header__inner {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-  .site-title { justify-self: center; }
-  .site-header__spacer { display: none; }
+/* ===== Layout helpers ===== */
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px;
 }
 
-/* =========================
-   BUTTONS (SITE-WIDE)
-========================= */
-.button-row {
-  display: flex;
-  gap: 14px;
-  justify-content: center;  /* centers the buttons */
+.section{
+  padding: 72px 0;
+}
+
+.section h2{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0 0 14px;
+  color: #16342f;
+}
+
+.section p{
+  margin: 0 0 12px;
+  line-height: 1.7;
+  color: rgba(0,0,0,0.70);
+}
+
+/* ===== Buttons (shared) ===== */
+.btn{
+  display: inline-flex;
   align-items: center;
-  flex-wrap: wrap;
-  margin-top: 18px;
-}
-
-.button, .btn {
-  display: inline-block;
-  padding: 10px 18px;
+  justify-content: center;
+  padding: 12px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.35);
-  background: rgba(0,0,0,0.35);
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.22);
   color: #fff;
   font-weight: 600;
-  letter-spacing: 0.2px;
-  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+  letter-spacing: 0.01em;
+  transition: transform 0.12s ease, background 0.12s ease, border-color 0.12s ease;
 }
 
-.button:hover, .btn:hover {
+.btn:hover{
   transform: translateY(-1px);
-  background: rgba(0,0,0,0.50);
-  border-color: rgba(255,255,255,0.55);
+  background: rgba(0,0,0,0.30);
+  border-color: rgba(255,255,255,0.38);
 }
 
-.button.primary, .btn.primary {
+.btn.primary{
   background: rgba(255,255,255,0.92);
   color: #111;
   border-color: rgba(255,255,255,0.92);
 }
 
-.button.primary:hover, .btn.primary:hover {
-  background: #fff;
-}
-/* ===============================
-   BOOK COVER (GLOBAL)
-   =============================== */
-
-.book-cover{
-  width: min(320px, 80vw);   /* controls size */
-  height: auto;
-  display: block;
-  margin: 18px auto 0;
-  border-radius: 14px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.30);
+.btn.primary:hover{
+  background: rgba(255,255,255,1);
+  border-color: rgba(255,255,255,1);
 }
 
-/* Book page presentation override */
-.book-page .book-cover-global {
-  width: 280px;
-  max-width: 90%;
-  margin: 0 auto;
-  display: block;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-  border-radius: 4px;
-}
-/* --- 3D Book Cover Effect --- */
-.book-cover {
-  max-width: 320px;
-  width: 100%;
-  height: auto;
-
-  transform:
-    perspective(1200px)
-    rotateY(-8deg)
-    rotateX(2deg);
-
-  transform-origin: center;
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
-
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.35),
-    0 8px 16px rgba(0, 0, 0, 0.25);
-
-  border-radius: 6px;
-}
-
-/* Gentle hover refinement */
-.book-cover:hover {
-  transform:
-    perspective(1200px)
-    rotateY(-2deg)
-    rotateX(0deg)
-    translateY(-6px);
-
-  box-shadow:
-    0 28px 60px rgba(0, 0, 0, 0.45),
-    0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
-/* Mobile: keep it flat */
-@media (max-width: 768px) {
-  .book-cover {
-    transform: none;
-    box-shadow:
-      0 12px 24px rgba(0, 0, 0, 0.25);
-  }
-/* ================================
-   BOOK COVER (Alchemy of Change)
-   ================================ */
-
-.book-cover {
-  max-width: 320px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 24px auto;
-
-  transform: perspective(1200px) rotateY(-14deg) rotateX(3deg);
-  box-shadow: 16px 24px 50px rgba(0,0,0,.4);
-  border-radius: 10px;
-
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
-}
-
-.book-cover:hover {
-  transform: perspective(1200px) rotateY(0deg) rotateX(0deg) translateY(-6px);
-  box-shadow: 0 30px 70px rgba(0,0,0,.5);
-}
- /* ============================
-   IMMERSIONS (RETREATS) + CONTACT
-   Paste into: static/css/style.css
-   ============================ */
-
-/* --- shared helpers --- */
-.section {
-  padding: 56px 18px;
-}
-
-.container {
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-.center {
-  text-align: center;
-}
-
-.stack-12 > * + * { margin-top: 12px; }
-.stack-16 > * + * { margin-top: 16px; }
-.stack-24 > * + * { margin-top: 24px; }
-.stack-32 > * + * { margin-top: 32px; }
-
-/* --- page headings --- */
-.page-title {
-  font-size: 2.2rem;
-  line-height: 1.15;
-  margin: 0;
-  letter-spacing: 0.01em;
-}
-
-.page-subtitle {
-  max-width: 760px;
-  margin: 12px auto 0;
-  opacity: 0.92;
-  line-height: 1.55;
-}
-
-/* --- hero block (clean, centered) --- */
-.hero-simple {
-  padding: 64px 18px 36px;
-  text-align: center;
-}
-
-.hero-simple .container {
-  max-width: 920px;
-}
-
-.hero-cta {
-  margin-top: 22px;
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* --- buttons (site-consistent) --- */
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  padding: 12px 16px;
-  border-radius: 999px;
-  font-weight: 600;
-  line-height: 1;
-  transition: transform 0.18s ease, opacity 0.18s ease;
-  border: 1px solid rgba(0,0,0,0.15);
-}
-
-.btn:hover { transform: translateY(-1px); opacity: 0.95; }
-
-.btn.primary {
-  background: rgba(0,0,0,0.65);
-  color: #fff;
-  border-color: rgba(0,0,0,0.35);
-}
-
-.btn.ghost {
-  background: rgba(255,255,255,0.65);
-  color: rgba(0,0,0,0.75);
-}
-
-/* --- card surfaces --- */
-.card {
-  background: rgba(255,255,255,0.70);
-  border: 1px solid rgba(0,0,0,0.10);
-  border-radius: 14px;
-  padding: 18px 18px;
-  box-shadow: 0 14px 40px rgba(0,0,0,0.08);
-  backdrop-filter: blur(6px);
-}
-
-/* --- pricing layout (3 clean cards) --- */
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 18px;
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-.price-card {
-  grid-column: span 4;
-  text-align: left;
-}
-
-.price-card h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.25rem;
-}
-
-.price-tag {
-  font-size: 1.45rem;
-  font-weight: 800;
-  margin: 8px 0 6px 0;
-}
-
-.price-note {
-  opacity: 0.85;
-  font-size: 0.95rem;
-  line-height: 1.45;
-}
-
-.price-list {
-  margin: 12px 0 0;
-  padding-left: 18px;
-  line-height: 1.6;
-}
-
-.price-actions {
-  margin-top: 14px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-/* --- section dividers --- */
-.hr-soft {
-  height: 1px;
-  background: rgba(0,0,0,0.10);
-  border: 0;
-  margin: 32px auto;
-  max-width: 860px;
-}
-
-/* --- contact page --- */
-.contact-wrap {
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.contact-card {
-  text-align: left;
-}
-
-.contact-card label {
-  display: block;
-  font-weight: 600;
-  margin: 14px 0 8px;
-}
-
-.contact-card input,
-.contact-card textarea {
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid rgba(0,0,0,0.15);
-  padding: 12px 12px;
-  font-size: 1rem;
-  background: rgba(255,255,255,0.80);
-}
-
-.contact-card textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-.contact-card .form-actions {
-  margin-top: 14px;
-  display: flex;
-  justify-content: flex-start;
-}
-   
-   /* =========================
-   BOOK PAGE — ALCHEMY
-   ========================= */
-
-.page-book section {
-  padding: 100px 0;
-}
-
-.book-hero {
-  text-align: center;
-  padding: 140px 0 120px;
-}
-
-.book-hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.book-hero .subtitle {
-  font-size: 1.2rem;
-  color: rgba(0,0,0,0.65);
-  margin-bottom: 20px;
-}
-
-.hero-intro {
-  max-width: 640px;
-  margin: 0 auto 36px;
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-.hero-actions,
-.book-actions {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.book-section .wrap.narrow {
-  max-width: 720px;
-}
-
-.book-section h2 {
-  margin-bottom: 20px;
-}
-
-.soft-bg {
-  background: rgba(245,247,244,1);
-}
-
-.preview-box {
-  background: rgba(255,255,255,0.9);
-  border-radius: 16px;
-  padding: 36px;
-  border: 1px solid rgba(0,0,0,0.08);
-}
-
-.muted {
-  color: rgba(0,0,0,0.55);
-  font-style: italic;
-}
-
-/* --- responsive --- */
-@media (max-width: 920px) {
-  .price-card { grid-column: span 6; }
-}
-
-@media (max-width: 600px) {
-  .hero-simple { padding: 52px 16px 28px; }
-  .page-title { font-size: 1.85rem; }
-  .price-card { grid-column: span 12; }
-  .btn { width: 100%; text-align: center; }
-  .hero-cta { gap: 10px; }
-}
-
-/* =========================
-   FOOTER
-========================= */
-.site-footer {
+/* ===== Footer ===== */
+.site-footer{
   text-align: center;
   padding: 40px 0;
   color: #666;
