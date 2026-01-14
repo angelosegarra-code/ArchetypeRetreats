@@ -393,6 +393,69 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   justify-content: flex-start;
 }
+   
+   /* =========================
+   BOOK PAGE — ALCHEMY
+   ========================= */
+
+.page-book section {
+  padding: 100px 0;
+}
+
+.book-hero {
+  text-align: center;
+  padding: 140px 0 120px;
+}
+
+.book-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.book-hero .subtitle {
+  font-size: 1.2rem;
+  color: rgba(0,0,0,0.65);
+  margin-bottom: 20px;
+}
+
+.hero-intro {
+  max-width: 640px;
+  margin: 0 auto 36px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.hero-actions,
+.book-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.book-section .wrap.narrow {
+  max-width: 720px;
+}
+
+.book-section h2 {
+  margin-bottom: 20px;
+}
+
+.soft-bg {
+  background: rgba(245,247,244,1);
+}
+
+.preview-box {
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  padding: 36px;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.muted {
+  color: rgba(0,0,0,0.55);
+  font-style: italic;
+}
 
 /* --- responsive --- */
 @media (max-width: 920px) {
