@@ -15,18 +15,24 @@
   
   <div class="hero-overlay"></div>
 
-  <div class="hero-text">
-    <h1>Begin Where Inspiration Lives</h1>
-    <p class="hero-subtitle">When Awareness Enters the Field</p>
+  <section class="hero" style="background-image: url('{{ url_for('static', filename='images/hero-people.jpg') }}');">
+  <div class="hero-overlay"></div>
 
-    <p class="hero-description">
-      A book — and a body of work — exploring how individuals, teams, and organizations
-      move from first-order problem-solving to second-order change.
+  <div class="hero-text">
+    <h1>Begin Where Inspiration Enters the Field</h1>
+
+    <p class="hero-subtitle">
+      Exploring how individuals and teams move<br>
+      from fixing problems to understanding the conditions that create them.
     </p>
 
     <div class="hero-buttons">
-      <a class="btn primary" href="{{ url_for('alchemy_book_page') }}">Explore the Book</a>
-      <a class="btn" href="/alchemy">Discover the Work</a>
+      <a class="btn primary" href="{{ url_for('alchemy_book_page') }}">
+        Explore the Book
+      </a>
+      <a class="btn" href="/alchemy">
+        Discover the Work
+      </a>
     </div>
   </div>
 </section>
