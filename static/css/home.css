@@ -180,6 +180,39 @@
   <a href="/about">About</a>
   <a href="/contact">Contact</a>
 </nav>
+/* ===== PAGE HERO (Alchemy Book) ===== */
+
+.page-hero {
+  position: relative;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.45)
+  );
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.page-hero-inner h1,
+.page-hero-inner p,
+.page-hero-inner .kicker,
+.page-hero-inner .subtitle,
+.page-hero-inner .lead,
+.page-hero-inner .micro {
+  color: #fff;
+}
 
 @media (max-width: 768px) {
   .hero {
