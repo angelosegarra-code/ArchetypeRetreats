@@ -173,17 +173,7 @@
   flex-wrap: wrap;
   margin-top: 18px;
 }
-<div class="site-title"><a href="/">Archetype Retreats</a></div>
 
-<nav class="site-nav">
-  <a href="/">Home</a>
-  <a href="/innercube">InnerCube Test</a>
-  <a href="/alchemy">Alchemy</a>
-  <a href="/retreats">Retreats</a>
-  <a href="/shop">Shop</a>
-  <a href="/about">About</a>
-  <a href="/contact">Contact</a>
-</nav>
 /* ===== PAGE HERO (Alchemy Book) ===== */
 
 .page-hero {
