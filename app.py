@@ -171,7 +171,10 @@ def alchemy_organizations_page():
 @app.route("/book")
 def book_page():
     return render_template("book.html")
-    
+ 
+@app.route("/alchemy-book")
+def alchemy_book():
+    return render_template("alchemy_book.html")   
 # force redeploy
 
 if __name__ == '__main__':
