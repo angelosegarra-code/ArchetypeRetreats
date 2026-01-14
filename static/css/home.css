@@ -12,45 +12,58 @@
   overflow: hidden;
 }
 
+/* ===== HERO (Homepage) ===== */
+
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Dark overlay — visual only, never blocks clicks */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.55),
-    rgba(0, 0, 0, 0.35)
+    rgba(0, 0, 0, 0.72),
+    rgba(0, 0, 0, 0.50)
   );
   z-index: 0;
-  pointer-events: none; /* THIS is what keeps buttons clickable */
+  pointer-events: none;
 }
 
+/* TEXT LAYER — MUST BE ABOVE OVERLAY */
 .hero-text {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* ← THIS is the key */
   max-width: 880px;
   padding: 0 24px;
   color: #fff;
 }
 
+/* Ensure all text stays white */
 .hero-text h1,
-.hero-text p{
+.hero-text p,
+.hero-subtitle,
+.hero-description {
   color: #fff;
 }
 
-.hero-description{
-  opacity: 0.95;
-  line-height: 1.6;
-  margin-top: 10px;
-}
-
-.hero-buttons{
+/* Buttons row */
+.hero-buttons {
   display: flex;
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 18px;
 }
-
 /* Buttons (home) */
 .btn{
   display: inline-flex;
