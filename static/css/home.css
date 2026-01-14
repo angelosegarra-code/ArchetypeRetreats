@@ -27,13 +27,14 @@
   pointer-events: none;
 }
 
-/* Text + buttons layer */
 .hero-text {
   position: relative;
   z-index: 2;
   max-width: 880px;
   padding: 0 24px;
   color: #fff;
+
+  transform: translateY(-60px);
 }
 
 /* Typography */
@@ -60,6 +61,8 @@
   margin-top: 16px;
 }
 
-@media (max-width: 768px){
-  .hero{ height: 60vh; }
+@media (max-width: 768px) {
+  .hero-text {
+    transform: translateY(-30px);
+  }
 }
