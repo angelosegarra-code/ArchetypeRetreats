@@ -66,3 +66,86 @@
     transform: translateY(-30px);
   }
 }
+/* ==============================
+   HOMEPAGE: SPACING + CARDS FIX
+   ============================== */
+
+.home .section{
+  padding: 52px 0 !important;   /* reduces giant gaps */
+}
+
+.home .container{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* tighten typography spacing */
+.home h2{
+  margin: 0 0 12px !important;
+}
+.home p{
+  margin: 0 0 12px !important;
+  line-height: 1.6;
+}
+
+/* Panels */
+.home .panel{
+  padding: 26px !important;
+  border-radius: 16px;
+}
+
+/* Button rows */
+.home .button-row{
+  display: flex !important;
+  gap: 12px !important;
+  flex-wrap: wrap;
+  margin-top: 14px !important;
+}
+
+/* Make sure btn buttons never look like underlined links */
+.home a.btn{
+  text-decoration: none !important;
+}
+
+/* ==============================
+   THREE PATHS (CARDS) — IMPORTANT
+   This is why you're seeing underlined text.
+   ============================== */
+
+.home .card-grid{
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  margin-top: 8px;
+}
+
+@media (max-width: 900px){
+  .home .card-grid{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.home a.card{
+  display: block !important;
+  padding: 22px !important;
+  border-radius: 16px !important;
+  text-decoration: none !important;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.55);
+}
+
+.home a.card h3{
+  margin: 0 0 10px !important;
+}
+
+.home a.card p{
+  margin: 0 0 12px !important;
+}
+
+.home .card-link{
+  display: inline-block;
+  margin-top: 6px;
+  text-decoration: underline;
+  opacity: 0.9;
+}
