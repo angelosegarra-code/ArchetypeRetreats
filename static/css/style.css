@@ -224,3 +224,44 @@ a { color: inherit; }
 body.home main{
   padding-top: 80px;
 }
+/* =========================
+   BOOK PAGE — 3D MOCKUP
+   ========================= */
+
+.book-mockup{
+  width: min(360px, 86vw);   /* small, elegant */
+  margin: 28px auto 18px;
+
+  transform: perspective(1200px) rotateY(-18deg) rotateZ(-2deg);
+  transform-origin: center;
+
+  border-radius: 10px;
+  box-shadow:
+    0 22px 44px rgba(0,0,0,0.28),
+    0 6px 16px rgba(0,0,0,0.18);
+
+  position: relative;
+}
+
+.book-mockup img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* subtle highlight for depth */
+.book-mockup::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.18),
+    rgba(255,255,255,0.00) 18%,
+    rgba(0,0,0,0.00) 60%,
+    rgba(0,0,0,0.12)
+  );
+}
