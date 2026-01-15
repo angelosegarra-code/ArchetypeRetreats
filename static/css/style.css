@@ -214,3 +214,13 @@ a { color: inherit; }
     display: flex;
   }
 }
+/* Hero text nudge (adjust the number) */
+.hero-text,
+.hero-content,
+.hero__content{
+  transform: translateY(-50px);
+}
+/* Homepage hero vertical adjustment */
+body.home main{
+  padding-top: 80px;
+}
