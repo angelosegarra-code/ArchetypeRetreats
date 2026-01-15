@@ -288,9 +288,6 @@ body.home section + section{
    (remove after we see the culprit)
    ================================= */
 
-body.home *{
-  outline: 1px solid rgba(255,0,0,0.35) !important;
-}
 /* ===============================
    HOMEPAGE: unify buttons + spacing
    =============================== */
