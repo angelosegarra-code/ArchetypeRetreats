@@ -12,7 +12,7 @@
   {% block extra_css %}{% endblock %}
 </head>
 
-<body>
+<body class="{% block body_class %}{% endblock %}">
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-title" href="{{ url_for('home') }}">Archetype Retreats</a>
