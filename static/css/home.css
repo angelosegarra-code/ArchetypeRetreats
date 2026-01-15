@@ -232,3 +232,45 @@
   text-decoration: underline;
   opacity: 0.9;
 }
+/* =====================================
+   HOMEPAGE: BIG GAP KILL SWITCH
+   (only affects body.home)
+   ===================================== */
+
+/* 1) Reduce hero height if it's too tall */
+body.home .hero{
+  min-height: 60vh !important;
+  height: auto !important;
+  padding-top: 120px !important;
+  padding-bottom: 70px !important;
+}
+
+/* 2) Tighten ALL homepage sections */
+body.home .section{
+  padding-top: 44px !important;
+  padding-bottom: 44px !important;
+  margin: 0 !important;
+}
+
+/* 3) Tighten typography spacing globally on home */
+body.home h1, body.home h2, body.home h3{
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+body.home p{
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+  line-height: 1.55 !important;
+}
+
+/* 4) Tighten panels */
+body.home .panel{
+  margin: 0 !important;
+  padding: 26px !important;
+}
+
+/* 5) Remove unexpected extra margins between blocks */
+body.home section + section{
+  margin-top: 0 !important;
+}
