@@ -1,7 +1,9 @@
 /* ===== Homepage Hero ===== */
 .hero {
   position: relative;
-  height: 80vh;
+  min-height: 560px;
+  height: auto;
+  padding: 130px 0 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,6 +11,13 @@
   background-size: cover;
   background-position: center 70%;
   overflow: hidden;
+}
+
+@media (max-width: 768px){
+  .hero{
+    min-height: 520px;
+    padding: 110px 0 70px;
+  }
 }
 
 /* overlay — BELOW text, ABOVE image */
@@ -281,4 +290,80 @@ body.home section + section{
 
 body.home *{
   outline: 1px solid rgba(255,0,0,0.35) !important;
+}
+/* ===============================
+   HOMEPAGE: unify buttons + spacing
+   =============================== */
+
+.section{ padding: 52px 0; }
+.container{ max-width: 980px; }
+
+.button-row{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* Make ALL button variants look like buttons */
+.btn,
+.button,
+a.button,
+a.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.18);
+  background: rgba(255,255,255,0.85);
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.btn.primary,
+.button.primary,
+a.btn.primary{
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.btn:hover,
+.button:hover{
+  transform: translateY(-1px);
+}
+
+/* Cards grid spacing (fix the underlined “list” look) */
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 18px;
+}
+
+@media (max-width: 900px){
+  .card-grid{ grid-template-columns: 1fr; }
+}
+
+.card{
+  display: block;
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.75);
+  text-decoration: none;
+  color: inherit;
+}
+
+.card h3{ margin: 0 0 8px; }
+.card p{ margin: 0 0 10px; }
+
+.card .card-link{
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
 }
