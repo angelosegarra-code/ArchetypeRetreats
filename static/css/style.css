@@ -265,3 +265,40 @@ body.home main{
     rgba(0,0,0,0.12)
   );
 }
+/* =========================
+   HOMEPAGE BOOK PANEL FIXES
+   ========================= */
+
+/* kill accidental huge gaps */
+.panel.book-panel{
+  gap: 22px;               /* controls space between image + text */
+  align-items: center;
+}
+
+/* make the "Get the Book" look like a real button */
+.panel.book-panel .btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-decoration: none;   /* remove underline */
+  border: 1px solid rgba(0,0,0,0.18);
+}
+
+/* primary style */
+.panel.book-panel .btn.primary{
+  background: rgba(0,0,0,0.86);
+  color: rgba(255,255,255,0.95);
+  border-color: rgba(0,0,0,0.25);
+}
+
+/* hover */
+.panel.book-panel .btn:hover{
+  filter: brightness(1.05);
+}
+
+/* optional: remove underlines from all links inside that panel text */
+.panel.book-panel a{
+  text-decoration: none;
+}
