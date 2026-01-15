@@ -4,7 +4,7 @@
 {% block body_class %}home{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=1004">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=1005">
 {% endblock %}
 
 {% block content %}
@@ -25,10 +25,11 @@
 
     <div class="hero-buttons">
       <a class="btn primary"
-   href="https://intinno.gumroad.com/l/vlzkf"
-   target="_blank" rel="noopener">Get the Book</a>
-        Explore the Book
+         href="https://intinno.gumroad.com/l/vlzkf"
+         target="_blank" rel="noopener">
+        Get the Book
       </a>
+
       <a class="btn" href="/alchemy">
         Discover the Work
       </a>
@@ -36,7 +37,7 @@
   </div>
 
 </section>
-  
+
 <!-- FROM IMPROVEMENT TO AWARENESS -->
 <section class="section">
   <div class="container">
@@ -55,7 +56,6 @@
     </p>
   </div>
 </section>
-
 
 <!-- ARCHETYPE EXPLORER -->
 <section class="section">
@@ -81,20 +81,21 @@
       <p><em>If it resonates, keep it. If it doesn’t, let it go.</em></p>
 
       <div class="button-row">
-  <a href="/explorer" class="button">Try the Explorer</a>
-  <a href="/innercube" class="button">Take the Full InnerCube Test</a>
-</div>
+        <a class="btn" href="/explorer">Try the Explorer</a>
+        <a class="btn primary" href="/innercube">Take the Full InnerCube Test</a>
+      </div>
+
     </div>
   </div>
 </section>
-
 
 <!-- THREE PATHS -->
 <section class="section">
   <div class="container">
     <div class="card-grid">
 
-      <a class="card" href="/shop">
+      <!-- Shop removed: point this to the Book page or Gumroad -->
+      <a class="card" href="/book">
         <h3>Individual Inquiry</h3>
         <p>
           Reflection, creative practice, and symbolic tools for recognizing
@@ -125,7 +126,6 @@
   </div>
 </section>
 
-
 <!-- WHY GROUPS -->
 <section class="section">
   <div class="container">
@@ -150,18 +150,18 @@
   </div>
 </section>
 
-
 <!-- BOOK ANCHOR -->
 <section class="section">
   <div class="container">
     <div class="panel book-panel">
 
- <div class="book-mockup">
-  <img
-    src="{{ url_for('static', filename='images/book-cover.jpg') }}"
-    alt="The Alchemy of Change book cover">
-</div>
-      
+      <div class="book-mockup">
+        <img
+          src="{{ url_for('static', filename='images/book-cover.jpg') }}"
+          alt="The Alchemy of Change book cover">
+      </div>
+
+      <div>
         <h2>Begin with the Book</h2>
 
         <p>
@@ -172,14 +172,17 @@
         <p>It is not a method. It is a way of seeing.</p>
 
         <div class="button-row">
-          <a class="btn primary" href="https://intinno.gumroad.com/l/vlzkf" target="_blank" rel="noopener">Get the Book</a>
+          <a class="btn primary"
+             href="https://intinno.gumroad.com/l/vlzkf"
+             target="_blank" rel="noopener">
+            Get the Book
+          </a>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-
 
 <!-- FACILITATOR PATH -->
 <section class="section">
@@ -207,7 +210,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- CONTINUING THE CONVERSATION -->
 <section class="section">
