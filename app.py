@@ -114,9 +114,7 @@ def export_csv():
 def logout(): session.clear(); return redirect('/')
 @app.route('/robots.txt')
 def robots_txt(): return app.send_static_file('robots.txt')
-@app.route('/retreats')
-def retreats():
-    return render_template('retreats.html')
+
 
 @app.route('/shop')
 def shop():
@@ -140,7 +138,7 @@ def innercube_thankyou():
     
 @app.route('/retreats')
 def retreats_page():
-    return render_template('retreats.html')
+    return redirect('/immersions', code=301)
 
 @app.route('/shop')
 def shop_page():
