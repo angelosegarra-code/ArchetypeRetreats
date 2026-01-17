@@ -1,0 +1,64 @@
+/* =========================
+   Immersions Hero
+   ========================= */
+
+.immersion-hero {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5f5f5;
+  background: #111;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)
+  );
+}
+
+.hero-inner-wrap {
+  position: relative;
+  max-width: 820px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-subhead {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 1rem 0 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero-note {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* =========================
+   Gateway Cards
+   ========================= */
+
+.gateway-cards {
+  display: grid;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2rem;
+  border-radius: 8px;
+}
