@@ -1,88 +1,92 @@
 {% extends "base.html" %}
+
 {% block content %}
+<div class="page-retreats">
 
-<section class="section immersions-gateway">
-  <div class="container">
+  <!-- HERO -->
+  <section class="retreat-hero">
+    <div class="hero-overlay"></div>
 
-    <!-- Header -->
-    <div class="gateway-header">
+    <div class="hero-inner-wrap">
       <h1>Archetype Immersions</h1>
-      <p class="gateway-intro">
+
+      <p class="hero-subhead">
         Immersive experiences centered on facilitation as a practice of presence,
         attention, and collective learning.
       </p>
 
-      <div class="gateway-actions">
-        <a href="#calendly" class="btn-primary">Schedule a Discovery Call</a>
-        <a href="/immersions" class="btn-secondary">View Immersion Options</a>
+      <div class="hero-actions">
+        <a class="btn primary" href="#calendar">Schedule a Discovery Call</a>
+        <a class="btn soft" href="#options">View Immersion Options</a>
       </div>
+
+      <p class="hero-note">
+        Hosted in Bali and online. Designed for facilitators, guides,
+        and those learning how to hold space within complex human systems.
+      </p>
+    </div>
+  </section>
+
+  <!-- OPTIONS -->
+  <section id="options" class="retreat-options">
+
+    <!-- Facilitator -->
+    <div id="facilitator" class="retreat-option">
+      <h2>Facilitator Immersion — Bali</h2>
+      <p class="option-meta">In-person · Small group</p>
+
+      <p>
+        An in-person immersion for those learning how to hold space
+        for individual and collective transformation.
+      </p>
+
+      <p>
+        This experience centers on facilitation as a relational,
+        field-based practice rather than a set of techniques.
+      </p>
+
+      <a href="#calendar" class="option-link">Learn more →</a>
     </div>
 
-    <!-- Cards -->
-    <div class="cards">
+    <!-- Online -->
+    <div id="online" class="retreat-option">
+      <h2>Online Immersion</h2>
+      <p class="option-meta">Guided · Remote</p>
 
-      <!-- Card 1 -->
-      <div class="card" id="facilitator">
-        <h2>Facilitator Immersion — Bali</h2>
-        <p class="card-meta">In-person · Small group</p>
+      <p>
+        A guided online entry into facilitation as a practice
+        of presence and attention for those not yet able to travel.
+      </p>
 
-        <p>
-          An in-person immersion for those learning how to hold space
-          for individual and collective transformation.
-        </p>
+      <p>
+        Designed as an orientation and threshold into the work.
+      </p>
 
-        <p>
-          This experience centers on facilitation as a relational,
-          field-based practice rather than a set of techniques.
-        </p>
-
-        <a href="/immersions#facilitator" class="card-link">
-          Learn more →
-        </a>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card" id="online">
-        <h2>Online Immersion</h2>
-        <p class="card-meta">Guided · Remote</p>
-
-        <p>
-          A guided online entry into facilitation as a practice of presence
-          and attention for those not yet able to travel.
-        </p>
-
-        <p>
-          Designed as an orientation and threshold into the work.
-        </p>
-
-        <a href="/immersions#online" class="card-link">
-          Learn more →
-        </a>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card" id="organizations">
-        <h2>Applied Facilitation — Organizations</h2>
-        <p class="card-meta">Teams · Systems · Leadership</p>
-
-        <p>
-          An application of the same facilitation principles
-          within organizational and institutional contexts.
-        </p>
-
-        <p>
-          Focused on how groups learn, adapt,
-          and coordinate under complexity.
-        </p>
-
-        <a href="/immersions#organizations" class="card-link">
-          Learn more →
-        </a>
-      </div>
-
+      <a href="#calendar" class="option-link">Learn more →</a>
     </div>
 
-  </div>
-</section>
+    <!-- Organizations -->
+    <div id="organizations" class="retreat-option">
+      <h2>Applied Facilitation — Organizations</h2>
+      <p class="option-meta">Teams · Systems · Leadership</p>
 
+      <p>
+        An application of the same facilitation principles
+        within organizational and institutional contexts.
+      </p>
+
+      <p>
+        Focused on how groups learn, adapt,
+        and coordinate under complexity.
+      </p>
+
+      <a href="/alchemy/organizations" class="option-link">Learn more →</a>
+    </div>
+
+  </section>
+
+  <!-- CALENDAR ANCHOR -->
+  <section id="calendar"></section>
+
+</div>
 {% endblock %}
