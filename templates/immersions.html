@@ -1,32 +1,36 @@
 {% extends "base.html" %}
 
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/immersions.css') }}?v=2">
+{% endblock %}
+
 {% block content %}
 <div class="page-retreats">
 
   <!-- HERO -->
-  <section class="retreat-hero">
-    <div class="hero-overlay"></div>
+  <section class="immersion-hero">
+  <div class="hero-overlay"></div>
 
-    <div class="hero-inner-wrap">
-      <h1>Archetype Immersions</h1>
+  <div class="hero-inner-wrap">
+    <h1>Archetype Immersions</h1>
 
-      <p class="hero-subhead">
-        Immersive experiences centered on facilitation as a practice of presence,
-        attention, and collective learning.
-      </p>
+    <p class="hero-subhead">
+      Immersive experiences centered on facilitation as a practice of presence,
+      attention, and collective learning.
+    </p>
 
-      <div class="hero-actions">
-        <a class="btn primary" href="#calendar">Schedule a Discovery Call</a>
-        <a class="btn soft" href="#options">View Immersion Options</a>
-      </div>
-
-      <p class="hero-note">
-        Hosted in Bali and online. Designed for facilitators, guides,
-        and those learning how to hold space within complex human systems.
-      </p>
+    <div class="hero-actions">
+      <a href="#calendar" class="btn primary">Schedule a Discovery Call</a>
+      <a href="#options" class="btn soft">View Immersion Options</a>
     </div>
-  </section>
 
+    <p class="hero-note">
+      Hosted in Bali and online. Designed for facilitators, guides, and those
+      learning how to hold space within complex human systems.
+    </p>
+  </div>
+</section>
+  
   <!-- OPTIONS -->
   <section id="options" class="retreat-options">
 
