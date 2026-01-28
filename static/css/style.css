@@ -299,3 +299,11 @@ body.home main{
 .panel.book-panel a{
   text-decoration: none;
 }
+
+.bridge-line {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+  font-style: italic;
+}
