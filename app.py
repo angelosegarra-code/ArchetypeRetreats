@@ -178,6 +178,10 @@ def alchemy_book():
 def immersions():
     return render_template("immersions.html")
 
+@app.route("/internships")
+def internships():
+    return render_template("internships.html")
+
 # force redeploy
 
 if __name__ == '__main__':
