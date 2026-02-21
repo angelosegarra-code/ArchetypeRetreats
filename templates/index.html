@@ -1,265 +1,119 @@
-{% extends "base.html" %}
-
-{% block title %}Home · Archetype Retreats{% endblock %}
-{% block body_class %}home{% endblock %}
-
-{% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=1011">
-{% endblock %}
-
-{% block content %}
-
-<!-- HERO -->
-<section class="hero"
-  style="background-image: url('{{ url_for('static', filename='images/home-hero-people.jpg') }}');">
-
+<!-- HERO SECTION -->
+<section class="hero">
   <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="eyebrow">Archetype Retreats</p>
+    <p class="founder">Founded by Angelo Segarra</p>
 
-  <div class="hero-text">
-    <h1>Begin Where Inspiration Enters the Field</h1>
+    <h1>
+      You’ve built one life.<br>
+      Now enter the work that reshapes the field beneath it.
+    </h1>
 
-    <p class="hero-subtitle">
-      Exploring how individuals and teams move from fixing problems to
-      understanding the conditions that create them.
+    <p class="subtext">
+      High-depth retreats in Bali for individuals and small groups ready for lasting, experiential transformation.
     </p>
 
-    <div class="hero-buttons">
-      <a class="btn primary"
-         href="https://intinno.gumroad.com/l/vlzkf"
-         target="_blank" rel="noopener">
-        Explore the Book
-      </a>
-
-      <a class="btn" href="/alchemy">
-        Discover the Work
-      </a>
-    </div>
-  </div>
-
-</section>
-
-<!-- FROM IMPROVEMENT TO AWARENESS -->
-<section class="section">
-  <div class="container">
-    <h2>When Improvement Becomes Inspiration</h2>
-
-    <p>
-    Most approaches to change begin with improvement.
-    Something isn’t working, so we refine it, optimize it, or try harder.
-    </p>
-
-    <p>
-    And for a time, this helps.
-    </p>
-
-    <p>
-    But improvement works within existing conditions.
-    When those conditions are misaligned, even successful improvement can feel exhausting.
-    </p>
-
-    <p>
-    Inspiration enters when attention shifts —
-    not toward fixing what’s broken, but toward noticing what is already shaping experience.
-    </p>
-
-    <p><em>
-    The Alchemy of Change explores this shift, and how it unfolds personally, relationally, and collectively.
-    </em></p>
-    
-    <p>
-      First-order change focuses on improving what already exists.
-      Second-order change alters the conditions that shape behavior, culture, and meaning.
-    </p>
-
-    <p>
-      <em>The Alchemy of Change</em> introduces this distinction and how it unfolds
-      personally, relationally, and collectively.
-    </p>
+    <a href="/retreats" class="btn-primary">Enter the Retreat Field</a>
   </div>
 </section>
 
-<!-- ARCHETYPE EXPLORER -->
-<section class="section">
-  <div class="container">
-    <div class="panel">
 
-      <div class="panel-top">
-        <span class="pill">Instant · No sign-up</span>
-      </div>
+<!-- SECTION: WHAT THIS IS -->
+<section class="section section-light center">
+  <h2>This Is Not Self-Improvement.</h2>
+  <p>
+    Most change begins with refinement. Optimize. Adjust. Try harder.
+    For a time, it works.
+  </p>
+  <p>
+    But lasting transformation does not begin with improvement.
+    It begins when awareness enters the field itself.
+  </p>
+  <p>
+    Archetype Retreats are designed for that shift.
+  </p>
+</section>
 
-     <h3>A Simple Way to Begin</h3>
 
+<!-- SECTION: THE EXPERIENCE -->
+<section class="section section-soft">
+  <div class="three-col">
+    <div>
+      <h3>Immersive Environment</h3>
       <p>
-      Some people begin through quiet reflection.
-      Others through symbolic self-recognition.
+        Small-group retreats in Bali designed for depth, not performance.
       </p>
-
+    </div>
+    <div>
+      <h3>Second-Order Change</h3>
       <p>
-      There is no right starting point — only what feels natural.
+        We work beneath behavior — at the level of structure and field.
+      </p>
+    </div>
+    <div>
+      <h3>Intimate Cohorts</h3>
+      <p>
+        Private, high-attention environments with limited participants.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION: THE SETTING -->
+<section class="section section-image">
+  <div class="image-content">
+    <h2>The Setting Matters.</h2>
+    <p>
+      Transformation does not occur in noise.
+      Our retreats are held in carefully selected environments in Bali —
+      spaces that invite stillness, depth, and sustained reflection.
+    </p>
+
+    <a href="/retreats" class="btn-secondary">View Upcoming Immersions</a>
+  </div>
+</section>
+
+
+<!-- SECTION: FOUNDER -->
+<section class="section section-light">
+  <div class="two-col">
+    <div class="founder-text">
+      <h2>Founded by Angelo Segarra</h2>
+      <p>
+        Angelo Segarra is a retreat founder and facilitator specializing in
+        second-order change, archetypal orientation, and experiential transformation.
       </p>
       <p>
-        The Archetype Explorer is a brief mirror — not a diagnosis —
-        designed to reveal how attention and narrative organize experience.
+        His work bridges philosophy, embodiment, and immersive field environments.
       </p>
-
-      <p><em>If it resonates, keep it. If it doesn’t, let it go.</em></p>
-
-    <div class="button-row">
-      <a class="btn" href="/explorer">Begin the Alchemy Reflection</a>
-      <a class="btn primary" href="/innercube">Continue with the InnerCube Reflection</a>
+      <a href="/about" class="link-minimal">Learn About the Work →</a>
     </div>
-
-      <p class="bridge-line">
-        If the first reflection resonates, the Inner Cube explores how this orientation responds under pressure.
-      </p>
-
+    <div class="founder-image">
+      <img src="/static/images/angelo.jpg" alt="Angelo Segarra">
     </div>
   </div>
 </section>
 
-<!-- THREE PATHS -->
-<section class="section">
-  <div class="container">
-    <div class="card-grid">
 
-      <!-- Shop removed: point this to the Book page or Gumroad -->
-      <a class="card" href="/book">
-        <h3>Individual Inquiry</h3>
-        <p>
-          Reflection, creative practice, and symbolic tools for recognizing
-          the patterns shaping your inner and outer life.
-        </p>
-        <span class="card-link">Explore Books &amp; Guides</span>
-      </a>
-
-      <a class="card" href="/alchemy#organizations">
-        <h3>Second-Order Change</h3>
-        <p>
-          Work with organizations and teams seeking awareness of the systems
-          shaping culture, behavior, and decision-making — beyond surface-level improvement.
-        </p>
-        <span class="card-link">Organizational Work</span>
-      </a>
-
-      <a class="card" href="/immersions#facilitator">
-        <h3>Shared Fields of Practice</h3>
-        <p>
-          Retreats and small groups create contained environments where
-          shared awareness allows systems to reorganize naturally.
-        </p>
-        <span class="card-link">Explore Retreats</span>
-      </a>
-
-    </div>
-  </div>
+<!-- SECTION: BOOK (SUBTLE) -->
+<section class="section section-soft center">
+  <h3>The Intellectual Foundation</h3>
+  <p>
+    <em>The Alchemy of Change</em> explores how awareness reorganizes experience —
+    and forms the philosophical basis of the retreat work.
+  </p>
+  <a href="/book" class="link-minimal">Explore the Book →</a>
 </section>
 
-<!-- WHY GROUPS -->
-<section class="section">
-  <div class="container">
-    <h2>Why Retreats and Small Groups Matter</h2>
 
-    <p>Second-order change cannot be implemented.</p>
-
-    <p>
-      It requires time, containment, and shared attention —
-      conditions rarely available in everyday life or organizational structures.
-    </p>
-
-    <p>
-      Retreats and facilitated groups create temporary fields
-      where systems can recognize themselves.
-      What emerges is not a plan, but a shift in perception.
-    </p>
-
-    <p class="quote">
-      <em>When no one is asked to change, change becomes possible.</em>
-    </p>
-  </div>
+<!-- FINAL INVITATION -->
+<section class="section section-dark center">
+  <h2>The Work Is Not For Everyone.</h2>
+  <p>
+    But for those ready to move beyond refinement and into reorientation —
+    the field is open.
+  </p>
+  <a href="/retreats" class="btn-primary">Enter the Retreat Field</a>
 </section>
-
-<!-- BOOK ANCHOR -->
-<section class="section">
-  <div class="container">
-    <div class="panel book-panel">
-
-      <div class="book-mockup">
-        <img
-          src="{{ url_for('static', filename='images/alchemy-of-change-cover-v2.jpg') }}"
-          alt="The Alchemy of Change book cover">
-      </div>
-
-      <div>
-        <h2>Begin with the Book</h2>
-
-        <p>
-          <em>The Alchemy of Change</em> is the conceptual foundation for this work —
-          from individual inquiry to organizational practice and retreats.
-        </p>
-
-        <p>It is not a method. It is a way of seeing.</p>
-
-        <div class="button-row">
-          <a class="btn primary"
-             href="https://intinno.gumroad.com/l/vlzkf"
-             target="_blank" rel="noopener">
-            Get the Book
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- FACILITATOR PATH -->
-<section class="section">
-  <div class="container">
-    <div class="panel">
-
-      <h2>Learn to Hold the Field</h2>
-
-      <p>
-        Some people begin this work for personal clarity.
-        Over time, they feel drawn to hold attention for others —
-        in groups, teams, and organizations.
-      </p>
-
-      <p>
-        Facilitation here is not technique-based.
-        It is a practice of perception,
-        allowing systems to reorganize without force or blame.
-      </p>
-
-      <div class="button-row">
-        <a class="btn primary" href="/facilitator-path">Explore the Facilitator Path</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTINUING THE CONVERSATION -->
-<section class="section">
-  <div class="container">
-    <h2>Continuing the Conversation</h2>
-
-    <p>
-      From time to time, I work with individuals, groups, and organizations
-      who want to explore this work in a more applied or relational way.
-    </p>
-
-    <p>
-      You’re welcome to reach out —
-      or join a small, infrequent email list
-      where new writing and projects are shared.
-    </p>
-
-    <div class="button-row">
-      <a class="btn" href="/contact">Contact</a>
-      <a class="btn" href="/mailing-list">Join the Email List</a>
-    </div>
-  </div>
-</section>
-
-{% endblock %}
