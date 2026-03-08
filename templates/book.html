@@ -3,79 +3,91 @@
 
 {% block content %}
 <section class="section book-page">
-  <div class="container" style="text-align:center;">
+  <div class="container" style="text-align:center; max-width:1100px;">
 
     <h1>Books by Angelo Segarra</h1>
     <p>These books explore perception, creativity, intuition, and the deeper structures of transformation.</p>
 
-    <br><br>
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(2, minmax(260px,1fr));
+      gap:50px 40px;
+      margin-top:50px;
+      align-items:start;
+    ">
 
-    <!-- INTUITION BARRIER -->
+      <!-- INTUITION BARRIER -->
 
-    <h2>Intuition Barrier</h2>
-    <p>A philosophical exploration of intuition, perception, and how overthinking obscures direct understanding.</p>
+      <div>
+        <h2>Intuition Barrier</h2>
+        <p>A philosophical exploration of intuition, perception, and how overthinking obscures direct understanding.</p>
 
-    <div class="book-mockup">
-      <img
-        src="{{ url_for('static', filename='images/UNADJUSTEDNONRAW_thumb_416d.jpg') }}"
-        alt="Intuition Barrier book cover">
+        <div class="book-mockup">
+          <img
+            src="{{ url_for('static', filename='images/UNADJUSTEDNONRAW_thumb_416d.jpg') }}"
+            alt="Intuition Barrier book cover"
+            style="max-width:280px; width:100%; height:auto; margin:auto; display:block;">
+        </div>
+
+        <div class="button-row" style="justify-content:center; margin-top:15px;">
+          <a class="button primary"
+             href="https://your-gumroad-link"
+             target="_blank" rel="noopener">Get the Book</a>
+        </div>
+      </div>
+
+
+      <!-- ALCHEMY OF CHANGE -->
+
+      <div>
+        <h2>The Alchemy of Change</h2>
+        <p>A book exploring how awareness enters the field and how individuals, teams, and organizations move from first-order problem solving to second-order change.</p>
+
+        <div class="book-mockup">
+          <img
+            src="{{ url_for('static', filename='images/book-cover.jpg') }}"
+            alt="The Alchemy of Change book cover"
+            style="max-width:280px; width:100%; height:auto; margin:auto; display:block;">
+        </div>
+
+        <div class="button-row" style="justify-content:center; margin-top:15px;">
+          <a class="button primary"
+             href="https://intinno.gumroad.com/l/vlzkf"
+             target="_blank" rel="noopener">Get the Book</a>
+        </div>
+      </div>
+
+
+      <!-- PAINTING TO POETRY -->
+
+      <div>
+        <h2>Painting to Poetry</h2>
+        <p>An exploration of how visual art and language interact, revealing the deeper relationship between perception and expression.</p>
+
+        <div class="book-mockup">
+          <img
+            src="{{ url_for('static', filename='images/UNADJUSTEDNONRAW_thumb_4058.jpg') }}"
+            alt="Painting to Poetry book cover"
+            style="max-width:280px; width:100%; height:auto; margin:auto; display:block;">
+        </div>
+      </div>
+
+
+      <!-- TIMELESS FORM -->
+
+      <div>
+        <h2>Timeless Form</h2>
+        <p>A reflection on classical form, artistic observation, and the enduring dialogue between the human body and artistic creation.</p>
+
+        <div class="book-mockup">
+          <img
+            src="{{ url_for('static', filename='images/UNADJUSTEDNONRAW_thumb_3d90.jpg') }}"
+            alt="Timeless Form book cover"
+            style="max-width:280px; width:100%; height:auto; margin:auto; display:block;">
+        </div>
+      </div>
+
     </div>
-
-    <div class="button-row" style="justify-content:center;">
-      <a class="button primary"
-         href="https://your-gumroad-link"
-         target="_blank" rel="noopener">Get the Book</a>
-    </div>
-
-    <br><br><br>
-
-
-    <!-- ALCHEMY OF CHANGE -->
-
-    <h2>The Alchemy of Change</h2>
-    <p>A book exploring how awareness enters the field and how individuals, teams, and organizations move from first-order problem solving to second-order change.</p>
-
-    <div class="book-mockup">
-      <img
-        src="{{ url_for('static', filename='images/book-cover.jpg') }}"
-        alt="The Alchemy of Change book cover">
-    </div>
-
-    <div class="button-row" style="justify-content:center;">
-      <a class="button primary"
-         href="https://intinno.gumroad.com/l/vlzkf"
-         target="_blank" rel="noopener">Get the Book</a>
-    </div>
-
-    <br><br><br>
-
-
-    <!-- PAINTING TO POETRY -->
-
-    <h2>Painting to Poetry</h2>
-    <p>An exploration of how visual art and language interact, revealing the deeper relationship between perception and expression.</p>
-
-    <div class="book-mockup">
-      <img
-        src="{{ url_for('static', filename='images/UNADJUSTEDNONRAW_thumb_4058.jpg') }}"
-        alt="Painting to Poetry book cover">
-    </div>
-
-    <br><br><br>
-
-
-    <!-- TIMELESS FORM -->
-
-    <h2>Timeless Form</h2>
-    <p>A reflection on classical form, artistic observation, and the enduring dialogue between the human body and artistic creation.</p>
-
-    <div class="book-mockup">
-      <img
-        src="{{ url_for('static', filename='images/UNADJUSTEDNONRAW_thumb_3d90.jpg') }}"
-        alt="Timeless Form book cover">
-    </div>
-
-    <br><br>
 
   </div>
 </section>
