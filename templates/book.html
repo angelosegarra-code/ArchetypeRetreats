@@ -1,25 +1,82 @@
 {% extends "base.html" %}
-{% block title %} — Books{% endblock %}
+{% block title %} – Books{% endblock %}
 
 {% block content %}
 <section class="section book-page">
   <div class="container" style="text-align:center;">
+
     <h1>Books by Angelo Segarra</h1>
     <p>These books explore perception, creativity, intuition, and the deeper structures of transformation.</p>
 
+    <br><br>
+
+    <!-- INTUITION BARRIER -->
+
+    <h2>Intuition Barrier</h2>
+    <p>A philosophical exploration of intuition, perception, and how overthinking obscures direct understanding.</p>
+
     <div class="book-mockup">
-  <img
-    src="{{ url_for('static', filename='images/book-cover.jpg') }}"
-    alt="The Alchemy of Change book cover">
-</div>
+      <img
+        src="{{ url_for('static', filename='images/intuition-barrier.jpg') }}"
+        alt="Intuition Barrier book cover">
+    </div>
 
     <div class="button-row" style="justify-content:center;">
       <a class="button primary"
-         href=https://intinno.gumroad.com/l/vlzkf
-         target="_blank" rel="noopener">Buy on Gumroad</a>
-      <a class="button"
-         href="{{ url_for('contact') }}">Questions? Contact</a>
+         href="https://your-gumroad-link"
+         target="_blank" rel="noopener">Get the Book</a>
     </div>
+
+    <br><br><br>
+
+
+    <!-- ALCHEMY OF CHANGE -->
+
+    <h2>The Alchemy of Change</h2>
+    <p>A book exploring how awareness enters the field and how individuals, teams, and organizations move from first-order problem solving to second-order change.</p>
+
+    <div class="book-mockup">
+      <img
+        src="{{ url_for('static', filename='images/book-cover.jpg') }}"
+        alt="The Alchemy of Change book cover">
+    </div>
+
+    <div class="button-row" style="justify-content:center;">
+      <a class="button primary"
+         href="https://intinno.gumroad.com/l/vlzkf"
+         target="_blank" rel="noopener">Get the Book</a>
+    </div>
+
+    <br><br><br>
+
+
+    <!-- PAINTING TO POETRY -->
+
+    <h2>Painting to Poetry</h2>
+    <p>An exploration of how visual art and language interact, revealing the deeper relationship between perception and expression.</p>
+
+    <div class="book-mockup">
+      <img
+        src="{{ url_for('static', filename='images/painting-to-poetry.jpg') }}"
+        alt="Painting to Poetry book cover">
+    </div>
+
+    <br><br><br>
+
+
+    <!-- TIMELESS FORM -->
+
+    <h2>Timeless Form</h2>
+    <p>A reflection on classical form, artistic observation, and the enduring dialogue between the human body and artistic creation.</p>
+
+    <div class="book-mockup">
+      <img
+        src="{{ url_for('static', filename='images/timeless-form.jpg') }}"
+        alt="Timeless Form book cover">
+    </div>
+
+    <br><br>
+
   </div>
 </section>
 {% endblock %}
