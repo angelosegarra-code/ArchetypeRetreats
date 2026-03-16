@@ -182,7 +182,12 @@ def immersions():
 def internships():
     return render_template("internships.html")
 
-# force redeploy
+@app.route("/journal")
+def journal():
+    return render_template("tracker.html")
 
+# force redeploy
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
+
+
