@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>InnerCube Reflection Tracker</title>
+<link rel="stylesheet" href="/static/tracker.css">
+</head>
+
+<body>
+
+<h1>InnerCube Reflection Tracker</h1>
+
+<p>Record a short reflection from your journal and notice which archetype appeared today.</p>
+
+<form id="reflectionForm">
+
+<label>Date</label>
+<input type="date" id="date">
+
+<label>Journal</label>
+<select id="journal">
+<option>Dreamer Journal</option>
+<option>Observer Journal</option>
+<option>Alchemist Journal</option>
+<option>Visionary Journal</option>
+</select>
+
+<label>Which archetype appeared most strongly today?</label>
+<select id="archetype">
+<option>Dreamer</option>
+<option>Observer</option>
+<option>Alchemist</option>
+<option>Visionary</option>
+</select>
+
+<label>Insight</label>
+<textarea id="insight"></textarea>
+
+<button type="submit">Save Reflection</button>
+
+</form>
+
+<div id="entries"></div>
+
+<script src="/static/tracker.js"></script>
+
+</body>
+</html>
