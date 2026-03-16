@@ -35,10 +35,36 @@ form.addEventListener("submit", function(e) {
     };
 
     entries.push(entry);
-    localStorage.setItem("innercube_entries", JSON.stringify(entries));
+localStorage.setItem("innercube_entries", JSON.stringify(entries));
 
-    form.reset();
-    renderEntries();
+form.reset();
+renderEntries();
+updateSummary();
+
 });
 
 renderEntries();
+updateSummary();
+
+function updateSummary() {
+
+let dreamer = 0;
+let observer = 0;
+let alchemist = 0;
+let visionary = 0;
+
+entries.forEach(e => {
+
+if (e.archetype === "Dreamer") dreamer++;
+if (e.archetype === "Observer") observer++;
+if (e.archetype === "Alchemist") alchemist++;
+if (e.archetype === "Visionary") visionary++;
+
+});
+
+document.getElementById("dreamerCount").textContent = dreamer;
+document.getElementById("observerCount").textContent = observer;
+document.getElementById("alchemistCount").textContent = alchemist;
+document.getElementById("visionaryCount").textContent = visionary;
+
+}
