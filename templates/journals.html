@@ -3,6 +3,7 @@
 {% block title %}Journals | Archetype Retreats{% endblock %}
 
 {% block content %}
+
 <section class="journals-hero">
   <div class="journals-hero-inner">
     <p class="journals-kicker">Between the Lines</p>
@@ -13,87 +14,82 @@
   </div>
 </section>
 
-<section class="journals-intro">
-  <div class="journals-intro-inner">
-    <p>
-      These journals are not simply books to read. They are places to begin.
-      Each one offers a different orientation toward clarity, change, direction, and imagination.
-    </p>
-  </div>
-</section>
-
 <section class="journals-grid-section">
   <div class="journals-grid">
 
+    <!-- DREAMER -->
     <article class="journal-card">
-      <div class="journal-image-wrap">
-        <img src="{{ url_for('static', filename='images/dreamer-journal.jpg') }}" alt="Dreamer Journal cover">
-      </div>
+      <img src="{{ url_for('static', filename='images/dreamer-hero.jpg') }}" class="journal-hero-image">
+
       <div class="journal-card-content">
         <h2>Dreamer</h2>
         <p class="journal-tagline">For imagination, curiosity, and possibility.</p>
         <p class="journal-description">
           Begin here when you want to open, soften, and reconnect with what is possible.
         </p>
-        <div class="journal-actions">
-          <a href="YOUR_AMAZON_DREAMER_LINK" target="_blank" rel="noopener noreferrer" class="journal-button">
-            Begin here
-          </a>
-        </div>
+
+        <img src="{{ url_for('static', filename='images/dreamer-cover.jpg') }}" class="journal-cover-proof">
+
+        <a href="YOUR_AMAZON_DREAMER_LINK" target="_blank" class="journal-button">
+          Begin here
+        </a>
       </div>
     </article>
 
+    <!-- OBSERVER -->
     <article class="journal-card">
-      <div class="journal-image-wrap">
-        <img src="{{ url_for('static', filename='images/observer-journal.jpg') }}" alt="Observer Journal cover">
-      </div>
+      <img src="{{ url_for('static', filename='images/observer-hero.jpg') }}" class="journal-hero-image">
+
       <div class="journal-card-content">
         <h2>Observer</h2>
-        <p class="journal-tagline">For clarity, awareness, and understanding.</p>
+        <p class="journal-tagline">For clarity and awareness.</p>
         <p class="journal-description">
-          Begin here when you want to slow down, notice more clearly, and see what is really there.
+          Begin here when you want to slow down and see what is actually there.
         </p>
-        <div class="journal-actions">
-          <a href="YOUR_AMAZON_OBSERVER_LINK" target="_blank" rel="noopener noreferrer" class="journal-button">
-            Begin here
-          </a>
-        </div>
+
+        <img src="{{ url_for('static', filename='images/observer-cover.jpg') }}" class="journal-cover-proof">
+
+        <a href="YOUR_AMAZON_OBSERVER_LINK" target="_blank" class="journal-button">
+          Begin here
+        </a>
       </div>
     </article>
 
+    <!-- VISIONARY -->
     <article class="journal-card">
-      <div class="journal-image-wrap">
-        <img src="{{ url_for('static', filename='images/visionary-journal.jpg') }}" alt="Visionary Journal cover">
-      </div>
+      <img src="{{ url_for('static', filename='images/visionary-hero.jpg') }}" class="journal-hero-image">
+
       <div class="journal-card-content">
         <h2>Visionary</h2>
-        <p class="journal-tagline">For direction, purpose, and what lies ahead.</p>
+        <p class="journal-tagline">For direction and purpose.</p>
         <p class="journal-description">
-          Begin here when you feel something calling you forward and want to listen more deeply.
+          Begin here when something is calling you forward.
         </p>
-        <div class="journal-actions">
-          <a href="YOUR_AMAZON_VISIONARY_LINK" target="_blank" rel="noopener noreferrer" class="journal-button">
-            Begin here
-          </a>
-        </div>
+
+        <img src="{{ url_for('static', filename='images/visionary-cover.jpg') }}" class="journal-cover-proof">
+
+        <a href="YOUR_AMAZON_VISIONARY_LINK" target="_blank" class="journal-button">
+          Begin here
+        </a>
       </div>
     </article>
 
+    <!-- ALCHEMIST -->
     <article class="journal-card">
-      <div class="journal-image-wrap">
-        <img src="{{ url_for('static', filename='images/alchemist-journal.jpg') }}" alt="Alchemist Journal cover">
-      </div>
+      <img src="{{ url_for('static', filename='images/alchemist-hero.jpg') }}" class="journal-hero-image">
+
       <div class="journal-card-content">
         <h2>Alchemist</h2>
-        <p class="journal-tagline">For change, transformation, and release.</p>
+        <p class="journal-tagline">For change and transformation.</p>
         <p class="journal-description">
-          Begin here when something in your life is ready to shift and become something new.
+          Begin here when something in your life is ready to shift.
         </p>
-        <div class="journal-actions">
-          <a href="YOUR_AMAZON_ALCHEMIST_LINK" target="_blank" rel="noopener noreferrer" class="journal-button">
-            Begin here
-          </a>
-        </div>
+
+        <img src="{{ url_for('static', filename='images/alchemist-cover.jpg') }}" class="journal-cover-proof">
+
+        <a href="YOUR_AMAZON_ALCHEMIST_LINK" target="_blank" class="journal-button">
+          Begin here
+        </a>
       </div>
     </article>
 
@@ -101,32 +97,8 @@
 </section>
 
 <section class="journals-middle-note">
-  <div class="journals-middle-note-inner">
-    <p class="middle-note-line">You do not need all four.</p>
-    <p class="middle-note-line">You only need to begin where you are.</p>
-  </div>
+  <p>You do not need all four.</p>
+  <p>You only need to begin where you are.</p>
 </section>
 
-<section class="journals-bundle-section">
-  <div class="journals-bundle-inner">
-    <h3>Or move through all four.</h3>
-    <p>
-      Some begin with one journal and return later to another,
-      only to realize they have changed.
-    </p>
-    <a href="YOUR_AMAZON_SERIES_OR_COLLECTION_LINK" target="_blank" rel="noopener noreferrer" class="journal-button secondary">
-      Explore the full set
-    </a>
-  </div>
-</section>
-
-<section class="journals-tracker-section">
-  <div class="journals-tracker-inner">
-    <h3>Already writing?</h3>
-    <p>Continue your practice inside the journal space.</p>
-    <a href="/journal" class="journal-button ghost">
-      Open your journal
-    </a>
-  </div>
-</section>
 {% endblock %}
