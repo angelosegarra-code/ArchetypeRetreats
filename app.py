@@ -186,6 +186,10 @@ def internships():
 def journal():
     return render_template("tracker.html")
 
+@app.route('/journals')
+def journals():
+    return render_template('journals.html')
+
 # force redeploy
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
