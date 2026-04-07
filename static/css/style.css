@@ -446,3 +446,110 @@ body.home main{
   color: inherit;
   font-weight: 500;
 }
+.journals-hero {
+  background: #0b0b0b;
+  color: #f4f1ea;
+  text-align: center;
+  padding: 100px 20px 70px;
+}
+
+.journals-kicker {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.journals-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.journals-subtext {
+  color: #bbb;
+  font-size: 1.1rem;
+}
+
+.journals-grid-section {
+  background: #111;
+  padding: 60px 20px;
+}
+
+.journals-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.journal-card {
+  background: #171717;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.journal-hero-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.journal-card-content {
+  padding: 20px;
+}
+
+.journal-card h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.journal-tagline {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.journal-description {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.journal-cover-proof {
+  width: 100px;
+  margin: 15px auto;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.journal-button {
+  display: inline-block;
+  background: #f4f1ea;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.journal-button:hover {
+  background: #ddd;
+}
+
+.journals-middle-note {
+  text-align: center;
+  color: #ddd;
+  padding: 60px 20px;
+  background: #0d0d0d;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 800px) {
+  .journals-grid {
+    grid-template-columns: 1fr;
+  }
+}
