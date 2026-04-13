@@ -1,96 +1,163 @@
 {% extends "base.html" %}
-
-{% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/immersions.css') }}?v=2">
-{% endblock %}
-
 {% block content %}
-<div class="page-retreats">
 
-  <!-- HERO -->
-  <section class="immersion-hero">
+<!-- HERO -->
+<section class="hero hero-short">
   <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="eyebrow">Retreats</p>
 
-  <div class="hero-inner-wrap">
-    <h1>Archetype Immersions</h1>
+    <h1>
+      Retreats for people<br>
+      ready for real change.
+    </h1>
 
-    <p class="hero-subhead">
-      Immersive experiences centered on facilitation as a practice of presence,
-      attention, and collective learning.
+    <p class="subtext">
+      Small-group immersions in Bali for creatives, founders, and individuals in transition seeking depth, clarity, and lasting transformation.
     </p>
 
-    <div class="hero-actions">
-      <a href="#calendar" class="btn primary">Schedule a Discovery Call</a>
-      <a href="#options" class="btn soft">View Immersion Options</a>
+    <div class="hero-cta-group">
+      <a href="/apply" class="btn-primary">Apply for a Retreat</a>
+      <a href="/how-the-work-works" class="btn-secondary">How the Work Works</a>
     </div>
+  </div>
+</section>
 
-    <p class="hero-note">
-      Hosted in Bali and online. Designed for facilitators, guides, and those
-      learning how to hold space within complex human systems.
+<!-- INTRO -->
+<section class="section section-light center">
+  <h2>This Is Not an Escape From Life.</h2>
+  <p>
+    It is a return to it — with greater honesty, deeper awareness, and a different relationship to the patterns shaping it.
+  </p>
+  <p>
+    Archetype Retreats are immersive environments designed for people who sense that surface-level change is no longer enough.
+  </p>
+  <p>
+    What is needed is not more information, but a deeper reorientation.
+  </p>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="section section-soft center">
+  <h2>Who These Retreats Are For</h2>
+  <p>
+    These retreats are for those at a threshold — in work, identity, relationship, direction, or inner life.
+  </p>
+
+  <div class="three-col">
+    <div>
+      <h3>Creatives</h3>
+      <p>
+        For those whose inner world is shifting, and whose work no longer fits the same structure it once did.
+      </p>
+    </div>
+    <div>
+      <h3>Founders & Builders</h3>
+      <p>
+        For those who have created something meaningful, yet sense a deeper reorientation is now required.
+      </p>
+    </div>
+    <div>
+      <h3>People in Transition</h3>
+      <p>
+        For those moving through a life threshold and seeking a space where change can be experienced, not just understood.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS -->
+<section class="section section-light center">
+  <h2>What Happens in a Retreat</h2>
+  <p>
+    Each retreat is a carefully designed immersion that combines reflection, dialogue, archetypal inquiry, embodied practice, and the influence of place.
+  </p>
+  <p>
+    There is no single formula, but the work often includes deep conversations, guided exercises, silence, group process, and experiences designed to shift the way you see yourself and your life.
+  </p>
+  <p>
+    This is not passive learning. It is participatory, relational, and experiential.
+  </p>
+</section>
+
+<!-- RETREAT ELEMENTS -->
+<section class="section section-soft">
+  <div class="three-col">
+    <div>
+      <h3>Archetypal Inquiry</h3>
+      <p>
+        We explore the deeper roles, structures, and identities through which your life has been organized.
+      </p>
+    </div>
+    <div>
+      <h3>Embodied Experience</h3>
+      <p>
+        The work is not only intellectual. Change becomes more durable when it is encountered through the body, the environment, and lived experience.
+      </p>
+    </div>
+    <div>
+      <h3>Integration</h3>
+      <p>
+        Insight alone is not enough. Each retreat is designed to support real continuity between what happens here and how you live afterward.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SETTING -->
+<section class="section section-image">
+  <div class="image-content">
+    <h2>Why Bali</h2>
+    <p>
+      The setting is not incidental. Bali offers a depth of atmosphere, beauty, and spaciousness that supports this work in a way few places can.
+    </p>
+    <p>
+      The retreat environment is carefully chosen to create the conditions for presence, reflection, and meaningful change.
     </p>
   </div>
 </section>
-  
-  <!-- OPTIONS -->
-  <section id="options" class="retreat-options">
 
-    <!-- Facilitator -->
-    <div id="facilitator" class="retreat-option">
-      <h2>Facilitator Immersion — Bali</h2>
-      <p class="option-meta">In-person · Small group</p>
+<!-- FORMAT -->
+<section class="section section-light center">
+  <h2>The Retreat Format</h2>
+  <p>
+    Retreats are held in intimate cohorts with limited participation, allowing for depth, trust, and individual attention.
+  </p>
+  <p>
+    Some immersions are designed for small groups. Others may be private or invitation-based. All are structured to prioritize quality of experience over scale.
+  </p>
+</section>
 
-      <p>
-        An in-person immersion for those learning how to hold space
-        for individual and collective transformation.
-      </p>
+<!-- NOT FOR EVERYONE -->
+<section class="section section-soft center">
+  <h2>This Work Is Not For Everyone.</h2>
+  <p>
+    It is for those who are willing to slow down, pay attention, and enter into a more honest encounter with themselves.
+  </p>
+  <p>
+    If you are looking for entertainment, quick fixes, or a retreat that asks very little of you, this may not be the right fit.
+  </p>
+  <p>
+    But if you are ready for real depth, the invitation is here.
+  </p>
+</section>
 
-      <p>
-        This experience centers on facilitation as a relational,
-        field-based practice rather than a set of techniques.
-      </p>
+<!-- UPCOMING RETREATS / PLACEHOLDER -->
+<section class="section section-light center">
+  <h2>Upcoming Retreats</h2>
+  <p>
+    Explore current immersions, upcoming dates, and application details.
+  </p>
+  <a href="/apply" class="btn-primary">Apply for a Retreat</a>
+</section>
 
-      <a href="#calendar" class="option-link">Learn more →</a>
-    </div>
+<!-- FINAL CTA -->
+<section class="section section-dark center">
+  <h2>When the old structure no longer fits, a deeper kind of work begins.</h2>
+  <p>
+    Enter a retreat designed for clarity, reorientation, and lasting transformation.
+  </p>
+  <a href="/apply" class="btn-primary">Begin the Application</a>
+</section>
 
-    <!-- Online -->
-    <div id="online" class="retreat-option">
-      <h2>Online Immersion</h2>
-      <p class="option-meta">Guided · Remote</p>
-
-      <p>
-        A guided online entry into facilitation as a practice
-        of presence and attention for those not yet able to travel.
-      </p>
-
-      <p>
-        Designed as an orientation and threshold into the work.
-      </p>
-
-      <a href="#calendar" class="option-link">Learn more →</a>
-    </div>
-
-    <!-- Organizations -->
-    <div id="organizations" class="retreat-option">
-      <h2>Applied Facilitation — Organizations</h2>
-      <p class="option-meta">Teams · Systems · Leadership</p>
-
-      <p>
-        An application of the same facilitation principles
-        within organizational and institutional contexts.
-      </p>
-
-      <p>
-        Focused on how groups learn, adapt,
-        and coordinate under complexity.
-      </p>
-
-      <a href="/alchemy/organizations" class="option-link">Learn more →</a>
-    </div>
-
-  </section>
-
-  <!-- CALENDAR ANCHOR -->
-  <section id="calendar"></section>
-
-</div>
 {% endblock %}
