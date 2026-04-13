@@ -688,3 +688,33 @@ body.home main{
     grid-template-columns: 1fr;
   }
 }
+/* ===== Retreat Page Spacing Fix ===== */
+
+.section {
+  padding: 60px 0;
+}
+
+.section-soft {
+  padding: 50px 0;
+}
+
+.three-col {
+  margin-top: 1.5rem;
+  gap: 1.25rem;
+}
+
+.three-col h3 {
+  margin-bottom: 0.5rem;
+}
+
+.three-col p {
+  margin-bottom: 0;
+}
+
+.section.center p,
+.section.center .subhead,
+.section.center .section-intro {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
