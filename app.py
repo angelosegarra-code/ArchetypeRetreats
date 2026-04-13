@@ -190,6 +190,10 @@ def journal():
 def journals():
     return render_template('journals.html')
 
+@app.route('/retreat-format')
+def retreat_format():
+    return render_template('retreat-format.html')
+
 # force redeploy
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
