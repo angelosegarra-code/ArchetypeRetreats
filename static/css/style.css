@@ -718,3 +718,140 @@ body.home main{
   margin-left: auto;
   margin-right: auto;
 }
+/* =========================
+   TRACKER – ENTRIES SECTION
+========================= */
+
+.entries-card-inner p {
+  color: #5b564f;
+  line-height: 1.6;
+}
+
+.entry-card {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #f7f2e8;
+  border: 1px solid #e2d8c8;
+  transition: all 0.2s ease;
+}
+
+.entry-card:hover {
+  background: #f3eee3;
+}
+
+.entry-card p {
+  margin: 0 0 10px;
+}
+
+.entry-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   TRACKER – STRUCTURE / CARDS
+========================= */
+
+.pattern-card,
+.form-card,
+.support-card,
+.community-card,
+.entries-card {
+  background: #fbf8f1;
+  border: 1px solid #e4ddd0;
+  border-radius: 18px;
+  padding: 28px;
+  margin-top: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.pattern-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.pattern-note {
+  color: #6a655d;
+  font-size: 0.95rem;
+}
+
+.divider {
+  color: #8d877d;
+  margin: 0 8px;
+}
+
+
+/* =========================
+   SHARING (COMMUNITY LAYER)
+========================= */
+
+.sharing-options {
+  margin-top: 22px;
+  padding: 16px 18px;
+  background: #f3eee3;
+  border-radius: 12px;
+  border: 1px solid #e1d8c7;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.checkbox-row input {
+  width: auto;
+  margin: 0;
+}
+
+.sharing-note {
+  margin: 10px 0 0;
+  color: #6a655d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   SUPPORT LINKS (BOOKS / JOURNALS)
+========================= */
+
+.support-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.support-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #efe7d8;
+  color: #2f3b73;
+  border: 1px solid #ddd2bf;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.support-link:hover {
+  background: #e7ddcb;
+}
+
+
+/* =========================
+   COMMUNITY PREVIEW (FUTURE)
+========================= */
+
+.community-preview {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #f7f2e8;
+  border: 1px dashed #d5cab5;
+  color: #6a655d;
+}
