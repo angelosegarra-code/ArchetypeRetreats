@@ -1,24 +1,33 @@
 {% extends "base.html" %}
-{% block title %} – Books{% endblock %}
+{% block title %} – Books & Journals{% endblock %}
 
 {% block content %}
 <section class="section book-page">
   <div class="container" style="text-align:center; max-width:1100px;">
 
-    <h1>Books by Angelo Segarra</h1>
+    <h1>Books & Journals by Angelo Segarra</h1>
 
-    <h3 style="margin-top:10px; letter-spacing:1px; color:#888;">Ideas and Explorations</h3>
+    <h3 style="margin-top:10px; letter-spacing:1px; color:#888;">Ideas, Reflections, and Inner Work</h3>
 
-    <p style="max-width:700px; margin:auto; margin-top:12px;">
-      These books explore perception, creativity, intuition, and transformation.
-      Each approaches the question of change from a different perspective — philosophy, art, archetype, and practice.
+    <p style="max-width:760px; margin:auto; margin-top:12px;">
+      These books and journals explore perception, creativity, intuition, and transformation.
+      Some offer a deeper philosophical framework. Others offer a daily structure for reflection,
+      clarity, and change.
     </p>
+
+    <!-- BOOKS -->
+    <div style="margin-top:60px;">
+      <h2 style="margin-bottom:10px;">Books</h2>
+      <p style="max-width:700px; margin:auto; color:#777;">
+        Longer works exploring change, art, intuition, and meaning.
+      </p>
+    </div>
 
     <div style="
       display:grid;
       grid-template-columns:repeat(2, minmax(260px,1fr));
       gap:50px 40px;
-      margin-top:50px;
+      margin-top:40px;
       align-items:start;
     ">
 
@@ -36,9 +45,7 @@
         </div>
 
         <div class="button-row" style="justify-content:center; margin-top:15px;">
-          <a class="button primary"
-             href="https://your-gumroad-link"
-             target="_blank" rel="noopener">Get the Book</a>
+          <span class="button primary" style="opacity:0.65; cursor:default;">Available Soon</span>
         </div>
       </div>
 
@@ -74,6 +81,10 @@
             alt="Painting to Poetry book cover"
             style="height:320px; width:auto; margin:auto; display:block; object-fit:contain;">
         </div>
+
+        <div class="button-row" style="justify-content:center; margin-top:15px;">
+          <span class="button primary" style="opacity:0.65; cursor:default;">Available Soon</span>
+        </div>
       </div>
 
       <!-- TIMELESS FORM -->
@@ -87,6 +98,108 @@
             src="{{ url_for('static', filename='images/UNADJUSTEDNONRAW_thumb_3d90.jpg') }}"
             alt="Timeless Form book cover"
             style="height:320px; width:auto; margin:auto; display:block; object-fit:contain;">
+        </div>
+
+        <div class="button-row" style="justify-content:center; margin-top:15px;">
+          <span class="button primary" style="opacity:0.65; cursor:default;">Available Soon</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- JOURNALS -->
+    <div style="margin-top:80px;">
+      <h2 style="margin-bottom:10px;">InnerCube Journals</h2>
+      <p style="max-width:760px; margin:auto; color:#777;">
+        The app helps you notice the pattern. The journals help you work through it.
+      </p>
+    </div>
+
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(2, minmax(260px,1fr));
+      gap:50px 40px;
+      margin-top:40px;
+      align-items:start;
+    ">
+
+      <!-- DREAMER -->
+      <div>
+        <h2>Dreamer Journal</h2>
+        <p style="font-style:italic; color:#888; margin-top:6px;">A 30-day guided journey into imagination and possibility.</p>
+        <p>For those exploring creativity, self-discovery, and the space where something new begins to take shape.</p>
+
+        <div class="book-mockup">
+          <img
+            src="{{ url_for('static', filename='images/dreamer-journal.jpg') }}"
+            alt="Dreamer Journal cover"
+            style="height:320px; width:auto; margin:auto; display:block; object-fit:contain;">
+        </div>
+
+        <div class="button-row" style="justify-content:center; margin-top:15px;">
+          <a class="button primary"
+             href="https://www.amazon.com/dp/B0GV4RF94Z"
+             target="_blank" rel="noopener">View on Amazon</a>
+        </div>
+      </div>
+
+      <!-- OBSERVER -->
+      <div>
+        <h2>Observer Journal</h2>
+        <p style="font-style:italic; color:#888; margin-top:6px;">A 30-day guided journey into awareness and clear seeing.</p>
+        <p>For those drawn to reflection, perception, and the deeper patterns that shape thought and behavior.</p>
+
+        <div class="book-mockup">
+          <img
+            src="{{ url_for('static', filename='images/observer-journal.jpg') }}"
+            alt="Observer Journal cover"
+            style="height:320px; width:auto; margin:auto; display:block; object-fit:contain;">
+        </div>
+
+        <div class="button-row" style="justify-content:center; margin-top:15px;">
+          <a class="button primary"
+             href="https://www.amazon.com/dp/B0GVFXKZ2D"
+             target="_blank" rel="noopener">View on Amazon</a>
+        </div>
+      </div>
+
+      <!-- ALCHEMIST -->
+      <div>
+        <h2>Alchemist Journal</h2>
+        <p style="font-style:italic; color:#888; margin-top:6px;">A 30-day guided journey into transformation and inner movement.</p>
+        <p>For those working with change, transition, and the subtle process of becoming something new.</p>
+
+        <div class="book-mockup">
+          <img
+            src="{{ url_for('static', filename='images/alchemist-journal.jpg') }}"
+            alt="Alchemist Journal cover"
+            style="height:320px; width:auto; margin:auto; display:block; object-fit:contain;">
+        </div>
+
+        <div class="button-row" style="justify-content:center; margin-top:15px;">
+          <a class="button primary"
+             href="https://www.amazon.com/dp/B0GVKRJK69"
+             target="_blank" rel="noopener">View on Amazon</a>
+        </div>
+      </div>
+
+      <!-- VISIONARY -->
+      <div>
+        <h2>Visionary Journal</h2>
+        <p style="font-style:italic; color:#888; margin-top:6px;">A 30-day guided journey into purpose, clarity, and inner direction.</p>
+        <p>For those listening for direction, refining vision, and learning to recognize what is ready to emerge.</p>
+
+        <div class="book-mockup">
+          <img
+            src="{{ url_for('static', filename='images/visionary-journal.jpg') }}"
+            alt="Visionary Journal cover"
+            style="height:320px; width:auto; margin:auto; display:block; object-fit:contain;">
+        </div>
+
+        <div class="button-row" style="justify-content:center; margin-top:15px;">
+          <a class="button primary"
+             href="https://www.amazon.com/dp/B0GWQ1VM23"
+             target="_blank" rel="noopener">View on Amazon</a>
         </div>
       </div>
 
