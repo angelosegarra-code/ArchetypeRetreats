@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% block title %}InnerCube Test · Archetype Retreats{% endblock %}
+{% block title %}InnerCube · Archetype Retreats{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/innercube.css') }}?v=2004">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/innercube.css') }}?v=2005">
 {% endblock %}
 
 {% block content %}
@@ -10,38 +10,48 @@
 <!-- HERO SECTION -->
 <section class="ic-hero">
   <div class="ic-wrap">
-    <h1 class="ic-title">The InnerCube Test</h1>
-    <p class="ic-subtitle">
-      Five symbols. One inner landscape.<br>
-      Begin your short journey below to uncover your creative archetype.
-    </p>
-  </div>
-</section>
+    <h1 class="ic-title">InnerCube</h1>
 
-<!-- INSTRUCTION SECTION -->
-<section class="ic-steps">
-  <div class="ic-wrap">
-    <h2 class="ic-steps-title">How It Works</h2>
-    <div class="ic-steps-grid">
-      <div class="ic-step">
-        <h3>Step 1 — Imagine</h3>
-        <p>Close your eyes and picture a desert. As the questions appear, let your imagination guide you rather than your logic.</p>
-      </div>
-      <div class="ic-step">
-        <h3>Step 2 — Choose</h3>
-        <p>Select the images or words that feel right to you — there are no wrong answers. Each response reflects a part of your inner world.</p>
-      </div>
-      <div class="ic-step">
-        <h3>Step 3 — Discover</h3>
-        <p>At the end, you’ll see your primary archetype and receive a personalized creative report in your inbox.</p>
-      </div>
+    <p class="ic-subtitle">
+      A reflective way to see the pattern you may already be living.
+    </p>
+
+    <p class="ic-subtle">
+      This is less a test than a mirror.<br>
+      It does not define you. It reflects where you are.
+    </p>
+
+    <div style="margin-top:20px;">
+      <a href="#test-start" class="button primary">Begin the Reflection</a>
     </div>
   </div>
 </section>
 
-<!-- TALLY FORM EMBED -->
-<section class="ic-body">
+<!-- INTRO / FRAME -->
+<section class="ic-steps">
   <div class="ic-wrap">
+
+    <p style="max-width:700px; margin:auto; text-align:center;">
+      The four archetypes are not fixed identities.
+      They are patterns of orientation that appear at different moments in life.
+    </p>
+
+    <p style="max-width:700px; margin:10px auto 0; text-align:center; color:#777;">
+      The Dreamer imagines. The Observer sees.
+      The Alchemist transforms. The Visionary senses direction.
+    </p>
+
+  </div>
+</section>
+
+<!-- TALLY FORM EMBED -->
+<section id="test-start" class="ic-body">
+  <div class="ic-wrap">
+
+    <p style="text-align:center; color:#777; margin-bottom:15px;">
+      Move slowly. Choose what feels true, not what sounds right.
+    </p>
+
     <iframe
       src="https://tally.so/embed/w2YBZ9?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
       width="100%"
@@ -49,10 +59,11 @@
       frameborder="0"
       marginheight="0"
       marginwidth="0"
-      title="InnerCube Test"
+      title="InnerCube Reflection"
       style="display:block;"
       allow="fullscreen">
     </iframe>
+
   </div>
 </section>
 
@@ -60,8 +71,8 @@
 <section class="ic-info">
   <div class="ic-wrap">
     <p>
-      Once you complete the test, your archetype results will be revealed instantly.<br>
-      You’ll also receive a personalized 3-page creative report in your inbox.
+      At the end, a pattern will begin to emerge.<br>
+      You’ll also receive a deeper reflection in your inbox.
     </p>
   </div>
 </section>
