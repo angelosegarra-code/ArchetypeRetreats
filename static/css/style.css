@@ -855,3 +855,102 @@ body.home main{
   border: 1px dashed #d5cab5;
   color: #6a655d;
 }
+/* =========================
+   INNERCUBE BRIDGE CARD
+========================= */
+
+.archetype-bridge-card {
+  background: #f8f4eb;              /* same tone as your site */
+  border: 1px solid #e3dacb;
+  border-radius: 18px;
+  padding: 28px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.archetype-bridge-card h2 {
+  color: #2f3b73;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.archetype-bridge-card p {
+  color: #5b564f;
+  line-height: 1.65;
+  max-width: 620px;
+  margin: 0 auto 10px;
+}
+
+.archetype-bridge-card .bridge-note {
+  color: #7a746b;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.bridge-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.archetype-bridge-card:hover {
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* =========================
+   GO DEEPER SECTION (SUPPORT CARD)
+========================= */
+
+.support-card {
+  background: #fbf8f1;
+  border: 1px solid #e4ddd0;
+  border-radius: 18px;
+  padding: 28px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.support-card h2 {
+  color: #2f3b73;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.45rem;
+}
+
+.support-card p {
+  color: #5b564f;
+  line-height: 1.65;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.support-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.support-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #efe7d8;
+  color: #2f3b73;
+  border: 1px solid #ddd2bf;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.support-link:hover {
+  background: #e7ddcb;
+  transform: translateY(-1px);
+}
