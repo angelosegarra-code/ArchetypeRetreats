@@ -777,3 +777,11 @@
     padding: 76px 20px;
   }
 }
+.retreat-hero {
+  position: relative;
+  min-height: 95vh;
+  width: 100%;
+  background: url('/static/images/bali-hero.jpg') center center / cover no-repeat !important;
+  display: flex;
+  align-items: center;
+}
