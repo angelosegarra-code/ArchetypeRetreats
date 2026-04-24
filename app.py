@@ -138,7 +138,7 @@ def innercube_thankyou():
     
 @app.route('/retreats')
 def retreats_page():
-    return render_template('retreats.html')
+    return render_template('retreats-new.html')
     
 @app.route('/shop')
 def shop_page():
