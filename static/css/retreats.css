@@ -524,11 +524,58 @@
 }
 .retreat-hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 95vh;
+  width: 100%;
 
-  background: url('/static/images/bali-hero.jpg') center/cover no-repeat;
+  background: url('/static/images/bali-hero.jpg') center center / cover no-repeat;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(15, 18, 15, 0.25),
+    rgba(15, 18, 15, 0.55)
+  );
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+
+  max-width: 720px;
+  margin-left: 8%;
+  padding: 120px 24px;
+
+  text-align: left;
+}
+.hero-inner h1 {
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  line-height: 1.08;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero-subhead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 30px;
+}
+.btn.primary {
+  background: #c9a451;
+  color: #1f241f;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-weight: 500;
+}
+
+.btn.soft {
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  background: transparent;
 }
