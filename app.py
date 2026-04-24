@@ -138,8 +138,8 @@ def innercube_thankyou():
     
 @app.route('/retreats')
 def retreats_page():
-    return redirect('/immersions', code=301)
-
+    return render_template('retreats.html')
+    
 @app.route('/shop')
 def shop_page():
     return render_template('shop.html')
