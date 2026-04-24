@@ -785,3 +785,47 @@
   display: flex;
   align-items: center;
 }
+/* HERO READABILITY FIX */
+.retreat-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(15, 18, 15, 0.45),
+    rgba(15, 18, 15, 0.65)
+  );
+  z-index: 1;
+}
+
+.retreat-hero .hero-overlay {
+  display: none;
+}
+
+.retreat-hero .hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 24px;
+  text-align: center;
+}
+
+.retreat-hero .eyebrow,
+.retreat-hero h1,
+.retreat-hero .hero-subhead,
+.retreat-hero .hero-note {
+  color: #ffffff !important;
+}
+
+.retreat-hero .hero-subhead,
+.retreat-hero .hero-note {
+  text-shadow: 0 2px 18px rgba(0,0,0,0.45);
+}
+
+.retreat-hero h1 {
+  text-shadow: 0 4px 28px rgba(0,0,0,0.5);
+}
+
+.retreat-hero .hero-note {
+  opacity: 0.9;
+}
