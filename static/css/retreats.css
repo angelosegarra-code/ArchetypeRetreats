@@ -437,3 +437,88 @@
 .sticky-cta:hover {
   background: #1f4a42;
 }
+.narrow {
+  max-width: 820px;
+}
+
+.center {
+  text-align: center;
+}
+
+.section-soft {
+  background: #f5f1e8;
+}
+
+.section-dark {
+  background: #1f241f;
+  color: #f5f1e8;
+}
+
+.section-dark p,
+.section-dark h2 {
+  color: #f5f1e8;
+}
+
+.emphasis {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.insight-section {
+  text-align: center;
+}
+
+.insight-lead {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+.pattern-break {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin: 30px 0;
+  color: #1f241f;
+}
+
+.insight-core {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 30px 0;
+  color: #1f241f;
+}
+
+.insight-shift {
+  font-size: 1.4rem;
+  margin: 40px 0;
+  color: #7a5a2c;
+  font-weight: 500;
+}
+
+.insight-bridge {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.pricing-card.featured {
+  border: 1px solid rgba(122, 90, 44, 0.45);
+  box-shadow: 0 24px 70px rgba(31, 36, 31, 0.12);
+}
+
+.best-fit {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  color: #7a5a2c;
+  font-weight: 600;
+}
+
+.microcopy {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.pricing-note,
+.call-flow-cta {
+  max-width: 720px;
+  margin: 48px auto 0;
+}
