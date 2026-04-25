@@ -322,6 +322,7 @@ body.home main{
 .hero {
   position: relative;
   background: url('/static/images/retreat-hero.jpg') center/cover no-repeat;
+  filter: brightness(1.1) contrast(1.05);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -334,7 +335,10 @@ body.home main{
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: linear-gradient(
+    rgba(20, 25, 20, 0.25),
+    rgba(20, 25, 20, 0.45)
+  );
 }
 
 .hero-content {
