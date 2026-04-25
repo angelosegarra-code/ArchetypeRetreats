@@ -837,3 +837,32 @@
   font-weight: 600;
   box-shadow: 0 16px 40px rgba(0,0,0,0.25);
 }
+.call-benefits {
+  display: grid !important;
+  gap: 16px !important;
+  margin: 36px 0 !important;
+}
+
+.call-benefit {
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  padding: 16px 18px !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+.call-benefit span {
+  color: #c9a451 !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.12em !important;
+  font-weight: 700 !important;
+  min-width: 32px !important;
+}
+
+.call-benefit p {
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 1rem !important;
+}
