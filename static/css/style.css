@@ -949,3 +949,86 @@ body.home main{
   background: #e7ddcb;
   transform: translateY(-1px);
 }
+/* ===== PREMIUM HERO — FINAL ===== */
+
+.retreat-hero {
+  position: relative;
+  min-height: 100vh;
+  background: url('/static/images/retreat-hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  color: #fff;
+
+  /* subtle lift */
+  filter: brightness(1.08) contrast(1.05);
+}
+
+/* cinematic but light */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(18, 22, 18, 0.18),
+    rgba(18, 22, 18, 0.48)
+  );
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+}
+
+/* top line */
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+/* main headline */
+.retreat-hero h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.04;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin-bottom: 26px;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+/* subtext */
+.hero-subtext {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  opacity: 0.9;
+}
+
+/* buttons */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn.primary {
+  background: rgba(245,241,232,0.95);
+  color: #1f241f;
+  padding: 16px 28px;
+  text-decoration: none;
+}
+
+.btn.soft {
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  padding: 16px 28px;
+  text-decoration: none;
+  background: rgba(255,255,255,0.05);
+}
