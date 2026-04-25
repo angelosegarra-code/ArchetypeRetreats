@@ -867,3 +867,111 @@
   color: #2a2f2a !important;
   font-size: 1rem !important;
 }
+/* FINAL CALENDAR SECTION — CLEAN RESET */
+.calendar-final {
+  background: #f5f1e8 !important;
+  padding: 110px 24px !important;
+}
+
+.calendar-final-wrap {
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: 0.9fr 1.1fr !important;
+  gap: 42px !important;
+  align-items: start !important;
+}
+
+.calendar-copy-card {
+  background: #1f241f !important;
+  color: #f5f1e8 !important;
+  border-radius: 32px !important;
+  padding: 54px 42px !important;
+  box-shadow: 0 24px 70px rgba(31, 36, 31, 0.16) !important;
+}
+
+.calendar-kicker {
+  color: #c9a451 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.14em !important;
+  font-size: 0.75rem !important;
+  margin-bottom: 18px !important;
+}
+
+.calendar-copy-card h2 {
+  color: #ffffff !important;
+  font-size: clamp(2.2rem, 4vw, 3.6rem) !important;
+  line-height: 1.08 !important;
+  margin-bottom: 24px !important;
+}
+
+.calendar-lead {
+  color: rgba(245, 241, 232, 0.86) !important;
+  font-size: 1.08rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 34px !important;
+}
+
+.calendar-steps {
+  display: grid !important;
+  gap: 14px !important;
+  margin: 36px 0 !important;
+}
+
+.calendar-step {
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 18px !important;
+  padding: 16px 18px !important;
+}
+
+.calendar-step span {
+  color: #c9a451 !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.12em !important;
+  font-weight: 700 !important;
+  min-width: 34px !important;
+}
+
+.calendar-step p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin: 0 !important;
+  font-size: 1rem !important;
+  line-height: 1.45 !important;
+}
+
+.calendar-reassurance {
+  color: rgba(245, 241, 232, 0.72) !important;
+  font-size: 0.98rem !important;
+  margin-top: 28px !important;
+}
+
+.calendar-widget-card {
+  background: #ffffff !important;
+  border-radius: 32px !important;
+  padding: 18px !important;
+  box-shadow: 0 24px 80px rgba(31, 36, 31, 0.16) !important;
+  overflow: hidden !important;
+}
+
+.calendar-widget-card .calendly-inline-widget {
+  border-radius: 22px !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 900px) {
+  .calendar-final {
+    padding: 80px 18px !important;
+  }
+
+  .calendar-final-wrap {
+    grid-template-columns: 1fr !important;
+  }
+
+  .calendar-copy-card {
+    padding: 42px 26px !important;
+  }
+}
