@@ -854,7 +854,8 @@
 }
 
 .call-benefit span {
-  color: #c9a451 !important;
+  color: #a8842f !important;
+}
   font-size: 0.78rem !important;
   letter-spacing: 0.12em !important;
   font-weight: 700 !important;
@@ -863,6 +864,6 @@
 
 .call-benefit p {
   margin: 0 !important;
-  color: rgba(255, 255, 255, 0.88) !important;
+  color: #2a2f2a !important;
   font-size: 1rem !important;
 }
