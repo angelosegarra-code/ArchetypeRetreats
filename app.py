@@ -198,4 +198,6 @@ def retreat_format():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
 
-
+@app.route("/start")
+def start():
+    return render_template("start.html")
