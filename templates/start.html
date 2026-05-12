@@ -1,63 +1,149 @@
-{% extends "base.html" %}
-
-{% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/start.css') }}?v=1">
-{% endblock %}
-
 {% block content %}
 
 <section class="start-page">
 
+  <!-- HERO -->
   <div class="start-hero">
-    <p class="eyebrow">Start here</p>
+    <p class="eyebrow">Between the Lines</p>
 
-    <h1>What can’t be replicated?</h1>
+    <h1>Some things can only be understood through experience.</h1>
 
     <p class="intro">
-      A quiet doorway into story, reflection, and the part of human creativity
-      that cannot be copied.
+      Books, journals, and reflections on creativity, awareness,
+      memory, and the patterns that shape our lives.
     </p>
   </div>
 
-  <div class="start-links">
+  <!-- JOURNALS -->
+  <section class="start-section journals-section">
 
-    <!-- BOOK -->
-    <div class="start-card featured">
-      <p class="card-label">The Story</p>
-      <h2>The Last Human Creator</h2>
-      <p class="format-note">Available now on Kindle</p>
-        A story about creativity, consciousness, love, and artificial intelligence.
-      </p>
-      <a href="https://bit.ly/4cPyIbl" class="start-button" target="_blank">
-  Read the story
-</a>
-      </a>
-    </div>
+    <div class="section-text">
+      <p class="section-label">The Journals</p>
 
-    <!-- JOURNALS -->
-    <div class="start-card">
-      <p class="card-label">The Practice</p>
-      <h2>Guided Journals</h2>
+      <h2>The Creation Journals</h2>
+
       <p>
-        If something in you wants to explore further, begin with reflection.
+        Four guided journals exploring imagination, awareness,
+        transformation, and purpose.
       </p>
-      <a href="/journals" class="start-button secondary">
+
+      <p class="section-note">
+        Begin anywhere.
+      </p>
+
+      <a href="/journals" class="start-button">
         Explore the journals
       </a>
     </div>
 
-    <!-- INNERCUBE -->
-    <div class="start-card">
-      <p class="card-label">The Mirror</p>
-      <h2>InnerCube</h2>
-      <p>
-        Not everything can be replicated. This is where you begin to see what is yours.
-      </p>
-      <a href="/innercube" class="start-button secondary">
-        Enter the InnerCube
-      </a>
+    <div class="section-visual">
+      <img src="{{ url_for('static', filename='images/journals-stack.png') }}"
+           alt="The Creation Journals">
     </div>
 
+  </section>
+
+  <!-- BOOKS -->
+  <section class="start-section books-section">
+
+    <div class="books-header">
+      <p class="section-label">The Books</p>
+
+      <h2>Books by Angelo Segarra</h2>
+
+      <p>
+        Reflections on change, creativity, art, memory, and consciousness.
+      </p>
+    </div>
+
+    <div class="book-grid">
+
+      <!-- Alchemy -->
+      <div class="book-card">
+        <img src="{{ url_for('static', filename='images/alchemy-book.jpg') }}"
+             alt="The Alchemy of Change">
+
+        <h3>The Alchemy of Change</h3>
+
+        <p>
+          Why patterns repeat — and how awareness begins to transform them.
+        </p>
+
+        <a href="/alchemy" class="start-button secondary">
+          Explore
+        </a>
+      </div>
+
+      <!-- Painting to Poetry -->
+      <div class="book-card">
+        <img src="{{ url_for('static', filename='images/painting-poetry.jpg') }}"
+             alt="Painting to Poetry">
+
+        <h3>Painting to Poetry</h3>
+
+        <p>
+          A meditation on art, meaning, and the silent language of color.
+        </p>
+
+        <a href="/paintingtopoetry" class="start-button secondary">
+          Explore
+        </a>
+      </div>
+
+      <!-- Last Human Creator -->
+      <div class="book-card">
+        <img src="{{ url_for('static', filename='images/last-human.jpg') }}"
+             alt="The Last Human Creator">
+
+        <h3>The Last Human Creator</h3>
+
+        <p>
+          A cinematic story about memory, love, and what machines may never understand.
+        </p>
+
+        <a href="https://bit.ly/4cPyIbl"
+           class="start-button secondary"
+           target="_blank">
+          Read
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- INNERCUBE -->
+  <section class="start-section innercube-section">
+
+    <div class="innercube-content">
+
+      <p class="section-label">The Mirror</p>
+
+      <h2>InnerCube</h2>
+
+      <p>
+        A symbolic reflection designed to help you recognize
+        the patterns shaping your experience.
+      </p>
+
+      <p class="section-note">
+        Not a personality test.
+        A doorway into reflection.
+      </p>
+
+      <a href="/innercube" class="start-button">
+        Enter the InnerCube
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FINAL -->
+  <div class="closing-line">
+    <p>
+      Some things cannot be copied.
+    </p>
   </div>
 
 </section>
