@@ -1,7 +1,12 @@
+{% extends "base.html" %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/start.css') }}?v=2">
+{% endblock %}
+
 {% block content %}
 
 <section class="start-page">
-
   <!-- HERO -->
   <div class="start-hero">
     <p class="eyebrow">Between the Lines</p>
