@@ -346,8 +346,8 @@ body.home main{
 .hero-cta-group {
   display: flex;
   gap: 18px;
-  flex-wrap: wrap;
   justify-content: center;
+  margin-top: 340px;
 }
 
 /* SECTIONS */
