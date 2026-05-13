@@ -414,15 +414,13 @@ body.home main{
 /* BUTTONS */
 
 .btn-primary {
-  background: white;
-  color: black;
-  padding: 14px 30px;
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-block;
-  transition: 0.3s;
+  background: rgba(255,255,255,0.92);
+  color: #111;
+  border-radius: 14px;
+  padding: 16px 30px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
 }
-
 .btn-primary:hover {
   opacity: 0.8;
 }
