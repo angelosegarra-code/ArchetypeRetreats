@@ -1032,3 +1032,40 @@ body.home main{
   text-decoration: none;
   background: rgba(255,255,255,0.05);
 }
+.homepage-archetype-grid {
+  max-width: 1100px;
+  margin: 56px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.homepage-archetype-card {
+  background: #f5f1e8;
+  border-radius: 24px;
+  padding: 36px;
+  text-align: left;
+  box-shadow: 0 18px 50px rgba(31, 36, 31, 0.06);
+}
+
+.homepage-archetype-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #1f241f;
+}
+
+.homepage-archetype-card p {
+  color: #3f463d;
+  line-height: 1.7;
+}
+
+.section-soft .homepage-archetype-card {
+  background: rgba(255,255,255,0.64);
+}
+
+@media (max-width: 800px) {
+  .homepage-archetype-grid {
+    grid-template-columns: 1fr;
+  }
+}
