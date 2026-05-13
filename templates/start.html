@@ -1,69 +1,136 @@
 {% extends "base.html" %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/start.css') }}?v=6">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/start.css') }}?v=7">
 {% endblock %}
 
 {% block content %}
 
 <section class="start-page">
-  <!-- HERO -->
-  <div class="start-hero">
-    <p class="eyebrow">Between the Lines</p>
 
-    <h1>Some things can only be understood through experience.</h1>
+  <!-- HERO OFFER -->
+  <section class="start-offer-hero">
+    <div class="start-offer-inner">
 
-    <p class="intro">
-      Books, journals, and reflections on creativity, awareness,
-      memory, and the patterns that shape our lives.
-    </p>
-  </div>
+      <img
+        src="{{ url_for('static', filename='images/hero-archetype.jpg') }}"
+        alt="Online Introduction to Archetype Retreats"
+        class="start-offer-image"
+      >
 
-  <!-- JOURNALS -->
+      <div class="start-offer-copy">
+        <p class="eyebrow">Live Online • Monthly</p>
+
+        <h1>Online Introduction to Archetype Retreats</h1>
+
+        <p class="intro">
+          A 90-minute immersive workshop for men ready to stop abandoning
+          themselves for approval and reconnect with their core masculine archetype.
+        </p>
+
+        <a href="https://www.paypal.com/ncp/payment/A5J8QN7PC68Z2"
+           class="start-button primary"
+           target="_blank"
+           rel="noopener">
+          Reserve Your Spot — $47
+        </a>
+
+        <p class="section-note">
+          Live via Zoom • 8:00 PM – 9:30 PM WIB • Held every month
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT THIS IS -->
+  <section class="start-section innercube-section">
+    <div class="innercube-content">
+      <p class="section-label">The Work</p>
+
+      <h2>Stop grasping for validation. Return to yourself.</h2>
+
+      <p>
+        Many men spend years over-performing, over-giving, and shape-shifting
+        to be chosen, respected, or seen.
+      </p>
+
+      <p>
+        This introduction is a doorway into the four masculine archetypes:
+        Dreamer, Visionary, Observer, and Alchemist.
+      </p>
+
+      <p>
+        Through guided reflection and embodied inquiry, you will begin to see
+        where you have been abandoning your own nature — and how to return to it.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOUR ARCHETYPES -->
   <section class="start-section journals-section">
 
     <div class="section-text">
-      <p class="section-label">The Journals</p>
+      <p class="section-label">The Four Archetypes</p>
 
-      <h2>The Creation Journals</h2>
+      <h2>Dreamer. Visionary. Observer. Alchemist.</h2>
 
       <p>
-        Four guided journals exploring imagination, awareness,
-        transformation, and purpose.
+        Each archetype carries a different form of masculine intelligence:
+        imagination, direction, discernment, and transformation.
       </p>
 
-      <p class="section-note">
-        Begin anywhere.
+      <p>
+        When you resist your archetype, you feel divided.
+        When you embody it, your life begins to move from a clearer center.
       </p>
 
-      <a href="/journals" class="start-button">
-        Explore the journals
+      <a href="https://www.paypal.com/ncp/payment/A5J8QN7PC68Z2"
+         class="start-button"
+         target="_blank"
+         rel="noopener">
+        Reserve Your Spot — $47
       </a>
     </div>
 
     <div class="section-visual">
-      <img src="{{ url_for('static', filename='images/creation-journals.jpg') }}"
-     alt="The Creation Journals">
+      <img src="{{ url_for('static', filename='images/hero-archetype.jpg') }}"
+           alt="The Four Masculine Archetypes">
     </div>
 
   </section>
 
-  <!-- BOOKS -->
+  <!-- CONTINUE ELSEWHERE -->
   <section class="start-section books-section">
 
     <div class="books-header">
-      <p class="section-label">The Books</p>
+      <p class="section-label">Continue the Work</p>
 
-      <h2>Books by Angelo Segarra</h2>
+      <h2>Not Ready for the Workshop?</h2>
 
       <p>
-        Reflections on change, creativity, art, memory, and consciousness.
+        You can also begin through the journals, books, or InnerCube reflection.
       </p>
     </div>
 
     <div class="book-grid">
 
-      <!-- Alchemy -->
+      <div class="book-card">
+        <img src="{{ url_for('static', filename='images/creation-journals.jpg') }}"
+             alt="The Creation Journals">
+
+        <h3>The Journals</h3>
+
+        <p>
+          Four guided journals exploring imagination, awareness,
+          transformation, and purpose.
+        </p>
+
+        <a href="/journals" class="start-button secondary">
+          Explore
+        </a>
+      </div>
+
       <div class="book-card">
         <img src="{{ url_for('static', filename='images/alchemy-book.jpg') }}"
              alt="The Alchemy of Change">
@@ -71,7 +138,7 @@
         <h3>The Alchemy of Change</h3>
 
         <p>
-          Why patterns repeat — and how awareness begins to transform them.
+          A deeper written exploration of patterns, perception, and transformation.
         </p>
 
         <a href="/alchemy" class="start-button secondary">
@@ -79,66 +146,21 @@
         </a>
       </div>
 
-      <!-- Painting to Poetry -->
-      <div class="book-card">
-        <img src="{{ url_for('static', filename='images/painting-poetry.jpg') }}"
-             alt="Painting to Poetry">
-
-        <h3>Painting to Poetry</h3>
-
-        <p>
-          A meditation on art, meaning, and the silent language of color.
-        </p>
-
-        <a href="/paintingtopoetry" class="start-button secondary">
-          Explore
-        </a>
-      </div>
-
-      <!-- Last Human Creator -->
       <div class="book-card">
         <img src="{{ url_for('static', filename='images/last-human.jpg') }}"
              alt="The Last Human Creator">
 
-        <h3>The Last Human Creator</h3>
+        <h3>InnerCube</h3>
 
         <p>
-          A cinematic story about memory, love, and what machines may never understand.
+          A symbolic reflection designed to help you recognize the pattern
+          shaping your experience.
         </p>
 
-        <a href="https://bit.ly/4cPyIbl"
-           class="start-button secondary"
-           target="_blank">
-          Read
+        <a href="/innercube" class="start-button secondary">
+          Enter
         </a>
       </div>
-
-    </div>
-
-  </section>
-
-  <!-- INNERCUBE -->
-  <section class="start-section innercube-section">
-
-    <div class="innercube-content">
-
-      <p class="section-label">The Mirror</p>
-
-      <h2>InnerCube</h2>
-
-      <p>
-        A symbolic reflection designed to help you recognize
-        the patterns shaping your experience.
-      </p>
-
-      <p class="section-note">
-        Not a personality test.
-        A doorway into reflection.
-      </p>
-
-      <a href="/innercube" class="start-button">
-        Enter the InnerCube
-      </a>
 
     </div>
 
@@ -147,7 +169,7 @@
   <!-- FINAL -->
   <div class="closing-line">
     <p>
-      Some things cannot be copied.
+      Stop abandoning yourself for approval. Return to the man you already are.
     </p>
   </div>
 
