@@ -1053,13 +1053,30 @@ body.home main{
     grid-template-columns: 1fr;
   }
   
+/* FINAL HOMEPAGE PAYPAL CTA */
 .hero-button-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 20px 100px;
-  margin-top: -40px;
-  position: relative;
-  z-index: 20;
-  background: transparent;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 70px 20px 90px !important;
+  margin-top: 0 !important;
+  position: relative !important;
+  z-index: 20 !important;
+  background: #0f1216 !important;
+}
+
+.hero-button-section .btn-primary {
+  display: inline-block !important;
+  background: linear-gradient(to bottom, #e0b56f, #c99542) !important;
+  color: #111 !important;
+  border-radius: 16px !important;
+  padding: 18px 38px !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  text-decoration: none !important;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.35) !important;
+}
+
+.hero-button-section .btn-primary:hover {
+  opacity: 0.9 !important;
 }
