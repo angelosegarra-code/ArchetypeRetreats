@@ -194,10 +194,11 @@ def journals():
 def retreat_format():
     return render_template('retreat-format.html')
 
+@app.route("/start")
+def start():
+    return render_template("start.html")
+
 # force redeploy
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
 
-@app.route("/start")
-def start():
-    return render_template("start.html")
