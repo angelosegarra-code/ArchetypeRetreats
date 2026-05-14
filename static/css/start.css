@@ -322,3 +322,23 @@
   max-width: 420px;
   margin: 0 auto;
 }
+/* FORCE JOURNALS + ALCHEMY SIDE BY SIDE */
+.journals-section {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 60px !important;
+  align-items: stretch !important;
+  max-width: 1100px !important;
+  margin: 0 auto 140px !important;
+}
+
+.journals-section > .section-text,
+.journals-section > .book-card {
+  width: 100% !important;
+}
+
+@media (max-width: 900px) {
+  .journals-section {
+    grid-template-columns: 1fr !important;
+  }
+}
