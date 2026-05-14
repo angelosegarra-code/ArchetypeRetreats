@@ -1,26 +1,12 @@
 .start-page {
   min-height: 100vh;
 
-  background:
+background:
     linear-gradient(
-      rgba(0, 0, 0, 0.34),
-      rgba(0, 0, 0, 0.50)
+        rgba(0, 0, 0, 0.10),
+        rgba(0, 0, 0, 0.20)
     ),
     url('/static/images/start-hero.jpg');
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-
-  color: #f5f1e8;
-  padding: 120px 24px 100px;
-}
-
-.start-section,
-.closing-line {
-  position: relative;
-  z-index: 2;
-}
 
 /* HERO */
 
