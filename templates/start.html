@@ -100,72 +100,99 @@
 
   </section>
 
-  <!-- CONTINUE ELSEWHERE -->
-  <section class="start-section books-section">
+ <!-- CONTINUE ELSEWHERE -->
+<section class="start-section books-section">
 
-    <div class="books-header">
-      <p class="section-label">Continue the Work</p>
+  <div class="books-header">
+    <p class="section-label">Continue the Work</p>
 
-      <h2>Not Ready for the Workshop?</h2>
+    <h2>Not Ready for the Workshop?</h2>
+
+    <p>
+      You can also begin through the journals or books.
+    </p>
+  </div>
+
+  <div class="book-grid">
+
+    <!-- JOURNALS -->
+    <div class="book-card">
+      <img src="{{ url_for('static', filename='images/creation-journals.jpg') }}"
+           alt="The Creation Journals">
+
+      <h3>The Journals</h3>
 
       <p>
-        You can also begin through the journals, books, or InnerCube reflection.
+        Four guided journals exploring imagination, awareness,
+        transformation, and purpose.
       </p>
+
+      <a href="/journals" class="start-button secondary">
+        Explore
+      </a>
     </div>
 
-    <div class="book-grid">
+    <!-- ALCHEMY -->
+    <div class="book-card">
+      <img src="{{ url_for('static', filename='images/alchemy-book.jpg') }}"
+           alt="The Alchemy of Change">
 
-      <div class="book-card">
-        <img src="{{ url_for('static', filename='images/creation-journals.jpg') }}"
-             alt="The Creation Journals">
+      <h3>The Alchemy of Change</h3>
 
-        <h3>The Journals</h3>
+      <p>
+        A deeper written exploration of patterns,
+        perception, and transformation.
+      </p>
 
-        <p>
-          Four guided journals exploring imagination, awareness,
-          transformation, and purpose.
-        </p>
+      <a href="/alchemy" class="start-button secondary">
+        Explore
+      </a>
+    </div>
 
-        <a href="/journals" class="start-button secondary">
-          Explore
-        </a>
-      </div>
+  </div>
 
-      <div class="book-card">
-        <img src="{{ url_for('static', filename='images/alchemy-book.jpg') }}"
-             alt="The Alchemy of Change">
+</section>
 
-        <h3>The Alchemy of Change</h3>
+<!-- INNERCUBE -->
+<section class="start-section innercube-section">
 
-        <p>
-          A deeper written exploration of patterns, perception, and transformation.
-        </p>
+  <div class="innercube-layout">
 
-        <a href="/alchemy" class="start-button secondary">
-          Explore
-        </a>
-      </div>
+    <!-- IMAGE -->
+    <div class="innercube-visual">
+      <img
+        src="{{ url_for('static', filename='images/innercube-hero.jpg') }}"
+        alt="InnerCube"
+      >
+    </div>
 
-      <div class="book-card">
-        <img src="{{ url_for('static', filename='images/last-human.jpg') }}"
-             alt="The Last Human Creator">
+    <!-- CONTENT -->
+    <div class="innercube-content">
 
-        <h3>InnerCube</h3>
+      <p class="section-label">The Mirror</p>
 
-        <p>
-          A symbolic reflection designed to help you recognize the pattern
-          shaping your experience.
-        </p>
+      <h2>InnerCube</h2>
 
-        <a href="/innercube" class="start-button secondary">
-          Enter
-        </a>
-      </div>
+      <p>
+        A symbolic reflection designed to help you recognize
+        the deeper pattern shaping your experience.
+      </p>
+
+      <p class="section-note">
+        Not a personality test.
+        A doorway into self-recognition.
+      </p>
+
+      <a href="/innercube" class="start-button">
+        Enter the InnerCube
+      </a>
 
     </div>
 
-  </section>
+  </div>
 
+</section>
+      
   <!-- FINAL -->
   <div class="closing-line">
     <p>
