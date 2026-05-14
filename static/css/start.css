@@ -278,3 +278,39 @@
     max-width: 100%;
   }
 }
+/* FINAL START PAGE HERO CENTERING FIX */
+.start-offer-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 80px;
+}
+
+.start-offer-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.start-offer-image {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto 40px;
+  border-radius: 24px;
+}
+
+.start-offer-copy {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.start-offer-copy .start-button {
+  margin: 28px auto;
+}
