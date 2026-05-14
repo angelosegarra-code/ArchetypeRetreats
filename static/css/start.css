@@ -1,8 +1,21 @@
-.start-page {
+ .start-page {
   min-height: 100vh;
-  background: #050505;
-  color: #f5f0e6;
+  padding: 80px 24px 80px;
+  color: #f5f1e8;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.20)
+    ),
+    url('/static/images/start-hero.jpg?v=1');
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
 /* HERO */
 
 .start-hero {
@@ -294,50 +307,6 @@
 
 .start-offer-copy .start-button {
   margin: 28px auto;
-}
-
-.start-page {
-  min-height: 100vh;
-  color: #f5f0e6;
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.82),
-      rgba(0, 0, 0, 0.88)
-    ),
-    url("/static/images/start-hero1.jpg?v=20");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.journals-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 36px;
-  align-items: stretch;
-  max-width: 1100px;
-  margin: 80px auto;
-}
-
-.journals-section .section-text,
-.journals-section .book-card {
-  background: rgba(0, 0, 0, 0.55);
-  border: 1px solid rgba(207, 160, 90, 0.25);
-  border-radius: 24px;
-  padding: 32px;
-}
-
-.journals-section img,
-.book-card img {
-  max-width: 100%;
-  border-radius: 18px;
-}
-
-@media (max-width: 800px) {
-  .journals-section {
-    grid-template-columns: 1fr;
-  }
 }
 /* LAST HUMAN CREATOR CENTER FIX */
 .last-human-section {
