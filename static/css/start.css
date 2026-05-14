@@ -314,3 +314,17 @@
 .start-offer-copy .start-button {
   margin: 28px auto;
 }
+/* LAST HUMAN CREATOR CENTER FIX */
+.last-human-section {
+  text-align: center;
+}
+
+.last-human-section .book-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.last-human-section .book-card {
+  max-width: 420px;
+  margin: 0 auto;
+}
