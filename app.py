@@ -64,6 +64,9 @@ def submit():
 @app.route('/innercube')
 def innercube():
     return render_template('innercube.html')
+    @app.route('/workshops')
+def workshops():
+    return render_template('workshops.html')
 @app.route('/purchase')
 def purchase(): return render_template('purchase.html')
 @app.route('/download/<path:filename>')
