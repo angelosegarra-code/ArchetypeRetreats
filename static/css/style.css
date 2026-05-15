@@ -1262,3 +1262,93 @@ a { color: inherit; }
   position: relative !important;
   z-index: 2 !important;
 }
+/* HOMEPAGE FINAL STYLING */
+
+body {
+  background: #050505;
+  color: #f5f1e8;
+}
+
+.hero {
+  min-height: 92vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 140px 24px 100px !important;
+  background:
+    linear-gradient(rgba(8,10,12,0.66), rgba(8,10,12,0.78)),
+    url('/static/images/workshop-offering.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.hero-content {
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1;
+  color: #f5f1e8;
+}
+
+.hero p {
+  color: rgba(245,241,232,0.78);
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.section {
+  padding: 110px 24px;
+}
+
+.section-soft {
+  background: #0b0b0b;
+  color: #f5f1e8;
+}
+
+.section-light {
+  background: #111;
+  color: #f5f1e8;
+}
+
+.section-dark {
+  background: #030303;
+  color: #f5f1e8;
+}
+
+.center {
+  text-align: center;
+}
+
+.section h2 {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.section p {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  line-height: 1.8;
+  color: rgba(245,241,232,0.74);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: #d5a35b;
+  font-size: 0.75rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 16px 34px;
+  border-radius: 999px;
+  background: linear-gradient(to bottom, #e0b56f, #c99542);
+  color: #111 !important;
+  text-decoration: none;
+  font-weight: 700;
+}
