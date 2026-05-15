@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/start.css') }}?v=17">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/start.css') }}?v=18">
 {% endblock %}
 
 {% block content %}
@@ -67,51 +67,31 @@
     </div>
   </section>
 
-  
- <!-- FOUR ARCHETYPES + ALCHEMY -->
-<section class="start-section journals-section">
+  <!-- JOURNALS -->
+  <section class="start-section journals-section journals-centered">
+    <div class="section-text">
+      <p class="section-label">The Four Archetypes</p>
 
-  <div class="section-text">
-    <p class="section-label">The Four Archetypes</p>
+      <h2>Dreamer. Visionary. Observer. Alchemist.</h2>
 
-    <h2>Dreamer. Visionary. Observer. Alchemist.</h2>
+      <img
+        src="{{ url_for('static', filename='images/creation-journals.jpg') }}"
+        alt="The Creation Journals"
+      >
 
-    <img
-      src="{{ url_for('static', filename='images/creation-journals.jpg') }}"
-      alt="The Creation Journals"
-    >
+      <h3>The Journals</h3>
 
-    <h3>The Journals</h3>
+      <p>
+        Four guided journals exploring imagination, awareness,
+        transformation, and purpose.
+      </p>
 
-    <p>
-      Four guided journals exploring imagination, awareness,
-      transformation, and purpose.
-    </p>
+      <a href="/journals" class="start-button secondary">
+        Explore the Journals
+      </a>
+    </div>
+  </section>
 
-    <a href="/journals" class="start-button secondary">
-      Explore
-    </a>
-  </div>
-
-  <div class="book-card">
-    <img
-      src="{{ url_for('static', filename='images/alchemy-book.jpg') }}"
-      alt="The Alchemy of Change"
-    >
-
-    <h3>The Alchemy of Change</h3>
-
-    <p>
-      A deeper written exploration of patterns,
-      perception, and transformation.
-    </p>
-
-    <a href="/alchemy" class="start-button secondary">
-      Explore
-    </a>
-  </div>
-
-</section>
   <!-- INNERCUBE -->
   <section class="start-section innercube-section">
     <div class="innercube-layout">
@@ -146,20 +126,38 @@
     </div>
   </section>
 
-  <!-- LAST HUMAN CREATOR -->
-  <section class="start-section books-section">
+  <!-- BOOKS -->
+  <section class="start-section books-section books-two">
     <div class="books-header">
-      <p class="section-label">The Story</p>
+      <p class="section-label">The Books</p>
 
-      <h2>The Last Human Creator</h2>
+      <h2>Continue Through the Books</h2>
 
       <p>
-        A cinematic novel exploring memory, love,
-        creativity, and what machines may never understand.
+        Two different doorways into creativity, transformation, and consciousness.
       </p>
     </div>
 
     <div class="book-grid">
+
+      <div class="book-card">
+        <img
+          src="{{ url_for('static', filename='images/alchemy-book.jpg') }}"
+          alt="The Alchemy of Change"
+        >
+
+        <h3>The Alchemy of Change</h3>
+
+        <p>
+          A deeper written exploration of patterns,
+          perception, and transformation.
+        </p>
+
+        <a href="/alchemy" class="start-button secondary">
+          Explore
+        </a>
+      </div>
+
       <div class="book-card">
         <img
           src="{{ url_for('static', filename='images/last-human-creator.jpg') }}"
@@ -169,8 +167,8 @@
         <h3>The Last Human Creator</h3>
 
         <p>
-          A mythic exploration of humanity, consciousness,
-          and the future of creation itself.
+          A cinematic novel exploring memory, love,
+          creativity, and what machines may never understand.
         </p>
 
         <a href="https://bit.ly/4cPyIbl"
@@ -180,6 +178,7 @@
           Read
         </a>
       </div>
+
     </div>
   </section>
 
