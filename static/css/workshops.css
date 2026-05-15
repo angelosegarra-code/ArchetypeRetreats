@@ -16,7 +16,7 @@ body {
   padding: 140px 24px 100px;
   background:
     linear-gradient(rgba(5,5,5,0.68), rgba(5,5,5,0.88)),
-    url('/static/images/workshop-offering.jpg');
+    url('/static/images/warm-workshop.jpg');
   background-size: cover;
   background-position: center;
 }
