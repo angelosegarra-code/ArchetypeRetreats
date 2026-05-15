@@ -8,7 +8,7 @@
       rgba(0, 0, 0, 0.10),
       rgba(0, 0, 0, 0.20)
     ),
-    url('/static/images/start-hero.jpg?v=1');
+    url('/static/images/start-hero.jpg?v=7');
 
   background-size: cover;
   background-position: center top;
@@ -418,4 +418,157 @@
 .journals-centered .start-button {
   margin: 28px auto 0;
   display: inline-flex;
+}
+/* WORKSHOP SECTION */
+
+.workshop-section,
+.journals-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  margin: 120px auto;
+  max-width: 1250px;
+}
+
+.section-text h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.section-text p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: rgba(245, 241, 232, 0.74);
+  margin-bottom: 24px;
+  max-width: 560px;
+}
+
+.section-note {
+  font-style: italic;
+  color: rgba(245, 241, 232, 0.58);
+}
+
+.section-visual img {
+  width: 100%;
+  border-radius: 28px;
+  display: block;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+}
+
+/* BOOKS */
+
+.books-section {
+  max-width: 1300px;
+  margin: 120px auto;
+}
+
+.books-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.books-header h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin-bottom: 18px;
+}
+
+.books-header p {
+  color: rgba(245, 241, 232, 0.72);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.book-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  padding-bottom: 32px;
+  backdrop-filter: blur(10px);
+}
+
+.book-card img {
+  width: 100%;
+  display: block;
+  margin-bottom: 26px;
+}
+
+.book-card h3 {
+  font-size: 1.5rem;
+  margin: 0 24px 14px;
+}
+
+.book-card p {
+  color: rgba(245,241,232,0.72);
+  line-height: 1.7;
+  margin: 0 24px 24px;
+}
+
+.book-card .start-button {
+  margin-left: 24px;
+}
+
+/* INNERCUBE */
+
+.innercube-section {
+  max-width: 900px;
+  margin: 140px auto 60px;
+  text-align: center;
+}
+
+.innercube-content h2 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  margin-bottom: 24px;
+}
+
+.innercube-content p {
+  color: rgba(245,241,232,0.72);
+  line-height: 1.9;
+  max-width: 620px;
+  margin: 0 auto 34px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .workshop-section,
+  .journals-section,
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workshop-section,
+  .journals-section {
+    gap: 40px;
+  }
+
+  .section-text,
+  .books-header,
+  .innercube-content {
+    text-align: center;
+  }
+
+  .section-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .book-card .start-button {
+    margin-left: 0;
+  }
+
+  .book-card {
+    text-align: center;
+    padding-bottom: 40px;
+  }
 }
