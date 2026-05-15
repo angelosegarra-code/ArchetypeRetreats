@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 {% block page_css %}
 <style>
+body {
+  background: #050505;
+  color: #f5f1e8;
+}
 
+/* HERO */
 .home-hero {
   min-height: 92vh;
   display: flex;
@@ -9,14 +14,11 @@
   justify-content: center;
   text-align: center;
   padding: 140px 24px 100px;
-
   background:
-    linear-gradient(rgba(8,10,12,0.62), rgba(8,10,12,0.74)),
+    linear-gradient(rgba(8,10,12,0.72), rgba(8,10,12,0.84)),
     url('/static/images/workshop-offering.jpg');
-
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
 .home-hero-content {
@@ -39,8 +41,114 @@
   margin: 0 auto 28px;
 }
 
+/* SECTIONS */
+.section {
+  padding: 110px 24px;
+}
+
+.section-soft {
+  background: #0b0b0b;
+}
+
+.section-light {
+  background: #111;
+}
+
+.section-dark {
+  background: #030303;
+}
+
+.center {
+  text-align: center;
+}
+
+.section h2 {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  color: #f5f1e8;
+  margin-bottom: 26px;
+}
+
+.section p {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  line-height: 1.8;
+  color: rgba(245,241,232,0.74);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: #d5a35b;
+  font-size: 0.75rem;
+  margin-bottom: 18px;
+}
+
+/* BUTTONS */
+.btn-primary {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: linear-gradient(to bottom, #e0b56f, #c99542);
+  color: #111 !important;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 16px 45px rgba(0,0,0,0.45);
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 16px 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(245,241,232,0.35);
+  color: #f5f1e8 !important;
+  text-decoration: none;
+}
+
+/* ARCHETYPE GRID */
+.homepage-archetype-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 70px auto 0;
+}
+
+.homepage-archetype-card {
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 42px;
+}
+
+.homepage-archetype-card h3 {
+  color: #f5f1e8;
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+}
+
+.homepage-archetype-card p {
+  margin: 0 auto;
+}
+
+/* IMAGES */
+.section img {
+  max-width: 100%;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .homepage-archetype-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 5rem);
+  }
+}
 </style>
-{% endblock %}
 {% block content %}
 
 <!-- HERO -->
