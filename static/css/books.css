@@ -1,1 +1,24 @@
+body {
+  background: #050505;
+  color: #f5f1e8;
+}
 
+.book-page {
+  padding: 140px 24px 100px;
+}
+
+.book-page h1,
+.book-page h2,
+.book-page h3 {
+  color: #f5f1e8;
+}
+
+.book-page p {
+  color: rgba(245,241,232,0.74);
+  line-height: 1.8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
