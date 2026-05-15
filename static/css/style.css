@@ -1246,3 +1246,28 @@ body.home main{
     padding: 34px;
   }
 }
+/* FORCE NEW HOMEPAGE HERO */
+.hero {
+  min-height: 92vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 140px 24px 100px !important;
+  position: relative !important;
+  overflow: hidden !important;
+
+  background:
+    linear-gradient(rgba(8,10,12,0.62), rgba(8,10,12,0.72)),
+    url('/static/images/workshop-offering.jpg') !important;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.hero-content {
+  max-width: 900px !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
