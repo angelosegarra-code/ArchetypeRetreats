@@ -1352,3 +1352,43 @@ body {
   text-decoration: none;
   font-weight: 700;
 }
+<section class="home-hero">
+  <div class="home-hero-content">
+  /* NEW HOMEPAGE HERO */
+
+.home-hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 140px 24px 100px;
+
+  background:
+    linear-gradient(rgba(8,10,12,0.62), rgba(8,10,12,0.74)),
+    url('/static/images/workshop-offering.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1;
+  color: #f5f1e8;
+  margin-bottom: 28px;
+}
+
+.home-hero p {
+  color: rgba(245,241,232,0.78);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 760px;
+  margin: 0 auto 28px;
+}
