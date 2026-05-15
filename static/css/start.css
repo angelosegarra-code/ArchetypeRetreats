@@ -393,3 +393,29 @@
     grid-template-columns: 1fr;
   }
 }
+/* CENTER JOURNAL SECTION */
+
+.journals-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.journals-centered .section-text {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.journals-centered h2,
+.journals-centered h3,
+.journals-centered p,
+.journals-centered .section-label {
+  text-align: center;
+}
+
+.journals-centered .start-button {
+  margin: 28px auto 0;
+  display: inline-flex;
+}
