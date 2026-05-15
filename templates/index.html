@@ -1,253 +1,162 @@
 {% extends "base.html" %}
+
 {% block content %}
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
-
   <div class="hero-content">
+    <p class="eyebrow">Archetype Retreats</p>
 
-    </div>
+    <h1>Enter the work that changes the pattern.</h1>
 
+    <p>
+      Live workshops, journals, books, and retreats for people ready to explore
+      creativity, awareness, emotional patterns, and transformation.
+    </p>
+
+    <a href="/start" class="btn-primary">Start Here</a>
+  </div>
 </section>
 
-<section style="display:flex; justify-content:center; align-items:center; padding:60px 20px 80px; background:#0f1216;">
+<!-- MAIN OFFERING -->
+<section class="section section-soft center">
+  <p class="eyebrow">Live Online</p>
+
+  <h2>Archetype Retreats Reflection Workshop</h2>
+
+  <p>
+    A guided live Zoom workshop exploring creativity, awareness, journaling,
+    emotional patterns, and the deeper structures shaping your life.
+  </p>
+
+  <p>
+    This is not self-improvement in the usual sense. It is a quiet space to see
+    yourself more clearly, reconnect with what matters, and begin changing the
+    pattern from the inside.
+  </p>
+
+  <div style="margin:40px auto; max-width:950px;">
+    <img
+      src="{{ url_for('static', filename='images/workshop-offering.jpg') }}"
+      alt="Archetype Retreats Live Online Workshop"
+      style="width:100%; border-radius:28px; box-shadow:0 30px 90px rgba(0,0,0,0.45);">
+  </div>
+
   <a href="https://www.paypal.com/ncp/payment/A5J8QN7PC68Z2"
      target="_blank"
      rel="noopener"
-     style="
-       display:inline-block;
-       background:linear-gradient(to bottom, #e0b56f, #c99542);
-       color:#111;
-       border-radius:16px;
-       padding:18px 38px;
-       font-weight:700;
-       font-size:1rem;
-       text-decoration:none;
-       box-shadow:0 12px 35px rgba(0,0,0,0.35);
-     ">
-     Reserve Your Spot — $47
+     class="btn-primary">
+    Reserve Your Spot — $47
   </a>
 </section>
 
-<!-- SECTION: THE PROBLEM -->
-<section class="section section-soft center">
-  <p class="eyebrow">The Deeper Pattern</p>
-
-  <h2>Unworthiness begins when a man disconnects from his nature.</h2>
-
-  <p>
-    Many men spend years shape-shifting for approval — over-performing,
-    over-giving, over-attaching, and trying to become enough for someone else.
-  </p>
-
-  <p>
-    But the more a man abandons his own archetypal nature, the more fragmented
-    he becomes.
-  </p>
-
-  <p>
-    He may build his body, sharpen his mind, make money, or become more impressive —
-    but if he is still chasing validation, something inside remains unsettled.
-  </p>
-
-  <p>
-    Archetype Retreats are designed to help men reconnect with the deeper structure
-    of who they are.
-  </p>
-</section>
-
-<!-- SECTION: THE FOUR ARCHETYPES -->
-<section id="archetypes" class="section section-light center">
-  <p class="eyebrow">The Four Masculine Archetypes</p>
-
-  <h2>Dreamer. Visionary. Observer. Alchemist.</h2>
-
-  <p>
-    Each archetype carries a different form of masculine intelligence.
-    When you resist it, you feel divided. When you embody it, your life begins
-    to move from a clearer center.
-  </p>
-
-  <div class="homepage-archetype-grid">
-
-    <div class="homepage-archetype-card">
-      <h3>Dreamer</h3>
-      <p>
-        The Dreamer carries imagination, emotional depth, and the ability to feel
-        possibility before it becomes visible.
-      </p>
-    </div>
-
-    <div class="homepage-archetype-card">
-      <h3>Visionary</h3>
-      <p>
-        The Visionary carries direction, leadership, purpose, and the ability to
-        move toward a future with quiet certainty.
-      </p>
-    </div>
-
-    <div class="homepage-archetype-card">
-      <h3>Observer</h3>
-      <p>
-        The Observer carries awareness, discernment, pattern recognition, and the
-        ability to see beneath the surface.
-      </p>
-    </div>
-
-    <div class="homepage-archetype-card">
-      <h3>Alchemist</h3>
-      <p>
-        The Alchemist carries transformation, resilience, discipline, and the ability
-        to turn pain into power.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- SECTION: WHAT HAPPENS WHEN YOU EMBRACE YOUR ARCHETYPE -->
-<section class="section section-soft">
-  <div class="wrap narrow center">
-    <p class="eyebrow">What Happens When You Stop Resisting Yourself</p>
-
-    <h2>What Happens When You Embrace Your Archetype</h2>
-
-    <p>
-      The feeling of unworthiness begins to dissolve when a man stops abandoning
-      his own nature in exchange for approval.
-    </p>
-
-    <p>
-      When embraced fully, your archetype becomes grounded confidence, direction,
-      discernment, resilience, and purpose.
-    </p>
-  </div>
-
-  <div class="homepage-archetype-grid">
-
-    <div class="homepage-archetype-card">
-      <h3>Dreamer</h3>
-      <p>
-        When the Dreamer stops suppressing his vision in order to appear practical
-        or acceptable, he becomes deeply magnetic.
-      </p>
-      <p>
-        He moves with inspiration instead of fear. Others feel his emotional depth,
-        imagination, and quiet certainty that he is going somewhere meaningful.
-      </p>
-    </div>
-
-    <div class="homepage-archetype-card">
-      <h3>Visionary</h3>
-      <p>
-        The Visionary stops shape-shifting for status and begins building a life
-        aligned with his own inner direction.
-      </p>
-      <p>
-        He leads naturally because his life itself becomes an expression of purpose,
-        standards, and self-respect.
-      </p>
-    </div>
-
-    <div class="homepage-archetype-card">
-      <h3>Observer</h3>
-      <p>
-        The Observer develops discernment instead of over-giving. He begins trusting
-        what he sees and feels instead of ignoring it.
-      </p>
-      <p>
-        His calm presence creates clarity in relationships, decisions, and the way
-        he moves through life.
-      </p>
-    </div>
-
-    <div class="homepage-archetype-card">
-      <h3>Alchemist</h3>
-      <p>
-        The Alchemist stops chasing external validation and begins transforming
-        pressure, pain, and challenge into strength.
-      </p>
-      <p>
-        His resilience becomes quiet power. He no longer performs confidence —
-        he embodies it.
-      </p>
-    </div>
-
-  </div>
-
-  <div class="wrap narrow center">
-    <p>
-      A man aligned with his archetype stops over-attaching, over-performing,
-      and abandoning himself for approval.
-    </p>
-
-    <p>
-      He becomes grounded in who he is. And from there, everything begins to change.
-    </p>
-  </div>
-</section>
-
-<!-- SECTION: THE RETREAT EXPERIENCE -->
+<!-- THE WORK -->
 <section class="section section-light center">
-  <p class="eyebrow">The Experience</p>
+  <p class="eyebrow">The Work</p>
 
-  <h2>This Is Not Self-Improvement.</h2>
-
-  <p>
-    This is not about becoming someone else.
-    It is about returning to the part of yourself you stopped trusting.
-  </p>
+  <h2>Four ways of seeing. One path of becoming.</h2>
 
   <p>
-    Through guided reflection, archetypal inquiry, embodied practice, creative exploration,
-    and carefully held dialogue, Archetype Retreats help men reconnect with themselves
-    in a way that does not happen in everyday life.
+    The archetypes are not labels. They are mirrors — ways of recognizing how
+    imagination, awareness, transformation, and vision move through you.
   </p>
 
-  <p>
-    The work is quiet, direct, experiential, and grounded in the belief that real change
-    begins when a man stops performing and starts listening from within.
-  </p>
+  <div class="homepage-archetype-grid">
 
-  <a href="/retreats" class="btn-primary">Explore the Reset Immersion</a>
+    <div class="homepage-archetype-card">
+      <h3>Dreamer</h3>
+      <p>Imagination, longing, possibility, and the part of you that still believes something new can emerge.</p>
+    </div>
+
+    <div class="homepage-archetype-card">
+      <h3>Observer</h3>
+      <p>Awareness, clarity, discernment, and the ability to see the pattern beneath the pattern.</p>
+    </div>
+
+    <div class="homepage-archetype-card">
+      <h3>Alchemist</h3>
+      <p>Transformation, release, resilience, and the capacity to turn experience into wisdom.</p>
+    </div>
+
+    <div class="homepage-archetype-card">
+      <h3>Visionary</h3>
+      <p>Direction, purpose, intuition, and the courage to move toward what wants to take form.</p>
+    </div>
+
+  </div>
+
+  <a href="/start" class="btn-primary">Explore the Work</a>
 </section>
 
-<!-- SECTION: THE SETTING -->
+<!-- JOURNALS -->
+<section class="section section-soft center">
+  <p class="eyebrow">The Journals</p>
+
+  <h2>The Creation Journals</h2>
+
+  <p>
+    Four guided journals offering daily reflection through imagination,
+    awareness, transformation, and purpose.
+  </p>
+
+  <div style="margin:40px auto; max-width:950px;">
+    <img
+      src="{{ url_for('static', filename='images/creation-journals.jpg') }}"
+      alt="The Creation Journals"
+      style="width:100%; border-radius:28px; box-shadow:0 30px 90px rgba(0,0,0,0.45);">
+  </div>
+
+  <a href="/journals" class="btn-primary">Explore the Journals</a>
+</section>
+
+<!-- BOOKS -->
+<section class="section section-light center">
+  <p class="eyebrow">Books & Reflections</p>
+
+  <h2>Books by Angelo Segarra</h2>
+
+  <p>
+    Writings on change, creativity, art, memory, consciousness, and the human
+    experience.
+  </p>
+
+  <a href="/library" class="btn-primary">Visit the Library</a>
+</section>
+
+<!-- RETREATS -->
 <section class="section section-image">
   <div class="image-content">
+    <p class="eyebrow">Bali Immersions</p>
+
     <h2>The Setting Matters.</h2>
 
     <p>
-      Real transformation rarely happens in noise. Our retreats are held in carefully
-      selected environments in Bali that support stillness, presence, and sustained reflection.
+      For deeper work, Archetype Retreats also offers immersive experiences in
+      Bali designed around stillness, creativity, reflection, and transformation.
     </p>
 
-    <p>
-      The place is not a backdrop. It is part of the work.
-    </p>
-
-    <a href="/retreats" class="btn-secondary">View Retreat Options</a>
+    <a href="/retreats" class="btn-secondary">Explore Retreats</a>
   </div>
 </section>
 
-<!-- SECTION: FOUNDER -->
+<!-- FOUNDER -->
 <section class="section section-light">
   <div class="two-col">
     <div class="founder-text">
       <h2>Founded by Angelo Segarra</h2>
 
       <p>
-        Angelo Segarra is a retreat founder and facilitator whose work focuses on
-        deep transformation, archetypal orientation, creativity, and experiential change.
+        Angelo Segarra is a facilitator, artist, teacher, and writer whose work
+        explores transformation through creativity, archetypal reflection, and
+        experiential change.
       </p>
 
       <p>
-        Drawing from philosophy, embodiment, art, teaching, and immersive retreat design,
-        he creates environments where men can step out of familiar patterns and return
-        to a deeper sense of self.
+        His work brings together art, philosophy, journaling, awareness, and
+        symbolic inquiry to help people recognize the patterns shaping their lives.
       </p>
 
-      <a href="/retreats" class="link-minimal">Learn About the Work →</a>
+      <a href="/start" class="link-minimal">Begin the Work →</a>
     </div>
 
     <div class="founder-image">
@@ -256,82 +165,15 @@
   </div>
 </section>
 
-<!-- RETREAT CTA -->
-<section class="section section-soft center">
-  <h2>Ready to Stop Performing and Return to Yourself?</h2>
-
-  <p>
-    The Reset Immersion is for men who are ready to step away from pressure,
-    reconnect with themselves, and move forward with clarity, self-respect, and direction.
-  </p>
-
-  <a href="/retreats" class="btn-primary">Explore the Reset Immersion</a>
-</section>
-
-<!-- JOURNALS -->
-<section class="homepage-journals-section">
-  <div class="homepage-journals-inner">
-    <p class="homepage-journals-kicker">Begin Elsewhere</p>
-
-    <h2>Not Ready for a Retreat?</h2>
-
-    <p class="homepage-journals-subtext">
-      The journals offer four entry points into reflection, clarity, direction, and change.
-    </p>
-
-    <div class="homepage-journals-grid">
-      <a href="/journals" class="homepage-journal-card">
-        <img src="{{ url_for('static', filename='images/dreamer-hero.jpg') }}" alt="Dreamer journal">
-        <div class="homepage-journal-card-content">
-          <h3>Dreamer</h3>
-          <p>Imagination, curiosity, possibility.</p>
-        </div>
-      </a>
-
-      <a href="/journals" class="homepage-journal-card">
-        <img src="{{ url_for('static', filename='images/observer-hero.jpg') }}" alt="Observer journal">
-        <div class="homepage-journal-card-content">
-          <h3>Observer</h3>
-          <p>Clarity, awareness, understanding.</p>
-        </div>
-      </a>
-
-      <a href="/journals" class="homepage-journal-card">
-        <img src="{{ url_for('static', filename='images/visionary-hero.jpg') }}" alt="Visionary journal">
-        <div class="homepage-journal-card-content">
-          <h3>Visionary</h3>
-          <p>Direction, purpose, what lies ahead.</p>
-        </div>
-      </a>
-
-      <a href="/journals" class="homepage-journal-card">
-        <img src="{{ url_for('static', filename='images/alchemist-hero.jpg') }}" alt="Alchemist journal">
-        <div class="homepage-journal-card-content">
-          <h3>Alchemist</h3>
-          <p>Transformation, release, change.</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="homepage-journals-cta">
-      <a href="/journals" class="homepage-journals-button">Explore the Journals</a>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL INVITATION -->
+<!-- FINAL CTA -->
 <section class="section section-dark center">
-  <h2>Your Archetype Is Not a Flaw to Be Fixed.</h2>
+  <h2>Begin with reflection.</h2>
 
   <p>
-    It is the raw material of your greatness.
+    The pattern changes when you begin to see it.
   </p>
 
-  <p>
-    Stop abandoning yourself for approval. Return to the man you already are.
-  </p>
-
-  <a href="/retreats" class="btn-primary">Begin with the Reset Immersion</a>
+  <a href="/start" class="btn-primary">Start Here</a>
 </section>
 
 {% endblock %}
