@@ -572,3 +572,130 @@
     padding-bottom: 40px;
   }
 }
+.centered {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reflection-section {
+  padding-top: 40px;
+}
+
+.reflection-box {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 32px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  text-align: center;
+}
+
+.question {
+  display: none;
+}
+
+.question.active {
+  display: block;
+}
+
+.question h3 {
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
+  line-height: 1.2;
+  margin-bottom: 34px;
+}
+
+.answer-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.answer {
+  width: 100%;
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.07);
+  color: inherit;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.answer:hover {
+  background: rgba(214,168,95,0.18);
+}
+
+.capture-form {
+  display: none;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.capture-form.active {
+  display: block;
+}
+
+.capture-form h3 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 18px;
+}
+
+.capture-form p {
+  margin-bottom: 26px;
+}
+
+.capture-form input {
+  width: 100%;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1rem;
+}
+
+.capture-form button {
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 999px;
+  border: none;
+  background: #d6a85f;
+  color: #111;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.result-box {
+  display: none;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 36px 28px;
+  border-radius: 26px;
+  background: rgba(214,168,95,0.12);
+  border: 1px solid rgba(214,168,95,0.35);
+}
+
+.result-box.active {
+  display: block;
+}
+
+.result-box h3 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 18px;
+}
+
+.result-box p {
+  margin-bottom: 26px;
+}
+
+@media (max-width: 700px) {
+  .reflection-box {
+    padding: 34px 20px;
+    border-radius: 22px;
+  }
+
+  .answer {
+    text-align: center;
+  }
+}
