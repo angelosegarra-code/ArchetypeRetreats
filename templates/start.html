@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/start.css') }}?v=7">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/start.css') }}?v=8">
 {% endblock %}
 
 {% block content %}
@@ -9,42 +9,183 @@
 <section class="start-page">
 
   <!-- HERO -->
-  <div class="start-hero">
+  <section class="start-hero">
 
     <p class="eyebrow">Between the Lines</p>
 
     <h1>
-      Some things can only be understood through experience.
+      Harness the hidden power shaping your life.
     </h1>
 
     <p class="intro">
-      Books, journals, workshops, and reflections on creativity,
-      awareness, memory, and the patterns that shape our lives.
+      Most people try to change behavior.
+      Few recognize the deeper pattern beneath it.
     </p>
 
-  </div>
+    <a href="#reflection" class="start-button">
+      Begin the Reflection
+    </a>
+
+  </section>
+
+
+  <!-- REFLECTION INTRO -->
+  <section class="start-section reflection-intro">
+
+    <div class="section-text centered">
+
+      <p class="section-label">A Free Reflection</p>
+
+      <h2>A quieter way to see yourself.</h2>
+
+      <p>
+        This reflection takes less than two minutes.
+        There are no right answers — only patterns waiting to be recognized.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- REFLECTION -->
+  <section class="start-section reflection-section" id="reflection">
+
+    <div class="reflection-box">
+
+      <div class="question active">
+        <h3>When life feels uncertain, what do you tend to do?</h3>
+
+        <div class="answer-grid">
+          <button class="answer" data-type="Dreamer">Imagine new possibilities</button>
+          <button class="answer" data-type="Observer">Analyze the situation deeply</button>
+          <button class="answer" data-type="Alchemist">Try to transform myself immediately</button>
+          <button class="answer" data-type="Visionary">Push toward a new vision or goal</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>What feels most exhausting lately?</h3>
+
+        <div class="answer-grid">
+          <button class="answer" data-type="Dreamer">Feeling emotionally disconnected</button>
+          <button class="answer" data-type="Observer">Overthinking everything</button>
+          <button class="answer" data-type="Alchemist">Constant pressure to improve</button>
+          <button class="answer" data-type="Visionary">Carrying responsibility for the future</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>What do you secretly want more of right now?</h3>
+
+        <div class="answer-grid">
+          <button class="answer" data-type="Dreamer">Inspiration</button>
+          <button class="answer" data-type="Observer">Clarity</button>
+          <button class="answer" data-type="Alchemist">Inner peace</button>
+          <button class="answer" data-type="Visionary">Purpose</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>Which statement feels closest to your experience?</h3>
+
+        <div class="answer-grid">
+          <button class="answer" data-type="Dreamer">I feel stuck between possibilities.</button>
+          <button class="answer" data-type="Observer">I can’t stop analyzing things.</button>
+          <button class="answer" data-type="Alchemist">I feel like I’m constantly rebuilding myself.</button>
+          <button class="answer" data-type="Visionary">I know something bigger is possible.</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>What usually happens when you try to change?</h3>
+
+        <div class="answer-grid">
+          <button class="answer" data-type="Dreamer">I lose momentum</button>
+          <button class="answer" data-type="Observer">I think too much before acting</button>
+          <button class="answer" data-type="Alchemist">I become too intense</button>
+          <button class="answer" data-type="Visionary">I push too hard toward the future</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>What are you most drawn toward?</h3>
+
+        <div class="answer-grid">
+          <button class="answer" data-type="Dreamer">Creativity</button>
+          <button class="answer" data-type="Observer">Understanding</button>
+          <button class="answer" data-type="Alchemist">Transformation</button>
+          <button class="answer" data-type="Visionary">Meaning</button>
+        </div>
+      </div>
+
+
+      <!-- EMAIL CAPTURE -->
+      <form class="capture-form" id="captureForm">
+
+        <h3>Your reflection is ready.</h3>
+
+        <p>
+          Enter your email to receive your personalized reflection
+          and an invitation to the next live online workshop.
+        </p>
+
+        <input type="text" name="name" placeholder="First name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+
+        <input type="hidden" name="archetype" id="archetypeResult">
+
+        <button type="submit">
+          Reveal My Reflection
+        </button>
+
+      </form>
+
+
+      <!-- RESULT -->
+      <div class="result-box" id="resultBox">
+
+        <p class="section-label">Your Reflection</p>
+
+        <h3 id="resultTitle"></h3>
+
+        <p id="resultText"></p>
+
+        <a href="#workshop" class="start-button">
+          Explore the Workshop
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <!-- WORKSHOP -->
-  <section class="start-section workshop-section">
+  <section class="start-section workshop-section" id="workshop">
 
     <div class="section-text">
 
-      <p class="section-label">The Workshops</p>
+      <p class="section-label">The Workshop</p>
 
-      <h2>Live Online Reflection Workshops</h2>
+      <h2>Live Online Reflection Workshop</h2>
 
       <p>
-        Guided explorations into creativity, awareness, emotional patterns,
-        journaling, and transformation.
+        A guided 90-minute experience for slowing down,
+        recognizing the deeper patterns shaping your life,
+        and learning how to work with them more consciously.
       </p>
 
       <p class="section-note">
-        A quiet space to reflect more deeply, reconnect with yourself,
-        and explore the patterns shaping your life.
+        This is not a lecture. It is a quiet space for reflection,
+        insight, and realignment.
       </p>
 
-      <a href="/start" class="start-button">
-        Explore the workshops
+      <a href="https://www.paypal.com/ncp/payment/A5J8QN7PC68Z2"
+         class="start-button"
+         target="_blank">
+        Reserve Your Spot
       </a>
 
     </div>
@@ -52,15 +193,11 @@
     <div class="section-visual">
       <img
         src="{{ url_for('static', filename='images/workshop-offering.jpg') }}"
-        alt="Archetype Retreats Live Online Workshops">
-      <a href="https://www.paypal.com/ncp/payment/A5J8QN7PC68Z2"
-   class="start-button"
-   target="_blank">
-   Reserve Your Spot
-</a>
+        alt="Live Online Reflection Workshop">
     </div>
 
   </section>
+
 
   <!-- JOURNALS -->
   <section class="start-section journals-section">
@@ -77,11 +214,11 @@
       </p>
 
       <p class="section-note">
-        Begin anywhere.
+        Begin anywhere. Each journal offers a different doorway into self-reflection.
       </p>
 
       <a href="/journals" class="start-button">
-        Explore the journals
+        Explore the Journals
       </a>
 
     </div>
@@ -93,6 +230,7 @@
     </div>
 
   </section>
+
 
   <!-- BOOKS -->
   <section class="start-section books-section">
@@ -111,7 +249,6 @@
 
     <div class="book-grid">
 
-      <!-- ALCHEMY -->
       <div class="book-card">
 
         <img
@@ -126,12 +263,11 @@
         </p>
 
         <a href="/alchemy" class="start-button secondary">
-          Explore the book
+          Explore the Book
         </a>
 
       </div>
 
-      <!-- PAINTING -->
       <div class="book-card">
 
         <img
@@ -146,12 +282,11 @@
         </p>
 
         <a href="/library" class="start-button secondary">
-          Explore the book
+          Explore the Book
         </a>
 
       </div>
 
-      <!-- LAST HUMAN -->
       <div class="book-card">
 
         <img
@@ -168,7 +303,7 @@
         <a href="https://bit.ly/4cPyIbl"
            target="_blank"
            class="start-button secondary">
-          Read the story
+          Read the Story
         </a>
 
       </div>
@@ -177,19 +312,19 @@
 
   </section>
 
+
   <!-- INNERCUBE -->
   <section class="start-section innercube-section">
 
     <div class="innercube-content">
 
-      <p class="section-label">The Mirror</p>
+      <p class="section-label">The Deeper Mirror</p>
 
       <h2>InnerCube</h2>
 
       <p>
-        A symbolic reflection experience exploring
-        the patterns shaping perception, creativity,
-        and identity.
+        When you are ready to go deeper, enter the symbolic reflection experience
+        behind the archetype system.
       </p>
 
       <a href="/innercube" class="start-button">
@@ -201,5 +336,74 @@
   </section>
 
 </section>
+
+
+<script>
+const questions = document.querySelectorAll('.question');
+const answers = document.querySelectorAll('.answer');
+const form = document.getElementById('captureForm');
+const archetypeInput = document.getElementById('archetypeResult');
+const resultBox = document.getElementById('resultBox');
+const resultTitle = document.getElementById('resultTitle');
+const resultText = document.getElementById('resultText');
+
+let currentQuestion = 0;
+
+let scores = {
+  Dreamer: 0,
+  Observer: 0,
+  Alchemist: 0,
+  Visionary: 0
+};
+
+const resultCopy = {
+  Dreamer: "Your hidden power is imagination. You sense possibilities before they become clear. Your challenge is grounding your inner world into one simple next step.",
+  Observer: "Your hidden power is awareness. You see patterns others often miss. Your challenge is moving from reflection into lived action.",
+  Alchemist: "Your hidden power is transformation. You are drawn to change, depth, and renewal. Your challenge is allowing change to unfold without forcing it.",
+  Visionary: "Your hidden power is direction. You feel called toward something larger. Your challenge is staying connected to the present while moving toward the future."
+};
+
+answers.forEach(answer => {
+  answer.addEventListener('click', () => {
+    const type = answer.dataset.type;
+    scores[type]++;
+
+    questions[currentQuestion].classList.remove('active');
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+      questions[currentQuestion].classList.add('active');
+    } else {
+      const topType = Object.keys(scores).reduce((a, b) =>
+        scores[a] > scores[b] ? a : b
+      );
+
+      archetypeInput.value = topType;
+      form.classList.add('active');
+    }
+  });
+});
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const type = archetypeInput.value;
+
+  form.classList.remove('active');
+  resultBox.classList.add('active');
+
+  resultTitle.innerText = `Your responses suggest a strong ${type} pattern.`;
+  resultText.innerText = resultCopy[type];
+
+  /*
+    Later connect this form to:
+    - Formspree
+    - Tally
+    - Make.com webhook
+    - MailerLite
+    - ConvertKit
+  */
+});
+</script>
 
 {% endblock %}
