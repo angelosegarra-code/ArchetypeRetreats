@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=33">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/retreats.css') }}?v=6">
 {% endblock %}
 
 {% block content %}
@@ -12,229 +12,330 @@
     <div class="hero-overlay"></div>
 
     <div class="hero-inner wrap">
-      <p class="eyebrow">Archetype Retreats — Bali</p>
+
+      <p class="eyebrow">Creative Archetype Retreats in Bali</p>
 
       <h1>
-        Before you make your next move,<br>
-        step out and see clearly.
+        A Space to Reconnect<br>
+        with Creativity, Clarity, and Yourself
       </h1>
 
-      <p class="hero-subtext">
-        A small, structured retreat in Bali for men who feel burned out,
-        pressured, or caught in repeating patterns — and need clarity, not more noise.
+      <p class="hero-subhead">
+        Immersive creative retreats in Bali blending painting, journaling,
+        archetypal awareness, reflection, and meaningful conversation
+        in a restorative tropical setting.
       </p>
 
       <div class="hero-actions">
-        <a class="btn primary" href="#calendar">Start with a Conversation</a>
-        <a class="btn soft" href="#options">Explore the Immersion</a>
+        <a class="btn primary" href="#calendar">
+          Schedule a Discovery Call
+        </a>
+
+        <a class="btn soft" href="#waitlist">
+          Join the Waitlist
+        </a>
       </div>
 
       <p class="hero-note">
-        Not therapy. Not escape. A grounded space to step back, see the pattern,
-        and return with a clearer sense of direction.
+        Designed for thoughtful people seeking a slower rhythm,
+        deeper clarity, creative renewal, and a more meaningful way forward.
       </p>
+
     </div>
   </section>
 
-  <!-- PROBLEM -->
+  <!-- IMAGE FEATURE -->
+  <section class="retreat-section retreat-gallery">
+    <div class="wrap">
+
+      <div class="gallery-grid">
+
+        <div class="gallery-card">
+          <img
+            src="{{ url_for('static', filename='images/retreat-group-bali.jpg') }}"
+            alt="Creative retreat in Bali"
+          >
+        </div>
+
+        <div class="gallery-card">
+          <img
+            src="{{ url_for('static', filename='images/retreat-journaling-bali.jpg') }}"
+            alt="Journaling in Bali"
+          >
+        </div>
+
+        <div class="gallery-card">
+          <img
+            src="{{ url_for('static', filename='images/retreat-painting-bali.jpg') }}"
+            alt="Painting retreat"
+          >
+        </div>
+
+        <div class="gallery-card">
+          <img
+            src="{{ url_for('static', filename='images/retreat-circle-bali.jpg') }}"
+            alt="Group creative session"
+          >
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTRO -->
   <section class="retreat-section">
     <div class="wrap narrow center">
-      <h2>You may not be lost. But something no longer fits.</h2>
+
+      <h2>This Is Not Just a Vacation</h2>
 
       <p>
-        From the outside, your life may still look functional. You may be handling
-        responsibilities, making decisions, and doing what needs to be done.
+        Many people arrive exhausted from years of overthinking,
+        overworking, or feeling disconnected from themselves.
       </p>
 
       <p>
-        But underneath, there may be a quieter truth: the way you’ve been moving
-        through life is no longer giving you clarity, energy, or direction.
+        Somewhere along the way, creativity, presence, and meaning
+        became secondary to survival and responsibility.
       </p>
 
       <p>
-        You don’t need more pressure. You don’t need another productivity system.
-        You need enough space to see what is actually going on.
+        These retreats are designed to create space —
+        space to slow down, reflect, create, reconnect,
+        and remember who you are beneath the noise.
       </p>
+
     </div>
   </section>
 
-  <!-- EDUCATIONAL PIECE -->
+  <!-- EDUCATIONAL -->
   <section class="retreat-section section-soft center insight-section">
     <div class="wrap narrow">
-      <h2>Why Rest Isn’t Enough</h2>
+
+      <h2>Why Slowing Down Matters</h2>
 
       <p class="insight-lead">
-        Rest helps the body recover. But it does not always change the pattern
-        you return to.
+        Most people try to solve exhaustion by pushing harder.
       </p>
 
       <p>
-        If the structure underneath your life remains the same, the same pressure
-        often comes back — sometimes in a different form, but with the same feeling.
+        More productivity. More goals. More distraction.
       </p>
 
       <p>
-        This retreat is designed to create a different kind of pause:
-        not just rest, but perspective.
+        But often the deeper issue is disconnection.
+      </p>
+
+      <p class="pattern-break">
+        Disconnection from creativity.<br>
+        Disconnection from reflection.<br>
+        Disconnection from yourself.
       </p>
 
       <p>
-        A place to step out of the noise, see the structure beneath your choices,
-        and return with a clearer sense of what needs to change next.
+        Creativity is not simply artistic expression.
       </p>
+
+      <p class="insight-core">
+        It is how we remain alive to our own experience.
+      </p>
+
+      <p>
+        Through painting, journaling, dialogue,
+        nature, stillness, and archetypal reflection,
+        participants begin to reconnect with something essential.
+      </p>
+
     </div>
   </section>
 
-  <!-- OPTIONS / IMMERSION -->
-  <section id="options" class="retreat-section">
+  <!-- WHAT HAPPENS -->
+  <section class="retreat-section">
+    <div class="wrap">
+
+      <h2>What Happens During the Retreat</h2>
+
+      <p class="subhead">
+        Each immersion combines reflection, creativity,
+        conversation, and restorative space.
+      </p>
+
+      <div class="immersion-grid">
+
+        <article class="immersion-card">
+          <h3>Painting & Creative Practice</h3>
+          <p>
+            Gentle creative exploration designed to reconnect you
+            with expression, intuition, and play.
+          </p>
+        </article>
+
+        <article class="immersion-card">
+          <h3>Journaling & Reflection</h3>
+          <p>
+            Guided writing sessions help uncover patterns,
+            memories, desires, and meaningful insight.
+          </p>
+        </article>
+
+        <article class="immersion-card">
+          <h3>Archetypal Awareness</h3>
+          <p>
+            Work with symbolic archetypes as reflective tools
+            for understanding personality, direction, and transformation.
+          </p>
+        </article>
+
+        <article class="immersion-card">
+          <h3>Meaningful Conversation</h3>
+          <p>
+            Carefully held dialogue encourages connection,
+            honesty, and deeper listening.
+          </p>
+        </article>
+
+        <article class="immersion-card">
+          <h3>Nature & Restoration</h3>
+          <p>
+            Bali becomes part of the retreat experience —
+            spaciousness, beauty, tropical stillness, and slower rhythms.
+          </p>
+        </article>
+
+        <article class="immersion-card">
+          <h3>Creative Renewal</h3>
+          <p>
+            Leave feeling calmer, clearer, more inspired,
+            and more connected to your life again.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section id="waitlist" class="retreat-section section-dark">
     <div class="wrap narrow center">
-      <h2>What the Immersion Offers</h2>
+
+      <p class="eyebrow">Join the Waitlist</p>
+
+      <h2>Upcoming Bali Retreat Dates Are Opening Soon</h2>
 
       <p>
-        This is not a retreat built around constant activity. It is a carefully held
-        space for reflection, conversation, creative insight, and quiet integration.
+        Small-group immersions are currently forming.
+        Join the waitlist to receive updates about future dates,
+        online introductions, and retreat openings.
       </p>
 
-      <p>
-        The work is designed to help you step outside your normal environment long
-        enough to see the patterns that are difficult to recognize while you are still
-        inside them.
-      </p>
+      <a class="btn primary" href="#calendar">
+        Start with a Conversation
+      </a>
 
-      <p>
-        Through guided reflection, structured conversation, and time in a beautiful
-        supportive environment, you begin to clarify what is actually happening —
-        and what may need to shift next.
-      </p>
-    </div>
-  </section>
-
-  <!-- WHAT THIS IS / IS NOT -->
-  <section class="retreat-section section-soft">
-    <div class="wrap narrow">
-      <h2 class="center">What This Is — And What It Is Not</h2>
-
-      <h3>This is:</h3>
-      <p>
-        A structured pause for men who need space to think clearly, reconnect with
-        themselves, and see the deeper pattern beneath their current situation.
-      </p>
-
-      <h3>This is not:</h3>
-      <p>
-        A therapy retreat, a spiritual performance, or another vacation that leaves
-        you returning to the same life unchanged.
-      </p>
     </div>
   </section>
 
   <!-- FOUNDER -->
-  <section class="retreat-section">
+  <section class="retreat-section section-soft">
     <div class="wrap narrow center">
-      <h2>Guided by Angelo Segarra</h2>
+
+      <h2>Held by Angelo Segarra</h2>
 
       <p>
-        These retreats bring together Angelo’s background in art, teaching,
-        facilitation, philosophy, and lived experience across cultures.
+        Angelo Segarra is a 68-year-old American expat,
+        artist, writer, and facilitator living in Indonesia.
+        Recently remarried and fully immersed in his own creative renaissance,
+        he brings together decades of experience in art, teaching,
+        philosophy, and cross-cultural living.
       </p>
 
       <p>
-        The work is quiet, reflective, creative, and direct — designed for people
-        who are ready for more than another temporary reset.
+        His retreats blend painting, journaling,
+        archetypal awareness, and gentle guidance
+        to help participants reconnect with creativity
+        and purpose — no matter their age or stage of life.
       </p>
+
+      <p>
+        The work is quiet, reflective, creative,
+        and direct — designed for people ready
+        to return to themselves through attention,
+        expression, and meaningful change.
+      </p>
+
     </div>
   </section>
 
   <!-- FAQ -->
   <section class="retreat-section">
     <div class="wrap narrow">
+
       <h2>Questions You May Have</h2>
 
-      <h3>Do I need experience with art or creativity?</h3>
+      <h3>Do I need artistic experience?</h3>
       <p>
-        No. Creative exploration here is not about making “good” art.
-        It is used as a way of seeing what thought alone often misses.
+        No. These retreats are designed for beginners and experienced creatives alike.
+        The focus is reflection and expression, not performance.
       </p>
 
       <h3>Is this therapy?</h3>
       <p>
-        No. This is not therapy or medical treatment. It is reflective,
-        experiential retreat work focused on clarity, pattern recognition, and integration.
+        No. This is reflective retreat work focused on creativity,
+        self-awareness, and meaningful life integration.
       </p>
 
-      <h3>Can I come alone?</h3>
+      <h3>Can I attend alone?</h3>
       <p>
-        Yes. Most people can attend alone. The experience is designed to be carefully
-        held and supportive.
+        Yes. Many participants arrive alone and quickly feel welcomed
+        into the atmosphere of the retreat.
+      </p>
+
+      <h3>What ages attend?</h3>
+      <p>
+        Participants come from many different stages of life.
+        The retreat is designed to be inclusive and intergenerational.
       </p>
 
       <h3>Is lodging included?</h3>
       <p>
-        Lodging is not included in the listed individual immersion price, but guidance
-        can be provided depending on retreat location and dates.
+        Lodging is arranged separately depending on retreat dates and locations,
+        though recommendations and assistance are provided.
       </p>
 
-      <h3>What happens after I schedule a call?</h3>
-      <p>
-        We’ll clarify fit, timing, retreat format, and next steps. If it is not the right
-        match, that will be respected.
-      </p>
     </div>
   </section>
 
-  <!-- FINAL CTA / CALENDAR -->
-  <section id="calendar" class="retreat-calendar calendar-final">
-    <div class="calendar-final-wrap">
+  <!-- CALENDLY -->
+  <section id="calendar" class="retreat-calendar">
+    <div class="wrap">
 
-      <div class="calendar-copy-card">
-        <p class="calendar-kicker">Begin Here</p>
+      <h2>Schedule a Discovery Call</h2>
 
-        <h2>Start with a Conversation</h2>
+      <p class="subhead">
+        A calm conversation to explore fit, timing,
+        retreat options, and next steps.
+      </p>
 
-        <p class="calendar-lead">
-          A short, grounded conversation to step back, look clearly at where you are,
-          and explore whether this is the right next step.
-        </p>
-
-        <div class="calendar-steps">
-          <div class="calendar-step">
-            <span>01</span>
-            <p>Clarify where you are right now</p>
-          </div>
-
-          <div class="calendar-step">
-            <span>02</span>
-            <p>Explore whether this is the right fit</p>
-          </div>
-
-          <div class="calendar-step">
-            <span>03</span>
-            <p>Leave with a clearer sense of direction</p>
-          </div>
-        </div>
-
-        <p class="calendar-reassurance">
-          No pressure. No expectations. Just a real conversation.
-        </p>
-      </div>
-
-      <div class="calendar-widget-card">
+      <div class="calendar-box">
         <div
           class="calendly-inline-widget"
           data-url="https://calendly.com/intinno/innercube-discovery-call"
-          style="min-width:320px;height:720px;">
+          style="min-width:320px;height:700px;">
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- CALENDLY SCRIPT -->
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script
+    src="https://assets.calendly.com/assets/external/widget.js"
+    async>
+  </script>
 
   <!-- STICKY CTA -->
   <a href="#calendar" class="sticky-cta">
-    Schedule a Short Conversation
+    Start with a Conversation
   </a>
 
   <script>
