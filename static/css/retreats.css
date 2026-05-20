@@ -1004,3 +1004,132 @@
     grid-template-columns: 1fr;
   }
 }
+/* PRICING SECTION */
+
+.retreat-pricing {
+  padding: 100px 24px;
+  background: #f6efe5;
+  color: #2f261c;
+}
+
+.pricing-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.retreat-pricing h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  margin-bottom: 18px;
+}
+
+.pricing-intro {
+  max-width: 720px;
+  margin: 0 auto 52px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #6f5c49;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.pricing-card {
+  position: relative;
+  background: #fffaf2;
+  border: 1px solid rgba(90, 62, 35, 0.18);
+  border-radius: 24px;
+  padding: 38px 30px;
+  text-align: left;
+  box-shadow: 0 18px 45px rgba(62, 42, 25, 0.08);
+}
+
+.pricing-card.featured {
+  border: 1px solid rgba(188, 135, 63, 0.65);
+  transform: translateY(-10px);
+  box-shadow: 0 24px 60px rgba(82, 54, 28, 0.16);
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: #c99b5c;
+  color: #fff;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pricing-card h3 {
+  font-family: Georgia, serif;
+  font-size: 1.55rem;
+  margin-bottom: 14px;
+}
+
+.price {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #8b5e2e;
+  margin-bottom: 6px;
+}
+
+.price-note {
+  color: #7b6a58;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.pricing-card ul {
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
+.pricing-card li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.card-description {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #6f5c49;
+}
+
+.pricing-cta {
+  margin-top: 46px;
+}
+
+.pricing-cta p {
+  margin-bottom: 22px;
+  color: #6f5c49;
+}
+
+.retreat-button {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 999px;
+  background: #2f261c;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.retreat-button:hover {
+  background: #8b5e2e;
+}
+
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+}
