@@ -1177,3 +1177,146 @@
   width: 100%;
   height: 100%;
 }
+.retreat-section {
+  padding: 100px 20px;
+}
+
+.retreat-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  max-width: 760px;
+  margin-bottom: 60px;
+}
+
+.section-header.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-label {
+  display: inline-block;
+  color: #cfa05a;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.section-header p {
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.location-grid,
+.accommodation-grid,
+.affiliate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.location-grid img,
+.accommodation-grid img,
+.affiliate-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.highlight-card,
+.affiliate-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 30px;
+  backdrop-filter: blur(8px);
+}
+
+.highlight-card h3,
+.affiliate-content h3 {
+  margin-bottom: 12px;
+}
+
+.highlight-card p,
+.affiliate-content p {
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.affiliate-card {
+  text-decoration: none;
+  color: white;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.affiliate-card:hover {
+  transform: translateY(-6px);
+}
+
+.affiliate-content {
+  padding: 24px;
+}
+/* AFFILIATE SECTION */
+
+.affiliate-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.affiliate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  margin-top: 60px;
+}
+
+.affiliate-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 24px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.35s ease;
+  backdrop-filter: blur(8px);
+}
+
+.affiliate-card:hover {
+  transform: translateY(-8px);
+}
+
+.affiliate-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.affiliate-content {
+  padding: 28px;
+}
+
+.affiliate-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+}
+
+.affiliate-content p {
+  line-height: 1.7;
+  opacity: 0.9;
+}
