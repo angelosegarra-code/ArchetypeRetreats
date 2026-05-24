@@ -85,40 +85,121 @@
     </div>
   </section>
 
-  <!-- EDUCATIONAL -->
-  <section class="retreat-section section-soft center insight-section">
-    <div class="wrap narrow">
+  <!-- LOCATION SECTION -->
+<section class="retreat-section">
+  <div class="retreat-container">
 
-      <h2>Why Slowing Down Matters</h2>
-
-      <p class="insight-lead">
-        Most people try to solve exhaustion by pushing harder.
-      </p>
-
-      <p>More productivity. More goals. More distraction.</p>
-
-      <p>But often the deeper issue is disconnection.</p>
-
-      <p class="pattern-break">
-        Disconnection from creativity.<br>
-        Disconnection from reflection.<br>
-        Disconnection from yourself.
-      </p>
-
-      <p>Creativity is not simply artistic expression.</p>
-
-      <p class="insight-core">
-        It is how we remain alive to our own experience.
-      </p>
-
+    <div class="section-header">
+      <span class="section-label">The Location</span>
+      <h2>Ubud, Bali</h2>
       <p>
-        Through painting, journaling, dialogue,
-        nature, stillness, and archetypal reflection,
-        participants begin to reconnect with something essential.
+        Surrounded by rice fields, jungle pathways, cafés, temples, and tropical scenery,
+        Ubud offers a slower rhythm of life designed for reflection, creativity, and renewal.
+        Known as the cultural heart of Bali, the area blends natural beauty with art,
+        spirituality, and warm hospitality in a way that feels both grounding and inspiring.
       </p>
+    </div>
+
+    <div class="location-grid">
+      <img src="{{ url_for('static', filename='images/ubud1.jpg') }}" alt="Rice fields in Ubud">
+      <img src="{{ url_for('static', filename='images/ubud2.jpg') }}" alt="Ubud café">
+      <img src="{{ url_for('static', filename='images/ubud3.jpg') }}" alt="Bali jungle walkway">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ACCOMMODATION SECTION -->
+<section class="retreat-section accommodation-section">
+  <div class="retreat-container">
+
+    <div class="section-header">
+      <span class="section-label">Accommodation</span>
+      <h2>Boutique Comfort & Shared Gathering Spaces</h2>
+      <p>
+        Guests stay in carefully selected boutique guesthouses, villas, and small hotels
+        throughout the peaceful Ubud area, many within walking distance of cafés,
+        rice fields, and retreat activities. The central gathering space serves as the
+        heart of the retreat experience, offering workshops, shared meals, conversation,
+        and creative reflection in a calm and welcoming atmosphere.
+      </p>
+    </div>
+
+    <div class="accommodation-grid">
+      <img src="{{ url_for('static', filename='images/meeting-room.jpg') }}" alt="Retreat meeting room">
+      <img src="{{ url_for('static', filename='images/kitchen-space.jpg') }}" alt="Shared kitchen">
+      <img src="{{ url_for('static', filename='images/pool-area.jpg') }}" alt="Pool and lounge area">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- HIGHLIGHTS SECTION -->
+<section class="retreat-section highlights-section">
+  <div class="retreat-container">
+
+    <div class="section-header center">
+      <span class="section-label">Retreat Highlights</span>
+      <h2>An Immersive Creative Experience</h2>
+    </div>
+
+    <div class="highlights-grid">
+
+      <div class="highlight-card">
+        <h3>Creative Workshops</h3>
+        <p>
+          Explore journaling, archetypal reflection, guided exercises,
+          and creative practices designed to deepen awareness and inspiration.
+        </p>
+      </div>
+
+      <div class="highlight-card">
+        <h3>Small Group Atmosphere</h3>
+        <p>
+          Intentionally intimate retreats that encourage meaningful conversation,
+          authentic connection, and spacious personal reflection.
+        </p>
+      </div>
+
+      <div class="highlight-card">
+        <h3>Rice Fields & Nature</h3>
+        <p>
+          Walk through jungle paths, cafés, waterfalls, and the natural beauty
+          surrounding Ubud throughout the retreat experience.
+        </p>
+      </div>
+
+      <div class="highlight-card">
+        <h3>Gourmet Meals</h3>
+        <p>
+          Enjoy tropical breakfasts, community dinners, and daily lunches
+          at a nearby restaurant nestled in the rice fields.
+        </p>
+      </div>
+
+      <div class="highlight-card">
+        <h3>Transformation & Renewal</h3>
+        <p>
+          Slow down, reconnect with yourself, and rediscover clarity through
+          creativity, awareness, and immersive reflection.
+        </p>
+      </div>
+
+      <div class="highlight-card">
+        <h3>Supportive Environment</h3>
+        <p>
+          Ideal for solo travelers, couples, creatives, professionals,
+          and anyone seeking meaningful personal growth.
+        </p>
+      </div>
 
     </div>
-  </section>
+
+  </div>
+</section>
+
 
   <!-- WHAT HAPPENS -->
   <section class="retreat-section">
@@ -340,7 +421,7 @@
       <h2>Held by Angelo Segarra</h2>
 
       <p>
-        Angelo Segarra is a 68-year-old American expat,
+        Angelo Segarra is an American expat,
         artist, writer, and facilitator living in Indonesia.
         Recently remarried and fully immersed in his own creative renaissance,
         he brings together decades of experience in art, teaching,
@@ -447,3 +528,66 @@
 
 </div>
 {% endblock %}
+
+<!-- RECOMMENDED RETREATS / AFFILIATE SECTION -->
+<section class="retreat-section affiliate-section">
+  <div class="retreat-container">
+
+    <div class="section-header center">
+      <span class="section-label">Explore Bali</span>
+      <h2>Recommended Retreat Experiences</h2>
+      <p>
+        Looking to continue your journey in Bali? Below are a small collection
+        of carefully curated retreat experiences aligned with creativity,
+        reflection, wellness, and personal transformation.
+      </p>
+    </div>
+
+    <div class="affiliate-grid">
+
+      <!-- RETREAT 1 -->
+      <a href="YOUR_AFFILIATE_LINK" class="affiliate-card" target="_blank">
+        <img src="{{ url_for('static', filename='images/affiliate1.jpg') }}" alt="Creative retreat Bali">
+
+        <div class="affiliate-content">
+          <h3>Creative & Writing Retreats</h3>
+
+          <p>
+            Inspiring retreat experiences designed for artists, writers,
+            journaling, and creative exploration in peaceful Bali settings.
+          </p>
+        </div>
+      </a>
+
+      <!-- RETREAT 2 -->
+      <a href="YOUR_AFFILIATE_LINK" class="affiliate-card" target="_blank">
+        <img src="{{ url_for('static', filename='images/affiliate2.jpg') }}" alt="Mindfulness retreat Bali">
+
+        <div class="affiliate-content">
+          <h3>Mindfulness & Reflection</h3>
+
+          <p>
+            Quiet and restorative retreats focused on awareness,
+            stillness, emotional renewal, and reconnecting with yourself.
+          </p>
+        </div>
+      </a>
+
+      <!-- RETREAT 3 -->
+      <a href="YOUR_AFFILIATE_LINK" class="affiliate-card" target="_blank">
+        <img src="{{ url_for('static', filename='images/affiliate3.jpg') }}" alt="Luxury wellness retreat Bali">
+
+        <div class="affiliate-content">
+          <h3>Luxury Wellness Escapes</h3>
+
+          <p>
+            Boutique Bali experiences blending wellness, comfort,
+            tropical beauty, and meaningful personal restoration.
+          </p>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
