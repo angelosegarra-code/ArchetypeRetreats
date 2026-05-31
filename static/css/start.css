@@ -699,3 +699,26 @@
     text-align: center;
   }
 }
+.support-section {
+    text-align: center;
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.support-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: #FFBF00;
+    color: #111;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.support-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
