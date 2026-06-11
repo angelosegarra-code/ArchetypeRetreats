@@ -1,0 +1,349 @@
+{% extends "base.html" %}
+
+{% block page_css %}
+<style>
+.partner-page {
+  background: #f7f1e6;
+  color: #173f2c;
+}
+
+.partner-hero {
+  min-height: 88vh;
+  background: linear-gradient(rgba(8,45,28,.25), rgba(8,45,28,.75)),
+              url("{{ url_for('static', filename='images/retreat-walk.jpg') }}");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 80px 20px;
+}
+
+.partner-hero-inner {
+  max-width: 850px;
+  margin: auto;
+}
+
+.partner-hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  letter-spacing: .08em;
+  margin-bottom: 20px;
+}
+
+.partner-hero h2 {
+  font-size: clamp(1.5rem, 3vw, 2.6rem);
+  font-weight: 400;
+  color: #e7c16a;
+}
+
+.partner-hero p {
+  font-size: 1.25rem;
+  max-width: 680px;
+  margin: 25px auto;
+}
+
+.partner-buttons {
+  margin-top: 30px;
+}
+
+.partner-buttons a {
+  display: inline-block;
+  margin: 8px;
+  padding: 14px 26px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-gold {
+  background: #c79a3b;
+  color: #143927;
+}
+
+.btn-outline {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.partner-section {
+  padding: 80px 22px;
+}
+
+.partner-wrap {
+  max-width: 1180px;
+  margin: auto;
+}
+
+.partner-section h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.partner-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.partner-card {
+  background: #fffaf1;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.partner-card img,
+.partner-grid img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.dark-band {
+  background: #0d3b28;
+  color: #fff;
+}
+
+.gold-text {
+  color: #c79a3b;
+}
+
+.archetype-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.archetype {
+  background: #fffaf1;
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+}
+
+.archetype img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.partner-list {
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+.final-cta {
+  text-align: center;
+  background: linear-gradient(rgba(8,45,28,.55), rgba(8,45,28,.85)),
+              url("{{ url_for('static', filename='images/bali-sunset-walk.jpg') }}");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+@media (max-width: 850px) {
+  .partner-grid,
+  .partner-cards,
+  .archetype-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-hero {
+    min-height: 75vh;
+  }
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="partner-page">
+
+  <section class="partner-hero">
+    <div class="partner-hero-inner">
+      <h1>Archetype Retreats</h1>
+      <h2>Partner With Us</h2>
+      <p>Help more people reconnect with creativity, clarity, and meaning through transformational retreat experiences in Bali.</p>
+      <div class="partner-buttons">
+        <a href="/contact" class="btn-gold">Start a Partnership Conversation</a>
+        <a href="#opportunities" class="btn-outline">View Partner Opportunities</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner-section">
+    <div class="partner-wrap partner-grid">
+      <div>
+        <h2>A Personal Invitation</h2>
+        <p>There comes a point when success is no longer enough.</p>
+        <p>The question shifts from <em>“What can I achieve?”</em> to <em>“What am I becoming?”</em></p>
+        <p>Archetype Retreats was created as a space for reflection, creativity, meaningful conversation, nature, and personal transformation.</p>
+        <p>We welcome partnerships with travel advisors, retreat brokers, coaches, facilitators, wellness professionals, influencers, and community leaders.</p>
+        <p><strong>Angelo Segarra</strong><br>Founder, Archetype Retreats</p>
+      </div>
+      <img src="{{ url_for('static', filename='images/angelo-founder.jpg') }}" alt="Angelo Segarra, founder of Archetype Retreats">
+    </div>
+  </section>
+
+  <section class="partner-section dark-band">
+    <div class="partner-wrap">
+      <h2>The Experience</h2>
+      <p>A space to slow down, reconnect deeply, and create lasting change.</p>
+
+      <div class="partner-cards">
+        <div class="partner-card">
+          <img src="{{ url_for('static', filename='images/retreat-space.jpg') }}" alt="Retreat gathering space">
+          <h3>Gather</h3>
+          <p>Meaningful conversations and shared reflection in inspiring spaces.</p>
+        </div>
+
+        <div class="partner-card">
+          <img src="{{ url_for('static', filename='images/retreat-pool.jpg') }}" alt="Retreat pool in Bali">
+          <h3>Restore</h3>
+          <p>Time for rest, integration, and renewal in a peaceful Bali setting.</p>
+        </div>
+
+        <div class="partner-card">
+          <img src="{{ url_for('static', filename='images/bali-temple.jpg') }}" alt="Balinese temple">
+          <h3>Explore</h3>
+          <p>Nature and culture that deepen perspective and spark inspiration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner-section">
+    <div class="partner-wrap partner-grid">
+      <div>
+        <h2>A Day at Archetype Retreats</h2>
+        <h3>Morning</h3>
+        <p>Breakfast, guided reflection, group dialogue, and intention setting.</p>
+
+        <h3>Afternoon</h3>
+        <p>Rice field walks, creative exploration, personal journaling, and open time for rest.</p>
+
+        <h3>Evening</h3>
+        <p>Shared dinner, community conversation, integration, and quiet reflection.</p>
+      </div>
+      <img src="{{ url_for('static', filename='images/journaling-bali.jpg') }}" alt="Journaling in Bali">
+    </div>
+  </section>
+
+  <section class="partner-section">
+    <div class="partner-wrap partner-grid">
+      <img src="{{ url_for('static', filename='images/rice-fields.jpg') }}" alt="Rice fields in Bali">
+      <div>
+        <h2>Why Bali?</h2>
+        <p>Bali is more than a destination. It becomes part of the transformation.</p>
+        <p>Its landscapes invite reflection. Its culture values presence and ceremony. Its slower rhythm helps people reconnect with what matters.</p>
+        <p>For artists, seekers, entrepreneurs, coaches, and change-makers, Bali offers a rare environment for clarity, renewal, and creative awakening.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner-section dark-band">
+    <div class="partner-wrap">
+      <h2>The Four Archetypes Framework</h2>
+      <p>Four archetypes. Four perspectives. One journey of self-discovery.</p>
+
+      <div class="archetype-grid">
+        <div class="archetype">
+          <h3>Dreamer</h3>
+          <p>Imagination, possibility, and the courage to dream.</p>
+          <img src="{{ url_for('static', filename='images/dreamer-journal.jpg') }}" alt="Dreamer Journal">
+        </div>
+
+        <div class="archetype">
+          <h3>Observer</h3>
+          <p>Awareness, clarity, and the ability to see what is real.</p>
+          <img src="{{ url_for('static', filename='images/observer-journal.jpg') }}" alt="Observer Journal">
+        </div>
+
+        <div class="archetype">
+          <h3>Alchemist</h3>
+          <p>Transformation, change, and the power within.</p>
+          <img src="{{ url_for('static', filename='images/alchemist-journal.jpg') }}" alt="Alchemist Journal">
+        </div>
+
+        <div class="archetype">
+          <h3>Visionary</h3>
+          <p>Purpose, direction, and the creation of meaningful futures.</p>
+          <img src="{{ url_for('static', filename='images/visionary-journal.jpg') }}" alt="Visionary Journal">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="opportunities" class="partner-section">
+    <div class="partner-wrap partner-grid">
+      <div>
+        <h2>Partnership Opportunities</h2>
+        <p>We collaborate with partners who serve people seeking clarity, creativity, renewal, and meaningful personal growth.</p>
+
+        <h3>Who Benefits Most?</h3>
+        <div class="partner-list">
+          ✓ Clients navigating transitions<br>
+          ✓ Burned-out professionals<br>
+          ✓ Creatives seeking renewal<br>
+          ✓ Entrepreneurs looking for clarity<br>
+          ✓ Coaches seeking next-step experiences<br>
+          ✓ Individuals exploring purpose and meaning
+        </div>
+      </div>
+
+      <div class="partner-card">
+        <h3>Partner Benefits</h3>
+        <div class="partner-list">
+          ✓ Competitive referral commissions<br>
+          ✓ Personalized referral links<br>
+          ✓ Discovery calls for prospective guests<br>
+          ✓ Small-group, high-touch retreat experiences<br>
+          ✓ Co-branded opportunities available<br>
+          ✓ Dedicated partner support
+        </div>
+
+        <h3>Commission Structure</h3>
+        <p><strong>10–15% referral commission</strong></p>
+        <p>Custom arrangements available for groups and special events.</p>
+
+        <h3>Program Overview</h3>
+        <p>Location: Ubud, Bali<br>
+        Duration: 7 Days<br>
+        Group Size: 6–12 Participants<br>
+        Language: English</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner-section">
+    <div class="partner-wrap partner-grid">
+      <div>
+        <h2>Continue the Journey</h2>
+        <p>The retreat experience is supported by a series of guided journals designed to help participants deepen their insights long after they return home.</p>
+        <p>Dreamer. Observer. Alchemist. Visionary.</p>
+        <p>Together, they help participants continue the inner work of imagination, awareness, transformation, and purposeful creation.</p>
+      </div>
+      <img src="{{ url_for('static', filename='images/journal-series.jpg') }}" alt="Four Archetype Journals">
+    </div>
+  </section>
+
+  <section class="partner-section final-cta">
+    <div class="partner-wrap">
+      <h2>Let’s Create Something Meaningful Together</h2>
+      <p>Whether you are a travel advisor, coach, facilitator, influencer, or community leader, we welcome conversations about collaboration.</p>
+      <div class="partner-buttons">
+        <a href="/contact" class="btn-gold">Contact Us</a>
+        <a href="mailto:intinno@icloud.com" class="btn-outline">Email Angelo</a>
+      </div>
+      <p>ArchetypeRetreats.com • intinno@icloud.com</p>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
