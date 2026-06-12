@@ -8,7 +8,7 @@
 .partner-hero {
   min-height: 90vh;
   background: linear-gradient(rgba(8,45,28,.25), rgba(8,45,28,.78)),
-              url("{{ url_for('static', filename='images/partners/arrival-bali.jpg') }}");
+              url("{{ url_for('static', filename='images/arrival-bali-retreat.jpg') }}");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -107,7 +107,7 @@
 .final-cta {
   text-align: center;
   background: linear-gradient(rgba(8,45,28,.58), rgba(8,45,28,.88)),
-              url("{{ url_for('static', filename='images/partners/community-circle.jpg') }}");
+              url("{{ url_for('static', filename='images/sunset-conversation.jpg') }}");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -135,115 +135,129 @@
         <a href="#opportunities" class="btn-outline">View Opportunities</a>
       </div>
     </div>
+  </section>
   <section class="partner-section dark-band">
-  <div class="partner-wrap">
-    <h2>The Experience</h2>
-    <p>A space to slow down, reconnect deeply, and create lasting change.</p>
-    <div class="partner-cards">
-      <div class="partner-card">
-        <img src="{{ url_for('static', filename='images/community-circle.jpg') }}" alt="Community circle at Archetype Retreats">
-        <h3>Gather</h3>
-        <p>Meaningful conversations and shared reflection in inspiring spaces.</p>
+    <div class="partner-wrap">
+      <h2>The Experience</h2>
+      <p>A space to slow down, reconnect deeply, and create lasting change.</p>
+      <div class="partner-cards">
+        <div class="partner-card">
+          <img src="{{ url_for('static', filename='images/community-circle.jpg') }}" alt="Community circle at Archetype Retreats">
+          <h3>Gather</h3>
+          <p>Meaningful conversations and shared reflection in inspiring spaces.</p>
+        </div>
+        <div class="partner-card">
+          <img src="{{ url_for('static', filename='images/pool.jpg') }}" alt="Retreat pool in Bali">
+          <h3>Restore</h3>
+          <p>Time for rest, integration, and renewal in a peaceful Bali setting.</p>
+        </div>
+        <div class="partner-card">
+          <img src="{{ url_for('static', filename='images/bali-temple.jpg') }}" alt="Balinese temple">
+          <h3>Explore</h3>
+          <p>Nature and culture that deepen perspective and spark inspiration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="partner-section">
+    <div class="partner-wrap partner-grid">
+      <div>
+        <h2>A Day at Archetype Retreats</h2>
+        <h3>Morning</h3>
+        <p>Breakfast, guided reflection, group dialogue, and intention setting.</p>
+        <h3>Afternoon</h3>
+        <p>Rice field walks, creative exploration, personal journaling, and open time for rest.</p>
+        <h3>Evening</h3>
+        <p>Shared dinner, community conversation, integration, and quiet reflection.</p>
+      </div>
+      <img src="{{ url_for('static', filename='images/journaling-rice-field.jpg') }}" alt="Guest journaling beside rice fields in Bali">
+    </div>
+  </section>
+  <section class="partner-section">
+    <div class="partner-wrap partner-grid">
+      <img src="{{ url_for('static', filename='images/rice-fields.jpg') }}" alt="Rice fields in Bali">
+      <div>
+        <h2>Why Bali?</h2>
+        <p>Bali is more than a destination. It becomes part of the transformation.</p>
+        <p>Its landscapes invite reflection. Its culture values presence and ceremony. Its slower rhythm helps people reconnect with what matters.</p>
+        <p>For artists, seekers, entrepreneurs, coaches, and change-makers, Bali offers a rare environment for clarity, renewal, and creative awakening.</p>
+      </div>
+    </div>
+  </section>
+  <section class="partner-section dark-band">
+    <div class="partner-wrap">
+      <h2>The Four Archetypes Framework</h2>
+      <p>Four archetypes. Four perspectives. One journey of self-discovery.</p>
+      <img class="full-image" src="{{ url_for('static', filename='images/four-journals.jpg') }}" alt="The four Archetype Journals">
+    </div>
+  </section>
+  <section class="partner-section journal-highlight">
+    <div class="partner-wrap partner-grid">
+      <div>
+        <h2>The Gift Every Guest Receives</h2>
+        <p>Each participant receives a handcrafted Archetype Journal created in Bali as a companion for reflection during and after the retreat.</p>
+        <p>More than a notebook, it becomes a meaningful object guests take home — a reminder of insight, creativity, and personal change.</p>
+        <p>Handmade journals transform the retreat from a single experience into an ongoing journey of reflection and growth.</p>
+      </div>
+      <img src="{{ url_for('static', filename='images/gift-journal-retreat.jpg') }}" alt="Guest receiving a handmade journal at Archetype Retreats">
+    </div>
+  </section>
+  <section class="partner-section">
+    <div class="partner-wrap partner-grid">
+      <img src="{{ url_for('static', filename='images/journal-maker.jpg') }}" alt="Balinese artisan making a handmade journal">
+      <div>
+        <h2>Handmade in Bali</h2>
+        <p>Our journal experience connects the retreat to local craftsmanship, natural materials, and intentional reflection.</p>
+        <p>This gives partners a powerful story to share: guests are not only attending a retreat, they are receiving a meaningful object created in Bali that continues to support insight and creativity long after they return home.</p>
+      </div>
+    </div>
+  </section>
+  <section id="opportunities" class="partner-section">
+    <div class="partner-wrap partner-grid">
+      <div>
+        <h2>Partnership Opportunities</h2>
+        <p>We collaborate with partners who serve people seeking clarity, creativity, renewal, and meaningful personal growth.</p>
+        <h3>Who Benefits Most?</h3>
+        <div class="partner-list">
+          ✓ Clients navigating transitions<br>
+          ✓ Burned-out professionals<br>
+          ✓ Creatives seeking renewal<br>
+          ✓ Entrepreneurs looking for clarity<br>
+          ✓ Coaches seeking next-step experiences<br>
+          ✓ Individuals exploring purpose and meaning
+        </div>
       </div>
       <div class="partner-card">
-        <img src="{{ url_for('static', filename='images/pool.jpg') }}" alt="Retreat pool in Bali">
-        <h3>Restore</h3>
-        <p>Time for rest, integration, and renewal in a peaceful Bali setting.</p>
-      </div>
-      <div class="partner-card">
-        <img src="{{ url_for('static', filename='images/bali-temple.jpg') }}" alt="Balinese temple">
-        <h3>Explore</h3>
-        <p>Nature and culture that deepen perspective and spark inspiration.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="partner-section">
-  <div class="partner-wrap partner-grid">
-    <div>
-      <h2>A Day at Archetype Retreats</h2>
-      <h3>Morning</h3>
-      <p>Breakfast, guided reflection, group dialogue, and intention setting.</p>
-      <h3>Afternoon</h3>
-      <p>Rice field walks, creative exploration, personal journaling, and open time for rest.</p>
-      <h3>Evening</h3>
-      <p>Shared dinner, community conversation, integration, and quiet reflection.</p>
-    </div>
-    <img src="{{ url_for('static', filename='images/journaling-rice-field.jpg') }}" alt="Guest journaling beside rice fields in Bali">
-  </div>
-</section>
-<section class="partner-section">
-  <div class="partner-wrap partner-grid">
-    <img src="{{ url_for('static', filename='images/rice-fields.jpg') }}" alt="Rice fields in Bali">
-    <div>
-      <h2>Why Bali?</h2>
-      <p>Bali is more than a destination. It becomes part of the transformation.</p>
-      <p>Its landscapes invite reflection. Its culture values presence and ceremony. Its slower rhythm helps people reconnect with what matters.</p>
-      <p>For artists, seekers, entrepreneurs, coaches, and change-makers, Bali offers a rare environment for clarity, renewal, and creative awakening.</p>
-    </div>
-  </div>
-</section>
-<section class="partner-section dark-band">
-  <div class="partner-wrap">
-    <h2>The Four Archetypes Framework</h2>
-    <p>Four archetypes. Four perspectives. One journey of self-discovery.</p>
-    <img class="full-image" src="{{ url_for('static', filename='images/four-journals.jpg') }}" alt="The four Archetype Journals">
-  </div>
-</section>
-<section class="partner-section journal-highlight">
-  <div class="partner-wrap partner-grid">
-    <div>
-      <h2>The Gift Every Guest Receives</h2>
-      <p>Each participant receives a handcrafted Archetype Journal created in Bali as a companion for reflection during and after the retreat.</p>
-      <p>More than a notebook, it becomes a meaningful object guests take home — a reminder of insight, creativity, and personal change.</p>
-      <p>Handmade journals transform the retreat from a single experience into an ongoing journey of reflection and growth.</p>
-    </div>
-    <img src="{{ url_for('static', filename='images/gift-journal-retreat.jpg') }}" alt="Guest receiving a handmade journal at Archetype Retreats">
-  </div>
-</section>
-<section class="partner-section">
-  <div class="partner-wrap partner-grid">
-    <img src="{{ url_for('static', filename='images/journal-maker.jpg') }}" alt="Balinese artisan making a handmade journal">
-    <div>
-      <h2>Handmade in Bali</h2>
-      <p>Our journal experience connects the retreat to local craftsmanship, natural materials, and intentional reflection.</p>
-      <p>This gives partners a powerful story to share: guests are not only attending a retreat, they are receiving a meaningful object created in Bali that continues to support insight and creativity long after they return home.</p>
-    </div>
-  </div>
-</section>
-<section id="opportunities" class="partner-section">
-  <div class="partner-wrap partner-grid">
-    <div>
-      <h2>Partnership Opportunities</h2>
-      <p>We collaborate with partners who serve people seeking clarity, creativity, renewal, and meaningful personal growth.</p>
-      <h3>Who Benefits Most?</h3>
-      <div class="partner-list">
-        ✓ Clients navigating transitions<br>
-        ✓ Burned-out professionals<br>
-        ✓ Creatives seeking renewal<br>
-        ✓ Entrepreneurs looking for clarity<br>
-        ✓ Coaches seeking next-step experiences<br>
-        ✓ Individuals exploring purpose and meaning
+        <h3>Partner Benefits</h3>
+        <div class="partner-list">
+          ✓ 10–15% referral commission<br>
+          ✓ Personalized referral links<br>
+          ✓ Discovery calls for prospective guests<br>
+          ✓ Small-group, high-touch retreat experiences<br>
+          ✓ Co-branded opportunities available<br>
+          ✓ Dedicated partner support
+        </div>
+        <h3>Program Overview</h3>
+        <p>
+          Location: Ubud, Bali<br>
+          Duration: 7 Days<br>
+          Group Size: 6–12 Participants<br>
+          Language: English
+        </p>
       </div>
     </div>
-    <div class="partner-card">
-      <h3>Partner Benefits</h3>
-      <div class="partner-list">
-        ✓ 10–15% referral commission<br>
-        ✓ Personalized referral links<br>
-        ✓ Discovery calls for prospective guests<br>
-        ✓ Small-group, high-touch retreat experiences<br>
-        ✓ Co-branded opportunities available<br>
-        ✓ Dedicated partner support
+  </section>
+  <section class="partner-section final-cta">
+    <div class="partner-wrap">
+      <h2>Let’s Create Something Meaningful Together</h2>
+      <p>Whether you are a travel advisor, coach, facilitator, influencer, or community leader, we welcome conversations about collaboration.</p>
+      <div class="partner-buttons">
+        <a href="/contact" class="btn-gold">Become a Partner</a>
+        <a href="mailto:intinno@icloud.com" class="btn-outline">Email Angelo</a>
       </div>
-      <h3>Program Overview</h3>
-      <p>
-        Location: Ubud, Bali<br>
-        Duration: 7 Days<br>
-        Group Size: 6–12 Participants<br>
-        Language: English
-      </p>
+      <p>ArchetypeRetreats.com • intinno@icloud.com</p>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 {% endblock %}
+
