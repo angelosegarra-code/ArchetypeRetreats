@@ -205,6 +205,10 @@ def start():
 def partners():
     return render_template("partners.html")
     
+  @app.route("/brochure")
+def brochure():
+    return render_template("brochure.html") 
+    
 # force redeploy
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
