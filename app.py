@@ -205,9 +205,9 @@ def start():
 def partners():
     return render_template("partners.html")
     
-  @app.route("/brochure")
+@app.route("/brochure")
 def brochure():
-    return render_template("brochure.html") 
+    return render_template("brochure.html")
     
 # force redeploy
 if __name__ == '__main__':
