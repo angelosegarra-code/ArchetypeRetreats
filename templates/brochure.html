@@ -1,0 +1,304 @@
+{% extends "base.html" %}
+{% block page_css %}
+<style>
+.brochure-page {
+  background: #f7f1e6;
+  color: #173f2c;
+}
+.brochure-hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(8,45,28,.25), rgba(8,45,28,.8)),
+              url("{{ url_for('static', filename='images/arrival-bali-retreat.jpg') }}");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 90px 22px;
+}
+.brochure-hero-inner {
+  max-width: 900px;
+  margin: auto;
+}
+.brochure-hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  letter-spacing: .08em;
+  margin-bottom: 18px;
+}
+.brochure-hero h2 {
+  color: #e7c16a;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3vw, 2.5rem);
+}
+.brochure-hero p {
+  font-size: 1.25rem;
+  max-width: 720px;
+  margin: 25px auto;
+}
+.brochure-section {
+  padding: 85px 22px;
+}
+.brochure-wrap {
+  max-width: 1180px;
+  margin: auto;
+}
+.brochure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 42px;
+  align-items: center;
+}
+.brochure-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.brochure-card {
+  background: #fffaf1;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0,0,0,.10);
+}
+.brochure-card img,
+.brochure-grid img,
+.full-image {
+  width: 100%;
+  border-radius: 18px;
+  display: block;
+}
+.brochure-section h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 20px;
+}
+.dark-band {
+  background: #0d3b28;
+  color: #fff;
+}
+.dark-band .brochure-card {
+  color: #173f2c;
+}
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.journal-card {
+  background: #fffaf1;
+  color: #173f2c;
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+}
+.journal-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+.details-box {
+  background: #fffaf1;
+  padding: 34px;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0,0,0,.10);
+  line-height: 1.9;
+}
+.brochure-buttons a {
+  display: inline-block;
+  margin: 8px;
+  padding: 14px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.btn-gold {
+  background: #c79a3b;
+  color: #143927;
+}
+.btn-outline {
+  border: 1px solid #fff;
+  color: #fff;
+}
+.final-brochure {
+  text-align: center;
+  background: linear-gradient(rgba(8,45,28,.58), rgba(8,45,28,.88)),
+              url("{{ url_for('static', filename='images/sunset-conversation.jpg') }}");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+@media (max-width: 850px) {
+  .brochure-grid,
+  .brochure-cards,
+  .journal-grid {
+    grid-template-columns: 1fr;
+  }
+  .brochure-hero {
+    min-height: 76vh;
+  }
+}
+</style>
+{% endblock %}
+{% block content %}
+<div class="brochure-page">
+  <section class="brochure-hero">
+    <div class="brochure-hero-inner">
+      <h1>Archetype Retreats</h1>
+      <h2>Creativity • Reflection • Transformation • Bali</h2>
+      <p>A 7-day retreat experience in Ubud, Bali for people seeking clarity, renewal, and meaningful personal growth.</p>
+      <div class="brochure-buttons">
+        <a href="/contact" class="btn-gold">Schedule a Discovery Call</a>
+      </div>
+    </div>
+  </section>
+  <section class="brochure-section">
+    <div class="brochure-wrap brochure-grid">
+      <div>
+        <h2>A Personal Invitation</h2>
+        <p>There comes a point when success is no longer enough. The question shifts from <em>“What can I achieve?”</em> to <em>“What am I becoming?”</em></p>
+        <p>Archetype Retreats was created as a space to slow down, reconnect with creativity, and explore the deeper patterns shaping your life.</p>
+        <p>Through reflection, conversation, nature, journaling, and creative practice, guests are invited into a meaningful experience of insight and renewal.</p>
+        <p><strong>Angelo Segarra</strong><br>Founder, Archetype Retreats</p>
+      </div>
+      <img src="{{ url_for('static', filename='images/angelo-journaling.jpg') }}" alt="Angelo journaling in Bali">
+    </div>
+  </section>
+  <section class="brochure-section dark-band">
+    <div class="brochure-wrap brochure-grid">
+      <img src="{{ url_for('static', filename='images/rice-fields.jpg') }}" alt="Bali rice fields">
+      <div>
+        <h2>Why Bali?</h2>
+        <p>Bali is more than a destination. It becomes part of the transformation.</p>
+        <p>Its landscapes invite reflection. Its culture values presence and ceremony. Its slower rhythm helps people reconnect with what matters.</p>
+        <p>For artists, seekers, entrepreneurs, educators, and people navigating change, Bali offers a rare environment for clarity, renewal, and creative awakening.</p>
+      </div>
+    </div>
+  </section>
+  <section class="brochure-section">
+    <div class="brochure-wrap">
+      <h2>The Experience</h2>
+      <p>A space to gather, restore, and explore.</p>
+      <div class="brochure-cards">
+        <div class="brochure-card">
+          <img src="{{ url_for('static', filename='images/community-circle.jpg') }}" alt="Community circle">
+          <h3>Gather</h3>
+          <p>Meaningful conversation, reflection, and shared discovery in a small-group setting.</p>
+        </div>
+        <div class="brochure-card">
+          <img src="{{ url_for('static', filename='images/pool.jpg') }}" alt="Pool in Bali">
+          <h3>Restore</h3>
+          <p>Rest, spaciousness, integration, and renewal in a peaceful tropical environment.</p>
+        </div>
+        <div class="brochure-card">
+          <img src="{{ url_for('static', filename='images/bali-temple.jpg') }}" alt="Balinese temple">
+          <h3>Explore</h3>
+          <p>Nature, culture, rice fields, and quiet moments that open new perspective.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="brochure-section">
+    <div class="brochure-wrap brochure-grid">
+      <div>
+        <h2>A Day at Archetype Retreats</h2>
+        <h3>Morning</h3>
+        <p>Breakfast, guided reflection, group dialogue, and intention setting.</p>
+        <h3>Afternoon</h3>
+        <p>Rice field walks, creative exploration, personal journaling, and open time for rest.</p>
+        <h3>Evening</h3>
+        <p>Shared dinner, community conversation, integration, and quiet reflection.</p>
+      </div>
+      <img src="{{ url_for('static', filename='images/journaling-rice-field.jpg') }}" alt="Guest journaling beside rice fields">
+    </div>
+  </section>
+  <section class="brochure-section dark-band">
+    <div class="brochure-wrap">
+      <h2>The Four Archetypes Framework</h2>
+      <p>Four archetypes. Four perspectives. One journey of self-discovery.</p>
+      <img class="full-image" src="{{ url_for('static', filename='images/four-journals.jpg') }}" alt="Four Archetype Journals">
+    </div>
+  </section>
+  <section class="brochure-section">
+    <div class="brochure-wrap brochure-grid">
+      <div>
+        <h2>The Gift Every Guest Receives</h2>
+        <p>Each participant receives a handcrafted Archetype Journal created in Bali as a companion for reflection during and after the retreat.</p>
+        <p>More than a notebook, it becomes a meaningful object guests take home — a reminder of insight, creativity, and personal change.</p>
+      </div>
+      <img src="{{ url_for('static', filename='images/gift-journal-retreat.jpg') }}" alt="Guest receiving handmade journal">
+    </div>
+  </section>
+  <section class="brochure-section dark-band">
+    <div class="brochure-wrap brochure-grid">
+      <img src="{{ url_for('static', filename='images/journal-maker.jpg') }}" alt="Journal maker in Bali">
+      <div>
+        <h2>Handmade in Bali</h2>
+        <p>The journal experience connects the retreat to local craft, natural materials, and intentional reflection.</p>
+        <p>Guests are not simply attending a retreat. They are entering a guided creative journey they can continue long after returning home.</p>
+      </div>
+    </div>
+  </section>
+  <section class="brochure-section">
+    <div class="brochure-wrap">
+      <h2>Continue the Journey</h2>
+      <p>Each archetype offers a different doorway into reflection, creativity, and meaningful change.</p>
+      <div class="journal-grid">
+        <div class="journal-card">
+          <img src="{{ url_for('static', filename='images/dreamer-journal.jpg') }}" alt="Dreamer Journal">
+          <h3>Dreamer</h3>
+          <p>Imagination and possibility.</p>
+        </div>
+        <div class="journal-card">
+          <img src="{{ url_for('static', filename='images/observer-journal.jpg') }}" alt="Observer Journal">
+          <h3>Observer</h3>
+          <p>Awareness and clarity.</p>
+        </div>
+        <div class="journal-card">
+          <img src="{{ url_for('static', filename='images/alchemist-journal.jpg') }}" alt="Alchemist Journal">
+          <h3>Alchemist</h3>
+          <p>Transformation and growth.</p>
+        </div>
+        <div class="journal-card">
+          <img src="{{ url_for('static', filename='images/visionary-journal.jpg') }}" alt="Visionary Journal">
+          <h3>Visionary</h3>
+          <p>Purpose and future creation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="brochure-section">
+    <div class="brochure-wrap brochure-grid">
+      <img src="{{ url_for('static', filename='images/reflection-rain-new.jpg') }}" alt="Guest journaling during tropical rain">
+      <div>
+        <h2>Small Groups. Meaningful Space.</h2>
+        <p>Archetype Retreats are intentionally small, allowing each participant to be seen, heard, and supported.</p>
+        <p>The retreat is designed for people who want more than a holiday — people seeking clarity, creativity, connection, and a deeper relationship with their own becoming.</p>
+      </div>
+    </div>
+  </section>
+  <section class="brochure-section dark-band">
+    <div class="brochure-wrap">
+      <h2>Retreat Details</h2>
+      <div class="details-box">
+        <p>
+          <strong>Location:</strong> Ubud, Bali<br>
+          <strong>Duration:</strong> 7 Days<br>
+          <strong>Group Size:</strong> 6–12 Participants<br>
+          <strong>Language:</strong> English<br>
+          <strong>Includes:</strong> Guided sessions, journaling, creative reflection, nature walks, shared meals, and a handcrafted Archetype Journal<br>
+          <strong>Ideal For:</strong> Professionals, creatives, coaches, educators, entrepreneurs, and individuals navigating life transitions
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="brochure-section final-brochure">
+    <div class="brochure-wrap">
+      <h2>Let’s Begin</h2>
+      <p>Reconnect with creativity, clarity, and meaning in Bali.</p>
+      <div class="brochure-buttons">
+        <a href="/contact" class="btn-gold">Schedule a Discovery Call</a>
+        <a href="mailto:intinno@icloud.com" class="btn-outline">Email Angelo</a>
+      </div>
+      <p>ArchetypeRetreats.com • intinno@icloud.com</p>
+    </div>
+  </section>
+</div>
+{% endblock %}
