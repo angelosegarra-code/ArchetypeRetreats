@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/journals.css') }}?v=3">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/journals.css') }}?v=4">
 {% endblock %}
 
 {% block content %}
@@ -9,11 +9,312 @@
 <div class="journals-page">
 
   <!-- HERO -->
-
   <section class="journals-hero">
+    <img
+      src="{{ url_for('static', filename='images/four-journals.jpg') }}"
+      alt="The Four Archetype Journals">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        Handmade in Bali
+      </p>
+
+      <h1>
+        The Four Archetype Journals
+      </h1>
+
+      <p>
+        Handcrafted journals inspired by the Dreamer, Observer,
+        Alchemist, and Visionary archetypes.
+      </p>
+
+      <a href="#shop" class="btn primary">
+        Choose Your Journal
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="journals-section">
+
+    <p class="eyebrow">
+      A Companion for the Journey
+    </p>
+
+    <h2>
+      More Than a Notebook
+    </h2>
+
+    <p>
+      Each Archetype Journal is individually handcrafted in Bali using
+      natural materials and traditional artisan techniques.
+      Designed for writing, sketching, reflection, and creative practice,
+      these journals provide a quiet space in a busy world.
+    </p>
+
+    <p>
+      Included with every journal is a removable 10-day archetype
+      reflection insert designed to help you begin. The journal itself
+      remains intentionally open, giving you the freedom to create
+      your own journey.
+    </p>
+
+  </section>
+
+
+  <!-- JOURNAL GRID -->
+
+  <section id="shop" class="journals-section">
+
+    <p class="eyebrow">
+      Choose Your Path
+    </p>
+
+    <h2>
+      The Collection
+    </h2>
+
+    <div class="journal-grid">
+
+      <div class="journal-card">
+
+        <h3>Dreamer Journal</h3>
+
+        <p>
+          A space for imagination, possibility,
+          inspiration, and creative exploration.
+        </p>
+
+        <p class="insert">
+          Includes Dreamer 10-Day Reflection Insert
+        </p>
+
+        <p class="price">$39 USD</p>
+
+        <a href="DREAMER_PAYPAL_LINK"
+           target="_blank"
+           class="btn primary">
+           Purchase
+        </a>
+
+      </div>
+
+
+      <div class="journal-card">
+
+        <h3>Observer Journal</h3>
+
+        <p>
+          A space for awareness, insight,
+          mindfulness, and reflection.
+        </p>
+
+        <p class="insert">
+          Includes Observer 10-Day Reflection Insert
+        </p>
+
+        <p class="price">$39 USD</p>
+
+        <a href="OBSERVER_PAYPAL_LINK"
+           target="_blank"
+           class="btn primary">
+           Purchase
+        </a>
+
+      </div>
+
+
+      <div class="journal-card">
+
+        <h3>Alchemist Journal</h3>
+
+        <p>
+          A space for transformation,
+          healing, growth, and change.
+        </p>
+
+        <p class="insert">
+          Includes Alchemist 10-Day Reflection Insert
+        </p>
+
+        <p class="price">$39 USD</p>
+
+        <a href="ALCHEMIST_PAYPAL_LINK"
+           target="_blank"
+           class="btn primary">
+           Purchase
+        </a>
+
+      </div>
+
+
+      <div class="journal-card">
+
+        <h3>Visionary Journal</h3>
+
+        <p>
+          A space for vision, purpose,
+          planning, and future possibilities.
+        </p>
+
+        <p class="insert">
+          Includes Visionary 10-Day Reflection Insert
+        </p>
+
+        <p class="price">$39 USD</p>
+
+        <a href="VISIONARY_PAYPAL_LINK"
+           target="_blank"
+           class="btn primary">
+           Purchase
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- COLLECTION -->
+
+  <section class="collection-section">
+
+    <p class="eyebrow">
+      Complete Collection
+    </p>
+
+    <h2>
+      All Four Archetype Journals
+    </h2>
+
+    <p>
+      Receive the complete collection and explore
+      imagination, awareness, transformation,
+      and vision through four handcrafted companions.
+    </p>
+
+    <p class="collection-price">
+      $129 USD
+    </p>
+
+    <a href="COLLECTION_PAYPAL_LINK"
+       target="_blank"
+       class="btn primary">
+       Purchase Collection
+    </a>
+
+  </section>
+
+
+  <!-- ARTISAN SECTION -->
+
+  <section class="artisan-section">
 
     <img
-      src="{{ url_for('static', filename='images/journals/four-journals.jpg') }}"
+      src="{{ url_for('static', filename='images/journals/journal-brochure.jpg') }}"
+      alt="Crafted in Bali">
+
+    <div class="artisan-content">
+
+      <p class="eyebrow">
+        Crafted in Bali
+      </p>
+
+      <h2>
+        Handmade by Local Artisans
+      </h2>
+
+      <p>
+        Every journal is assembled by hand using
+        natural fibers and traditional techniques.
+        The result is a unique object designed not
+        simply to be used, but to accompany meaningful
+        moments of reflection and creativity.
+      </p>
+
+      <p>
+        Whether carried during travel, used in a retreat,
+        or kept beside your bed, each journal is intended
+        to become part of your personal story.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INCLUDED -->
+
+  <section class="journals-section">
+
+    <h2>
+      What’s Included
+    </h2>
+
+    <ul class="included-list">
+
+      <li>Handmade Bali journal</li>
+
+      <li>Natural artisan materials</li>
+
+      <li>Removable 10-day archetype insert</li>
+
+      <li>Blank pages for writing and sketching</li>
+
+      <li>QR code to additional resources</li>
+
+      <li>Protective packaging</li>
+
+    </ul>
+
+  </section>
+
+
+  <!-- SHIPPING -->
+
+  <section class="journals-section shipping">
+
+    <h2>
+      Shipping
+    </h2>
+
+    <p>
+      Journals are shipped directly from Bali.
+      Shipping costs are calculated separately
+      based on destination.
+    </p>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
+
+  <section class="final-cta">
+
+    <h2>
+      Begin with a Blank Page
+    </h2>
+
+    <p>
+      A journal is not only a place to record what has happened.
+      It is a place to meet what is becoming possible.
+    </p>
+
+    <a href="#shop" class="btn primary">
+      Choose Your Journal
+    </a>
+
+  </section>
+
+</div>
+
+{% endblock %}
       alt="The Four Archetype Journals">
 
     <div class="hero-content">
