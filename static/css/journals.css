@@ -218,3 +218,24 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* JOURNAL COLLECTION HERO FIX */
+
+.journals-hero .hero-content h1 {
+  color: #f7f1e6 !important;
+}
+
+.journals-hero .hero-content p {
+  color: rgba(247, 241, 230, 0.92) !important;
+}
+
+.journals-hero .eyebrow {
+  color: #d8b06a !important;
+}
+
+.journals-hero {
+  text-align: center;
+}
+
+.journals-hero .btn {
+  margin-top: 20px;
+}
