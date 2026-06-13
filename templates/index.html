@@ -17,17 +17,18 @@ body {
   padding: 240px 24px 120px;
 
   background:
-  linear-gradient(
-    rgba(247,241,230,0.15),
-    rgba(247,241,230,0.35)
-  ),
-  url('/static/images/four-journals.jpg');
+    linear-gradient(
+      rgba(247,241,230,0.15),
+      rgba(247,241,230,0.35)
+    ),
+    url('/static/images/four-journals.jpg');
 
   background-size: cover;
   background-position: center;
 }
 
-font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+.home-hero h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
   line-height: 1.05;
   color: #ffffff;
   text-shadow: 0 3px 12px rgba(0,0,0,0.35);
@@ -175,7 +176,7 @@ font-size: clamp(2.2rem, 4.5vw, 3.8rem);
 {% block content %}
 <section class="home-hero">
   <div class="home-hero-content">
-    <p class="eyebrow">Archetype Retreats</p>
+   
     <h1>Begin with a blank page.</h1>
     <p>
       A creative retreat experience in Bali for reflection, journaling,
