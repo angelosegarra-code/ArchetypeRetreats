@@ -209,6 +209,10 @@ def partners():
 def brochure():
     return render_template("brochure.html")
     
+@app.route('/journal-collection')
+def journal_collection():
+    return render_template('journal_collection.html') 
+    
 # force redeploy
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
