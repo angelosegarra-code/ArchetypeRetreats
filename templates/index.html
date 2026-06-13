@@ -6,29 +6,47 @@ body {
   color: #173f2c;
 }
 /* HERO */
+
 .home-hero {
-  min-height: 92vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 140px 24px 100px;
+
+  padding: 240px 24px 120px;
+
   background:
-    linear-gradient(rgba(247,241,230,0.25), rgba(247,241,230,0.92)),
+    linear-gradient(
+      rgba(247,241,230,0.40),
+      rgba(247,241,230,0.92)
+    ),
     url('/static/images/four-journals.jpg');
+
   background-size: cover;
   background-position: center;
 }
+
 .home-hero-content {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 80px auto 0;
+
+  background: rgba(247,241,230,0.82);
+
+  padding: 50px;
+
+  border-radius: 28px;
+
+  backdrop-filter: blur(3px);
 }
+
 .home-hero h1 {
-  font-size: clamp(3rem, 7vw, 5.8rem);
-  line-height: 1;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.05;
   color: #173f2c;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
+
 .home-hero p {
   color: #315840;
   font-size: 1.15rem;
@@ -54,7 +72,7 @@ body {
   text-align: center;
 }
 .section h2 {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1.05;
   color: #173f2c;
   margin-bottom: 26px;
