@@ -123,3 +123,98 @@ body {
     margin-bottom: 30px;
     line-height: 1.8;
 }
+/* JOURNAL COLLECTION PAGE */
+
+.journals-page {
+  background: #f7f1e6;
+  color: #173f2c;
+}
+
+.journals-page h1,
+.journals-page h2,
+.journals-page h3,
+.journals-page p,
+.journals-page li {
+  color: #173f2c;
+}
+
+.journals-hero {
+  background: #111;
+  text-align: center;
+  padding: 40px 20px 70px;
+}
+
+.journals-hero img {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 24px;
+  display: block;
+  margin: 0 auto 45px;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.journals-section,
+.collection-section,
+.final-cta {
+  max-width: 1100px;
+  margin: 90px auto;
+  padding: 0 24px;
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.journal-card {
+  background: #fffaf0;
+  padding: 36px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+.journal-card h3,
+.journal-card p {
+  color: #173f2c;
+}
+
+.price,
+.collection-price {
+  color: #b88642;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.collection-section {
+  text-align: center;
+  background: #fffaf0;
+  border-radius: 28px;
+  padding: 70px 40px;
+}
+
+.artisan-section {
+  max-width: 1200px;
+  margin: 90px auto;
+  padding: 0 24px;
+}
+
+.artisan-section img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.final-cta {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+  .journal-grid {
+    grid-template-columns: 1fr;
+  }
+}
