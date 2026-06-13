@@ -69,3 +69,42 @@ body {
   color: rgba(245,241,232,0.74);
   line-height: 1.7;
 }
+/* JOURNAL COLLECTION PAGE */
+
+.collection-section {
+  text-align: center;
+  max-width: 900px;
+  margin: 80px auto;
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.journal-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.price,
+.collection-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #b88642;
+  margin: 20px 0;
+}
+
+.artisan-section {
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.artisan-section img {
+  width: 100%;
+  border-radius: 24px;
+}
