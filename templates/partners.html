@@ -129,7 +129,343 @@
     <div class="partner-hero-inner">
       <h1>Archetype Retreats</h1>
       <h2>Partner With Us</h2>
-      <p>Help more people reconnect with creativity, clarity, and meaning through transformational retreat experiences in Bali.</p>
+      {% extends "base.html" %}
+{% block page_css %}
+<style>
+body {
+  background: #050505;
+  color: #f5f1e8;
+}
+
+/* HERO */
+.home-hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 140px 24px 100px;
+  background:
+    linear-gradient(rgba(8,10,12,0.72), rgba(8,10,12,0.84)),
+    url('/static/images/homepage-hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.home-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1;
+  color: #f5f1e8;
+  margin-bottom: 28px;
+}
+
+.home-hero p {
+  color: rgba(245,241,232,0.78);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 760px;
+  margin: 0 auto 28px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 110px 24px;
+}
+
+.section-soft {
+  background: #0b0b0b;
+}
+
+.section-light {
+  background: #111;
+}
+
+.section-dark {
+  background: #030303;
+}
+
+.center {
+  text-align: center;
+}
+
+.section h2 {
+  font-size: clamp(2.rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  color: #f5f1e8;
+  margin-bottom: 26px;
+}
+
+.section p {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  line-height: 1.8;
+  color: rgba(245,241,232,0.74);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: #d5a35b;
+  font-size: 0.75rem;
+  margin-bottom: 18px;
+}
+
+/* BUTTONS */
+.btn-primary {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: linear-gradient(to bottom, #e0b56f, #c99542);
+  color: #111 !important;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 16px 45px rgba(0,0,0,0.45);
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 16px 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(245,241,232,0.35);
+  color: #f5f1e8 !important;
+  text-decoration: none;
+}
+
+/* ARCHETYPE GRID */
+.homepage-archetype-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 70px auto 0;
+}
+
+.homepage-archetype-card {
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 42px;
+}
+
+.homepage-archetype-card h3 {
+  color: #f5f1e8;
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+}
+
+.homepage-archetype-card p {
+  margin: 0 auto;
+}
+
+/* IMAGES */
+.section img {
+  max-width: 100%;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .homepage-archetype-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 5rem);
+  }
+}
+  .founder-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px;
+  display: block;
+  margin: 0 auto;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="home-hero">
+  <div class="home-hero-content">
+    <p class="eyebrow">Archetype Retreats</p>
+
+    <h1>Enter the work that changes the pattern.</h1>
+
+    <p>
+      Live workshops, journals, books, and retreats for people ready to explore
+      creativity, awareness, emotional patterns, and transformation.
+    </p>
+
+    <a href="/workshops" class="btn-primary">Explore the Workshops</a>
+  </div>
+</section>
+
+<!-- MAIN OFFERING -->
+<section class="section section-soft center">
+  <p class="eyebrow">Live Online</p>
+
+  <h2>Archetype Retreats Reflection Workshop</h2>
+
+  <p>
+    A guided live Zoom workshop exploring creativity, awareness, journaling,
+    emotional patterns, and the deeper structures shaping your life.
+  </p>
+
+  <p>
+    This is not self-improvement in the usual sense. It is a quiet space to see
+    yourself more clearly, reconnect with what matters, and begin changing the
+    pattern from the inside.
+  </p>
+
+  <div style="margin:40px auto; max-width:950px;">
+    <img
+      src="{{ url_for('static', filename='images/workshop-offering.jpg') }}"
+      alt="Archetype Retreats Live Online Workshop"
+      style="width:100%; border-radius:28px; box-shadow:0 30px 90px rgba(0,0,0,0.45);">
+  </div>
+
+  <a href="https://www.paypal.com/ncp/payment/A5J8QN7PC68Z2"
+     target="_blank"
+     rel="noopener"
+     class="btn-primary">
+    Reserve Your Spot — $47
+  </a>
+</section>
+
+<!-- THE WORK -->
+<section class="section section-light center">
+  <p class="eyebrow">The Work</p>
+
+  <h2>Four ways of seeing. One path of becoming.</h2>
+
+  <p>
+    The archetypes are not labels. They are mirrors — ways of recognizing how
+    imagination, awareness, transformation, and vision move through you.
+  </p>
+
+  <div class="homepage-archetype-grid">
+
+    <div class="homepage-archetype-card">
+      <h3>Dreamer</h3>
+      <p>Imagination, longing, possibility, and the part of you that still believes something new can emerge.</p>
+    </div>
+
+    <div class="homepage-archetype-card">
+      <h3>Observer</h3>
+      <p>Awareness, clarity, discernment, and the ability to see the pattern beneath the pattern.</p>
+    </div>
+
+    <div class="homepage-archetype-card">
+      <h3>Alchemist</h3>
+      <p>Transformation, release, resilience, and the capacity to turn experience into wisdom.</p>
+    </div>
+
+    <div class="homepage-archetype-card">
+      <h3>Visionary</h3>
+      <p>Direction, purpose, intuition, and the courage to move toward what wants to take form.</p>
+    </div>
+
+  </div>
+
+ <a href="/workshops" class="btn-primary">Explore the Workshops</a>
+</section>
+
+<!-- JOURNALS -->
+<section class="section section-soft center">
+  <p class="eyebrow">The Journals</p>
+
+  <h2>The Creation Journals</h2>
+
+  <p>
+    Four guided journals offering daily reflection through imagination,
+    awareness, transformation, and purpose.
+  </p>
+
+  <div style="margin:40px auto; max-width:950px;">
+    <img
+      src="{{ url_for('static', filename='images/creation-journals.jpg') }}"
+      alt="The Creation Journals"
+      style="width:100%; border-radius:28px; box-shadow:0 30px 90px rgba(0,0,0,0.45);">
+  </div>
+
+  <a href="/journals" class="btn-primary">Explore the Journals</a>
+</section>
+
+<!-- BOOKS -->
+<section class="section section-light center">
+  <p class="eyebrow">Books & Reflections</p>
+
+  <h2>Books by Angelo Segarra</h2>
+
+  <p>
+    Writings on change, creativity, art, memory, consciousness, and the human
+    experience.
+  </p>
+
+  <a href="/book" class="btn-primary">Visit the Library</a>
+</section>
+
+<!-- RETREATS -->
+<section class="section section-image">
+  <div class="image-content">
+    <p class="eyebrow">Bali Immersions</p>
+
+    <h2>The Setting Matters.</h2>
+
+    <p>
+      For deeper work, Archetype Retreats also offers immersive experiences in
+      Bali designed around stillness, creativity, reflection, and transformation.
+    </p>
+
+    <a href="/retreats" class="btn-secondary">Explore Retreats</a>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="section section-light">
+  <div class="two-col">
+    <div class="founder-text">
+      <h2>Founded by Angelo Segarra</h2>
+
+      <p>
+        Angelo Segarra is a facilitator, artist, teacher, and writer whose work
+        explores transformation through creativity, archetypal reflection, and
+        experiential change.
+      </p>
+
+      <p>
+        His work brings together art, philosophy, journaling, awareness, and
+        symbolic inquiry to help people recognize the patterns shaping their lives.
+      </p>
+
+      <a href="/start" class="link-minimal">Begin the Work →</a>
+    </div>
+
+    <div class="founder-image">
+      <img src="/static/images/angelo2.jpg" alt="Angelo Segarra">
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section section-dark center">
+  <h2>Begin with reflection.</h2>
+
+  <p>
+    The pattern changes when you begin to see it.
+  </p>
+
+  <a href="/start" class="btn-primary">Start Here</a>
+</section>
+
+{% endblock %}
       <div class="partner-buttons">
     <a href="/contact" class="btn-gold">Become a Partner</a>
 
