@@ -20,6 +20,26 @@ def redirect_www():
     url = request.url
     if url.startswith("http://www.") or url.startswith("https://www."):
         return redirect(url.replace("://www.", "://", 1), code=301)
+
+# The public retreat site now lives inside Creative Intelligence World as an
+# online learning pathway. Preserve account/admin and existing purchase
+# downloads, but do not serve the old travel, lodging, or retreat offers.
+ARCHETYPE_LEARNING_URL = 'https://creativeintelligence.world/archetypes/'
+LEGACY_ACCOUNT_PATHS = {'/admin', '/dashboard', '/export_csv', '/logout',
+                        '/my_downloads'}
+
+@app.before_request
+def redirect_public_site():
+    if request.method not in ('GET', 'HEAD'):
+        return None
+    path = request.path
+    if path in LEGACY_ACCOUNT_PATHS or path.startswith('/download/'):
+        return None
+    if path.startswith('/static/pdfs/'):
+        return None  # Existing digital purchases may link to these files.
+    if path == '/robots.txt':
+        return None
+    return redirect(ARCHETYPE_LEARNING_URL, code=301)
 # redeploy trigger for static css visibility
 # Optional: prevent CSS caching during testing
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
